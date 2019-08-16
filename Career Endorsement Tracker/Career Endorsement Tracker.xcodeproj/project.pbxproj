@@ -12,6 +12,7 @@
 		3738EC5C23061D830083158B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3738EC5B23061D830083158B /* Assets.xcassets */; };
 		3738EC5F23061D830083158B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3738EC5D23061D830083158B /* LaunchScreen.storyboard */; };
 		3738EC67230628770083158B /* CareerEndorsementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738EC66230628770083158B /* CareerEndorsementViewController.swift */; };
+		5784F9EB230729B600C11198 /* DataGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EA230729B600C11198 /* DataGetter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3738EC5E23061D830083158B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3738EC6023061D830083158B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3738EC66230628770083158B /* CareerEndorsementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerEndorsementViewController.swift; sourceTree = "<group>"; };
+		5784F9EA230729B600C11198 /* DataGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGetter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		5784F9E4230728FF00C11198 /* Networking  */ = {
 			isa = PBXGroup;
 			children = (
+				5784F9EA230729B600C11198 /* DataGetter.swift */,
 			);
 			path = "Networking ";
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5784F9EB230729B600C11198 /* DataGetter.swift in Sources */,
 				3738EC5523061D800083158B /* AppDelegate.swift in Sources */,
 				3738EC67230628770083158B /* CareerEndorsementViewController.swift in Sources */,
 			);

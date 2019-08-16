@@ -1,0 +1,20 @@
+PODS:
+  - JGProgressHUD (2.0.3)
+  - LBTAComponents (1.1)
+
+DEPENDENCIES:
+  - JGProgressHUD
+  - LBTAComponents
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - JGProgressHUD
+    - LBTAComponents
+
+SPEC CHECKSUMS:
+  JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
+  LBTAComponents: 2e7719683ddcf1cdf7280700438c0c6a5f7da550
+
+PODFILE CHECKSUM: 737b0e255cc3ce790dda41deca2ef68490f6008a
+
+COCOAPODS: 1.6.0.beta.1

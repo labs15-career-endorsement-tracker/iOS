@@ -16,7 +16,7 @@
 
 /* Begin PBXFileReference section */
 		3738EC5123061D800083158B /* Career Endorsement Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Career Endorsement Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3738EC5423061D800083158B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3738EC5423061D800083158B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		3738EC5923061D800083158B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3738EC5B23061D830083158B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3738EC5E23061D830083158B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +54,86 @@
 		3738EC5323061D800083158B /* Career Endorsement Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				3738EC5423061D800083158B /* AppDelegate.swift */,
-				3738EC66230628770083158B /* CareerEndorsementViewController.swift */,
+				5784F9E92307295400C11198 /* Constants */,
+				5784F9E82307293B00C11198 /* Extensions */,
+				5784F9E72307291900C11198 /* Storyboards */,
+				5784F9E62307290D00C11198 /* Supporting */,
+				5784F9E52307290800C11198 /* Views */,
+				5784F9E4230728FF00C11198 /* Networking  */,
+				5784F9E3230728F800C11198 /* ViewControllers */,
+				5784F9E2230728EE00C11198 /* Controllers */,
+				5784F9E1230728E900C11198 /* Models */,
 				3738EC5823061D800083158B /* Main.storyboard */,
-				3738EC5B23061D830083158B /* Assets.xcassets */,
 				3738EC5D23061D830083158B /* LaunchScreen.storyboard */,
-				3738EC6023061D830083158B /* Info.plist */,
 			);
 			path = "Career Endorsement Tracker";
+			sourceTree = "<group>";
+		};
+		5784F9E1230728E900C11198 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5784F9E2230728EE00C11198 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5784F9E3230728F800C11198 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3738EC66230628770083158B /* CareerEndorsementViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5784F9E4230728FF00C11198 /* Networking  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Networking ";
+			sourceTree = "<group>";
+		};
+		5784F9E52307290800C11198 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5784F9E62307290D00C11198 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				3738EC5423061D800083158B /* AppDelegate.swift */,
+				3738EC6023061D830083158B /* Info.plist */,
+				3738EC5B23061D830083158B /* Assets.xcassets */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		5784F9E72307291900C11198 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5784F9E82307293B00C11198 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5784F9E92307295400C11198 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

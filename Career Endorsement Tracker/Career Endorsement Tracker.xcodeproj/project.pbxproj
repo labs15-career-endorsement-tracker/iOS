@@ -15,6 +15,7 @@
 		5784F9EB230729B600C11198 /* DataGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EA230729B600C11198 /* DataGetter.swift */; };
 		5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EC23072A1600C11198 /* CurrentUser.swift */; };
 		5784F9EF23072BFB00C11198 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EE23072BFB00C11198 /* Config.swift */; };
+		5784F9F123072D5600C11198 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5784F9F023072D5600C11198 /* Welcome.storyboard */; };
 		A2B0A87515BC226E3F4CB9AC /* Pods_Career_Endorsement_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACBD38D9B88F5507D50FED8 /* Pods_Career_Endorsement_Tracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		5784F9EA230729B600C11198 /* DataGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGetter.swift; sourceTree = "<group>"; };
 		5784F9EC23072A1600C11198 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		5784F9EE23072BFB00C11198 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		5784F9F023072D5600C11198 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		C9C6DD038EA49314E0BE8940 /* Pods-Career Endorsement Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 		5784F9E72307291900C11198 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				5784F9F023072D5600C11198 /* Welcome.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3738EC5F23061D830083158B /* LaunchScreen.storyboard in Resources */,
+				5784F9F123072D5600C11198 /* Welcome.storyboard in Resources */,
 				3738EC5C23061D830083158B /* Assets.xcassets in Resources */,
 				3738EC5A23061D800083158B /* Main.storyboard in Resources */,
 			);

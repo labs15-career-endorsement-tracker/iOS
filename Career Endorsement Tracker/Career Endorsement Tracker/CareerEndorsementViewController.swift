@@ -9,18 +9,27 @@
 import UIKit
 
 class CareerEndorsementViewController: UIViewController {
+    
+    // MARK: - Properties
 
+    // MARK: - Outlets
+    @IBOutlet weak var greetingLabel: UILabel!
+    @IBOutlet weak var sayHelloButton: UIButton!
+    
+    
+    // MARK: - View states
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    @IBOutlet weak var greetingLabel: UILabel!
+    
+    // MARK: - Actions
     @IBAction func sayHelloButtonTapped(_ sender: Any) {
         greetingLabel.text = "Greetings from the Labs15\nCareer Endorsement Team!"
     }
+    
+    
     /*
     // MARK: - Navigation
 

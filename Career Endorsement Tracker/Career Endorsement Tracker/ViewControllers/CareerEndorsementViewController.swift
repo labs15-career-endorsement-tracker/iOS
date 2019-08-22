@@ -17,7 +17,8 @@ class CareerEndorsementViewController: UIViewController {
     @IBOutlet weak var sayHelloButton: UIButton!
     
     
-    // MARK: - View states
+    // MARK: - VC Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

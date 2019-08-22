@@ -8,7 +8,7 @@
 
 import UIKit
 import LBTAComponents
-import JGProgressHUD
+//import JGProgressHUD
 
 class Config {
     static let designGrayColor = UIColor(r: 206, g: 214, b: 227)
@@ -28,9 +28,9 @@ class Config {
         on.present(alert, animated: true, completion: completion)
     }
     
-    static func dissmissHud(_ hud: JGProgressHUD, text: String, detailText: String, delay: TimeInterval) {
-        hud.textLabel.text = text
-        hud.detailTextLabel.text = detailText
-        hud.dismiss(afterDelay: delay, animated: true)
-    }
+//    static func dissmissHud(_ hud: JGProgressHUD, text: String, detailText: String, delay: TimeInterval) {
+//        hud.textLabel.text = text
+//        hud.detailTextLabel.text = detailText
+//        hud.dismiss(afterDelay: delay, animated: true)
+//    }
 }

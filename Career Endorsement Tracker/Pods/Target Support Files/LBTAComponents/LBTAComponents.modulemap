@@ -1,4 +1,4 @@
-framework module LBTAComponents {
+module LBTAComponents {
   umbrella header "LBTAComponents-umbrella.h"
 
   export *

@@ -21,6 +21,9 @@
 		FA5D9B16230F181B00DC9BC1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D9B15230F181B00DC9BC1 /* NotificationService.swift */; };
 		FA5D9B1A230F181B00DC9BC1 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA5D9B13230F181B00DC9BC1 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FAA6DF1D23107BDB00B1DA7D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6DF1C23107BDB00B1DA7D /* CoreDataStack.swift */; };
+		FAA6DF2023107E1400B1DA7D /* CareerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA6DF1E23107E1400B1DA7D /* CareerModel.xcdatamodeld */; };
+		FAA6DF222310828500B1DA7D /* Tasks+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6DF212310828500B1DA7D /* Tasks+Convenience.swift */; };
+		FAA6DF2B2310831800B1DA7D /* TasksRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6DF2A2310831800B1DA7D /* TasksRepresentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		FA5D9B15230F181B00DC9BC1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FA5D9B17230F181B00DC9BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAA6DF1C23107BDB00B1DA7D /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		FAA6DF1F23107E1400B1DA7D /* CareerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CareerModel.xcdatamodel; sourceTree = "<group>"; };
+		FAA6DF212310828500B1DA7D /* Tasks+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+Convenience.swift"; sourceTree = "<group>"; };
+		FAA6DF2A2310831800B1DA7D /* TasksRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksRepresentation.swift; sourceTree = "<group>"; };
 		FAE9606D230F1AB7006E7467 /* Career Endorsement Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Career Endorsement Tracker.entitlements"; sourceTree = "<group>"; };
 		FAE9606E230F1C89006E7467 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		FE6AE4FA7D64ABA26C147CA6 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
@@ -220,9 +226,68 @@
 		FAA6DF1B23107B3300B1DA7D /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				FAA6DF29231082C900B1DA7D /* Resources */,
+				FAA6DF28231082C400B1DA7D /* Steps */,
+				FAA6DF27231082B300B1DA7D /* User_steps_completed */,
+				FAA6DF26231082AF00B1DA7D /* Users */,
+				FAA6DF25231082A600B1DA7D /* Tracks */,
+				FAA6DF242310829A00B1DA7D /* Tasks_tracks */,
 				FAA6DF1C23107BDB00B1DA7D /* CoreDataStack.swift */,
+				FAA6DF1E23107E1400B1DA7D /* CareerModel.xcdatamodeld */,
+				FAA6DF232310828A00B1DA7D /* Tasks */,
 			);
 			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		FAA6DF232310828A00B1DA7D /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				FAA6DF212310828500B1DA7D /* Tasks+Convenience.swift */,
+				FAA6DF2A2310831800B1DA7D /* TasksRepresentation.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		FAA6DF242310829A00B1DA7D /* Tasks_tracks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tasks_tracks;
+			sourceTree = "<group>";
+		};
+		FAA6DF25231082A600B1DA7D /* Tracks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tracks;
+			sourceTree = "<group>";
+		};
+		FAA6DF26231082AF00B1DA7D /* Users */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		FAA6DF27231082B300B1DA7D /* User_steps_completed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = User_steps_completed;
+			sourceTree = "<group>";
+		};
+		FAA6DF28231082C400B1DA7D /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
+		FAA6DF29231082C900B1DA7D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		FFA804A24F4F6DEE9477576E /* Frameworks */ = {
@@ -424,12 +489,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA6DF222310828500B1DA7D /* Tasks+Convenience.swift in Sources */,
 				5784F9EB230729B600C11198 /* DataGetter.swift in Sources */,
+				FAA6DF2023107E1400B1DA7D /* CareerModel.xcdatamodeld in Sources */,
 				3738EC5523061D800083158B /* AppDelegate.swift in Sources */,
 				5784F9EF23072BFB00C11198 /* Config.swift in Sources */,
 				FAA6DF1D23107BDB00B1DA7D /* CoreDataStack.swift in Sources */,
 				5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */,
 				3738EC67230628770083158B /* CareerEndorsementViewController.swift in Sources */,
+				FAA6DF2B2310831800B1DA7D /* TasksRepresentation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +772,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FAA6DF1E23107E1400B1DA7D /* CareerModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FAA6DF1F23107E1400B1DA7D /* CareerModel.xcdatamodel */,
+			);
+			currentVersion = FAA6DF1F23107E1400B1DA7D /* CareerModel.xcdatamodel */;
+			path = CareerModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3738EC4923061D800083158B /* Project object */;
 }

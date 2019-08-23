@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.careerendorsement.Career-Endorsement-Tracker.onesignal</string>
+		<string>group.com.endrsd.Career-Endorsement-Tracker.onesignal</string>
 	</array>
 </dict>
 </plist>

@@ -3,229 +3,219 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		0EA75190C33F859B4477D6BA0A1874E6 /* OneSignal-iOS10.0 */ = {
+		210EB05CEC7AD9C148F90F752DE74C48 /* OneSignal */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 2587F90FB05F8DEB80E69FF7127B2FAD /* Build configuration list for PBXAggregateTarget "OneSignal-iOS10.0" */;
+			buildConfigurationList = 09A5A4D585F2B2C7D977A4F1E5213117 /* Build configuration list for PBXAggregateTarget "OneSignal" */;
 			buildPhases = (
 			);
 			dependencies = (
 			);
-			name = "OneSignal-iOS10.0";
-		};
-		FAEC05ABF71F3F43027EE756A42919F8 /* OneSignal-iOS12.2 */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 8E59D664A34BB2DABD37FBF15CF92E4F /* Build configuration list for PBXAggregateTarget "OneSignal-iOS12.2" */;
-			buildPhases = (
-			);
-			dependencies = (
-			);
-			name = "OneSignal-iOS12.2";
+			name = OneSignal;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		00F5041B1F549D03777E23DC6237FA54 /* JGProgressHUDPieIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = BEA3871FF5ECD33221C7245F5C0F2BA3 /* JGProgressHUDPieIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0D2DCF3C8FA54E5C26C5E5D142838B65 /* JGProgressHUDIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = BE89D59076C68F8D6A54B66A2C8A8231 /* JGProgressHUDIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1C4C2B85B863BFFC995D444AB8EC3C67 /* JGProgressHUDIndeterminateIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = F8BD4F5B581A4C5A48F08BDC2BDE6722 /* JGProgressHUDIndeterminateIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2B7BC7E7ECF5282C6E873FC4F8793499 /* JGProgressHUDAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FFE857DD5BCEE77B885CE733AFE87C /* JGProgressHUDAnimation.m */; };
-		2BBC6724BF21804E29D9F1E971951CE8 /* JGProgressHUDIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249440F2D085D891D0182A251954C697 /* JGProgressHUDIndicatorView.m */; };
-		2CA94C2C9449E40FB034F5A8B0D91AAF /* LBTALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6C5A243B9640E6068248860E09393B /* LBTALabel.swift */; };
-		325017536C1322F37FE3C503E690A8B7 /* NSMutableAttributedString+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7674DBA1D25F7A4831C245609377C32 /* NSMutableAttributedString+Helper.swift */; };
-		42977D72C034113FB3C9A651943E8128 /* jg_hud_error@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AC14E85B2E260707E1C02DEE82B720 /* jg_hud_error@3x.png */; };
-		478771614183186DFEAF9FF13A0A7039 /* jg_hud_success.png in Resources */ = {isa = PBXBuildFile; fileRef = 7608136B24B361F4C3484F6024F35E9F /* jg_hud_success.png */; };
-		48D73FEF177F1E4A5675D07089F98129 /* JGProgressHUDPieIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEC1CB96E36B820C7C2A2D5E905698 /* JGProgressHUDPieIndicatorView.m */; };
-		4A01BEF80CA09A47C14670633E3C512F /* Pods-Career Endorsement Tracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1624B39AB256EE52D34397524FE40200 /* Pods-Career Endorsement Tracker-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		53E1B2B56450C3BD6ED1BE9B354766C9 /* JGProgressHUDErrorIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = E7C09A1903E5125FB3F822DD315E9D15 /* JGProgressHUDErrorIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5427315A8A33A6DE285A8D9960D4E5B9 /* JGProgressHUDFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 28681496063037F13910018549EBE35D /* JGProgressHUDFadeAnimation.m */; };
-		543094EB5AADEFED339A2BA2F334E123 /* DatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0372D1812D8D52A119EFFCF5CD7861E7 /* DatasourceController.swift */; };
-		5CB8FCE123BA8381A2408B7CB3D0E7EB /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F374E076528E35CC6FF48FCA9A915 /* UIView+Anchors.swift */; };
-		61F1AA79D39DC4E31577A4D73EAA45BB /* UIColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323494A03612E092D8AEC5A7BF1C0F70 /* UIColor+Helper.swift */; };
-		6F8C52CAC4371BEC7F3A9D74BE633353 /* JGProgressHUDFadeZoomAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 69ABFE76E7F0FC5F210EEA3046ABEBC1 /* JGProgressHUDFadeZoomAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		71D2EEC4976D5A4F47CAE6457E5939DB /* Pods-Career Endorsement Tracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C65348E184399299BBEC549B43623B9E /* Pods-Career Endorsement Tracker-dummy.m */; };
-		72876C26FB9D1A7794CE508517F67F17 /* JGProgressHUDFadeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F0C4212DCA6F002B37A083A08D5B325 /* JGProgressHUDFadeAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7349B7EA568D244012FE0E319582D203 /* JGProgressHUD-Defines.h in Headers */ = {isa = PBXBuildFile; fileRef = A96FEA461D63C325BBECB380700A7C71 /* JGProgressHUD-Defines.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		744BFDFDE03570F8AE2CA66A239F48A9 /* JGProgressHUDShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = CBB358120309E4D0A3DEA9CED6FA7E7D /* JGProgressHUDShadow.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9054D780C546DB478C5319DF0AA584C5 /* LBTAComponents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D77D9C23E99309A48C451B0ABC40102 /* LBTAComponents-dummy.m */; };
-		90F7236DF0C04FB27D6F4BF549B4B272 /* jg_hud_success@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB62E2D632F9772D56D0C97FD1892E94 /* jg_hud_success@3x.png */; };
-		9BB051E94905486A209DA51C651B386A /* LBTAComponents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D3E0499918950A87749B1AE773FC5E5 /* LBTAComponents-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9EB7888C8E5B9FE973B995059F92FCE4 /* DiscardableImageCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39464AB68F10DE7C318DF23B746CD590 /* DiscardableImageCacheItem.swift */; };
-		A68DD0980373B6250B41EDA6E4E6AD10 /* jg_hud_success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B4BFA7A1250F588DA11709991EB655 /* jg_hud_success@2x.png */; };
-		A8C5D61AE083C02BEE298484510D8C1D /* JGProgressHUDSuccessIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = E57DA64A98474BAC29794FD5A840CF21 /* JGProgressHUDSuccessIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		AF6A39E55D5F0DDB54324D8AA7101E2D /* JGProgressHUDRingIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC05D0835D31EB14F2E143043399AA9 /* JGProgressHUDRingIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B099F771A48EAB7892D8423525D35AA6 /* JGProgressHUDSuccessIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D78415D0DBC7522D365009631A1EA12 /* JGProgressHUDSuccessIndicatorView.m */; };
-		BEC3DCC805AF62978A3862FB0E68AE0C /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C140668AE6BE5789C024510C3C3262A5 /* CachedImageView.swift */; };
-		C02A14EDD79AD0268D27788DE412D0D3 /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64269D30DFE733A3E34CD960023FA04D /* Datasource.swift */; };
-		C249119005BD08ECA6E091D1CB94F9CF /* JGProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = AC68B5C004E20EFA8926EC51EB5C45B8 /* JGProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C2DA77212E41BA1EF3591A4D824205ED /* JGProgressHUDImageIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD71AA272F9BA985386786F1769E27D1 /* JGProgressHUDImageIndicatorView.m */; };
-		CDAFE143B0BF27BD669CA9F3A8C10919 /* jg_hud_error.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3BEB7854E517F26CFA1E2779141A3F /* jg_hud_error.png */; };
-		D0D86656A17D3408C489AE01149C1AED /* LBTATextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF092018972D4B5A85F577BA0F214EA /* LBTATextView.swift */; };
-		D76CA1E0DB390F07C3D78CE8DA394A57 /* UIButton+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02385E792AF16308E2193802337039 /* UIButton+Helper.swift */; };
-		DB3A28804475F5AB8F242F7B677F8B66 /* JGProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04039AE2D6FBF3EBF387B0E75CCFCCF3 /* JGProgressHUD-dummy.m */; };
-		E022FABE273D29A51DB5135D40DD3477 /* JGProgressHUDErrorIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C298D49BCE5DC968B9F5CBBD58B70685 /* JGProgressHUDErrorIndicatorView.m */; };
-		E75E6F237894BF4CA6C437E9D375AD72 /* JGProgressHUDImageIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 445CA2EFCD7428C993E3F8495EFA9232 /* JGProgressHUDImageIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E78538F9FCA3CED6BF21C0A40B6E2C3D /* Pods-OneSignalNotificationServiceExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4A9D4545B04D83B4177743001FB37F /* Pods-OneSignalNotificationServiceExtension-dummy.m */; };
-		E8EF7635E818FA6977B66DF299FBB0AA /* DatasourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202E78ACCBDFF226CFB5D0A0CFC74957 /* DatasourceCell.swift */; };
-		E96C08E6E27EF3751F4204F22EED79F8 /* JGProgressHUDAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D5D2881BA88870A2C75A49A429ED0F /* JGProgressHUDAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EC789B86B9EF2C19C899BE85A925004D /* JGProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 800B29CC112D8DFB1E41FFE928E68A16 /* JGProgressHUD.m */; };
-		EF842A62F5093A04881193A338A4FC3A /* JGProgressHUDFadeZoomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EF59F144012767AB6A9D9AEBAA69675 /* JGProgressHUDFadeZoomAnimation.m */; };
-		F4A5FC9561F5D87A9981B4AAB6185974 /* UIImage+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F58CC1F2ABAEC585AF466754239D03B /* UIImage+Helper.swift */; };
-		F631B1625CF6E98E2DF405B8AA0BBC6D /* JGProgressHUDShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = F56F2E1C0A62E2BA8D483697578602AD /* JGProgressHUDShadow.m */; };
-		F717B482DE7FB865702329E58FFC6E4B /* jg_hud_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF04227FBCB79A0F1DFD002EBA99BF92 /* jg_hud_error@2x.png */; };
-		FB777A5D708BFD135AEB9113E6D22FDC /* JGProgressHUDIndeterminateIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C41B245E0CE0F2DA8A06CA48B69CAF98 /* JGProgressHUDIndeterminateIndicatorView.m */; };
-		FD8BD2A4A2E066C008139488BB9E70CE /* JGProgressHUDRingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B206072924EE6DAE95ED015863F9696 /* JGProgressHUDRingIndicatorView.m */; };
-		FDB9DD05BFEAF6D2C87D4A19D3509E7E /* DefaultCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7462901FDE4251E0BB8F02A074DCBD4 /* DefaultCells.swift */; };
+		09300A6C1B39F630B6804B953D281DD6 /* Pods-Career Endorsement Tracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A17C19B11431330CF0CA90B51B44C18 /* Pods-Career Endorsement Tracker-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		097378AD23A7C5B7BAABC77D92462BC4 /* JGProgressHUDRingIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = E3104B32DC8E552A9435D277F96FB789 /* JGProgressHUDRingIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0DEE3938DFEE55FC7EE3B81D8CE0BB19 /* LBTAComponents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 681F7C6409FDCE87715EC014798BE210 /* LBTAComponents-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		186B403BDA11C95A90E8F0DA3BF0CDDB /* jg_hud_error.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7EAAED0AC810E3F07352F2C32307AE /* jg_hud_error.png */; };
+		1C7768F28E6238553E40BF41221FB834 /* JGProgressHUDErrorIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A3B91FCDD301D800262E74569F0B6B /* JGProgressHUDErrorIndicatorView.m */; };
+		258E75696493975FBC1BE02FAA29A329 /* JGProgressHUDFadeZoomAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 26A6AAC8269DB167263BF0B82E399C0D /* JGProgressHUDFadeZoomAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		29C0DE4164DB114E942372AD1D17E110 /* JGProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C849CAFD58C0F916B9D369D93E54D46 /* JGProgressHUD-dummy.m */; };
+		2A8A9F67FECE1E44445E76D1E7EF665A /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F374E076528E35CC6FF48FCA9A915 /* UIView+Anchors.swift */; };
+		3195707DF5DB1A3BE09E97971BF4189B /* DatasourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202E78ACCBDFF226CFB5D0A0CFC74957 /* DatasourceCell.swift */; };
+		31BB2E78B1A107C70EA3E395F8D17045 /* JGProgressHUDFadeZoomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D2435445F2262A144E6E238223D0E /* JGProgressHUDFadeZoomAnimation.m */; };
+		33B48D3FC4788328C7DCF07FBD91672F /* JGProgressHUDErrorIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = B37F829569B33D52410E8BBB1466CF79 /* JGProgressHUDErrorIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		357BE51B0A74E989BF64F981196B0E2A /* jg_hud_success@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73199C6EFF18BF5B388C06EA18C62C01 /* jg_hud_success@3x.png */; };
+		37C7527F11534A5930F0160E3593E1E6 /* UIColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323494A03612E092D8AEC5A7BF1C0F70 /* UIColor+Helper.swift */; };
+		3F8E686FFF579B74176951E6763EB72A /* jg_hud_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A64A2402F4B8FF3F5F528F3AB23345C /* jg_hud_error@2x.png */; };
+		412E1536AAB8BF3DE2507420A57483A9 /* LBTALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6C5A243B9640E6068248860E09393B /* LBTALabel.swift */; };
+		48E8299D0525E59833CE3DAF2A303C7E /* JGProgressHUDImageIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DA5862A0E02EB2CE58C6C7B04C15AA /* JGProgressHUDImageIndicatorView.m */; };
+		4A23C48AB1BC9D5DE8A8AEFEFB7489C7 /* jg_hud_success.png in Resources */ = {isa = PBXBuildFile; fileRef = 12826DC404BCEA4BF5CC0769646AD6CB /* jg_hud_success.png */; };
+		4CF8701FC720A0046BCDBC0D82EC92E9 /* JGProgressHUDSuccessIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92DA27CA98637C722BA69E4F64C73D /* JGProgressHUDSuccessIndicatorView.m */; };
+		5307D29793822653529A96F4736A2012 /* JGProgressHUDShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 059D0596C65DE5BB90351905DDF9E05C /* JGProgressHUDShadow.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5C1E2C439DD9FF6A93FF713B54CB73A6 /* NSMutableAttributedString+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7674DBA1D25F7A4831C245609377C32 /* NSMutableAttributedString+Helper.swift */; };
+		64EFCD71F4DBADF638A124DE2A8950E5 /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C140668AE6BE5789C024510C3C3262A5 /* CachedImageView.swift */; };
+		6C47C8836B942C9896B0ECD7DB563FD2 /* JGProgressHUDFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 519711C138CBED4B38D994995F89DC1F /* JGProgressHUDFadeAnimation.m */; };
+		7196ACE4DA6CA30E5D916B728CBA0932 /* JGProgressHUDIndeterminateIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1132969E74AC04E7F93AC1906E9EE4E5 /* JGProgressHUDIndeterminateIndicatorView.m */; };
+		73928DE04092BE4D62F5E6AD90150657 /* JGProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B0C58026F7F330528E536026AFA8EE /* JGProgressHUD.m */; };
+		852DD38B487D0A2DF9E62251A5A7DADE /* DiscardableImageCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39464AB68F10DE7C318DF23B746CD590 /* DiscardableImageCacheItem.swift */; };
+		8BB80DB6738DC210AEE4447A3EA0715B /* JGProgressHUDPieIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = F658CF6712ED92FBD382D046C466DA48 /* JGProgressHUDPieIndicatorView.m */; };
+		8F4838DE31217059AAD81E20C9B75C76 /* JGProgressHUD-Defines.h in Headers */ = {isa = PBXBuildFile; fileRef = F8ECC73228C8CE022D444758836A7C0D /* JGProgressHUD-Defines.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9582AF387C5C448D223DC50C7475ACEB /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64269D30DFE733A3E34CD960023FA04D /* Datasource.swift */; };
+		A9EC26785781ABB08FF471B6B1B5E420 /* DatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0372D1812D8D52A119EFFCF5CD7861E7 /* DatasourceController.swift */; };
+		AD4EFA13E57FEAE8266BC488C3B36726 /* UIImage+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F58CC1F2ABAEC585AF466754239D03B /* UIImage+Helper.swift */; };
+		B18490E1075339BD5C8BB290639B480F /* DefaultCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7462901FDE4251E0BB8F02A074DCBD4 /* DefaultCells.swift */; };
+		B5E5F28D6CD908F853280C3A4D33FE76 /* Pods-OneSignalNotificationServiceExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 721322D466B705A20C018668049E56E7 /* Pods-OneSignalNotificationServiceExtension-dummy.m */; };
+		BA8585704AAD237EB999749A004674AE /* JGProgressHUDIndeterminateIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 452A27B4C25A349C8D0192345C7DFB5B /* JGProgressHUDIndeterminateIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BB82D344F5127ED85CC5B66A7AA81CA3 /* Pods-Career Endorsement Tracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7A8488E8256C64B0F9A4D696057F87 /* Pods-Career Endorsement Tracker-dummy.m */; };
+		BE3DF19FE62BA58B20CA666682CFDCBF /* JGProgressHUDIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = A382B7B5FD56C26A6052658B0B282DEC /* JGProgressHUDIndicatorView.m */; };
+		C115B536D215D3C7609D9F511E2C843B /* jg_hud_success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27EACB45DFCD460DD424D2C82CAC2CB0 /* jg_hud_success@2x.png */; };
+		C6C76B2C57B8C3EBD05C7FC11B160073 /* LBTATextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF092018972D4B5A85F577BA0F214EA /* LBTATextView.swift */; };
+		C96DF516A35E686B4E7CCB68CA55043E /* JGProgressHUDShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7C84E61AEA9531F18C4DA3F58F160A /* JGProgressHUDShadow.m */; };
+		CF3D2D40DAF9800F1608F72442BB55F2 /* JGProgressHUDFadeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DFF7C61B0552C8E6DB2CFF5D75F59CE /* JGProgressHUDFadeAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CF3DBB7BC0B0F4263E5EFAC55DD698DA /* JGProgressHUDAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A425329D6ECBF069D26339A368B8642 /* JGProgressHUDAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D049415424CB8E9294125EA22951D764 /* JGProgressHUDPieIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = FF392C41E4277D3EE97CEBDF4760317C /* JGProgressHUDPieIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DD95BFF2BC5375D21CB3CE7C21490139 /* JGProgressHUDRingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3DF30C9CAC35DBD86405967DD62B52 /* JGProgressHUDRingIndicatorView.m */; };
+		E13A39E2473975C1539F6F76D69143CE /* JGProgressHUDAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CE84ABB814E1550E99C2EB991D5683 /* JGProgressHUDAnimation.m */; };
+		E465CDF840F7E98FC6D172606A0C6D31 /* JGProgressHUDIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 180C3D7357B04E37481653598EA4A053 /* JGProgressHUDIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E68476AECBD66E359127A35E1974DA9E /* LBTAComponents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4D64FDC0B5CA5F25702351677C8940 /* LBTAComponents-dummy.m */; };
+		EA2F6B1499A87AF28412DE2F82AC3EED /* JGProgressHUDSuccessIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = EDA1365012C7D77E519F8CA1A351774C /* JGProgressHUDSuccessIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EE306CA716940FFEB04A45AB851CD8A1 /* UIButton+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02385E792AF16308E2193802337039 /* UIButton+Helper.swift */; };
+		EF0ED0CFBE052C8E4EB93C158F86FB70 /* JGProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7EC3A9EACB563E8E5E4D35682769C7 /* JGProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F3FF2B48D886BBC7C98CA625EFC8C699 /* jg_hud_error@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB44165AB477299BDF40B5F78AFB829 /* jg_hud_error@3x.png */; };
+		FECF06EBB540A4393C12E033278B2A83 /* JGProgressHUDImageIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 517FA1AC66C87E798B6AAA0D33FC46A0 /* JGProgressHUDImageIndicatorView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		192EB0220FB4EA14894B88D3D2FA9ABC /* PBXContainerItemProxy */ = {
+		3325EA56326FA804017155A667BF40E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C5AC4BC1C09EC0710D237275B2FD8357;
+			remoteGlobalIDString = 210EB05CEC7AD9C148F90F752DE74C48;
+			remoteInfo = OneSignal;
+		};
+		3DF5BEE9CF86397F5CCB746B4A5C9A03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 507F07FC62AFC9C6A73513E671361060;
 			remoteInfo = LBTAComponents;
 		};
-		1E90C2FCE9823A07470007F350A557FE /* PBXContainerItemProxy */ = {
+		6E8E6DBA6A24CB353BD7312320D9A4E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FAEC05ABF71F3F43027EE756A42919F8;
-			remoteInfo = "OneSignal-iOS12.2";
-		};
-		F1F07D1D9260D10610BE9B3E73C4A890 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 86D319BF7714B1026380F8462B6EDA06;
+			remoteGlobalIDString = BBD6B43FA0F7FFBCD1978EBE76F99021;
 			remoteInfo = "JGProgressHUD-JGProgressHUD";
 		};
-		F32732786263B9D2C784C5B8CBF57100 /* PBXContainerItemProxy */ = {
+		C2C2C7A6BBB9009BF1A8DFD62186999D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0EA75190C33F859B4477D6BA0A1874E6;
-			remoteInfo = "OneSignal-iOS10.0";
-		};
-		F542140899C46CE1E4583B31D7C88729 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 82E45B8D36CA2A9FEA6005915DD6188F;
+			remoteGlobalIDString = 6F3964F174D0EBFB0D64F8DBC20E1429;
 			remoteInfo = JGProgressHUD;
+		};
+		DBB254FE065C953494479A157A0DDE34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 210EB05CEC7AD9C148F90F752DE74C48;
+			remoteInfo = OneSignal;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0372D1812D8D52A119EFFCF5CD7861E7 /* DatasourceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatasourceController.swift; path = LBTAComponents/Classes/DatasourceController.swift; sourceTree = "<group>"; };
-		04039AE2D6FBF3EBF387B0E75CCFCCF3 /* JGProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JGProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		0500A6CA258CC35B1C36D64585373316 /* Pods-Career Endorsement Tracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Career Endorsement Tracker-acknowledgements.plist"; sourceTree = "<group>"; };
-		1624B39AB256EE52D34397524FE40200 /* Pods-Career Endorsement Tracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Career Endorsement Tracker-umbrella.h"; sourceTree = "<group>"; };
-		1ABEC1CB96E36B820C7C2A2D5E905698 /* JGProgressHUDPieIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDPieIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDPieIndicatorView.m; sourceTree = "<group>"; };
-		1B0B1872A34F6189E44F4D6A4184384D /* Pods-OneSignalNotificationServiceExtension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OneSignalNotificationServiceExtension-acknowledgements.plist"; sourceTree = "<group>"; };
-		1EF59F144012767AB6A9D9AEBAA69675 /* JGProgressHUDFadeZoomAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDFadeZoomAnimation.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeZoomAnimation.m; sourceTree = "<group>"; };
+		059D0596C65DE5BB90351905DDF9E05C /* JGProgressHUDShadow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDShadow.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDShadow.h; sourceTree = "<group>"; };
+		0E30C7872FDB35946B7D021A9FEAFA77 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = iOS_SDK/OneSignalSDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
+		11001147461FF572E097A439293D4BDD /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		1132969E74AC04E7F93AC1906E9EE4E5 /* JGProgressHUDIndeterminateIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDIndeterminateIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDIndeterminateIndicatorView.m; sourceTree = "<group>"; };
+		12826DC404BCEA4BF5CC0769646AD6CB /* jg_hud_success.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = jg_hud_success.png; path = JGProgressHUD/Resources/jg_hud_success.png; sourceTree = "<group>"; };
+		1809E2EE5B501F587F96A3CE966751B2 /* libPods-Career Endorsement Tracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Career Endorsement Tracker.a"; path = "libPods-Career Endorsement Tracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		180C3D7357B04E37481653598EA4A053 /* JGProgressHUDIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDIndicatorView.h; sourceTree = "<group>"; };
+		1AB44165AB477299BDF40B5F78AFB829 /* jg_hud_error@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "jg_hud_error@3x.png"; path = "JGProgressHUD/Resources/jg_hud_error@3x.png"; sourceTree = "<group>"; };
+		1EAB8D37B99948A89EF0E7DDC01A656B /* OneSignal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OneSignal.xcconfig; sourceTree = "<group>"; };
+		1F7E41DB50904F157472B75834F118AD /* Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown"; sourceTree = "<group>"; };
 		202E78ACCBDFF226CFB5D0A0CFC74957 /* DatasourceCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatasourceCell.swift; path = LBTAComponents/Classes/DatasourceCell.swift; sourceTree = "<group>"; };
-		249440F2D085D891D0182A251954C697 /* JGProgressHUDIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDIndicatorView.m; sourceTree = "<group>"; };
-		28681496063037F13910018549EBE35D /* JGProgressHUDFadeAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDFadeAnimation.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeAnimation.m; sourceTree = "<group>"; };
-		28BF6E63AA8DA8D666C8B586FE2F6BB9 /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-OneSignalNotificationServiceExtension.a"; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24ED1ED23475BF8DDBF1A5E0AFE9F8F7 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		26A6AAC8269DB167263BF0B82E399C0D /* JGProgressHUDFadeZoomAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDFadeZoomAnimation.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeZoomAnimation.h; sourceTree = "<group>"; };
+		27EACB45DFCD460DD424D2C82CAC2CB0 /* jg_hud_success@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "jg_hud_success@2x.png"; path = "JGProgressHUD/Resources/jg_hud_success@2x.png"; sourceTree = "<group>"; };
+		2A425329D6ECBF069D26339A368B8642 /* JGProgressHUDAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDAnimation.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDAnimation.h; sourceTree = "<group>"; };
 		2D6C5A243B9640E6068248860E09393B /* LBTALabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LBTALabel.swift; path = LBTAComponents/Classes/LBTALabel.swift; sourceTree = "<group>"; };
+		2D7A8488E8256C64B0F9A4D696057F87 /* Pods-Career Endorsement Tracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Career Endorsement Tracker-dummy.m"; sourceTree = "<group>"; };
+		2E92DA27CA98637C722BA69E4F64C73D /* JGProgressHUDSuccessIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDSuccessIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDSuccessIndicatorView.m; sourceTree = "<group>"; };
 		323494A03612E092D8AEC5A7BF1C0F70 /* UIColor+Helper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Helper.swift"; path = "LBTAComponents/Classes/UIColor+Helper.swift"; sourceTree = "<group>"; };
+		32A3B91FCDD301D800262E74569F0B6B /* JGProgressHUDErrorIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDErrorIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDErrorIndicatorView.m; sourceTree = "<group>"; };
+		36E3149BBAD791EE8A0DCECF4F2A4CF8 /* LBTAComponents.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LBTAComponents.modulemap; sourceTree = "<group>"; };
 		39464AB68F10DE7C318DF23B746CD590 /* DiscardableImageCacheItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiscardableImageCacheItem.swift; path = LBTAComponents/Classes/DiscardableImageCacheItem.swift; sourceTree = "<group>"; };
-		3B206072924EE6DAE95ED015863F9696 /* JGProgressHUDRingIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDRingIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDRingIndicatorView.m; sourceTree = "<group>"; };
-		406C81DED568CFAE201CAFCFF14C5B31 /* Pods-Career Endorsement Tracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Career Endorsement Tracker.modulemap"; sourceTree = "<group>"; };
-		40FFE857DD5BCEE77B885CE733AFE87C /* JGProgressHUDAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDAnimation.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDAnimation.m; sourceTree = "<group>"; };
-		414013D9DBA6A289278C2CB7295230B4 /* libJGProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libJGProgressHUD.a; path = libJGProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		445CA2EFCD7428C993E3F8495EFA9232 /* JGProgressHUDImageIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDImageIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDImageIndicatorView.h; sourceTree = "<group>"; };
-		457F9F0A940DD13151AB601D0689CCB4 /* libPods-Career Endorsement Tracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Career Endorsement Tracker.a"; path = "libPods-Career Endorsement Tracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C6B5078C945DA998806D97DA215DD55 /* OneSignal-iOS12.2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "OneSignal-iOS12.2.xcconfig"; path = "../OneSignal-iOS12.2/OneSignal-iOS12.2.xcconfig"; sourceTree = "<group>"; };
-		4D3E0499918950A87749B1AE773FC5E5 /* LBTAComponents-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LBTAComponents-umbrella.h"; sourceTree = "<group>"; };
-		4E3BEB7854E517F26CFA1E2779141A3F /* jg_hud_error.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = jg_hud_error.png; path = JGProgressHUD/Resources/jg_hud_error.png; sourceTree = "<group>"; };
-		532F61F47324D807CDF2AB3C456498B0 /* JGProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JGProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		5494FFC607F4C1CC9580FDDB20DF6001 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = iOS_SDK/OneSignalSDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
-		57AC14E85B2E260707E1C02DEE82B720 /* jg_hud_error@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "jg_hud_error@3x.png"; path = "JGProgressHUD/Resources/jg_hud_error@3x.png"; sourceTree = "<group>"; };
-		5C7E3972B588475AD22441D87402C8EF /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		3F7EAAED0AC810E3F07352F2C32307AE /* jg_hud_error.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = jg_hud_error.png; path = JGProgressHUD/Resources/jg_hud_error.png; sourceTree = "<group>"; };
+		452A27B4C25A349C8D0192345C7DFB5B /* JGProgressHUDIndeterminateIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDIndeterminateIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDIndeterminateIndicatorView.h; sourceTree = "<group>"; };
+		4AF3B972C94DFF11700E306F18F01DF3 /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-OneSignalNotificationServiceExtension.a"; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C8D2435445F2262A144E6E238223D0E /* JGProgressHUDFadeZoomAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDFadeZoomAnimation.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeZoomAnimation.m; sourceTree = "<group>"; };
+		50B0C58026F7F330528E536026AFA8EE /* JGProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUD.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUD.m; sourceTree = "<group>"; };
+		50BFFE42053E6D006359F73E08370CE1 /* JGProgressHUD.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = JGProgressHUD.bundle; path = "JGProgressHUD-JGProgressHUD.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		517FA1AC66C87E798B6AAA0D33FC46A0 /* JGProgressHUDImageIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDImageIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDImageIndicatorView.h; sourceTree = "<group>"; };
+		519711C138CBED4B38D994995F89DC1F /* JGProgressHUDFadeAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDFadeAnimation.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeAnimation.m; sourceTree = "<group>"; };
 		5CF092018972D4B5A85F577BA0F214EA /* LBTATextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LBTATextView.swift; path = LBTAComponents/Classes/LBTATextView.swift; sourceTree = "<group>"; };
-		5D78415D0DBC7522D365009631A1EA12 /* JGProgressHUDSuccessIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDSuccessIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDSuccessIndicatorView.m; sourceTree = "<group>"; };
+		5DFF7C61B0552C8E6DB2CFF5D75F59CE /* JGProgressHUDFadeAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDFadeAnimation.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeAnimation.h; sourceTree = "<group>"; };
 		5E02385E792AF16308E2193802337039 /* UIButton+Helper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Helper.swift"; path = "LBTAComponents/Classes/UIButton+Helper.swift"; sourceTree = "<group>"; };
 		64269D30DFE733A3E34CD960023FA04D /* Datasource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Datasource.swift; path = LBTAComponents/Classes/Datasource.swift; sourceTree = "<group>"; };
-		65C8E1E2C06AC18C2EADA1193DA636D0 /* ResourceBundle-JGProgressHUD-JGProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-JGProgressHUD-JGProgressHUD-Info.plist"; sourceTree = "<group>"; };
-		69ABFE76E7F0FC5F210EEA3046ABEBC1 /* JGProgressHUDFadeZoomAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDFadeZoomAnimation.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeZoomAnimation.h; sourceTree = "<group>"; };
-		6B2F909F7A81CF1B18635D15433D259C /* OneSignal-iOS10.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OneSignal-iOS10.0.xcconfig"; sourceTree = "<group>"; };
-		6D77D9C23E99309A48C451B0ABC40102 /* LBTAComponents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LBTAComponents-dummy.m"; sourceTree = "<group>"; };
-		7608136B24B361F4C3484F6024F35E9F /* jg_hud_success.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = jg_hud_success.png; path = JGProgressHUD/Resources/jg_hud_success.png; sourceTree = "<group>"; };
+		681F7C6409FDCE87715EC014798BE210 /* LBTAComponents-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LBTAComponents-umbrella.h"; sourceTree = "<group>"; };
+		6C59B339E434E5D7B7354CCF5F0CA45E /* libLBTAComponents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLBTAComponents.a; path = libLBTAComponents.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F73FD043172EB9B9FD41A1B6F56B21B /* JGProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JGProgressHUD.xcconfig; sourceTree = "<group>"; };
+		721322D466B705A20C018668049E56E7 /* Pods-OneSignalNotificationServiceExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OneSignalNotificationServiceExtension-dummy.m"; sourceTree = "<group>"; };
+		72DA4FF49EF2C7B635958CD36B6DCFCB /* Pods-Career Endorsement Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Career Endorsement Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		73199C6EFF18BF5B388C06EA18C62C01 /* jg_hud_success@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "jg_hud_success@3x.png"; path = "JGProgressHUD/Resources/jg_hud_success@3x.png"; sourceTree = "<group>"; };
+		7A17C19B11431330CF0CA90B51B44C18 /* Pods-Career Endorsement Tracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Career Endorsement Tracker-umbrella.h"; sourceTree = "<group>"; };
+		7A64A2402F4B8FF3F5F528F3AB23345C /* jg_hud_error@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "jg_hud_error@2x.png"; path = "JGProgressHUD/Resources/jg_hud_error@2x.png"; sourceTree = "<group>"; };
+		7C7C84E61AEA9531F18C4DA3F58F160A /* JGProgressHUDShadow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDShadow.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDShadow.m; sourceTree = "<group>"; };
 		7F58CC1F2ABAEC585AF466754239D03B /* UIImage+Helper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Helper.swift"; path = "LBTAComponents/Classes/UIImage+Helper.swift"; sourceTree = "<group>"; };
-		800B29CC112D8DFB1E41FFE928E68A16 /* JGProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUD.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUD.m; sourceTree = "<group>"; };
-		8774F651E044A39DCAA0051D4A342E88 /* JGProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JGProgressHUD.xcconfig; sourceTree = "<group>"; };
-		92236FC0ABDB78F87073A82D658C1C6B /* JGProgressHUD.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = JGProgressHUD.bundle; path = "JGProgressHUD-JGProgressHUD.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BA07CF650B4249D4180A42ED08D9768 /* LBTAComponents.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LBTAComponents.modulemap; sourceTree = "<group>"; };
+		7FBAFAA66E9C7401884F439AE8BC662C /* libJGProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libJGProgressHUD.a; path = libJGProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FC6D9ACFEEC1B06852632123C3B997E /* ResourceBundle-JGProgressHUD-JGProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-JGProgressHUD-JGProgressHUD-Info.plist"; sourceTree = "<group>"; };
+		92DA5862A0E02EB2CE58C6C7B04C15AA /* JGProgressHUDImageIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDImageIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDImageIndicatorView.m; sourceTree = "<group>"; };
+		9C849CAFD58C0F916B9D369D93E54D46 /* JGProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JGProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F0C4212DCA6F002B37A083A08D5B325 /* JGProgressHUDFadeAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDFadeAnimation.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeAnimation.h; sourceTree = "<group>"; };
-		A15715B7AF5A711EF7D3A6D573B1CA92 /* Pods-Career Endorsement Tracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Career Endorsement Tracker-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A96FEA461D63C325BBECB380700A7C71 /* JGProgressHUD-Defines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "JGProgressHUD-Defines.h"; path = "JGProgressHUD/JGProgressHUD/JGProgressHUD-Defines.h"; sourceTree = "<group>"; };
+		9F7EC3A9EACB563E8E5E4D35682769C7 /* JGProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUD.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUD.h; sourceTree = "<group>"; };
+		A2CE84ABB814E1550E99C2EB991D5683 /* JGProgressHUDAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDAnimation.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDAnimation.m; sourceTree = "<group>"; };
+		A382B7B5FD56C26A6052658B0B282DEC /* JGProgressHUDIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDIndicatorView.m; sourceTree = "<group>"; };
 		A97F374E076528E35CC6FF48FCA9A915 /* UIView+Anchors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Anchors.swift"; path = "LBTAComponents/Classes/UIView+Anchors.swift"; sourceTree = "<group>"; };
-		AB62E2D632F9772D56D0C97FD1892E94 /* jg_hud_success@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "jg_hud_success@3x.png"; path = "JGProgressHUD/Resources/jg_hud_success@3x.png"; sourceTree = "<group>"; };
-		AC68B5C004E20EFA8926EC51EB5C45B8 /* JGProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUD.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUD.h; sourceTree = "<group>"; };
-		B137A6CFDE2C21EFB75961C59AB90EAA /* LBTAComponents-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LBTAComponents-prefix.pch"; sourceTree = "<group>"; };
+		AA3DF30C9CAC35DBD86405967DD62B52 /* JGProgressHUDRingIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDRingIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDRingIndicatorView.m; sourceTree = "<group>"; };
+		B24E48166A0BCFC1D09DDE570C65FAA2 /* LBTAComponents-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LBTAComponents-prefix.pch"; sourceTree = "<group>"; };
+		B37F829569B33D52410E8BBB1466CF79 /* JGProgressHUDErrorIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDErrorIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDErrorIndicatorView.h; sourceTree = "<group>"; };
 		B7674DBA1D25F7A4831C245609377C32 /* NSMutableAttributedString+Helper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSMutableAttributedString+Helper.swift"; path = "LBTAComponents/Classes/NSMutableAttributedString+Helper.swift"; sourceTree = "<group>"; };
-		BE4A9D4545B04D83B4177743001FB37F /* Pods-OneSignalNotificationServiceExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OneSignalNotificationServiceExtension-dummy.m"; sourceTree = "<group>"; };
-		BE89D59076C68F8D6A54B66A2C8A8231 /* JGProgressHUDIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDIndicatorView.h; sourceTree = "<group>"; };
-		BEA3871FF5ECD33221C7245F5C0F2BA3 /* JGProgressHUDPieIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDPieIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDPieIndicatorView.h; sourceTree = "<group>"; };
-		BFA8B65815CBCCD9E2B1BD617289B1B4 /* Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C140668AE6BE5789C024510C3C3262A5 /* CachedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CachedImageView.swift; path = LBTAComponents/Classes/CachedImageView.swift; sourceTree = "<group>"; };
-		C298D49BCE5DC968B9F5CBBD58B70685 /* JGProgressHUDErrorIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDErrorIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDErrorIndicatorView.m; sourceTree = "<group>"; };
-		C2CA74A6DF7734B082E76154BE0813AE /* LBTAComponents.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LBTAComponents.xcconfig; sourceTree = "<group>"; };
-		C41B245E0CE0F2DA8A06CA48B69CAF98 /* JGProgressHUDIndeterminateIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDIndeterminateIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDIndeterminateIndicatorView.m; sourceTree = "<group>"; };
-		C65348E184399299BBEC549B43623B9E /* Pods-Career Endorsement Tracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Career Endorsement Tracker-dummy.m"; sourceTree = "<group>"; };
-		CB01E98C1619E5A95257CB348B1284CA /* Pods-Career Endorsement Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Career Endorsement Tracker.release.xcconfig"; sourceTree = "<group>"; };
-		CBB358120309E4D0A3DEA9CED6FA7E7D /* JGProgressHUDShadow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDShadow.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDShadow.h; sourceTree = "<group>"; };
-		CF04227FBCB79A0F1DFD002EBA99BF92 /* jg_hud_error@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "jg_hud_error@2x.png"; path = "JGProgressHUD/Resources/jg_hud_error@2x.png"; sourceTree = "<group>"; };
-		D1B6F30DF86EE7E06795941DE5DB926B /* Pods-Career Endorsement Tracker-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Career Endorsement Tracker-resources.sh"; sourceTree = "<group>"; };
-		D658E16E6883737F455730FDD87F931D /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
-		E57DA64A98474BAC29794FD5A840CF21 /* JGProgressHUDSuccessIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDSuccessIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDSuccessIndicatorView.h; sourceTree = "<group>"; };
-		E7C09A1903E5125FB3F822DD315E9D15 /* JGProgressHUDErrorIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDErrorIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDErrorIndicatorView.h; sourceTree = "<group>"; };
-		E8D5D2881BA88870A2C75A49A429ED0F /* JGProgressHUDAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDAnimation.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDAnimation.h; sourceTree = "<group>"; };
-		EAC05D0835D31EB14F2E143043399AA9 /* JGProgressHUDRingIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDRingIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDRingIndicatorView.h; sourceTree = "<group>"; };
-		F56F2E1C0A62E2BA8D483697578602AD /* JGProgressHUDShadow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDShadow.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDShadow.m; sourceTree = "<group>"; };
-		F6647A83F2F9CB41EC8124D42EB1B82E /* libLBTAComponents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLBTAComponents.a; path = libLBTAComponents.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C38E0116865AF11425871DCDF309E8B8 /* LBTAComponents.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LBTAComponents.xcconfig; sourceTree = "<group>"; };
+		C3A9A4D68ADFBD6C0760BEE65CBE7DD5 /* Pods-Career Endorsement Tracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Career Endorsement Tracker-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C4837065FE6E08ECD65085A224B468A2 /* Pods-Career Endorsement Tracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Career Endorsement Tracker-acknowledgements.plist"; sourceTree = "<group>"; };
+		C9DA95AA04B86E69AD83D29661CF58ED /* Pods-OneSignalNotificationServiceExtension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OneSignalNotificationServiceExtension-acknowledgements.plist"; sourceTree = "<group>"; };
+		CBF78B9BFF4240CA7B51399F287EA9B7 /* Pods-Career Endorsement Tracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Career Endorsement Tracker.modulemap"; sourceTree = "<group>"; };
+		DCA104D476A3FF3A01521AFF445AB91D /* Pods-Career Endorsement Tracker-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Career Endorsement Tracker-resources.sh"; sourceTree = "<group>"; };
+		DE4D64FDC0B5CA5F25702351677C8940 /* LBTAComponents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LBTAComponents-dummy.m"; sourceTree = "<group>"; };
+		E19675188EA192FD3E65DE0100E07CD3 /* Pods-Career Endorsement Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Career Endorsement Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		E3104B32DC8E552A9435D277F96FB789 /* JGProgressHUDRingIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDRingIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDRingIndicatorView.h; sourceTree = "<group>"; };
+		EDA1365012C7D77E519F8CA1A351774C /* JGProgressHUDSuccessIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDSuccessIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDSuccessIndicatorView.h; sourceTree = "<group>"; };
+		F658CF6712ED92FBD382D046C466DA48 /* JGProgressHUDPieIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDPieIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDPieIndicatorView.m; sourceTree = "<group>"; };
 		F7462901FDE4251E0BB8F02A074DCBD4 /* DefaultCells.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultCells.swift; path = LBTAComponents/Classes/DefaultCells.swift; sourceTree = "<group>"; };
-		F8B4BFA7A1250F588DA11709991EB655 /* jg_hud_success@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "jg_hud_success@2x.png"; path = "JGProgressHUD/Resources/jg_hud_success@2x.png"; sourceTree = "<group>"; };
-		F8BD4F5B581A4C5A48F08BDC2BDE6722 /* JGProgressHUDIndeterminateIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDIndeterminateIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDIndeterminateIndicatorView.h; sourceTree = "<group>"; };
-		FCFCA46F2DABAE159D0D43891F73FE31 /* Pods-Career Endorsement Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Career Endorsement Tracker.debug.xcconfig"; sourceTree = "<group>"; };
-		FD71AA272F9BA985386786F1769E27D1 /* JGProgressHUDImageIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDImageIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDImageIndicatorView.m; sourceTree = "<group>"; };
+		F8ECC73228C8CE022D444758836A7C0D /* JGProgressHUD-Defines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "JGProgressHUD-Defines.h"; path = "JGProgressHUD/JGProgressHUD/JGProgressHUD-Defines.h"; sourceTree = "<group>"; };
+		FF392C41E4277D3EE97CEBDF4760317C /* JGProgressHUDPieIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDPieIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDPieIndicatorView.h; sourceTree = "<group>"; };
+		FF5A9FFF75FAE4D6CB39A9A8ABAE300A /* JGProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JGProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		58EF822C6969735BC382785F949F697B /* Frameworks */ = {
+		1191AA5E12D6D58F005295A22E300BBF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		634EBF09263A08CC972AE08C44DB4E9E /* Frameworks */ = {
+		2C38681B35E9BCA7480867A3AAB72161 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		64EF3FF7306F3B368F59A6A471C36C9F /* Frameworks */ = {
+		BEF056DFDB9F205A097278E752AE4FF5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6DC514351FC7208DF617B734E76769AD /* Frameworks */ = {
+		C221FB8544E6B8EF024DD9C409C74CFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F58B16925E2F182BE34BF44AC5B382FD /* Frameworks */ = {
+		DB73DE7F429FDB38CABB5A0EB7CC786B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -235,23 +225,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E0920CD7565181491FECEFA649F0933 /* Products */ = {
+		0573CA9399CE82648C5CF351B8177917 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				92236FC0ABDB78F87073A82D658C1C6B /* JGProgressHUD.bundle */,
-				414013D9DBA6A289278C2CB7295230B4 /* libJGProgressHUD.a */,
-				F6647A83F2F9CB41EC8124D42EB1B82E /* libLBTAComponents.a */,
-				457F9F0A940DD13151AB601D0689CCB4 /* libPods-Career Endorsement Tracker.a */,
-				28BF6E63AA8DA8D666C8B586FE2F6BB9 /* libPods-OneSignalNotificationServiceExtension.a */,
+				36E3149BBAD791EE8A0DCECF4F2A4CF8 /* LBTAComponents.modulemap */,
+				C38E0116865AF11425871DCDF309E8B8 /* LBTAComponents.xcconfig */,
+				DE4D64FDC0B5CA5F25702351677C8940 /* LBTAComponents-dummy.m */,
+				B24E48166A0BCFC1D09DDE570C65FAA2 /* LBTAComponents-prefix.pch */,
+				681F7C6409FDCE87715EC014798BE210 /* LBTAComponents-umbrella.h */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/LBTAComponents";
 			sourceTree = "<group>";
 		};
 		241DE2EDCD9D7213472EE09F8C12375A /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AFFDDDF20D0D0796476040FAB7E25241 /* Pods-Career Endorsement Tracker */,
-				506689D54DE55EB974A895E3E50318F7 /* Pods-OneSignalNotificationServiceExtension */,
+				50AC7C9B315F01057FD0BB7BFE488683 /* Pods-Career Endorsement Tracker */,
+				9A6D757A86F74DDC4BD3C6192350EFF1 /* Pods-OneSignalNotificationServiceExtension */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -272,127 +263,125 @@
 				323494A03612E092D8AEC5A7BF1C0F70 /* UIColor+Helper.swift */,
 				7F58CC1F2ABAEC585AF466754239D03B /* UIImage+Helper.swift */,
 				A97F374E076528E35CC6FF48FCA9A915 /* UIView+Anchors.swift */,
-				F9D2AD889A6F795933C21DC5A36C72B1 /* Support Files */,
+				0573CA9399CE82648C5CF351B8177917 /* Support Files */,
 			);
 			name = LBTAComponents;
 			path = LBTAComponents;
 			sourceTree = "<group>";
 		};
-		506689D54DE55EB974A895E3E50318F7 /* Pods-OneSignalNotificationServiceExtension */ = {
+		43D8882833AF36347D655B0AAF72760C /* JGProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				BFA8B65815CBCCD9E2B1BD617289B1B4 /* Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown */,
-				1B0B1872A34F6189E44F4D6A4184384D /* Pods-OneSignalNotificationServiceExtension-acknowledgements.plist */,
-				BE4A9D4545B04D83B4177743001FB37F /* Pods-OneSignalNotificationServiceExtension-dummy.m */,
-				5C7E3972B588475AD22441D87402C8EF /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
-				D658E16E6883737F455730FDD87F931D /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+				9F7EC3A9EACB563E8E5E4D35682769C7 /* JGProgressHUD.h */,
+				50B0C58026F7F330528E536026AFA8EE /* JGProgressHUD.m */,
+				F8ECC73228C8CE022D444758836A7C0D /* JGProgressHUD-Defines.h */,
+				2A425329D6ECBF069D26339A368B8642 /* JGProgressHUDAnimation.h */,
+				A2CE84ABB814E1550E99C2EB991D5683 /* JGProgressHUDAnimation.m */,
+				B37F829569B33D52410E8BBB1466CF79 /* JGProgressHUDErrorIndicatorView.h */,
+				32A3B91FCDD301D800262E74569F0B6B /* JGProgressHUDErrorIndicatorView.m */,
+				5DFF7C61B0552C8E6DB2CFF5D75F59CE /* JGProgressHUDFadeAnimation.h */,
+				519711C138CBED4B38D994995F89DC1F /* JGProgressHUDFadeAnimation.m */,
+				26A6AAC8269DB167263BF0B82E399C0D /* JGProgressHUDFadeZoomAnimation.h */,
+				4C8D2435445F2262A144E6E238223D0E /* JGProgressHUDFadeZoomAnimation.m */,
+				517FA1AC66C87E798B6AAA0D33FC46A0 /* JGProgressHUDImageIndicatorView.h */,
+				92DA5862A0E02EB2CE58C6C7B04C15AA /* JGProgressHUDImageIndicatorView.m */,
+				452A27B4C25A349C8D0192345C7DFB5B /* JGProgressHUDIndeterminateIndicatorView.h */,
+				1132969E74AC04E7F93AC1906E9EE4E5 /* JGProgressHUDIndeterminateIndicatorView.m */,
+				180C3D7357B04E37481653598EA4A053 /* JGProgressHUDIndicatorView.h */,
+				A382B7B5FD56C26A6052658B0B282DEC /* JGProgressHUDIndicatorView.m */,
+				FF392C41E4277D3EE97CEBDF4760317C /* JGProgressHUDPieIndicatorView.h */,
+				F658CF6712ED92FBD382D046C466DA48 /* JGProgressHUDPieIndicatorView.m */,
+				E3104B32DC8E552A9435D277F96FB789 /* JGProgressHUDRingIndicatorView.h */,
+				AA3DF30C9CAC35DBD86405967DD62B52 /* JGProgressHUDRingIndicatorView.m */,
+				059D0596C65DE5BB90351905DDF9E05C /* JGProgressHUDShadow.h */,
+				7C7C84E61AEA9531F18C4DA3F58F160A /* JGProgressHUDShadow.m */,
+				EDA1365012C7D77E519F8CA1A351774C /* JGProgressHUDSuccessIndicatorView.h */,
+				2E92DA27CA98637C722BA69E4F64C73D /* JGProgressHUDSuccessIndicatorView.m */,
+				E9A70DDA0CFBDB9B92EDF76F1CA6D22F /* Resources */,
+				CB3EBBEE1165E2A386C07D574EAB6A79 /* Support Files */,
 			);
-			name = "Pods-OneSignalNotificationServiceExtension";
-			path = "Target Support Files/Pods-OneSignalNotificationServiceExtension";
+			name = JGProgressHUD;
+			path = JGProgressHUD;
 			sourceTree = "<group>";
 		};
-		70214EFA83D6101732BDB184DAD8A737 /* Support Files */ = {
+		50AC7C9B315F01057FD0BB7BFE488683 /* Pods-Career Endorsement Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				8774F651E044A39DCAA0051D4A342E88 /* JGProgressHUD.xcconfig */,
-				04039AE2D6FBF3EBF387B0E75CCFCCF3 /* JGProgressHUD-dummy.m */,
-				532F61F47324D807CDF2AB3C456498B0 /* JGProgressHUD-prefix.pch */,
-				65C8E1E2C06AC18C2EADA1193DA636D0 /* ResourceBundle-JGProgressHUD-JGProgressHUD-Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/JGProgressHUD";
-			sourceTree = "<group>";
-		};
-		788B63675C3BF19A9E62929667B6F1B5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5494FFC607F4C1CC9580FDDB20DF6001 /* OneSignal.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A21DFF946B22654AB5512DDC9C741792 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6B2F909F7A81CF1B18635D15433D259C /* OneSignal-iOS10.0.xcconfig */,
-				4C6B5078C945DA998806D97DA215DD55 /* OneSignal-iOS12.2.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/OneSignal-iOS10.0";
-			sourceTree = "<group>";
-		};
-		AFFDDDF20D0D0796476040FAB7E25241 /* Pods-Career Endorsement Tracker */ = {
-			isa = PBXGroup;
-			children = (
-				406C81DED568CFAE201CAFCFF14C5B31 /* Pods-Career Endorsement Tracker.modulemap */,
-				A15715B7AF5A711EF7D3A6D573B1CA92 /* Pods-Career Endorsement Tracker-acknowledgements.markdown */,
-				0500A6CA258CC35B1C36D64585373316 /* Pods-Career Endorsement Tracker-acknowledgements.plist */,
-				C65348E184399299BBEC549B43623B9E /* Pods-Career Endorsement Tracker-dummy.m */,
-				D1B6F30DF86EE7E06795941DE5DB926B /* Pods-Career Endorsement Tracker-resources.sh */,
-				1624B39AB256EE52D34397524FE40200 /* Pods-Career Endorsement Tracker-umbrella.h */,
-				FCFCA46F2DABAE159D0D43891F73FE31 /* Pods-Career Endorsement Tracker.debug.xcconfig */,
-				CB01E98C1619E5A95257CB348B1284CA /* Pods-Career Endorsement Tracker.release.xcconfig */,
+				CBF78B9BFF4240CA7B51399F287EA9B7 /* Pods-Career Endorsement Tracker.modulemap */,
+				C3A9A4D68ADFBD6C0760BEE65CBE7DD5 /* Pods-Career Endorsement Tracker-acknowledgements.markdown */,
+				C4837065FE6E08ECD65085A224B468A2 /* Pods-Career Endorsement Tracker-acknowledgements.plist */,
+				2D7A8488E8256C64B0F9A4D696057F87 /* Pods-Career Endorsement Tracker-dummy.m */,
+				DCA104D476A3FF3A01521AFF445AB91D /* Pods-Career Endorsement Tracker-resources.sh */,
+				7A17C19B11431330CF0CA90B51B44C18 /* Pods-Career Endorsement Tracker-umbrella.h */,
+				72DA4FF49EF2C7B635958CD36B6DCFCB /* Pods-Career Endorsement Tracker.debug.xcconfig */,
+				E19675188EA192FD3E65DE0100E07CD3 /* Pods-Career Endorsement Tracker.release.xcconfig */,
 			);
 			name = "Pods-Career Endorsement Tracker";
 			path = "Target Support Files/Pods-Career Endorsement Tracker";
 			sourceTree = "<group>";
 		};
-		B21DF320EEFC5FFB6997B0F69D457797 /* Resources */ = {
+		7C26B844A52BC8D278D92D043FFE29C8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4E3BEB7854E517F26CFA1E2779141A3F /* jg_hud_error.png */,
-				CF04227FBCB79A0F1DFD002EBA99BF92 /* jg_hud_error@2x.png */,
-				57AC14E85B2E260707E1C02DEE82B720 /* jg_hud_error@3x.png */,
-				7608136B24B361F4C3484F6024F35E9F /* jg_hud_success.png */,
-				F8B4BFA7A1250F588DA11709991EB655 /* jg_hud_success@2x.png */,
-				AB62E2D632F9772D56D0C97FD1892E94 /* jg_hud_success@3x.png */,
+				50BFFE42053E6D006359F73E08370CE1 /* JGProgressHUD.bundle */,
+				7FBAFAA66E9C7401884F439AE8BC662C /* libJGProgressHUD.a */,
+				6C59B339E434E5D7B7354CCF5F0CA45E /* libLBTAComponents.a */,
+				1809E2EE5B501F587F96A3CE966751B2 /* libPods-Career Endorsement Tracker.a */,
+				4AF3B972C94DFF11700E306F18F01DF3 /* libPods-OneSignalNotificationServiceExtension.a */,
 			);
-			name = Resources;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		C364F77EB6FEAE1AFAAD7AD7BA339C78 /* OneSignal */ = {
+		7FC323F9231D753C08E00F895234C4F6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				788B63675C3BF19A9E62929667B6F1B5 /* Frameworks */,
-				A21DFF946B22654AB5512DDC9C741792 /* Support Files */,
+				1EAB8D37B99948A89EF0E7DDC01A656B /* OneSignal.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/OneSignal";
+			sourceTree = "<group>";
+		};
+		91BC3CC0E88EB10670E1C4F86CCB96FC /* OneSignal */ = {
+			isa = PBXGroup;
+			children = (
+				BBC5702DBF9BDDD3F9F442724A5D2688 /* Frameworks */,
+				7FC323F9231D753C08E00F895234C4F6 /* Support Files */,
 			);
 			name = OneSignal;
 			path = OneSignal;
 			sourceTree = "<group>";
 		};
-		CE0D973988E206C960F5467782598846 /* JGProgressHUD */ = {
+		9A6D757A86F74DDC4BD3C6192350EFF1 /* Pods-OneSignalNotificationServiceExtension */ = {
 			isa = PBXGroup;
 			children = (
-				AC68B5C004E20EFA8926EC51EB5C45B8 /* JGProgressHUD.h */,
-				800B29CC112D8DFB1E41FFE928E68A16 /* JGProgressHUD.m */,
-				A96FEA461D63C325BBECB380700A7C71 /* JGProgressHUD-Defines.h */,
-				E8D5D2881BA88870A2C75A49A429ED0F /* JGProgressHUDAnimation.h */,
-				40FFE857DD5BCEE77B885CE733AFE87C /* JGProgressHUDAnimation.m */,
-				E7C09A1903E5125FB3F822DD315E9D15 /* JGProgressHUDErrorIndicatorView.h */,
-				C298D49BCE5DC968B9F5CBBD58B70685 /* JGProgressHUDErrorIndicatorView.m */,
-				9F0C4212DCA6F002B37A083A08D5B325 /* JGProgressHUDFadeAnimation.h */,
-				28681496063037F13910018549EBE35D /* JGProgressHUDFadeAnimation.m */,
-				69ABFE76E7F0FC5F210EEA3046ABEBC1 /* JGProgressHUDFadeZoomAnimation.h */,
-				1EF59F144012767AB6A9D9AEBAA69675 /* JGProgressHUDFadeZoomAnimation.m */,
-				445CA2EFCD7428C993E3F8495EFA9232 /* JGProgressHUDImageIndicatorView.h */,
-				FD71AA272F9BA985386786F1769E27D1 /* JGProgressHUDImageIndicatorView.m */,
-				F8BD4F5B581A4C5A48F08BDC2BDE6722 /* JGProgressHUDIndeterminateIndicatorView.h */,
-				C41B245E0CE0F2DA8A06CA48B69CAF98 /* JGProgressHUDIndeterminateIndicatorView.m */,
-				BE89D59076C68F8D6A54B66A2C8A8231 /* JGProgressHUDIndicatorView.h */,
-				249440F2D085D891D0182A251954C697 /* JGProgressHUDIndicatorView.m */,
-				BEA3871FF5ECD33221C7245F5C0F2BA3 /* JGProgressHUDPieIndicatorView.h */,
-				1ABEC1CB96E36B820C7C2A2D5E905698 /* JGProgressHUDPieIndicatorView.m */,
-				EAC05D0835D31EB14F2E143043399AA9 /* JGProgressHUDRingIndicatorView.h */,
-				3B206072924EE6DAE95ED015863F9696 /* JGProgressHUDRingIndicatorView.m */,
-				CBB358120309E4D0A3DEA9CED6FA7E7D /* JGProgressHUDShadow.h */,
-				F56F2E1C0A62E2BA8D483697578602AD /* JGProgressHUDShadow.m */,
-				E57DA64A98474BAC29794FD5A840CF21 /* JGProgressHUDSuccessIndicatorView.h */,
-				5D78415D0DBC7522D365009631A1EA12 /* JGProgressHUDSuccessIndicatorView.m */,
-				B21DF320EEFC5FFB6997B0F69D457797 /* Resources */,
-				70214EFA83D6101732BDB184DAD8A737 /* Support Files */,
+				1F7E41DB50904F157472B75834F118AD /* Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown */,
+				C9DA95AA04B86E69AD83D29661CF58ED /* Pods-OneSignalNotificationServiceExtension-acknowledgements.plist */,
+				721322D466B705A20C018668049E56E7 /* Pods-OneSignalNotificationServiceExtension-dummy.m */,
+				11001147461FF572E097A439293D4BDD /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				24ED1ED23475BF8DDBF1A5E0AFE9F8F7 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
-			name = JGProgressHUD;
-			path = JGProgressHUD;
+			name = "Pods-OneSignalNotificationServiceExtension";
+			path = "Target Support Files/Pods-OneSignalNotificationServiceExtension";
+			sourceTree = "<group>";
+		};
+		BBC5702DBF9BDDD3F9F442724A5D2688 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E30C7872FDB35946B7D021A9FEAFA77 /* OneSignal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB3EBBEE1165E2A386C07D574EAB6A79 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6F73FD043172EB9B9FD41A1B6F56B21B /* JGProgressHUD.xcconfig */,
+				9C849CAFD58C0F916B9D369D93E54D46 /* JGProgressHUD-dummy.m */,
+				FF5A9FFF75FAE4D6CB39A9A8ABAE300A /* JGProgressHUD-prefix.pch */,
+				7FC6D9ACFEEC1B06852632123C3B997E /* ResourceBundle-JGProgressHUD-JGProgressHUD-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JGProgressHUD";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -401,7 +390,7 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				F7474790037D676A50A0A57C2F5F3AFA /* Pods */,
-				1E0920CD7565181491FECEFA649F0933 /* Products */,
+				7C26B844A52BC8D278D92D043FFE29C8 /* Products */,
 				241DE2EDCD9D7213472EE09F8C12375A /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -413,159 +402,86 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E9A70DDA0CFBDB9B92EDF76F1CA6D22F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F7EAAED0AC810E3F07352F2C32307AE /* jg_hud_error.png */,
+				7A64A2402F4B8FF3F5F528F3AB23345C /* jg_hud_error@2x.png */,
+				1AB44165AB477299BDF40B5F78AFB829 /* jg_hud_error@3x.png */,
+				12826DC404BCEA4BF5CC0769646AD6CB /* jg_hud_success.png */,
+				27EACB45DFCD460DD424D2C82CAC2CB0 /* jg_hud_success@2x.png */,
+				73199C6EFF18BF5B388C06EA18C62C01 /* jg_hud_success@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		F7474790037D676A50A0A57C2F5F3AFA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CE0D973988E206C960F5467782598846 /* JGProgressHUD */,
+				43D8882833AF36347D655B0AAF72760C /* JGProgressHUD */,
 				2A4DB82CA614747564C3AE6034B38C3C /* LBTAComponents */,
-				C364F77EB6FEAE1AFAAD7AD7BA339C78 /* OneSignal */,
+				91BC3CC0E88EB10670E1C4F86CCB96FC /* OneSignal */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		F9D2AD889A6F795933C21DC5A36C72B1 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9BA07CF650B4249D4180A42ED08D9768 /* LBTAComponents.modulemap */,
-				C2CA74A6DF7734B082E76154BE0813AE /* LBTAComponents.xcconfig */,
-				6D77D9C23E99309A48C451B0ABC40102 /* LBTAComponents-dummy.m */,
-				B137A6CFDE2C21EFB75961C59AB90EAA /* LBTAComponents-prefix.pch */,
-				4D3E0499918950A87749B1AE773FC5E5 /* LBTAComponents-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/LBTAComponents";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3ECFAD5495680CD3462E8AB1F1F17FDC /* Headers */ = {
+		0477CEC6A760E9D67324D8AD5039092A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F4838DE31217059AAD81E20C9B75C76 /* JGProgressHUD-Defines.h in Headers */,
+				EF0ED0CFBE052C8E4EB93C158F86FB70 /* JGProgressHUD.h in Headers */,
+				CF3DBB7BC0B0F4263E5EFAC55DD698DA /* JGProgressHUDAnimation.h in Headers */,
+				33B48D3FC4788328C7DCF07FBD91672F /* JGProgressHUDErrorIndicatorView.h in Headers */,
+				CF3D2D40DAF9800F1608F72442BB55F2 /* JGProgressHUDFadeAnimation.h in Headers */,
+				258E75696493975FBC1BE02FAA29A329 /* JGProgressHUDFadeZoomAnimation.h in Headers */,
+				FECF06EBB540A4393C12E033278B2A83 /* JGProgressHUDImageIndicatorView.h in Headers */,
+				BA8585704AAD237EB999749A004674AE /* JGProgressHUDIndeterminateIndicatorView.h in Headers */,
+				E465CDF840F7E98FC6D172606A0C6D31 /* JGProgressHUDIndicatorView.h in Headers */,
+				D049415424CB8E9294125EA22951D764 /* JGProgressHUDPieIndicatorView.h in Headers */,
+				097378AD23A7C5B7BAABC77D92462BC4 /* JGProgressHUDRingIndicatorView.h in Headers */,
+				5307D29793822653529A96F4736A2012 /* JGProgressHUDShadow.h in Headers */,
+				EA2F6B1499A87AF28412DE2F82AC3EED /* JGProgressHUDSuccessIndicatorView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75E8F384826CE30F3E15FE367404A2F7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09300A6C1B39F630B6804B953D281DD6 /* Pods-Career Endorsement Tracker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1CCF282AA9908A231EB6C3046B4EF24 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4FA8D0106148E92629B08912943A1BE6 /* Headers */ = {
+		C14013D4AB17193F7BD1918C7D6F0E61 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BB051E94905486A209DA51C651B386A /* LBTAComponents-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8331E1763C61F759147592B625C67E75 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4A01BEF80CA09A47C14670633E3C512F /* Pods-Career Endorsement Tracker-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F48AA03C78434F752987909B04F17C28 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7349B7EA568D244012FE0E319582D203 /* JGProgressHUD-Defines.h in Headers */,
-				C249119005BD08ECA6E091D1CB94F9CF /* JGProgressHUD.h in Headers */,
-				E96C08E6E27EF3751F4204F22EED79F8 /* JGProgressHUDAnimation.h in Headers */,
-				53E1B2B56450C3BD6ED1BE9B354766C9 /* JGProgressHUDErrorIndicatorView.h in Headers */,
-				72876C26FB9D1A7794CE508517F67F17 /* JGProgressHUDFadeAnimation.h in Headers */,
-				6F8C52CAC4371BEC7F3A9D74BE633353 /* JGProgressHUDFadeZoomAnimation.h in Headers */,
-				E75E6F237894BF4CA6C437E9D375AD72 /* JGProgressHUDImageIndicatorView.h in Headers */,
-				1C4C2B85B863BFFC995D444AB8EC3C67 /* JGProgressHUDIndeterminateIndicatorView.h in Headers */,
-				0D2DCF3C8FA54E5C26C5E5D142838B65 /* JGProgressHUDIndicatorView.h in Headers */,
-				00F5041B1F549D03777E23DC6237FA54 /* JGProgressHUDPieIndicatorView.h in Headers */,
-				AF6A39E55D5F0DDB54324D8AA7101E2D /* JGProgressHUDRingIndicatorView.h in Headers */,
-				744BFDFDE03570F8AE2CA66A239F48A9 /* JGProgressHUDShadow.h in Headers */,
-				A8C5D61AE083C02BEE298484510D8C1D /* JGProgressHUDSuccessIndicatorView.h in Headers */,
+				0DEE3938DFEE55FC7EE3B81D8CE0BB19 /* LBTAComponents-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		16D54554EC45236C06DB9E9635C601C7 /* Pods-OneSignalNotificationServiceExtension */ = {
+		507F07FC62AFC9C6A73513E671361060 /* LBTAComponents */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 470AE8D90451DCFA3ADBA430396CFA2A /* Build configuration list for PBXNativeTarget "Pods-OneSignalNotificationServiceExtension" */;
+			buildConfigurationList = 2B0BCFA807C7548CB3A1AB2A91DF48D0 /* Build configuration list for PBXNativeTarget "LBTAComponents" */;
 			buildPhases = (
-				3ECFAD5495680CD3462E8AB1F1F17FDC /* Headers */,
-				D900F307A2A53DA245D420D99FF28246 /* Sources */,
-				F58B16925E2F182BE34BF44AC5B382FD /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C36A1CFC1E5E4473EAA2CF3D39763488 /* PBXTargetDependency */,
-			);
-			name = "Pods-OneSignalNotificationServiceExtension";
-			productName = "Pods-OneSignalNotificationServiceExtension";
-			productReference = 28BF6E63AA8DA8D666C8B586FE2F6BB9 /* libPods-OneSignalNotificationServiceExtension.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		82E45B8D36CA2A9FEA6005915DD6188F /* JGProgressHUD */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 16A4479C88D6DC9D12A998274AD54D7D /* Build configuration list for PBXNativeTarget "JGProgressHUD" */;
-			buildPhases = (
-				F48AA03C78434F752987909B04F17C28 /* Headers */,
-				9419663BE9F5D75E28F57A2E868ACDC8 /* Sources */,
-				64EF3FF7306F3B368F59A6A471C36C9F /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2A3205A2D17373AEB9D189BF61E3C3CC /* PBXTargetDependency */,
-			);
-			name = JGProgressHUD;
-			productName = JGProgressHUD;
-			productReference = 414013D9DBA6A289278C2CB7295230B4 /* libJGProgressHUD.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		86D319BF7714B1026380F8462B6EDA06 /* JGProgressHUD-JGProgressHUD */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D3FC70C73B805EC747E42C02A5B02F9B /* Build configuration list for PBXNativeTarget "JGProgressHUD-JGProgressHUD" */;
-			buildPhases = (
-				46DC209124159C1B5CBFC8AFB22DEC0E /* Sources */,
-				6DC514351FC7208DF617B734E76769AD /* Frameworks */,
-				11523782440AF8D1A7B9A151147C6C80 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "JGProgressHUD-JGProgressHUD";
-			productName = "JGProgressHUD-JGProgressHUD";
-			productReference = 92236FC0ABDB78F87073A82D658C1C6B /* JGProgressHUD.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
-		B229447B3A5B9C498E9422F60F4907FA /* Pods-Career Endorsement Tracker */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FE87411749C26B2F2B001AA923A8E7DA /* Build configuration list for PBXNativeTarget "Pods-Career Endorsement Tracker" */;
-			buildPhases = (
-				8331E1763C61F759147592B625C67E75 /* Headers */,
-				310FAAE0782AF8150F3CA518DEC3DCA9 /* Sources */,
-				58EF822C6969735BC382785F949F697B /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				787D5902DEE909A31281802531363D1E /* PBXTargetDependency */,
-				9572B58B50E4822B811DE6D8D16ABA19 /* PBXTargetDependency */,
-				B95E1BFECBFF5252C8587D2F65991944 /* PBXTargetDependency */,
-			);
-			name = "Pods-Career Endorsement Tracker";
-			productName = "Pods-Career Endorsement Tracker";
-			productReference = 457F9F0A940DD13151AB601D0689CCB4 /* libPods-Career Endorsement Tracker.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		C5AC4BC1C09EC0710D237275B2FD8357 /* LBTAComponents */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8B0154E8A210E3799DAFDB9AAF7F4A8F /* Build configuration list for PBXNativeTarget "LBTAComponents" */;
-			buildPhases = (
-				4FA8D0106148E92629B08912943A1BE6 /* Headers */,
-				E1B9AA0356CC72A2B8423677DF019652 /* Sources */,
-				634EBF09263A08CC972AE08C44DB4E9E /* Frameworks */,
-				00A9393F93E246A18B95C9F9053547CB /* Copy generated compatibility header */,
+				C14013D4AB17193F7BD1918C7D6F0E61 /* Headers */,
+				F762C6CDB9A0F894B784523D4140E55E /* Sources */,
+				2C38681B35E9BCA7480867A3AAB72161 /* Frameworks */,
+				08D298684C14EE477B56440610BF4B7D /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
@@ -573,7 +489,80 @@
 			);
 			name = LBTAComponents;
 			productName = LBTAComponents;
-			productReference = F6647A83F2F9CB41EC8124D42EB1B82E /* libLBTAComponents.a */;
+			productReference = 6C59B339E434E5D7B7354CCF5F0CA45E /* libLBTAComponents.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6F3964F174D0EBFB0D64F8DBC20E1429 /* JGProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D8EEF45465D5D61A75662220C5D44F2 /* Build configuration list for PBXNativeTarget "JGProgressHUD" */;
+			buildPhases = (
+				0477CEC6A760E9D67324D8AD5039092A /* Headers */,
+				22AC97067416D9739F62D55B62604E34 /* Sources */,
+				1191AA5E12D6D58F005295A22E300BBF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02FF193A5B88A4023ED3553BA1727777 /* PBXTargetDependency */,
+			);
+			name = JGProgressHUD;
+			productName = JGProgressHUD;
+			productReference = 7FBAFAA66E9C7401884F439AE8BC662C /* libJGProgressHUD.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BBD6B43FA0F7FFBCD1978EBE76F99021 /* JGProgressHUD-JGProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E990BFC8499D9AA61C78D217D92BD09D /* Build configuration list for PBXNativeTarget "JGProgressHUD-JGProgressHUD" */;
+			buildPhases = (
+				AD654DDEDD77F14B82BDE945887869D8 /* Sources */,
+				DB73DE7F429FDB38CABB5A0EB7CC786B /* Frameworks */,
+				53408C9387046251B881DDD503664BD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JGProgressHUD-JGProgressHUD";
+			productName = "JGProgressHUD-JGProgressHUD";
+			productReference = 50BFFE42053E6D006359F73E08370CE1 /* JGProgressHUD.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		BD0F10574EB554D7E668F50D2A5B77DF /* Pods-OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD7C69DEA8EDE84B8C3BDCE7C6F5CE4D /* Build configuration list for PBXNativeTarget "Pods-OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				B1CCF282AA9908A231EB6C3046B4EF24 /* Headers */,
+				5A6FECADF0310672696DADDF5446C050 /* Sources */,
+				BEF056DFDB9F205A097278E752AE4FF5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				662173D0C1DAFC76820DBFA8955ED8EE /* PBXTargetDependency */,
+			);
+			name = "Pods-OneSignalNotificationServiceExtension";
+			productName = "Pods-OneSignalNotificationServiceExtension";
+			productReference = 4AF3B972C94DFF11700E306F18F01DF3 /* libPods-OneSignalNotificationServiceExtension.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C765FC081E1A36213FBC9C9419937740 /* Pods-Career Endorsement Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11FCF6B2A51FF36B6D90F223E3757FDF /* Build configuration list for PBXNativeTarget "Pods-Career Endorsement Tracker" */;
+			buildPhases = (
+				75E8F384826CE30F3E15FE367404A2F7 /* Headers */,
+				18BAE7828B6F5D4008DB345D485855F3 /* Sources */,
+				C221FB8544E6B8EF024DD9C409C74CFC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF75D750822B9AA1AF02FB55A1101772 /* PBXTargetDependency */,
+				F76727AE0EE2B07D6B5A0B51936090CF /* PBXTargetDependency */,
+				F5F18DDFB7169AD23F39B7B16B33BDD1 /* PBXTargetDependency */,
+			);
+			name = "Pods-Career Endorsement Tracker";
+			productName = "Pods-Career Endorsement Tracker";
+			productReference = 1809E2EE5B501F587F96A3CE966751B2 /* libPods-Career Endorsement Tracker.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -582,50 +571,49 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 1E0920CD7565181491FECEFA649F0933 /* Products */;
+			productRefGroup = 7C26B844A52BC8D278D92D043FFE29C8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				82E45B8D36CA2A9FEA6005915DD6188F /* JGProgressHUD */,
-				86D319BF7714B1026380F8462B6EDA06 /* JGProgressHUD-JGProgressHUD */,
-				C5AC4BC1C09EC0710D237275B2FD8357 /* LBTAComponents */,
-				0EA75190C33F859B4477D6BA0A1874E6 /* OneSignal-iOS10.0 */,
-				FAEC05ABF71F3F43027EE756A42919F8 /* OneSignal-iOS12.2 */,
-				B229447B3A5B9C498E9422F60F4907FA /* Pods-Career Endorsement Tracker */,
-				16D54554EC45236C06DB9E9635C601C7 /* Pods-OneSignalNotificationServiceExtension */,
+				6F3964F174D0EBFB0D64F8DBC20E1429 /* JGProgressHUD */,
+				BBD6B43FA0F7FFBCD1978EBE76F99021 /* JGProgressHUD-JGProgressHUD */,
+				507F07FC62AFC9C6A73513E671361060 /* LBTAComponents */,
+				210EB05CEC7AD9C148F90F752DE74C48 /* OneSignal */,
+				C765FC081E1A36213FBC9C9419937740 /* Pods-Career Endorsement Tracker */,
+				BD0F10574EB554D7E668F50D2A5B77DF /* Pods-OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		11523782440AF8D1A7B9A151147C6C80 /* Resources */ = {
+		53408C9387046251B881DDD503664BD9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDAFE143B0BF27BD669CA9F3A8C10919 /* jg_hud_error.png in Resources */,
-				F717B482DE7FB865702329E58FFC6E4B /* jg_hud_error@2x.png in Resources */,
-				42977D72C034113FB3C9A651943E8128 /* jg_hud_error@3x.png in Resources */,
-				478771614183186DFEAF9FF13A0A7039 /* jg_hud_success.png in Resources */,
-				A68DD0980373B6250B41EDA6E4E6AD10 /* jg_hud_success@2x.png in Resources */,
-				90F7236DF0C04FB27D6F4BF549B4B272 /* jg_hud_success@3x.png in Resources */,
+				186B403BDA11C95A90E8F0DA3BF0CDDB /* jg_hud_error.png in Resources */,
+				3F8E686FFF579B74176951E6763EB72A /* jg_hud_error@2x.png in Resources */,
+				F3FF2B48D886BBC7C98CA625EFC8C699 /* jg_hud_error@3x.png in Resources */,
+				4A23C48AB1BC9D5DE8A8AEFEFB7489C7 /* jg_hud_success.png in Resources */,
+				C115B536D215D3C7609D9F511E2C843B /* jg_hud_success@2x.png in Resources */,
+				357BE51B0A74E989BF64F981196B0E2A /* jg_hud_success@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00A9393F93E246A18B95C9F9053547CB /* Copy generated compatibility header */ = {
+		08D298684C14EE477B56440610BF4B7D /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -652,150 +640,174 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		310FAAE0782AF8150F3CA518DEC3DCA9 /* Sources */ = {
+		18BAE7828B6F5D4008DB345D485855F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71D2EEC4976D5A4F47CAE6457E5939DB /* Pods-Career Endorsement Tracker-dummy.m in Sources */,
+				BB82D344F5127ED85CC5B66A7AA81CA3 /* Pods-Career Endorsement Tracker-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46DC209124159C1B5CBFC8AFB22DEC0E /* Sources */ = {
+		22AC97067416D9739F62D55B62604E34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29C0DE4164DB114E942372AD1D17E110 /* JGProgressHUD-dummy.m in Sources */,
+				73928DE04092BE4D62F5E6AD90150657 /* JGProgressHUD.m in Sources */,
+				E13A39E2473975C1539F6F76D69143CE /* JGProgressHUDAnimation.m in Sources */,
+				1C7768F28E6238553E40BF41221FB834 /* JGProgressHUDErrorIndicatorView.m in Sources */,
+				6C47C8836B942C9896B0ECD7DB563FD2 /* JGProgressHUDFadeAnimation.m in Sources */,
+				31BB2E78B1A107C70EA3E395F8D17045 /* JGProgressHUDFadeZoomAnimation.m in Sources */,
+				48E8299D0525E59833CE3DAF2A303C7E /* JGProgressHUDImageIndicatorView.m in Sources */,
+				7196ACE4DA6CA30E5D916B728CBA0932 /* JGProgressHUDIndeterminateIndicatorView.m in Sources */,
+				BE3DF19FE62BA58B20CA666682CFDCBF /* JGProgressHUDIndicatorView.m in Sources */,
+				8BB80DB6738DC210AEE4447A3EA0715B /* JGProgressHUDPieIndicatorView.m in Sources */,
+				DD95BFF2BC5375D21CB3CE7C21490139 /* JGProgressHUDRingIndicatorView.m in Sources */,
+				C96DF516A35E686B4E7CCB68CA55043E /* JGProgressHUDShadow.m in Sources */,
+				4CF8701FC720A0046BCDBC0D82EC92E9 /* JGProgressHUDSuccessIndicatorView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A6FECADF0310672696DADDF5446C050 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E5F28D6CD908F853280C3A4D33FE76 /* Pods-OneSignalNotificationServiceExtension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD654DDEDD77F14B82BDE945887869D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9419663BE9F5D75E28F57A2E868ACDC8 /* Sources */ = {
+		F762C6CDB9A0F894B784523D4140E55E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB3A28804475F5AB8F242F7B677F8B66 /* JGProgressHUD-dummy.m in Sources */,
-				EC789B86B9EF2C19C899BE85A925004D /* JGProgressHUD.m in Sources */,
-				2B7BC7E7ECF5282C6E873FC4F8793499 /* JGProgressHUDAnimation.m in Sources */,
-				E022FABE273D29A51DB5135D40DD3477 /* JGProgressHUDErrorIndicatorView.m in Sources */,
-				5427315A8A33A6DE285A8D9960D4E5B9 /* JGProgressHUDFadeAnimation.m in Sources */,
-				EF842A62F5093A04881193A338A4FC3A /* JGProgressHUDFadeZoomAnimation.m in Sources */,
-				C2DA77212E41BA1EF3591A4D824205ED /* JGProgressHUDImageIndicatorView.m in Sources */,
-				FB777A5D708BFD135AEB9113E6D22FDC /* JGProgressHUDIndeterminateIndicatorView.m in Sources */,
-				2BBC6724BF21804E29D9F1E971951CE8 /* JGProgressHUDIndicatorView.m in Sources */,
-				48D73FEF177F1E4A5675D07089F98129 /* JGProgressHUDPieIndicatorView.m in Sources */,
-				FD8BD2A4A2E066C008139488BB9E70CE /* JGProgressHUDRingIndicatorView.m in Sources */,
-				F631B1625CF6E98E2DF405B8AA0BBC6D /* JGProgressHUDShadow.m in Sources */,
-				B099F771A48EAB7892D8423525D35AA6 /* JGProgressHUDSuccessIndicatorView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D900F307A2A53DA245D420D99FF28246 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E78538F9FCA3CED6BF21C0A40B6E2C3D /* Pods-OneSignalNotificationServiceExtension-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E1B9AA0356CC72A2B8423677DF019652 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BEC3DCC805AF62978A3862FB0E68AE0C /* CachedImageView.swift in Sources */,
-				C02A14EDD79AD0268D27788DE412D0D3 /* Datasource.swift in Sources */,
-				E8EF7635E818FA6977B66DF299FBB0AA /* DatasourceCell.swift in Sources */,
-				543094EB5AADEFED339A2BA2F334E123 /* DatasourceController.swift in Sources */,
-				FDB9DD05BFEAF6D2C87D4A19D3509E7E /* DefaultCells.swift in Sources */,
-				9EB7888C8E5B9FE973B995059F92FCE4 /* DiscardableImageCacheItem.swift in Sources */,
-				9054D780C546DB478C5319DF0AA584C5 /* LBTAComponents-dummy.m in Sources */,
-				2CA94C2C9449E40FB034F5A8B0D91AAF /* LBTALabel.swift in Sources */,
-				D0D86656A17D3408C489AE01149C1AED /* LBTATextView.swift in Sources */,
-				325017536C1322F37FE3C503E690A8B7 /* NSMutableAttributedString+Helper.swift in Sources */,
-				D76CA1E0DB390F07C3D78CE8DA394A57 /* UIButton+Helper.swift in Sources */,
-				61F1AA79D39DC4E31577A4D73EAA45BB /* UIColor+Helper.swift in Sources */,
-				F4A5FC9561F5D87A9981B4AAB6185974 /* UIImage+Helper.swift in Sources */,
-				5CB8FCE123BA8381A2408B7CB3D0E7EB /* UIView+Anchors.swift in Sources */,
+				64EFCD71F4DBADF638A124DE2A8950E5 /* CachedImageView.swift in Sources */,
+				9582AF387C5C448D223DC50C7475ACEB /* Datasource.swift in Sources */,
+				3195707DF5DB1A3BE09E97971BF4189B /* DatasourceCell.swift in Sources */,
+				A9EC26785781ABB08FF471B6B1B5E420 /* DatasourceController.swift in Sources */,
+				B18490E1075339BD5C8BB290639B480F /* DefaultCells.swift in Sources */,
+				852DD38B487D0A2DF9E62251A5A7DADE /* DiscardableImageCacheItem.swift in Sources */,
+				E68476AECBD66E359127A35E1974DA9E /* LBTAComponents-dummy.m in Sources */,
+				412E1536AAB8BF3DE2507420A57483A9 /* LBTALabel.swift in Sources */,
+				C6C76B2C57B8C3EBD05C7FC11B160073 /* LBTATextView.swift in Sources */,
+				5C1E2C439DD9FF6A93FF713B54CB73A6 /* NSMutableAttributedString+Helper.swift in Sources */,
+				EE306CA716940FFEB04A45AB851CD8A1 /* UIButton+Helper.swift in Sources */,
+				37C7527F11534A5930F0160E3593E1E6 /* UIColor+Helper.swift in Sources */,
+				AD4EFA13E57FEAE8266BC488C3B36726 /* UIImage+Helper.swift in Sources */,
+				2A8A9F67FECE1E44445E76D1E7EF665A /* UIView+Anchors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2A3205A2D17373AEB9D189BF61E3C3CC /* PBXTargetDependency */ = {
+		02FF193A5B88A4023ED3553BA1727777 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "JGProgressHUD-JGProgressHUD";
-			target = 86D319BF7714B1026380F8462B6EDA06 /* JGProgressHUD-JGProgressHUD */;
-			targetProxy = F1F07D1D9260D10610BE9B3E73C4A890 /* PBXContainerItemProxy */;
+			target = BBD6B43FA0F7FFBCD1978EBE76F99021 /* JGProgressHUD-JGProgressHUD */;
+			targetProxy = 6E8E6DBA6A24CB353BD7312320D9A4E4 /* PBXContainerItemProxy */;
 		};
-		787D5902DEE909A31281802531363D1E /* PBXTargetDependency */ = {
+		662173D0C1DAFC76820DBFA8955ED8EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OneSignal;
+			target = 210EB05CEC7AD9C148F90F752DE74C48 /* OneSignal */;
+			targetProxy = 3325EA56326FA804017155A667BF40E1 /* PBXContainerItemProxy */;
+		};
+		CF75D750822B9AA1AF02FB55A1101772 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JGProgressHUD;
-			target = 82E45B8D36CA2A9FEA6005915DD6188F /* JGProgressHUD */;
-			targetProxy = F542140899C46CE1E4583B31D7C88729 /* PBXContainerItemProxy */;
+			target = 6F3964F174D0EBFB0D64F8DBC20E1429 /* JGProgressHUD */;
+			targetProxy = C2C2C7A6BBB9009BF1A8DFD62186999D /* PBXContainerItemProxy */;
 		};
-		9572B58B50E4822B811DE6D8D16ABA19 /* PBXTargetDependency */ = {
+		F5F18DDFB7169AD23F39B7B16B33BDD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OneSignal;
+			target = 210EB05CEC7AD9C148F90F752DE74C48 /* OneSignal */;
+			targetProxy = DBB254FE065C953494479A157A0DDE34 /* PBXContainerItemProxy */;
+		};
+		F76727AE0EE2B07D6B5A0B51936090CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LBTAComponents;
-			target = C5AC4BC1C09EC0710D237275B2FD8357 /* LBTAComponents */;
-			targetProxy = 192EB0220FB4EA14894B88D3D2FA9ABC /* PBXContainerItemProxy */;
-		};
-		B95E1BFECBFF5252C8587D2F65991944 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "OneSignal-iOS12.2";
-			target = FAEC05ABF71F3F43027EE756A42919F8 /* OneSignal-iOS12.2 */;
-			targetProxy = 1E90C2FCE9823A07470007F350A557FE /* PBXContainerItemProxy */;
-		};
-		C36A1CFC1E5E4473EAA2CF3D39763488 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "OneSignal-iOS10.0";
-			target = 0EA75190C33F859B4477D6BA0A1874E6 /* OneSignal-iOS10.0 */;
-			targetProxy = F32732786263B9D2C784C5B8CBF57100 /* PBXContainerItemProxy */;
+			target = 507F07FC62AFC9C6A73513E671361060 /* LBTAComponents */;
+			targetProxy = 3DF5BEE9CF86397F5CCB746B4A5C9A03 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0ACD9B23B606DB0591F66AB8DBF3436F /* Release */ = {
+		0D1EFCD0FBDEE07A220692A5EA56ABBC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8774F651E044A39DCAA0051D4A342E88 /* JGProgressHUD.xcconfig */;
+			baseConfigurationReference = C38E0116865AF11425871DCDF309E8B8 /* LBTAComponents.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/JGProgressHUD/JGProgressHUD-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				GCC_PREFIX_HEADER = "Target Support Files/LBTAComponents/LBTAComponents-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MODULEMAP_FILE = Headers/Public/LBTAComponents/LBTAComponents.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = JGProgressHUD;
-				PRODUCT_NAME = JGProgressHUD;
+				PRODUCT_MODULE_NAME = LBTAComponents;
+				PRODUCT_NAME = LBTAComponents;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		1137C39FCDCE38B764DFD6462AAC4976 /* Release */ = {
+		458D4AC3456C69070B6A925BAACCA9FC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8774F651E044A39DCAA0051D4A342E88 /* JGProgressHUD.xcconfig */;
+			baseConfigurationReference = 1EAB8D37B99948A89EF0E7DDC01A656B /* OneSignal.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JGProgressHUD";
-				INFOPLIST_FILE = "Target Support Files/JGProgressHUD/ResourceBundle-JGProgressHUD-JGProgressHUD-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = JGProgressHUD;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		76E0B063A07B006B3A9353371D23E881 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72DA4FF49EF2C7B635958CD36B6DCFCB /* Pods-Career Endorsement Tracker.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
 			};
-			name = Release;
+			name = Debug;
 		};
-		23A207A8015F32E5A9B68646544CD830 /* Release */ = {
+		7B05E1674375F484153E46BA151165B6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B2F909F7A81CF1B18635D15433D259C /* OneSignal-iOS10.0.xcconfig */;
+			baseConfigurationReference = 1EAB8D37B99948A89EF0E7DDC01A656B /* OneSignal.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -812,7 +824,30 @@
 			};
 			name = Release;
 		};
-		3048B0C5C704DFFF688DA57F5380ED58 /* Release */ = {
+		7E7059AFC0FCA6561ABD7E8A47213655 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E19675188EA192FD3E65DE0100E07CD3 /* Pods-Career Endorsement Tracker.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -860,60 +895,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		3546D6EB4993DE59196188AD8EF531A3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8774F651E044A39DCAA0051D4A342E88 /* JGProgressHUD.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/JGProgressHUD/JGProgressHUD-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = JGProgressHUD;
-				PRODUCT_NAME = JGProgressHUD;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		518B68A8494BA3F4D795A43AAAF63C06 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C6B5078C945DA998806D97DA215DD55 /* OneSignal-iOS12.2.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		5B0C8287D755FD95091CF35D87FB8B2D /* Debug */ = {
+		916E0404255105F480DC4950B7625F7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -964,7 +958,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -972,14 +966,39 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		665098975675FD350D9855DE5B01CD3C /* Debug */ = {
+		9228941B4E4B6096BD12A1DAD8FEA4E7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8774F651E044A39DCAA0051D4A342E88 /* JGProgressHUD.xcconfig */;
+			baseConfigurationReference = 6F73FD043172EB9B9FD41A1B6F56B21B /* JGProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/JGProgressHUD/JGProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = JGProgressHUD;
+				PRODUCT_NAME = JGProgressHUD;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0B45C1E75CD97DC749C979B4D853C1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F73FD043172EB9B9FD41A1B6F56B21B /* JGProgressHUD.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JGProgressHUD";
@@ -993,91 +1012,48 @@
 			};
 			name = Debug;
 		};
-		70B97C677C4603CD3EDED17D1112BA88 /* Debug */ = {
+		C4304C99C3EB2B5CBFEE1B3486248573 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCFCA46F2DABAE159D0D43891F73FE31 /* Pods-Career Endorsement Tracker.debug.xcconfig */;
+			baseConfigurationReference = 6F73FD043172EB9B9FD41A1B6F56B21B /* JGProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JGProgressHUD";
+				INFOPLIST_FILE = "Target Support Files/JGProgressHUD/ResourceBundle-JGProgressHUD-JGProgressHUD-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = JGProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		E70C7FEB654C98281A5D79BFDF631C40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24ED1ED23475BF8DDBF1A5E0AFE9F8F7 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		765579667D541323AF128890709DE97E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B2F909F7A81CF1B18635D15433D259C /* OneSignal-iOS10.0.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		8D85BF4D0EBA4AD21A7E6EDDBF4B5275 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C6B5078C945DA998806D97DA215DD55 /* OneSignal-iOS12.2.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		8FB478D0DE69BEDC338510F44258459C /* Debug */ = {
+		EED6CF01E694354F5496E3E2A0BA912E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C7E3972B588475AD22441D87402C8EF /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		95FFF1F102C805C2147183F562413585 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2CA74A6DF7734B082E76154BE0813AE /* LBTAComponents.xcconfig */;
+			baseConfigurationReference = C38E0116865AF11425871DCDF309E8B8 /* LBTAComponents.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1101,46 +1077,21 @@
 			};
 			name = Release;
 		};
-		AE1ACF86E5D44B731E7C75ECBB00329A /* Release */ = {
+		F3BAEC7B5B3665BEABE5D592DCD19878 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D658E16E6883737F455730FDD87F931D /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		B600B62A47491F7D231CA24A816B4998 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2CA74A6DF7734B082E76154BE0813AE /* LBTAComponents.xcconfig */;
+			baseConfigurationReference = 6F73FD043172EB9B9FD41A1B6F56B21B /* JGProgressHUD.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/LBTAComponents/LBTAComponents-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				MODULEMAP_FILE = Headers/Public/LBTAComponents/LBTAComponents.modulemap;
+				GCC_PREFIX_HEADER = "Target Support Files/JGProgressHUD/JGProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = LBTAComponents;
-				PRODUCT_NAME = LBTAComponents;
+				PRODUCT_MODULE_NAME = JGProgressHUD;
+				PRODUCT_NAME = JGProgressHUD;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1150,19 +1101,18 @@
 			};
 			name = Debug;
 		};
-		D750C1FC9A8E70DE1C5A70B4E73DFCA2 /* Release */ = {
+		FCF627F95FA5C18EB63EB19424E1ABAC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB01E98C1619E5A95257CB348B1284CA /* Pods-Career Endorsement Tracker.release.xcconfig */;
+			baseConfigurationReference = 11001147461FF572E097A439293D4BDD /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1170,36 +1120,44 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		16A4479C88D6DC9D12A998274AD54D7D /* Build configuration list for PBXNativeTarget "JGProgressHUD" */ = {
+		09A5A4D585F2B2C7D977A4F1E5213117 /* Build configuration list for PBXAggregateTarget "OneSignal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3546D6EB4993DE59196188AD8EF531A3 /* Debug */,
-				0ACD9B23B606DB0591F66AB8DBF3436F /* Release */,
+				458D4AC3456C69070B6A925BAACCA9FC /* Debug */,
+				7B05E1674375F484153E46BA151165B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2587F90FB05F8DEB80E69FF7127B2FAD /* Build configuration list for PBXAggregateTarget "OneSignal-iOS10.0" */ = {
+		11FCF6B2A51FF36B6D90F223E3757FDF /* Build configuration list for PBXNativeTarget "Pods-Career Endorsement Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				765579667D541323AF128890709DE97E /* Debug */,
-				23A207A8015F32E5A9B68646544CD830 /* Release */,
+				76E0B063A07B006B3A9353371D23E881 /* Debug */,
+				7E7059AFC0FCA6561ABD7E8A47213655 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		470AE8D90451DCFA3ADBA430396CFA2A /* Build configuration list for PBXNativeTarget "Pods-OneSignalNotificationServiceExtension" */ = {
+		1D8EEF45465D5D61A75662220C5D44F2 /* Build configuration list for PBXNativeTarget "JGProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8FB478D0DE69BEDC338510F44258459C /* Debug */,
-				AE1ACF86E5D44B731E7C75ECBB00329A /* Release */,
+				F3BAEC7B5B3665BEABE5D592DCD19878 /* Debug */,
+				9228941B4E4B6096BD12A1DAD8FEA4E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B0BCFA807C7548CB3A1AB2A91DF48D0 /* Build configuration list for PBXNativeTarget "LBTAComponents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D1EFCD0FBDEE07A220692A5EA56ABBC /* Debug */,
+				EED6CF01E694354F5496E3E2A0BA912E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1207,44 +1165,26 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B0C8287D755FD95091CF35D87FB8B2D /* Debug */,
-				3048B0C5C704DFFF688DA57F5380ED58 /* Release */,
+				916E0404255105F480DC4950B7625F7A /* Debug */,
+				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B0154E8A210E3799DAFDB9AAF7F4A8F /* Build configuration list for PBXNativeTarget "LBTAComponents" */ = {
+		E990BFC8499D9AA61C78D217D92BD09D /* Build configuration list for PBXNativeTarget "JGProgressHUD-JGProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B600B62A47491F7D231CA24A816B4998 /* Debug */,
-				95FFF1F102C805C2147183F562413585 /* Release */,
+				B0B45C1E75CD97DC749C979B4D853C1D /* Debug */,
+				C4304C99C3EB2B5CBFEE1B3486248573 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E59D664A34BB2DABD37FBF15CF92E4F /* Build configuration list for PBXAggregateTarget "OneSignal-iOS12.2" */ = {
+		FD7C69DEA8EDE84B8C3BDCE7C6F5CE4D /* Build configuration list for PBXNativeTarget "Pods-OneSignalNotificationServiceExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				518B68A8494BA3F4D795A43AAAF63C06 /* Debug */,
-				8D85BF4D0EBA4AD21A7E6EDDBF4B5275 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D3FC70C73B805EC747E42C02A5B02F9B /* Build configuration list for PBXNativeTarget "JGProgressHUD-JGProgressHUD" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				665098975675FD350D9855DE5B01CD3C /* Debug */,
-				1137C39FCDCE38B764DFD6462AAC4976 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FE87411749C26B2F2B001AA923A8E7DA /* Build configuration list for PBXNativeTarget "Pods-Career Endorsement Tracker" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				70B97C677C4603CD3EDED17D1112BA88 /* Debug */,
-				D750C1FC9A8E70DE1C5A70B4E73DFCA2 /* Release */,
+				FCF627F95FA5C18EB63EB19424E1ABAC /* Debug */,
+				E70C7FEB654C98281A5D79BFDF631C40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

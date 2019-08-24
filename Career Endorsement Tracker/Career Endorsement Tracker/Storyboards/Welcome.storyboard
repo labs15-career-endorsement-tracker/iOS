@@ -57,7 +57,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Career Endorsement Tracker" id="e4v-Eo-DZF"/>
                     <connections>
-                        <segue destination="gG1-rG-5xD" kind="show" id="sao-MY-M3l"/>
+                        <segue destination="gG1-rG-5xD" kind="show" identifier="LoginSegue" id="sao-MY-M3l"/>
                         <segue destination="Adi-gS-jZe" kind="show" identifier="SignUp" id="8Lc-yq-ycg"/>
                     </connections>
                 </viewController>

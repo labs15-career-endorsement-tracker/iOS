@@ -5,6 +5,7 @@ target 'Career Endorsement Tracker' do
   pod 'OneSignal', '>= 2.6.2', '< 3.0'
   pod 'LBTAComponents'
   pod 'JGProgressHUD'
+  pod 'FoldingCell'
 end
 
 target 'OneSignalNotificationServiceExtension' do

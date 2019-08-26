@@ -2,12 +2,12 @@ ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/OneSignal/iOS_SDK/OneSignalSDK/Framework"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/JGProgressHUD"
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/JGProgressHUD" "${PODS_CONFIGURATION_BUILD_DIR}/LBTAComponents"
-OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/LBTAComponents/LBTAComponents.modulemap"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"JGProgressHUD" -l"LBTAComponents" -framework "Foundation" -framework "OneSignal" -framework "QuartzCore" -framework "SystemConfiguration" -framework "UIKit" -framework "UserNotifications"
-OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/LBTAComponents/LBTAComponents.modulemap"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/FoldingCell" "${PODS_CONFIGURATION_BUILD_DIR}/JGProgressHUD" "${PODS_CONFIGURATION_BUILD_DIR}/LBTAComponents"
+OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/FoldingCell/FoldingCell.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/LBTAComponents/LBTAComponents.modulemap" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/JGProgressHUD"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"FoldingCell" -l"JGProgressHUD" -l"LBTAComponents" -framework "Foundation" -framework "OneSignal" -framework "QuartzCore" -framework "SystemConfiguration" -framework "UIKit" -framework "UserNotifications"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/FoldingCell/FoldingCell.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/LBTAComponents/LBTAComponents.modulemap"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
-SWIFT_INCLUDE_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/LBTAComponents"
+SWIFT_INCLUDE_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/FoldingCell" "${PODS_CONFIGURATION_BUILD_DIR}/LBTAComponents"

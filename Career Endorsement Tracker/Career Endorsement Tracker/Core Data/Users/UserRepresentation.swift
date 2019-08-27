@@ -17,12 +17,13 @@ struct UserRepresentation: Codable, Equatable {
     var is_admin: Bool
     var tracks_id: Int32
     var id: String
+    var device_token: String
 }
 
 // we need to make sure our Firebase data matches our CoreData data
 
 func == (lhs: UserRepresentation, rhs: User) -> Bool {
-    return lhs.id == rhs.id && lhs.email == rhs.email && lhs.tracks_id == rhs.tracks_id && lhs.first_name == rhs.first_name  && lhs.last_name == rhs.last_name && lhs.is_admin == rhs.is_admin
+    return lhs.id == rhs.id && lhs.email == rhs.email && lhs.tracks_id == rhs.tracks_id && lhs.first_name == rhs.first_name  && lhs.last_name == rhs.last_name && lhs.is_admin == rhs.is_admin && lhs.device_token == rhs.device_token
 }
 
 func == (lhs: User, rhs: UserRepresentation) -> Bool {

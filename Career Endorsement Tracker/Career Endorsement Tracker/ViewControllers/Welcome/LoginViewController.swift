@@ -32,7 +32,9 @@ class LoginViewContoller: UIViewController {
         
         server.loginWith(user: user, completion: { (error) in
             if let error = error {
-                Config.showAlert(on: self, style: .alert, title: "Login Error", message: error.localizedDescription)
+                DispatchQueue.main.async {
+                    Config.showAlert(on: self, style: .alert, title: "Login Error", message: error.localizedDescription)
+                }
                 return
             } else {
                 DispatchQueue.main.async {

@@ -32,12 +32,13 @@ class SignUpViewController: UIViewController {
             return
         }
         
-        
         let user = CurrentUser(username: username, password: password)
         
         server.loginWith(user: user) { (error) in
             if let error = error  {
-                Config.showAlert(on: self, style: .alert, title: "Sign Up Error", message: error.localizedDescription)
+                DispatchQueue.main.async {
+                    Config.showAlert(on: self, style: .alert, title: "Sign Up Error", message: error.localizedDescription)
+                }
                 return
             } else {
                 DispatchQueue.main.async {

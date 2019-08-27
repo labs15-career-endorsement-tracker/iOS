@@ -11,7 +11,7 @@ import UIKit
 //import JGProgressHUD
 
 class Config {
-    
+
     static let buttonTitleFontSize: CGFloat = 18
     static let buttonTitleColor = UIColor.white
     static let buttonCornerRadius: CGFloat = 7

@@ -25,6 +25,8 @@
 		570CE9092315D57700077B72 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE9082315D57700077B72 /* Task.swift */; };
 		570CE90B2315D59F00077B72 /* Lambda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE90A2315D59F00077B72 /* Lambda.swift */; };
 		570CE90E2315D6B300077B72 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */; };
+		570CE9112315F32200077B72 /* WelcomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE9102315F32200077B72 /* WelcomeNavigationController.swift */; };
+		570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE9122315F37200077B72 /* WelcomeViewController.swift */; };
 		5784F9EB230729B600C11198 /* DataGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EA230729B600C11198 /* DataGetter.swift */; };
 		5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EC23072A1600C11198 /* CurrentUser.swift */; };
 		5784F9EF23072BFB00C11198 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EE23072BFB00C11198 /* Config.swift */; };
@@ -94,6 +96,8 @@
 		570CE9082315D57700077B72 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		570CE90A2315D59F00077B72 /* Lambda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lambda.swift; sourceTree = "<group>"; };
 		570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		570CE9102315F32200077B72 /* WelcomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeNavigationController.swift; sourceTree = "<group>"; };
+		570CE9122315F37200077B72 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		5784F9EA230729B600C11198 /* DataGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGetter.swift; sourceTree = "<group>"; };
 		5784F9EC23072A1600C11198 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		5784F9EE23072BFB00C11198 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 		3738EC5323061D800083158B /* Career Endorsement Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				570CE90F2315F30800077B72 /* New Group */,
 				FAE9606D230F1AB7006E7467 /* Career Endorsement Tracker.entitlements */,
 				5784F9E92307295400C11198 /* Constants */,
 				FAA6DF1B23107B3300B1DA7D /* Core Data */,
@@ -200,6 +205,7 @@
 			children = (
 				570CE8FB2315CA7E00077B72 /* LoginViewController.swift */,
 				570CE8FF2315CA9700077B72 /* SignUpViewController.swift */,
+				570CE9122315F37200077B72 /* WelcomeViewController.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -218,6 +224,14 @@
 				570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		570CE90F2315F30800077B72 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				570CE9102315F32200077B72 /* WelcomeNavigationController.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		5784F9E1230728E900C11198 /* Models */ = {
@@ -564,6 +578,7 @@
 				570CE9022315CAE800077B72 /* Bearer.swift in Sources */,
 				FA8AAD8C23158E8500DA36A5 /* TracksRepresentation.swift in Sources */,
 				FAA6DF222310828500B1DA7D /* Tasks+Convenience.swift in Sources */,
+				570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */,
 				5784F9EB230729B600C11198 /* DataGetter.swift in Sources */,
 				FAA6DF2023107E1400B1DA7D /* CareerModel.xcdatamodeld in Sources */,
 				570CE90E2315D6B300077B72 /* HomeCollectionViewCell.swift in Sources */,
@@ -590,6 +605,7 @@
 				FA8AAD7E23158E2100DA36A5 /* TasksTracks+Convenience.swift in Sources */,
 				570CE9052315D4BE00077B72 /* HomeCollectionViewController.swift in Sources */,
 				570CE8F92315CA5C00077B72 /* Server.swift in Sources */,
+				570CE9112315F32200077B72 /* WelcomeNavigationController.swift in Sources */,
 				FAA6DF2B2310831800B1DA7D /* TasksRepresentation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

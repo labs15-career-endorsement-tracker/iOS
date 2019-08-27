@@ -13,7 +13,7 @@
         <!--Career Endorsement Tracker-->
         <scene sceneID="jG1-lV-2RB">
             <objects>
-                <viewController id="ONv-1f-Xjm" sceneMemberID="viewController">
+                <viewController id="ONv-1f-Xjm" customClass="WelcomeViewController" customModule="Career_Endorsement_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tVs-c5-3kX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,6 +27,9 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="ONv-1f-Xjm" eventType="touchUpInside" id="7jK-FQ-nlS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSA-Pt-xas">
                                 <rect key="frame" x="14" y="651" width="380" height="45"/>
@@ -34,6 +37,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpButtonPressed:" destination="ONv-1f-Xjm" eventType="touchUpInside" id="Iwu-dM-Cgp"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LambdaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="F6Q-Mg-uXt">
                                 <rect key="frame" x="84" y="384" width="240" height="128"/>
@@ -57,7 +63,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Career Endorsement Tracker" id="e4v-Eo-DZF"/>
                     <connections>
-                        <segue destination="gG1-rG-5xD" kind="show" identifier="LoginSegue" id="sao-MY-M3l"/>
+                        <outlet property="loginButton" destination="ruf-sg-eOM" id="KHE-Jn-ogc"/>
+                        <outlet property="signUpButton" destination="qSA-Pt-xas" id="NOC-V6-Uhn"/>
+                        <segue destination="gG1-rG-5xD" kind="show" identifier="Login" id="sao-MY-M3l"/>
                         <segue destination="Adi-gS-jZe" kind="show" identifier="SignUp" id="8Lc-yq-ycg"/>
                     </connections>
                 </viewController>
@@ -68,47 +76,59 @@
         <!--Sign Up-->
         <scene sceneID="Asf-MT-E3r">
             <objects>
-                <viewController title="Sign Up" id="Adi-gS-jZe" sceneMemberID="viewController">
+                <viewController title="Sign Up" id="Adi-gS-jZe" customClass="SignUpViewController" customModule="Career_Endorsement_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JUG-o9-GNB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pDK-0U-UE9">
-                                <rect key="frame" x="20" y="158" width="374" height="144"/>
+                                <rect key="frame" x="20" y="158" width="374" height="220"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="HZg-tN-dsF">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58b-wS-89H">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58b-wS-89H">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" textContentType="name"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="izK-sW-s9C">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MYh-hE-dXV">
                                         <rect key="frame" x="0.0" y="38" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" textContentType="name"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yii-rL-pL6">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="izK-sW-s9C">
                                         <rect key="frame" x="0.0" y="76" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Track" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ytr-Jy-dd5">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yii-rL-pL6">
                                         <rect key="frame" x="0.0" y="114" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Validate Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aet-yJ-djG">
+                                        <rect key="frame" x="0.0" y="152" width="374" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Track" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ytr-Jy-dd5">
+                                        <rect key="frame" x="0.0" y="190" width="374" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" textContentType="name"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3d-fx-fhV">
-                                <rect key="frame" x="20" y="310" width="374" height="45"/>
+                                <rect key="frame" x="20" y="386" width="374" height="45"/>
                                 <color key="backgroundColor" red="0.73828583960000005" green="0.19447204470000001" blue="0.20029488209999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="YqR-2y-oJq"/>
@@ -116,6 +136,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerButtonPressed:" destination="Adi-gS-jZe" eventType="touchUpInside" id="Yhn-56-3rd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -129,6 +152,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pv7-aZ-ITD"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="izK-sW-s9C" id="GaP-aw-MB5"/>
+                        <outlet property="firstNameTextField" destination="58b-wS-89H" id="EZ3-Yq-nnQ"/>
+                        <outlet property="lastNameTextField" destination="MYh-hE-dXV" id="DFX-r0-SGr"/>
+                        <outlet property="passwordTextField" destination="Yii-rL-pL6" id="7Sh-9S-yHS"/>
+                        <outlet property="registerButton" destination="K3d-fx-fhV" id="v8G-SS-8xT"/>
+                        <outlet property="trackTextField" destination="Ytr-Jy-dd5" id="BVx-z8-iyK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTV-Am-zOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,7 +168,7 @@
         <!--Log In-->
         <scene sceneID="tGM-VB-VG9">
             <objects>
-                <viewController title="Log In" id="gG1-rG-5xD" sceneMemberID="viewController">
+                <viewController title="Log In" id="gG1-rG-5xD" customClass="LoginViewContoller" customModule="Career_Endorsement_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SKO-ko-7Nk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,6 +199,9 @@
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="gG1-rG-5xD" eventType="touchUpInside" id="3Rv-NU-c3D"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -181,15 +215,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XSW-dj-k3J"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="F4u-5T-fDb" id="NKH-nA-39s"/>
+                        <outlet property="loginButton" destination="FLA-bk-0cn" id="M45-Lb-4cb"/>
+                        <outlet property="passwordTextField" destination="J7F-iA-Vmw" id="B93-ik-uhZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Hf-Ef-XSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2029" y="-344"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Welcome Navigation Controller-->
         <scene sceneID="4Ex-JF-8Et">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4bt-XO-RUW" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="WelcomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="4bt-XO-RUW" customClass="WelcomeNavigationController" customModule="Career_Endorsement_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DeF-zV-xgn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

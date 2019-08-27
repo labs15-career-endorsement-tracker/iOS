@@ -13,7 +13,8 @@ class SignUpViewController: UIViewController {
     
     let server = Server()
     
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var trackTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -26,7 +27,7 @@ class SignUpViewController: UIViewController {
     
     func signUp() {
         
-        guard let name = nameTextField.text, !name.isEmpty, let track = trackTextField.text, !track.isEmpty, let username = emailTextField.text, !username.isEmpty, let password = passwordTextField.text, !password.isEmpty else {
+        guard let firstName = firstNameTextField.text, !firstName.isEmpty, let lastName = lastNameTextField.text, !lastName.isEmpty, !lastName.isEmpty, let track = trackTextField.text, !track.isEmpty, let username = emailTextField.text, !username.isEmpty, let password = passwordTextField.text, !password.isEmpty else {
             Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Please make sure all fields are completed.")
             return
         }

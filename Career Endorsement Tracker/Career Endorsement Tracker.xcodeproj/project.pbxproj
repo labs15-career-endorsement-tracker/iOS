@@ -20,6 +20,11 @@
 		570CE8FC2315CA7E00077B72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8FB2315CA7E00077B72 /* LoginViewController.swift */; };
 		570CE9002315CA9700077B72 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8FF2315CA9700077B72 /* SignUpViewController.swift */; };
 		570CE9022315CAE800077B72 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE9012315CAE800077B72 /* Bearer.swift */; };
+		570CE9052315D4BE00077B72 /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE9042315D4BE00077B72 /* HomeCollectionViewController.swift */; };
+		570CE9072315D56500077B72 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE9062315D56500077B72 /* TaskController.swift */; };
+		570CE9092315D57700077B72 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE9082315D57700077B72 /* Task.swift */; };
+		570CE90B2315D59F00077B72 /* Lambda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE90A2315D59F00077B72 /* Lambda.swift */; };
+		570CE90E2315D6B300077B72 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */; };
 		5784F9EB230729B600C11198 /* DataGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EA230729B600C11198 /* DataGetter.swift */; };
 		5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EC23072A1600C11198 /* CurrentUser.swift */; };
 		5784F9EF23072BFB00C11198 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EE23072BFB00C11198 /* Config.swift */; };
@@ -84,6 +89,11 @@
 		570CE8FB2315CA7E00077B72 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		570CE8FF2315CA9700077B72 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		570CE9012315CAE800077B72 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
+		570CE9042315D4BE00077B72 /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
+		570CE9062315D56500077B72 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskController.swift; path = "Career Endorsement Tracker/ViewControllers/Home/TaskController.swift"; sourceTree = SOURCE_ROOT; };
+		570CE9082315D57700077B72 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		570CE90A2315D59F00077B72 /* Lambda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lambda.swift; sourceTree = "<group>"; };
+		570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		5784F9EA230729B600C11198 /* DataGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGetter.swift; sourceTree = "<group>"; };
 		5784F9EC23072A1600C11198 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		5784F9EE23072BFB00C11198 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -194,11 +204,29 @@
 			path = Welcome;
 			sourceTree = "<group>";
 		};
+		570CE9032315D4AA00077B72 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				570CE9042315D4BE00077B72 /* HomeCollectionViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		570CE90C2315D6A300077B72 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		5784F9E1230728E900C11198 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				5784F9EC23072A1600C11198 /* CurrentUser.swift */,
 				570CE9012315CAE800077B72 /* Bearer.swift */,
+				570CE9082315D57700077B72 /* Task.swift */,
+				570CE90A2315D59F00077B72 /* Lambda.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,6 +234,7 @@
 		5784F9E2230728EE00C11198 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				570CE9062315D56500077B72 /* TaskController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -213,6 +242,7 @@
 		5784F9E3230728F800C11198 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				570CE9032315D4AA00077B72 /* Home */,
 				570CE8FA2315CA6E00077B72 /* Welcome */,
 				3738EC66230628770083158B /* CareerEndorsementViewController.swift */,
 				570CE8E423143FC000077B72 /* HomeTableViewController.swift */,
@@ -232,6 +262,7 @@
 		5784F9E52307290800C11198 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				570CE90C2315D6A300077B72 /* Home */,
 				570CE8E623144E1600077B72 /* RequirementsTableViewCell.swift */,
 			);
 			path = Views;
@@ -535,6 +566,7 @@
 				FAA6DF222310828500B1DA7D /* Tasks+Convenience.swift in Sources */,
 				5784F9EB230729B600C11198 /* DataGetter.swift in Sources */,
 				FAA6DF2023107E1400B1DA7D /* CareerModel.xcdatamodeld in Sources */,
+				570CE90E2315D6B300077B72 /* HomeCollectionViewCell.swift in Sources */,
 				570CE9002315CA9700077B72 /* SignUpViewController.swift in Sources */,
 				FA8AAD8623158E5900DA36A5 /* Steps+Convenience.swift in Sources */,
 				FA8AAD8423158E4E00DA36A5 /* User_steps_completed+Convenience.swift in Sources */,
@@ -550,9 +582,13 @@
 				5784F9EF23072BFB00C11198 /* Config.swift in Sources */,
 				FA8AAD9223158EA300DA36A5 /* StepsRepresentation.swift in Sources */,
 				FAA6DF1D23107BDB00B1DA7D /* CoreDataStack.swift in Sources */,
+				570CE9092315D57700077B72 /* Task.swift in Sources */,
 				5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */,
 				3738EC67230628770083158B /* CareerEndorsementViewController.swift in Sources */,
+				570CE90B2315D59F00077B72 /* Lambda.swift in Sources */,
+				570CE9072315D56500077B72 /* TaskController.swift in Sources */,
 				FA8AAD7E23158E2100DA36A5 /* TasksTracks+Convenience.swift in Sources */,
+				570CE9052315D4BE00077B72 /* HomeCollectionViewController.swift in Sources */,
 				570CE8F92315CA5C00077B72 /* Server.swift in Sources */,
 				FAA6DF2B2310831800B1DA7D /* TasksRepresentation.swift in Sources */,
 			);

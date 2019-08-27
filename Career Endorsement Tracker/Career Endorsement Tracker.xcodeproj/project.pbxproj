@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,10 @@
 		3FB756B0E818B9A002E67AA1 /* libPods-Career Endorsement Tracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 648647ED1E50BB6B0FC4B3E9 /* libPods-Career Endorsement Tracker.a */; };
 		570CE8E523143FC000077B72 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8E423143FC000077B72 /* HomeTableViewController.swift */; };
 		570CE8E723144E1700077B72 /* RequirementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8E623144E1600077B72 /* RequirementsTableViewCell.swift */; };
+		570CE8F92315CA5C00077B72 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8F82315CA5C00077B72 /* Server.swift */; };
+		570CE8FC2315CA7E00077B72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8FB2315CA7E00077B72 /* LoginViewController.swift */; };
+		570CE9002315CA9700077B72 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8FF2315CA9700077B72 /* SignUpViewController.swift */; };
+		570CE9022315CAE800077B72 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE9012315CAE800077B72 /* Bearer.swift */; };
 		5784F9EB230729B600C11198 /* DataGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EA230729B600C11198 /* DataGetter.swift */; };
 		5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EC23072A1600C11198 /* CurrentUser.swift */; };
 		5784F9EF23072BFB00C11198 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EE23072BFB00C11198 /* Config.swift */; };
@@ -76,6 +80,10 @@
 		3738EC66230628770083158B /* CareerEndorsementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerEndorsementViewController.swift; sourceTree = "<group>"; };
 		570CE8E423143FC000077B72 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		570CE8E623144E1600077B72 /* RequirementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementsTableViewCell.swift; sourceTree = "<group>"; };
+		570CE8F82315CA5C00077B72 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		570CE8FB2315CA7E00077B72 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		570CE8FF2315CA9700077B72 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		570CE9012315CAE800077B72 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 		5784F9EA230729B600C11198 /* DataGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGetter.swift; sourceTree = "<group>"; };
 		5784F9EC23072A1600C11198 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		5784F9EE23072BFB00C11198 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -177,10 +185,20 @@
 			path = "Career Endorsement Tracker";
 			sourceTree = "<group>";
 		};
+		570CE8FA2315CA6E00077B72 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				570CE8FB2315CA7E00077B72 /* LoginViewController.swift */,
+				570CE8FF2315CA9700077B72 /* SignUpViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		5784F9E1230728E900C11198 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				5784F9EC23072A1600C11198 /* CurrentUser.swift */,
+				570CE9012315CAE800077B72 /* Bearer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +213,7 @@
 		5784F9E3230728F800C11198 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				570CE8FA2315CA6E00077B72 /* Welcome */,
 				3738EC66230628770083158B /* CareerEndorsementViewController.swift */,
 				570CE8E423143FC000077B72 /* HomeTableViewController.swift */,
 			);
@@ -205,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				5784F9EA230729B600C11198 /* DataGetter.swift */,
+				570CE8F82315CA5C00077B72 /* Server.swift */,
 			);
 			path = "Networking ";
 			sourceTree = "<group>";
@@ -510,10 +530,12 @@
 			files = (
 				FA8AAD9423158EAA00DA36A5 /* ResourcesRepresentation.swift in Sources */,
 				FA8AAD9023158E9B00DA36A5 /* User_steps_completedRepresentation.swift in Sources */,
+				570CE9022315CAE800077B72 /* Bearer.swift in Sources */,
 				FA8AAD8C23158E8500DA36A5 /* TracksRepresentation.swift in Sources */,
 				FAA6DF222310828500B1DA7D /* Tasks+Convenience.swift in Sources */,
 				5784F9EB230729B600C11198 /* DataGetter.swift in Sources */,
 				FAA6DF2023107E1400B1DA7D /* CareerModel.xcdatamodeld in Sources */,
+				570CE9002315CA9700077B72 /* SignUpViewController.swift in Sources */,
 				FA8AAD8623158E5900DA36A5 /* Steps+Convenience.swift in Sources */,
 				FA8AAD8423158E4E00DA36A5 /* User_steps_completed+Convenience.swift in Sources */,
 				FA8AAD8823158E6400DA36A5 /* Resources+Convenience.swift in Sources */,
@@ -521,6 +543,7 @@
 				FA8AAD8A23158E7A00DA36A5 /* TaskTracksRepresentation.swift in Sources */,
 				FA8AAD8E23158E8F00DA36A5 /* UserRepresentation.swift in Sources */,
 				FA8AAD8223158E4100DA36A5 /* User+Convenience.swift in Sources */,
+				570CE8FC2315CA7E00077B72 /* LoginViewController.swift in Sources */,
 				3738EC5523061D800083158B /* AppDelegate.swift in Sources */,
 				570CE8E723144E1700077B72 /* RequirementsTableViewCell.swift in Sources */,
 				570CE8E523143FC000077B72 /* HomeTableViewController.swift in Sources */,
@@ -530,6 +553,7 @@
 				5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */,
 				3738EC67230628770083158B /* CareerEndorsementViewController.swift in Sources */,
 				FA8AAD7E23158E2100DA36A5 /* TasksTracks+Convenience.swift in Sources */,
+				570CE8F92315CA5C00077B72 /* Server.swift in Sources */,
 				FAA6DF2B2310831800B1DA7D /* TasksRepresentation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

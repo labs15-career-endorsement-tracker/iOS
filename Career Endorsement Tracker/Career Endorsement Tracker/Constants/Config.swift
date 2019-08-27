@@ -11,10 +11,6 @@ import UIKit
 //import JGProgressHUD
 
 class Config {
-    static let designGrayColor = UIColor(r: 206, g: 214, b: 227)
-    static let baseColor = UIColor(r: 254, g: 202, b: 64)
-    static let darkBaseColor = UIColor(r: 255, g: 135, b: 135)
-    static let unselectedItemColor = UIColor(r:173, g: 173, b: 173)
     
     static let buttonTitleFontSize: CGFloat = 18
     static let buttonTitleColor = UIColor.white

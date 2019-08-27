@@ -6,10 +6,20 @@
 //  Copyright © 2019 Lambda School. All rights reserved.
 //
 
+
 import Foundation
 import UIKit
 
 class DataGetter {
+    
+    enum NetworkError: Error {
+        case noAuth
+        case otherError
+        case badData
+        case noDecode
+        case httpNon200StatusCode(code: Int)
+    }
+    
     //setting constants
     enum HTTPError: Error {
         case non200StatusCode

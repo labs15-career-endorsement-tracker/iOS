@@ -1,24 +1,28 @@
 PODS:
+  - FoldingCell (5.0.1)
   - JGProgressHUD (2.0.3)
   - LBTAComponents (1.1)
   - OneSignal (2.10.1)
 
 DEPENDENCIES:
+  - FoldingCell
   - JGProgressHUD
   - LBTAComponents
   - OneSignal (< 3.0, >= 2.6.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - FoldingCell
     - JGProgressHUD
     - LBTAComponents
     - OneSignal
 
 SPEC CHECKSUMS:
+  FoldingCell: 9197b915a415af9e52a857964066797af6a51c2b
   JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
   LBTAComponents: 2e7719683ddcf1cdf7280700438c0c6a5f7da550
   OneSignal: 8fb749fa07f88006403c9b659a570fb7fb74519a
 
-PODFILE CHECKSUM: 51974b06c429f3061c7fd45c38ab726d9380b05e
+PODFILE CHECKSUM: 67fdd76e97deead840ff8433549278428c86e571
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.6.0.beta.1

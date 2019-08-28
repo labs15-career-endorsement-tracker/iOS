@@ -51,6 +51,7 @@
 		FAA6DF2B2310831800B1DA7D /* TasksRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6DF2A2310831800B1DA7D /* TasksRepresentation.swift */; };
 		FACADFDE2316FEDE001BBE9C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACADFDD2316FEDE001BBE9C /* Extensions.swift */; };
 		FACADFE0231701A5001BBE9C /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACADFDF231701A5001BBE9C /* UserController.swift */; };
+		FACADFE523174587001BBE9C /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACADFE423174587001BBE9C /* Database.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		FAA6DF2A2310831800B1DA7D /* TasksRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksRepresentation.swift; sourceTree = "<group>"; };
 		FACADFDD2316FEDE001BBE9C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FACADFDF231701A5001BBE9C /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		FACADFE423174587001BBE9C /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		FAE9606D230F1AB7006E7467 /* Career Endorsement Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Career Endorsement Tracker.entitlements"; sourceTree = "<group>"; };
 		FAE9606E230F1C89006E7467 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		FE6AE4FA7D64ABA26C147CA6 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 		3738EC5323061D800083158B /* Career Endorsement Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				FACADFE323174573001BBE9C /* Database Mapping */,
 				570CE90F2315F30800077B72 /* New Group */,
 				FAE9606D230F1AB7006E7467 /* Career Endorsement Tracker.entitlements */,
 				5784F9E92307295400C11198 /* Constants */,
@@ -403,6 +406,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		FACADFE323174573001BBE9C /* Database Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				FACADFE423174587001BBE9C /* Database.swift */,
+			);
+			path = "Database Mapping";
+			sourceTree = "<group>";
+		};
 		FFA804A24F4F6DEE9477576E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -583,6 +594,7 @@
 				FA8AAD9023158E9B00DA36A5 /* User_steps_completedRepresentation.swift in Sources */,
 				570CE9022315CAE800077B72 /* Bearer.swift in Sources */,
 				FA8AAD8C23158E8500DA36A5 /* TracksRepresentation.swift in Sources */,
+				FACADFE523174587001BBE9C /* Database.swift in Sources */,
 				FAA6DF222310828500B1DA7D /* Tasks+Convenience.swift in Sources */,
 				570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */,
 				5784F9EB230729B600C11198 /* DataGetter.swift in Sources */,

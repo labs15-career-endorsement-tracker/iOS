@@ -27,12 +27,12 @@ class SignUpViewController: UIViewController {
     
     func signUp() {
         
-        guard let firstName = firstNameTextField.text, !firstName.isEmpty, let lastName = lastNameTextField.text, !lastName.isEmpty, !lastName.isEmpty, let track = trackTextField.text, !track.isEmpty, let username = emailTextField.text, !username.isEmpty, let password = passwordTextField.text, !password.isEmpty else {
+        guard let firstName = firstNameTextField.text, !firstName.isEmpty, let lastName = lastNameTextField.text, !lastName.isEmpty, !lastName.isEmpty, let track = Int(trackTextField.text), !track.isEmpty, let username = emailTextField.text, !username.isEmpty, let password = passwordTextField.text, !password.isEmpty else {
             Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Please make sure all fields are completed.")
             return
         }
         
-        let user = CurrentUser(username: username, password: password)
+        let user = CurrentUser(first_name: firstName, last_name: lastName, email: username, password: password, tracks_id: track)
         
         server.loginWith(user: user) { (error) in
             if let error = error  {

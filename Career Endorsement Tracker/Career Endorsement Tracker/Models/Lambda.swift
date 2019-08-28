@@ -8,6 +8,11 @@
 
 import Foundation
 
+struct tracks: Codable {
+    let id: Int
+    let title: String
+}
+
 struct track: Codable {
     var requirements: [Requirement]
 }

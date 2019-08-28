@@ -11,6 +11,9 @@ import UIKit
 
 //Model for user signed in
 struct CurrentUser: Encodable {
-    var username: String
+    var first_name: String
+    var last_name: String
+    var email: String
     var password: String
+    var tracks_id: Int
 }

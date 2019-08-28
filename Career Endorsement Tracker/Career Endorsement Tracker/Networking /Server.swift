@@ -35,16 +35,16 @@ class Server {
         }
     }
     
-    let baseURL = URL(string: "https://endrsed-api-staging.heroku/api/v0")
+    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v0")
     
     
     func loginWith(user: CurrentUser, completion: @escaping (Error?)->Void) {
         let loginURL = baseURL!.appendingPathComponent(Endpoints.login.rawValue)
-        
+         print("loginURL = \(loginURL)")
         var request = URLRequest(url: loginURL)
         request.httpMethod = HTTPMethods.post.rawValue
         request.addValue(HTTPHeaderKeys.ContentTypes.json.rawValue, forHTTPHeaderField: HTTPHeaderKeys.contentType.rawValue)
-        
+       
         let encoder = JSONEncoder()
         do {
             request.httpBody = try encoder.encode(user)
@@ -52,6 +52,9 @@ class Server {
             completion(error)
             return
         }
+        
+        // bob_ross@happylittlemistakes.com
+        
         
         dataGetter.fetchData(with: request) { (_, data, error) in
             if let error = error {
@@ -80,7 +83,7 @@ class Server {
         
         var request = URLRequest(url: signUpURL)
         request.httpMethod = HTTPMethods.post.rawValue
-        request.addValue(HTTPHeaderKeys.ContentTypes.json.rawValue, forHTTPHeaderField: HTTPHeaderKeys.contentType.rawValue)
+        request.setValue(HTTPHeaderKeys.ContentTypes.json.rawValue, forHTTPHeaderField: HTTPHeaderKeys.contentType.rawValue)
         
         let encoder = JSONEncoder()
         do {

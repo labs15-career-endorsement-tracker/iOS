@@ -49,6 +49,7 @@
 		FAA6DF2023107E1400B1DA7D /* CareerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA6DF1E23107E1400B1DA7D /* CareerModel.xcdatamodeld */; };
 		FAA6DF222310828500B1DA7D /* Tasks+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6DF212310828500B1DA7D /* Tasks+Convenience.swift */; };
 		FAA6DF2B2310831800B1DA7D /* TasksRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6DF2A2310831800B1DA7D /* TasksRepresentation.swift */; };
+		FACADFDE2316FEDE001BBE9C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACADFDD2316FEDE001BBE9C /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		FAA6DF1F23107E1400B1DA7D /* CareerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CareerModel.xcdatamodel; sourceTree = "<group>"; };
 		FAA6DF212310828500B1DA7D /* Tasks+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+Convenience.swift"; sourceTree = "<group>"; };
 		FAA6DF2A2310831800B1DA7D /* TasksRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksRepresentation.swift; sourceTree = "<group>"; };
+		FACADFDD2316FEDE001BBE9C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FAE9606D230F1AB7006E7467 /* Career Endorsement Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Career Endorsement Tracker.entitlements"; sourceTree = "<group>"; };
 		FAE9606E230F1C89006E7467 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		FE6AE4FA7D64ABA26C147CA6 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				3738EC5423061D800083158B /* AppDelegate.swift */,
 				3738EC6023061D830083158B /* Info.plist */,
 				3738EC5B23061D830083158B /* Assets.xcassets */,
+				FACADFDD2316FEDE001BBE9C /* Extensions.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				570CE8FC2315CA7E00077B72 /* LoginViewController.swift in Sources */,
 				3738EC5523061D800083158B /* AppDelegate.swift in Sources */,
 				570CE8E723144E1700077B72 /* RequirementsTableViewCell.swift in Sources */,
+				FACADFDE2316FEDE001BBE9C /* Extensions.swift in Sources */,
 				570CE8E523143FC000077B72 /* HomeTableViewController.swift in Sources */,
 				5784F9EF23072BFB00C11198 /* Config.swift in Sources */,
 				FA8AAD9223158EA300DA36A5 /* StepsRepresentation.swift in Sources */,

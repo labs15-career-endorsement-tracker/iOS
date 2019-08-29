@@ -95,7 +95,7 @@
 		570CE8FF2315CA9700077B72 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		570CE9012315CAE800077B72 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 		570CE9042315D4BE00077B72 /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
-		570CE9062315D56500077B72 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskController.swift; path = "Career Endorsement Tracker/ViewControllers/Home/TaskController.swift"; sourceTree = SOURCE_ROOT; };
+		570CE9062315D56500077B72 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskController.swift; path = "Career Endorsement Tracker/Helpers/TaskController.swift"; sourceTree = SOURCE_ROOT; };
 		570CE9082315D57700077B72 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		570CE90A2315D59F00077B72 /* Lambda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lambda.swift; sourceTree = "<group>"; };
 		570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -170,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				3738EC5323061D800083158B /* Career Endorsement Tracker */,
+				570CE90F2315F30800077B72 /* Not Used */,
 				FA5D9B14230F181B00DC9BC1 /* OneSignalNotificationServiceExtension */,
 				3738EC5223061D800083158B /* Products */,
 				0D45AFB23C58BBE35B56D597 /* Pods */,
@@ -189,30 +190,35 @@
 		3738EC5323061D800083158B /* Career Endorsement Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				FAE9606D230F1AB7006E7467 /* Career Endorsement Tracker.entitlements */,
 				5784F9E62307290D00C11198 /* Supporting */,
 				5784F9E72307291900C11198 /* Storyboards */,
-				FACADFE323174573001BBE9C /* Database Mapping */,
-				570CE90F2315F30800077B72 /* New Group */,
-				FAE9606D230F1AB7006E7467 /* Career Endorsement Tracker.entitlements */,
-				5784F9E92307295400C11198 /* Constants */,
+				374CB3A523186791009A8C2D /* Helpers */,
+				5784F9E1230728E900C11198 /* Models */,
 				FAA6DF1B23107B3300B1DA7D /* Core Data */,
-				5784F9E52307290800C11198 /* Views */,
 				5784F9E4230728FF00C11198 /* Networking  */,
 				5784F9E3230728F800C11198 /* ViewControllers */,
-				5784F9E2230728EE00C11198 /* Controllers */,
-				5784F9E1230728E900C11198 /* Models */,
-				3738EC5823061D800083158B /* Main.storyboard */,
-				3738EC5D23061D830083158B /* LaunchScreen.storyboard */,
 			);
 			path = "Career Endorsement Tracker";
+			sourceTree = "<group>";
+		};
+		374CB3A523186791009A8C2D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5784F9E92307295400C11198 /* Constants */,
+				FACADFE323174573001BBE9C /* Database Mapping */,
+				570CE9062315D56500077B72 /* TaskController.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		570CE8FA2315CA6E00077B72 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				570CE9102315F32200077B72 /* WelcomeNavigationController.swift */,
+				570CE9122315F37200077B72 /* WelcomeViewController.swift */,
 				570CE8FB2315CA7E00077B72 /* LoginViewController.swift */,
 				570CE8FF2315CA9700077B72 /* SignUpViewController.swift */,
-				570CE9122315F37200077B72 /* WelcomeViewController.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -221,24 +227,19 @@
 			isa = PBXGroup;
 			children = (
 				570CE9042315D4BE00077B72 /* HomeCollectionViewController.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		570CE90C2315D6A300077B72 /* Home */ = {
-			isa = PBXGroup;
-			children = (
 				570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */,
+				570CE8E423143FC000077B72 /* HomeTableViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		570CE90F2315F30800077B72 /* New Group */ = {
+		570CE90F2315F30800077B72 /* Not Used */ = {
 			isa = PBXGroup;
 			children = (
-				570CE9102315F32200077B72 /* WelcomeNavigationController.swift */,
+				3738EC66230628770083158B /* CareerEndorsementViewController.swift */,
+				570CE8E623144E1600077B72 /* RequirementsTableViewCell.swift */,
 			);
-			path = "New Group";
+			path = "Not Used";
 			sourceTree = "<group>";
 		};
 		5784F9E1230728E900C11198 /* Models */ = {
@@ -252,21 +253,11 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		5784F9E2230728EE00C11198 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				570CE9062315D56500077B72 /* TaskController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		5784F9E3230728F800C11198 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				570CE9032315D4AA00077B72 /* Home */,
 				570CE8FA2315CA6E00077B72 /* Welcome */,
-				3738EC66230628770083158B /* CareerEndorsementViewController.swift */,
-				570CE8E423143FC000077B72 /* HomeTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -278,15 +269,6 @@
 				570CE8F82315CA5C00077B72 /* Server.swift */,
 			);
 			path = "Networking ";
-			sourceTree = "<group>";
-		};
-		5784F9E52307290800C11198 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				570CE90C2315D6A300077B72 /* Home */,
-				570CE8E623144E1600077B72 /* RequirementsTableViewCell.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		5784F9E62307290D00C11198 /* Supporting */ = {
@@ -304,6 +286,8 @@
 			isa = PBXGroup;
 			children = (
 				5784F9F023072D5600C11198 /* Welcome.storyboard */,
+				3738EC5823061D800083158B /* Main.storyboard */,
+				3738EC5D23061D830083158B /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";

@@ -20,6 +20,7 @@ class Server {
     let dataGetter = DataGetter()
     
     var bearer: Bearer?
+    var encodedBearer: Data
     
     enum Endpoints: String {
         case signup = "/signup"
@@ -66,6 +67,9 @@ class Server {
                 completion(DataGetter.NetworkError.badData)
                 return
             }
+            
+            // Save the endoded bearer token so that it can be saved to user defaults
+            self.encodedBearer = data
             
             let decoder = JSONDecoder()
             do {

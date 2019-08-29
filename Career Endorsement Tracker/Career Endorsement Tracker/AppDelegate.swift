@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: - End OneSignal
         
         let ifLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
-        print(ifLoggedIn)
+        print("ifLoggedIn == \(ifLoggedIn)")
         
         if ifLoggedIn {
             // user is already logged in, present chat VC, but from MainVC, in order to unwind back to mainVC when user log out.

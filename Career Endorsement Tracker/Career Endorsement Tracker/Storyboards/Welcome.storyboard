@@ -92,6 +92,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" textContentType="name"/>
+                                                <connections>
+                                                    <action selector="firstNameTextFieldChanged:" destination="Adi-gS-jZe" eventType="editingChanged" id="MuJ-GO-DDy"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -100,14 +103,20 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" textContentType="name"/>
+                                        <connections>
+                                            <action selector="lasttNameTextFieldChanged:" destination="Adi-gS-jZe" eventType="editingDidEnd" id="Sd4-36-fWv"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="izK-sW-s9C">
                                         <rect key="frame" x="0.0" y="76" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                                        <connections>
+                                            <action selector="emailTextFieldChanged:" destination="Adi-gS-jZe" eventType="editingDidEnd" id="QbH-k9-QvN"/>
+                                        </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yii-rL-pL6">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password (8 - 16 characters)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yii-rL-pL6">
                                         <rect key="frame" x="0.0" y="114" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -124,6 +133,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" textContentType="name"/>
+                                        <connections>
+                                            <action selector="trackSelected:" destination="Adi-gS-jZe" eventType="editingDidEnd" id="RmI-22-fCd"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -159,6 +171,7 @@
                         <outlet property="passwordTextField" destination="Yii-rL-pL6" id="7Sh-9S-yHS"/>
                         <outlet property="registerButton" destination="K3d-fx-fhV" id="v8G-SS-8xT"/>
                         <outlet property="trackTextField" destination="Ytr-Jy-dd5" id="BVx-z8-iyK"/>
+                        <outlet property="validatePasswordTextField" destination="aet-yJ-djG" id="FaX-SX-Zrf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTV-Am-zOc" userLabel="First Responder" sceneMemberID="firstResponder"/>

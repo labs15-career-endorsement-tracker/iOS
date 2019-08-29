@@ -28,7 +28,7 @@ class LoginViewContoller: UIViewController {
                 Config.showAlert(on: self, style: .alert, title: "Login Error", message: "Please make sure all fields are completed.")
                 return
         }
-        let user = CurrentUser(username: username, password: password)
+        let user = CurrentUser(email: username, password: password)
         
         server.loginWith(user: user, completion: { (error) in
             if let error = error {
@@ -37,6 +37,10 @@ class LoginViewContoller: UIViewController {
                 }
                 return
             } else {
+                // Save the bearer token to user defaults
+           //     let userDefaults = UserDefaults.standard
+                let defaults = UserDefaults.standard
+                defaults.set(
                 DispatchQueue.main.async {
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")

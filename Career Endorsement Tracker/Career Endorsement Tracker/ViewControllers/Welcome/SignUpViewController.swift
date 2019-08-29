@@ -150,12 +150,15 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         guard let firstName = firstNameTextField.text, !firstName.isEmpty,
                 let lastName = lastNameTextField.text,  !lastName.isEmpty,
                 let email = emailTextField.text, !email.isEmpty,
-                let password = passwordTextField.text, !password.isEmpty,
-                let track = trackID else {
+            let password = passwordTextField.text, !password.isEmpty else {
                 Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Please make sure all fields are completed.")
                 return
         }
+    
+   //     let device_token = UserDefaults.standard.string(forKey: UserDefaultsKeys.deviceToken) ?? ""
             
+ //       let user = CurrentUser(first_name: firstName, last_name: lastName, email: email, password: password, tracks_id: trackID, device_token = self.device_token)
+    
         let user = CurrentUser(first_name: firstName, last_name: lastName, email: email, password: password, tracks_id: trackID)
         
         server.loginWith(user: user) { (error) in

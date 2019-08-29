@@ -38,9 +38,9 @@ class LoginViewContoller: UIViewController {
                 return
             } else {
                 // Save the bearer token to user defaults
-           //     let userDefaults = UserDefaults.standard
                 let defaults = UserDefaults.standard
-                defaults.set(
+                defaults.set(self.server.encodedBearer, forKey: "EncodedBearerToken")
+                
                 DispatchQueue.main.async {
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")

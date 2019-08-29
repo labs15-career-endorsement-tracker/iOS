@@ -20,7 +20,7 @@ class Server {
     let dataGetter = DataGetter()
     
     var bearer: Bearer?
-    var encodedBearer: Data
+    var encodedBearer: Data?
     
     enum Endpoints: String {
         case signup = "/signup"

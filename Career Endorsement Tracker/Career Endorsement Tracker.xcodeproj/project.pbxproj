@@ -33,6 +33,7 @@
 		5784F9F123072D5600C11198 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5784F9F023072D5600C11198 /* Welcome.storyboard */; };
 		FA5D9B16230F181B00DC9BC1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D9B15230F181B00DC9BC1 /* NotificationService.swift */; };
 		FA5D9B1A230F181B00DC9BC1 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA5D9B13230F181B00DC9BC1 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FA66A39F23187B1C00980AB6 /* UserStepsCompletedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A39E23187B1C00980AB6 /* UserStepsCompletedController.swift */; };
 		FA8AAD7E23158E2100DA36A5 /* TasksTracks+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AAD7D23158E2100DA36A5 /* TasksTracks+Convenience.swift */; };
 		FA8AAD8023158E3700DA36A5 /* Tracks+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AAD7F23158E3700DA36A5 /* Tracks+Convenience.swift */; };
 		FA8AAD8223158E4100DA36A5 /* User+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AAD8123158E4100DA36A5 /* User+Convenience.swift */; };
@@ -111,6 +112,7 @@
 		FA5D9B13230F181B00DC9BC1 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5D9B15230F181B00DC9BC1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FA5D9B17230F181B00DC9BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA66A39E23187B1C00980AB6 /* UserStepsCompletedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStepsCompletedController.swift; sourceTree = "<group>"; };
 		FA8AAD7D23158E2100DA36A5 /* TasksTracks+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TasksTracks+Convenience.swift"; sourceTree = "<group>"; };
 		FA8AAD7F23158E3700DA36A5 /* Tracks+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tracks+Convenience.swift"; sourceTree = "<group>"; };
 		FA8AAD8123158E4100DA36A5 /* User+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Convenience.swift"; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 			children = (
 				FA8AAD8323158E4E00DA36A5 /* User_steps_completed+Convenience.swift */,
 				FA8AAD8F23158E9B00DA36A5 /* User_steps_completedRepresentation.swift */,
+				FA66A39E23187B1C00980AB6 /* UserStepsCompletedController.swift */,
 			);
 			path = User_steps_completed;
 			sourceTree = "<group>";
@@ -624,6 +627,7 @@
 				570CE9072315D56500077B72 /* TaskController.swift in Sources */,
 				FA8AAD7E23158E2100DA36A5 /* TasksTracks+Convenience.swift in Sources */,
 				570CE9052315D4BE00077B72 /* HomeCollectionViewController.swift in Sources */,
+				FA66A39F23187B1C00980AB6 /* UserStepsCompletedController.swift in Sources */,
 				570CE8F92315CA5C00077B72 /* Server.swift in Sources */,
 				570CE9112315F32200077B72 /* WelcomeNavigationController.swift in Sources */,
 				FAA6DF2B2310831800B1DA7D /* TasksRepresentation.swift in Sources */,

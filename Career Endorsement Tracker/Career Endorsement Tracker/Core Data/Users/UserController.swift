@@ -44,6 +44,28 @@ class UserController {
         return result
     }
     
+    private func updateUsers(with representations: [UserRepresentation], in context: NSManagedObjectContext) {
+        context.performAndWait {
+            for userRep in representations {
+                let identifier = userRep.id
+                
+                let user = self.fetchSingleUserFromPersistentStore(identifier: identifier, context: context)
+                if let user = user, user != userRep {
+                    // if we have a User then update it
+                    user.email = userRep.email
+                    user.first_name = userRep.first_name
+                    user.is_admin = userRep.is_admin
+                    user.last_name = userRep.last_name
+                    user.tracks_id = userRep.tracks_id
+                    user.device_token = userRep.device_token
+                } else if user == nil {
+                    // if we have no User then create one
+                    _ = User(userRepresentation: userRep, context: context)
+                }
+            }
+        }
+    }
+    
     func fetchUsersFromServer(completion: @escaping CompletionHandler = { _ in}){
         let requestURL = baseURL.appendingPathExtension("json")
         let backgroundContext = CoreDataStack.shared.container.newBackgroundContext()
@@ -73,27 +95,6 @@ class UserController {
             completion(nil)
             }.resume()
     }
-    
-    private func updateUsers(with representations: [UserRepresentation], in context: NSManagedObjectContext) {
-        context.performAndWait {
-            for userRep in representations {
-                let identifier = userRep.id
-                
-                let user = self.fetchSingleUserFromPersistentStore(identifier: identifier, context: context)
-                if let user = user, user != userRep {
-                    // if we have a User then update it
-                    user.email = userRep.email
-                    user.first_name = userRep.first_name
-                    user.is_admin = userRep.is_admin
-                    user.last_name = userRep.last_name
-                    user.tracks_id = userRep.tracks_id
-                    user.device_token = userRep.device_token
-                } else if user == nil {
-                    // if we have no User then create one
-                    _ = User(userRepresentation: userRep, context: context)
-                }
-            }
-        }
-    }
+
 
 }

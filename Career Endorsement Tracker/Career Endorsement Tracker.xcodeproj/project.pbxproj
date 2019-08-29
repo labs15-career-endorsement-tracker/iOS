@@ -189,13 +189,13 @@
 		3738EC5323061D800083158B /* Career Endorsement Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				5784F9E62307290D00C11198 /* Supporting */,
+				5784F9E72307291900C11198 /* Storyboards */,
 				FACADFE323174573001BBE9C /* Database Mapping */,
 				570CE90F2315F30800077B72 /* New Group */,
 				FAE9606D230F1AB7006E7467 /* Career Endorsement Tracker.entitlements */,
 				5784F9E92307295400C11198 /* Constants */,
 				FAA6DF1B23107B3300B1DA7D /* Core Data */,
-				5784F9E72307291900C11198 /* Storyboards */,
-				5784F9E62307290D00C11198 /* Supporting */,
 				5784F9E52307290800C11198 /* Views */,
 				5784F9E4230728FF00C11198 /* Networking  */,
 				5784F9E3230728F800C11198 /* ViewControllers */,

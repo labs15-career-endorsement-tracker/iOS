@@ -64,6 +64,8 @@ class LoginViewContoller: UIViewController {
     }
     
     func updateViews() {
+        navigationController?.navigationBar.barTintColor =  #colorLiteral(red: 0.1592672765, green: 0.432379216, blue: 0.4243381619, alpha: 1)
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         // Login Btn
         loginButton.layer.masksToBounds = true
         loginButton.layer.cornerRadius = Config.buttonCornerRadius

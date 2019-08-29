@@ -11,6 +11,8 @@ import UIKit
 
 class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    // MARK: - Instances
+
     let server = Server()
     let lambdaTracks: [String] = [ "Full-Stack Web", "iOS", "Data Science", "Android", "UX Design"]
 //    var firstName: String = ""
@@ -19,6 +21,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 //    var password: String = ""
     var trackID: Int = -1
 
+    // MARK: - Outlets
     
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -27,6 +30,78 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var validatePasswordTextField: UITextField!
     @IBOutlet weak var trackTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
+    
+    // MARK: - Actions
+    
+    // MARK: Text Field Validation Actions
+    // first name
+    @IBAction func firstNameTextFieldChanged(_ sender: UITextField) {
+        lastNameTextField.isEnabled = true
+    }
+    
+    // last name
+    @IBAction func lasttNameTextFieldChanged(_ sender: UITextField) {
+        emailTextField.isEnabled = true
+    }
+    
+    // email address
+    @IBAction func emailTextFieldChanged(_ sender: UITextField) {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        let isValidEmail = emailTest.evaluate(with: emailTextField.text)
+        if (isValidEmail) {
+            passwordTextField.isEnabled = true
+            validatePasswordTextField.isEnabled = true
+        } else {
+            lastNameTextField.becomeFirstResponder()
+            Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Please enter a valid email address.")
+            emailTextField.text = nil
+        }
+    }
+    
+    // password
+    // TODO: Validate passwords
+    
+    @IBAction func first_nameDidEndOnExit(_ sender: UITextField) {
+        print("first_nameDidEndOnExit")
+        let charCount = firstNameTextField.text?.count ?? 0
+        if (charCount < 8) {
+            print("first_Name TextField.text?.count = \(charCount)")
+            self.becomeFirstResponder()
+        }
+    }
+    @IBAction func fnEditingDidEnd(_ sender: UITextField) {
+        print("irst_nameEditingDidEnd")
+        let charCount = firstNameTextField.text?.count ?? 0
+        
+        if (charCount < 8) {
+            print("first_Name TextField.text?.count = \(charCount)")
+            self.becomeFirstResponder()
+        }
+    }
+    @IBAction func trackSelected(_ sender: UITextField) {
+        let selectedTrack = trackTextField.text
+        switch(selectedTrack) {
+        case "Full-Stack Web":
+            trackID = 1
+        case "iOS":
+            trackID = 2
+        case "Data Science":
+            trackID = 3
+        case "Android":
+            trackID = 4
+        case "UX Design":
+            trackID = 5
+        default:
+            Config.showAlert(on: self, style: .alert, title: "SignUp Error", message:  "Please select a track")
+        }
+    }
+    
+    @IBAction func registerButtonPressed(_ sender: Any) {
+        signUp()
+    }
+    
+    // MARK: - VC Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,52 +132,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         updateViews()
     }
     
-    // MARK: Text Field Validation Actions
-    // first name
-    @IBAction func firstNameTextFieldChanged(_ sender: UITextField) {
-        lastNameTextField.isEnabled = true
-    }
-    
-    // last name
-    @IBAction func lasttNameTextFieldChanged(_ sender: UITextField) {
-        emailTextField.isEnabled = true
-    }
-    
-    // email address
-    @IBAction func emailTextFieldChanged(_ sender: UITextField) {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        let isValidEmail = emailTest.evaluate(with: emailTextField.text)
-        if (isValidEmail) {
-             passwordTextField.isEnabled = true
-             validatePasswordTextField.isEnabled = true
-        } else {
-            lastNameTextField.becomeFirstResponder()
-            Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Please enter a valid email address.")
-            emailTextField.text = nil
-        }
-    }
-    
-    // password
-    // TODO: Validate passwords
-    
-    @IBAction func first_nameDidEndOnExit(_ sender: UITextField) {
-        print("first_nameDidEndOnExit")
-         let charCount = firstNameTextField.text?.count ?? 0
-        if (charCount < 8) {
-            print("first_Name TextField.text?.count = \(charCount)")
-            self.becomeFirstResponder()
-        }
-    }
-    @IBAction func fnEditingDidEnd(_ sender: UITextField) {
-         print("irst_nameEditingDidEnd")
-        let charCount = firstNameTextField.text?.count ?? 0
-
-        if (charCount < 8) {
-            print("first_Name TextField.text?.count = \(charCount)")
-            self.becomeFirstResponder()
-        }
-    }
+    // MARK: - Pickerview
     
     // Picker view for track selection
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -121,23 +151,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         trackTextField.text = lambdaTracks[row]
     }
     
-    @IBAction func trackSelected(_ sender: UITextField) {
-        let selectedTrack = trackTextField.text
-        switch(selectedTrack) {
-        case "Full-Stack Web":
-            trackID = 1
-        case "iOS":
-            trackID = 2
-        case "Data Science":
-            trackID = 3
-        case "Android":
-            trackID = 4
-        case "UX Design":
-            trackID = 5
-        default:
-            Config.showAlert(on: self, style: .alert, title: "SignUp Error", message:  "Please select a track")
-        }
-    }
+    // MARK: - Signup
     
     func signUp() {
         
@@ -179,9 +193,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
     }
     
-    @IBAction func registerButtonPressed(_ sender: Any) {
-        signUp()
-    }
+    // MARK: - UI
     
     func updateViews() {
         registerButton.layer.masksToBounds = true

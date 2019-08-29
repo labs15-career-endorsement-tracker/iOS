@@ -10,16 +10,29 @@ import UIKit
 
 class LoginViewContoller: UIViewController {
     
+    // MARK: - Instances
+    
     let server = Server()
+    
+    // MARK: - Outlets
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
+    // MARK: - Actions
+    
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        login()
+    }
+    // MARK: - VC Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
     }
+    
+    // MARK: - Methods
     
     func login() {
         guard let username = emailTextField.text, !username.isEmpty,
@@ -48,10 +61,6 @@ class LoginViewContoller: UIViewController {
                 }
             }
         })
-    }
-    
-    @IBAction func loginButtonPressed(_ sender: Any) {
-        login()
     }
     
     func updateViews() {

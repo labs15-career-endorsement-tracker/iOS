@@ -155,11 +155,11 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 return
         }
     
-   //     let device_token = UserDefaults.standard.string(forKey: UserDefaultsKeys.deviceToken) ?? ""
+        let device_token = UserDefaults.standard.string(forKey: UserDefaultsKeys.deviceToken) ?? ""
             
- //       let user = CurrentUser(first_name: firstName, last_name: lastName, email: email, password: password, tracks_id: trackID, device_token = self.device_token)
+        let user = CurrentUser(first_name: firstName, last_name: lastName, email: email, password: password, tracks_id: trackID, device_token: device_token)
     
-        let user = CurrentUser(first_name: firstName, last_name: lastName, email: email, password: password, tracks_id: trackID)
+//        let user = CurrentUser(first_name: firstName, last_name: lastName, email: email, password: password, tracks_id: trackID)
         
         server.loginWith(user: user) { (error) in
             if let error = error  {

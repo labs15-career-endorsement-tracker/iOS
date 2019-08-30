@@ -1,5 +1,5 @@
 //
-//  TracksController.swift
+//  TaskTracksController.swift
 //  Career Endorsement Tracker
 //
 //  Created by Victor  on 8/30/19.
@@ -9,25 +9,25 @@
 import Foundation
 import CoreData
 
-class TracksController {
+class TaskTracksController {
     
     // MARK: - Init
     
-    init(){
-        fetchTracksFromServer { (error) in
+    init() {
+        fetchTasksTracksFromServer { (error) in
             if let error = error {
                 print("ERROR: \(error.localizedDescription)")
             }
-            print("HERE users pulled down: ", self.track.count)
+            print("HERE users pulled down: ", self.tasksTracks.count)
         }
         
     }
     // MARK: - Properties
     
-    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v0/tracks")!
+    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v0/requirements")!
     
-    var track: [Tracks] {
-        let request: NSFetchRequest<Tracks> = Tracks.fetchRequest()
+    var tasksTracks: [TasksTracks] {
+        let request: NSFetchRequest<TasksTracks> = TasksTracks.fetchRequest()
         //Sort by timestamp
         //request.sortDescriptors = [NSSortDescriptor(key: "timeStamp", ascending: true)]
         return (try? CoreDataStack.shared.mainContext.fetch(request)) ?? []
@@ -47,40 +47,40 @@ class TracksController {
     
     typealias CompletionHandler = (Error?) -> Void
     
-    func fetchSingleTrackFromPersistentStore(identifier: String, context: NSManagedObjectContext) -> Tracks? {
+    func fetchSingleTaskTrackFromPersistentStore(identifier: String, context: NSManagedObjectContext) -> TasksTracks? {
         // 1. create fetch request from User
-        let fetchRequest: NSFetchRequest<Tracks> = Tracks.fetchRequest()
+        let fetchRequest: NSFetchRequest<TasksTracks> = TasksTracks.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "identifier == %@", identifier)
         
-        var result: Tracks?
+        var result: TasksTracks?
         
         do {
             result = try context.fetch(fetchRequest).first
         } catch let fetchError {
-            print("Error fetching single track: \(fetchError.localizedDescription)")
+            print("Error fetching single task: \(fetchError.localizedDescription)")
         }
         return result
     }
     
-    private func updateTracks(with representations: [TracksRepresentation], in context: NSManagedObjectContext) {
+    private func updateTasksTracks(with representations: [TaskTracksRepresentation], in context: NSManagedObjectContext) {
         context.performAndWait {
-            for tracksRep in representations {
-                let identifier = tracksRep.id
+            for tasksTracksRep in representations {
+                let identifier = tasksTracksRep.id
                 
-                let track = self.fetchSingleTrackFromPersistentStore(identifier: identifier, context: context)
-                if let track = track, track != tracksRep {
+                let taskTrack = self.fetchSingleTaskTrackFromPersistentStore(identifier: identifier, context: context)
+                if let taskTrack = taskTrack, taskTrack != tasksTracksRep {
                     // if we have a User then update it
-                    track.track_name = tracksRep.track_name
-                    track.id = tracksRep.id
-                } else if track == nil {
+                    taskTrack.tasks_id = tasksTracksRep.tasks_id
+                    taskTrack.tracks_id = tasksTracksRep.tracks_id
+                } else if taskTrack == nil {
                     // if we have no User then create one
-                    _ = Tracks(tracksRepresentation: tracksRep, context: context)
+                    _ = TasksTracks(taskTracksRepresentation: tasksTracksRep, context: context)
                 }
             }
         }
     }
     
-    func fetchTracksFromServer(completion: @escaping CompletionHandler = { _ in}){
+    func fetchTasksTracksFromServer(completion: @escaping CompletionHandler = { _ in}){
         var requestURL = URLRequest(url: baseURL)
         requestURL.httpMethod = "GET"
         requestURL.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -89,7 +89,7 @@ class TracksController {
         
         URLSession.shared.dataTask(with: requestURL)  { (data, _, error) in
             if let error = error {
-                return NSLog("Error fetching tracks: \(error)")
+                return NSLog("Error fetching tasks tracks: \(error)")
             }
             
             guard let data = data else {
@@ -98,10 +98,10 @@ class TracksController {
             }
             
             do {
-                let tracksRepresentationDict = try JSONDecoder().decode([String: TracksRepresentation].self, from: data)
-                let tracksRepresentation = Array(tracksRepresentationDict.values)
+                let taskTracksRepresentationDict = try JSONDecoder().decode([String: TaskTracksRepresentation].self, from: data)
+                let taskTracksRepresentation = Array(taskTracksRepresentationDict.values)
                 
-                self.updateTracks(with: tracksRepresentation, in: backgroundContext)
+                self.updateTasksTracks(with: taskTracksRepresentation, in: backgroundContext)
                 
                 // save changes to disk
                 try CoreDataStack.shared.save(context: backgroundContext)

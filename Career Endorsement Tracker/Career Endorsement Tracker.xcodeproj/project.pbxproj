@@ -28,6 +28,7 @@
 		570CE9112315F32200077B72 /* WelcomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE9102315F32200077B72 /* WelcomeNavigationController.swift */; };
 		570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE9122315F37200077B72 /* WelcomeViewController.swift */; };
 		577EB1AF2319B7CF00EDB960 /* TracksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EB1AE2319B7CF00EDB960 /* TracksController.swift */; };
+		577EB1B12319BB4B00EDB960 /* TaskTracksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EB1B02319BB4B00EDB960 /* TaskTracksController.swift */; };
 		5784F9EB230729B600C11198 /* DataGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EA230729B600C11198 /* DataGetter.swift */; };
 		5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EC23072A1600C11198 /* CurrentUser.swift */; };
 		5784F9EF23072BFB00C11198 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EE23072BFB00C11198 /* Config.swift */; };
@@ -106,6 +107,7 @@
 		570CE9102315F32200077B72 /* WelcomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeNavigationController.swift; sourceTree = "<group>"; };
 		570CE9122315F37200077B72 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		577EB1AE2319B7CF00EDB960 /* TracksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksController.swift; sourceTree = "<group>"; };
+		577EB1B02319BB4B00EDB960 /* TaskTracksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTracksController.swift; sourceTree = "<group>"; };
 		5784F9EA230729B600C11198 /* DataGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGetter.swift; sourceTree = "<group>"; };
 		5784F9EC23072A1600C11198 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		5784F9EE23072BFB00C11198 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 			children = (
 				FA8AAD7D23158E2100DA36A5 /* TasksTracks+Convenience.swift */,
 				FA8AAD8923158E7A00DA36A5 /* TaskTracksRepresentation.swift */,
+				577EB1B02319BB4B00EDB960 /* TaskTracksController.swift */,
 			);
 			path = Tasks_tracks;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				FA8AAD8C23158E8500DA36A5 /* TracksRepresentation.swift in Sources */,
 				FACADFE523174587001BBE9C /* Database.swift in Sources */,
 				FAA6DF222310828500B1DA7D /* Tasks+Convenience.swift in Sources */,
+				577EB1B12319BB4B00EDB960 /* TaskTracksController.swift in Sources */,
 				570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */,
 				5784F9EB230729B600C11198 /* DataGetter.swift in Sources */,
 				FAA6DF2023107E1400B1DA7D /* CareerModel.xcdatamodeld in Sources */,

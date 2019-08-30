@@ -24,7 +24,7 @@ class UserController {
     }
     // MARK: - Properties
     
-    let baseURL = URL(string: "https://backend.com/")!
+    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v0/users")!
     
     var users: [User] {
         let request: NSFetchRequest<User> = User.fetchRequest()
@@ -85,7 +85,10 @@ class UserController {
     }
     
     func fetchUsersFromServer(completion: @escaping CompletionHandler = { _ in}){
-        let requestURL = baseURL.appendingPathExtension("json")
+        var requestURL = URLRequest(url: baseURL)
+        requestURL.httpMethod = "GET"
+        requestURL.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
         let backgroundContext = CoreDataStack.shared.container.newBackgroundContext()
         
         URLSession.shared.dataTask(with: requestURL)  { (data, _, error) in

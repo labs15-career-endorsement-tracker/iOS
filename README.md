@@ -40,19 +40,17 @@
 
 [UX Design files](https://www.notion.so/Mockups-4c32cd42f99447a998f6a6c619457f13)
 
-🚫 One to two paragraph statement about your product and what it does.
-
 ENDRSD is a dual-platform (WEB & iOS) application that provides easily accessible insight to one’s own learning progress (as a student) and any given students’ progress (as a coach/manager).
 
 ![](header.png)
 
 ### Features
 
-- Feature 1
-- Feature 2
-- Feature 3
-- Feature 4
-- Feature 5
+- Users can sign-up and login via both platforms (WEB & iOS)
+- Logged-in users to see a list of their track-specific 'requirements'
+- A logged-in user will be able to view a list of 'steps' that are to be completed for each associated 'requirement'
+- A logged-in user will be able to manually toggle the 'completed' or 'incompleted' status of a 'step'
+- Logged-in users will be able to view their overall endorsement progress, which is always up-to-date with the latest changes
 
 ### Authentication API here
 

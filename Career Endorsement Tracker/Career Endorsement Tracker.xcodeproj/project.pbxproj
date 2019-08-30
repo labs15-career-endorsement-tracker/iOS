@@ -34,6 +34,7 @@
 		FA5D9B16230F181B00DC9BC1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D9B15230F181B00DC9BC1 /* NotificationService.swift */; };
 		FA5D9B1A230F181B00DC9BC1 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA5D9B13230F181B00DC9BC1 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FA66A39F23187B1C00980AB6 /* UserStepsCompletedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A39E23187B1C00980AB6 /* UserStepsCompletedController.swift */; };
+		FA66A3A123198ECC00980AB6 /* StepsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A3A023198ECC00980AB6 /* StepsController.swift */; };
 		FA8AAD7E23158E2100DA36A5 /* TasksTracks+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AAD7D23158E2100DA36A5 /* TasksTracks+Convenience.swift */; };
 		FA8AAD8023158E3700DA36A5 /* Tracks+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AAD7F23158E3700DA36A5 /* Tracks+Convenience.swift */; };
 		FA8AAD8223158E4100DA36A5 /* User+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AAD8123158E4100DA36A5 /* User+Convenience.swift */; };
@@ -113,6 +114,7 @@
 		FA5D9B15230F181B00DC9BC1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FA5D9B17230F181B00DC9BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA66A39E23187B1C00980AB6 /* UserStepsCompletedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStepsCompletedController.swift; sourceTree = "<group>"; };
+		FA66A3A023198ECC00980AB6 /* StepsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsController.swift; sourceTree = "<group>"; };
 		FA8AAD7D23158E2100DA36A5 /* TasksTracks+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TasksTracks+Convenience.swift"; sourceTree = "<group>"; };
 		FA8AAD7F23158E3700DA36A5 /* Tracks+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tracks+Convenience.swift"; sourceTree = "<group>"; };
 		FA8AAD8123158E4100DA36A5 /* User+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Convenience.swift"; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 			children = (
 				FA8AAD8523158E5900DA36A5 /* Steps+Convenience.swift */,
 				FA8AAD9123158EA300DA36A5 /* StepsRepresentation.swift */,
+				FA66A3A023198ECC00980AB6 /* StepsController.swift */,
 			);
 			path = Steps;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				FA8AAD8223158E4100DA36A5 /* User+Convenience.swift in Sources */,
 				570CE8FC2315CA7E00077B72 /* LoginViewController.swift in Sources */,
 				FACADFE0231701A5001BBE9C /* UserController.swift in Sources */,
+				FA66A3A123198ECC00980AB6 /* StepsController.swift in Sources */,
 				3738EC5523061D800083158B /* AppDelegate.swift in Sources */,
 				570CE8E723144E1700077B72 /* RequirementsTableViewCell.swift in Sources */,
 				FACADFDE2316FEDE001BBE9C /* Extensions.swift in Sources */,

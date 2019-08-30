@@ -24,7 +24,7 @@ class TasksController {
     }
     // MARK: - Properties
     
-    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v0/users")!
+    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v0/requirements/")!
     
     var tasks: [Tasks] {
         let request: NSFetchRequest<Tasks> = Tasks.fetchRequest()

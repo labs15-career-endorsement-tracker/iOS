@@ -14,7 +14,7 @@ class TracksController {
     // MARK: - Init
     
     init(){
-        fetchUsersFromServer { (error) in
+        fetchTracksFromServer { (error) in
             if let error = error {
                 print("ERROR: \(error.localizedDescription)")
             }
@@ -80,7 +80,7 @@ class TracksController {
         }
     }
     
-    func fetchUsersFromServer(completion: @escaping CompletionHandler = { _ in}){
+    func fetchTracksFromServer(completion: @escaping CompletionHandler = { _ in}){
         var requestURL = URLRequest(url: baseURL)
         requestURL.httpMethod = "GET"
         requestURL.setValue("application/json", forHTTPHeaderField: "Content-Type")

@@ -19,6 +19,15 @@ class HomeCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        server.fetch { (error) in
+            if let error = error {
+                print(error)
+                return
+            } else {
+              print("Success")
+            }
+        }
         updateView()
     }
     

@@ -11,9 +11,27 @@ import CoreData
 
 class UserController {
 
+    // MARK: - Init
+    
+    init(){
+        fetchUsersFromServer { (error) in
+            if let error = error {
+                print("ERROR: \(error.localizedDescription)")
+            }
+            print("HERE users pulled down: ", self.users.count)
+        }
+        
+    }
     // MARK: - Properties
     
-    let baseURL = URL(string: "https://coredata-283af.firebaseio.com/")!
+    let baseURL = URL(string: "https://backend.com/")!
+    
+    var users: [User] {
+        let request: NSFetchRequest<User> = User.fetchRequest()
+        //Sort by timestamp
+        //request.sortDescriptors = [NSSortDescriptor(key: "timeStamp", ascending: true)]
+        return (try? CoreDataStack.shared.mainContext.fetch(request)) ?? []
+    }
 
     // MARK: - Save Persistent Store
     

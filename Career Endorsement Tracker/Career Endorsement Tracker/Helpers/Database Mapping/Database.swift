@@ -24,4 +24,10 @@ struct UserDefaultsKeys {
     static let tracksID = "tracks_id"
 }
 
-
+//<<<<<<< HEAD
+//
+//=======
+//struct EndpointKeys{
+//    static let userEndpoint = ""
+//}
+//>>>>>>> 95e0ee4e7148499588a9c71a9b78230a79939d57

@@ -1,24 +1,22 @@
-# Career Endorsement Tracker App (iOS Repo)
+# Labs15: Career Endorsement Tracker App (iOS Repo)
 
 🚫 Note: All lines that start with 🚫 are instructions and should be deleted before this is posted to your portfolio. This is intended to be a guideline. Feel free to add your own flare to it.
 
-🚫 The numbers 1️⃣ through 5️⃣ next to each item represent the week that part of the docs needs to be comepleted by.  Make sure to delete the numbers by the end of Labs.
+🚫 The numbers 1️⃣ through 5️⃣ next to each item represent the week that part of the docs needs to be comepleted by. Make sure to delete the numbers by the end of Labs.
 
-🚫 Each student has a required minimum number of meaningful PRs each week per the rubric.  Contributing to docs does NOT count as a PR to meet your weekly requirements.
+🚫 Each student has a required minimum number of meaningful PRs each week per the rubric. Contributing to docs does NOT count as a PR to meet your weekly requirements.
 
-# Title of project goes here
+# ENDRSD App
 
 1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
 
-## 4️⃣ Contributors
+## Contributors
 
-🚫Add contributor info below, make sure add images and edit the social links for each member. Add or delete these place-holders as needed
-
-|                                       [Student 1](https://github.com/)                                        |                                       [Student 2](https://github.com/)                                        |                                       [Student 3](https://github.com/)                                        |                                       [Student 4](https://github.com/)                                        |                                       [Student 5](https://github.com/)                                        |
-| :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
-|                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/)                       |
-|                 [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/)                 |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/honda0306)             |           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Mister-Corn)            |          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NandoTheessen)           |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/wvandolah)             |
-| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) |
+|                                                                                         [Alex Mata](https://github.com/alexander-frost)                                                                                         |                                                                                      [Sameera Roussi](https://github.com/sameeraleola)                                                                                       |                                                                                        [Victor Ruiz](https://github.com/vicxruiz)                                                                                        |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [<img src="https://media.licdn.com/dms/image/C5603AQHRbpDk-q8wRQ/profile-displayphoto-shrink_800_800/0?e=1571270400&v=beta&t=XbAXxDFqp9HpJcXDp0YdgiuPXrFp7667PY8pg8lOKuA" width = "200" />](https://github.com/alexander-frost) | [<img src="https://media.licdn.com/dms/image/C4E03AQHYAtIXaf1z4Q/profile-displayphoto-shrink_800_800/0?e=1571270400&v=beta&t=HHc-X-kcoeFuu1MTYQHGde9M3aa1WJEVOk-98OfAhEs" width = "200" />](https://github.com/sameeraleola) | [<img src="https://media.licdn.com/dms/image/C4E03AQF02srF_ss_iQ/profile-displayphoto-shrink_800_800/0?e=1571270400&v=beta&t=pBz0Pm1cHfDOdUN6wCq6qYDM8rlrHKaNhwsHn8MFUO0" width = "200" />](https://github.com/vicxruiz) |
+|                                                                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/alexander-frost)                                                                   |                                                                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/sameeraleola)                                                                   |                                                                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/vicxruiz)                                                                   |
+|                                                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/alexandert3977/)                                                 |                                                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/sameeraroussi/)                                                |                                                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/vicxruiz/)                                                 |
 
 🚫 Optional examples of using badges with links for your tech stack, make sure to change these to fit your project
 
@@ -36,27 +34,23 @@
 
 1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
 
-1️⃣ [Trello Board](🚫add link to trello board here)
+[Trello Board](https://trello.com/b/hKTAKrBD/endrsd)
 
-1️⃣ [Product Canvas](🚫add link to product canvas here)
+[Product Canvas](https://www.notion.so/Career-Endorsement-Tracker-38de5156701f4cebb29de81a4b6db1ad)
 
-1️⃣ [UX Design files](🚫add link to design files here) - 🚫 delete if not applicable
+[UX Design files](https://www.notion.so/Mockups-4c32cd42f99447a998f6a6c619457f13)
 
-🚫 One to two paragraph statement about your product and what it does.
-
-Quis hendrerit dolor magna eget. Pretium quam vulputate dignissim suspendisse. Ut aliquam purus sit amet luctus venenatis lectus magna fringilla. Orci dapibus ultrices in iaculis nunc sed augue. Euismod in pellentesque massa placerat duis ultricies. Bibendum at varius vel pharetra vel turpis nunc eget lorem. Lectus quam id leo in vitae. Purus sit amet luctus venenatis lectus magna fringilla urna porttitor.
-
-Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum. Donec et odio pellentesque diam volutpat. Id diam maecenas ultricies mi eget mauris. Est pellentesque elit ullamcorper dignissim. Orci dapibus ultrices in iaculis nunc.
+ENDRSD is a dual-platform (WEB & iOS) application that provides easily accessible insight to one’s own learning progress (as a student) and any given students’ progress (as a coach/manager).
 
 ![](header.png)
 
 ### Features
 
--    Feature 1
--    Feature 2
--    Feature 3
--    Feature 4
--    Feature 5
+- Users can sign-up and login via both platforms (WEB & iOS)
+- Logged-in users to see a list of their track-specific 'requirements'
+- A logged-in user will be able to view a list of 'steps' that are to be completed for each associated 'requirement'
+- A logged-in user will be able to manually toggle the 'completed' or 'incompleted' status of a 'step'
+- Logged-in users will be able to view their overall endorsement progress, which is always up-to-date with the latest changes
 
 ### Authentication API here
 
@@ -92,9 +86,9 @@ Volunteering your time; it pays you and your whole community fantastic dividends
 
 🚫 These are examples, make sure this matches your project's requirements
 
--   iOS 8.0+
--   Xcode 7.3
--   Cocoa Pods
+- iOS 8.0+
+- Xcode 7.3
+- Cocoa Pods
 
 ## Contributing
 
@@ -112,11 +106,12 @@ Please note we have a [code of conduct](./code_of_conduct.md). Please follow it 
 
 ### Issue/Bug Request
 
- **If you are having an issue with the existing project code, please submit a bug report under the following guidelines:**
- - Check first to see if your issue has already been reported.
- - Check to see if the issue has recently been fixed by attempting to reproduce the issue using the latest master branch in the repository.
- - Create a live example of the problem.
- - Submit a detailed bug report including your environment & browser, steps to reproduce the issue, actual and expected outcomes,  where you believe the issue is originating from, and any potential solutions you have considered.
+**If you are having an issue with the existing project code, please submit a bug report under the following guidelines:**
+
+- Check first to see if your issue has already been reported.
+- Check to see if the issue has recently been fixed by attempting to reproduce the issue using the latest master branch in the repository.
+- Create a live example of the problem.
+- Submit a detailed bug report including your environment & browser, steps to reproduce the issue, actual and expected outcomes, where you believe the issue is originating from, and any potential solutions you have considered.
 
 ### Feature Requests
 
@@ -140,11 +135,9 @@ Remember that this project is licensed under the MIT license, and by submitting 
 
 These contribution guidelines have been adapted from [this good-Contributing.md-template](https://gist.github.com/PurpleBooth/b24679402957c63ec426).
 
-
 ## Documentation
 
 See [Backend Documentation](_link to your backend readme here_) for details on the backend of our project.
-
 
 [swift-image]: https://img.shields.io/badge/swift-3.0-orange.svg
 [swift-url]: https://swift.org/

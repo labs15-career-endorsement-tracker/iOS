@@ -1,4 +1,4 @@
-# Career Endorsement Tracker App (iOS Repo)
+# Labs15: Career Endorsement Tracker App (iOS Repo)
 
 🚫 Note: All lines that start with 🚫 are instructions and should be deleted before this is posted to your portfolio. This is intended to be a guideline. Feel free to add your own flare to it.
 
@@ -6,7 +6,7 @@
 
 🚫 Each student has a required minimum number of meaningful PRs each week per the rubric. Contributing to docs does NOT count as a PR to meet your weekly requirements.
 
-# Career Endorsement Tracker App
+# ENDRSD App
 
 1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
 
@@ -34,11 +34,11 @@
 
 1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
 
-1️⃣ [Trello Board](🚫add link to trello board here)
+1️⃣ [Trello Board](https://trello.com/b/hKTAKrBD/endrsd)
 
-1️⃣ [Product Canvas](🚫add link to product canvas here)
+1️⃣ [Product Canvas](https://www.notion.so/Career-Endorsement-Tracker-38de5156701f4cebb29de81a4b6db1ad)
 
-1️⃣ [UX Design files](🚫add link to design files here) - 🚫 delete if not applicable
+1️⃣ [UX Design files](https://www.notion.so/Mockups-4c32cd42f99447a998f6a6c619457f13)
 
 🚫 One to two paragraph statement about your product and what it does.
 

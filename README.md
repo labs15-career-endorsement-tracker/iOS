@@ -34,17 +34,15 @@
 
 1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
 
-1️⃣ [Trello Board](https://trello.com/b/hKTAKrBD/endrsd)
+[Trello Board](https://trello.com/b/hKTAKrBD/endrsd)
 
-1️⃣ [Product Canvas](https://www.notion.so/Career-Endorsement-Tracker-38de5156701f4cebb29de81a4b6db1ad)
+[Product Canvas](https://www.notion.so/Career-Endorsement-Tracker-38de5156701f4cebb29de81a4b6db1ad)
 
-1️⃣ [UX Design files](https://www.notion.so/Mockups-4c32cd42f99447a998f6a6c619457f13)
+[UX Design files](https://www.notion.so/Mockups-4c32cd42f99447a998f6a6c619457f13)
 
 🚫 One to two paragraph statement about your product and what it does.
 
-Quis hendrerit dolor magna eget. Pretium quam vulputate dignissim suspendisse. Ut aliquam purus sit amet luctus venenatis lectus magna fringilla. Orci dapibus ultrices in iaculis nunc sed augue. Euismod in pellentesque massa placerat duis ultricies. Bibendum at varius vel pharetra vel turpis nunc eget lorem. Lectus quam id leo in vitae. Purus sit amet luctus venenatis lectus magna fringilla urna porttitor.
-
-Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum. Donec et odio pellentesque diam volutpat. Id diam maecenas ultricies mi eget mauris. Est pellentesque elit ullamcorper dignissim. Orci dapibus ultrices in iaculis nunc.
+ENDRSD is a dual-platform (WEB & iOS) application that provides easily accessible insight to one’s own learning progress (as a student) and any given students’ progress (as a coach/manager).
 
 ![](header.png)
 

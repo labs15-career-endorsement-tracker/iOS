@@ -17,3 +17,7 @@ struct UserDefaultsKeys {
     static let userAvatarUrl = "userAvatarUrl"
     static let userDOB = "userDateOfBirth"
 }
+
+struct EndpointKeys{
+    static let userEndpoint = ""
+}

@@ -175,7 +175,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
 //        let user = CurrentUser(first_name: firstName, last_name: lastName, email: email, password: password, tracks_id: trackID)
         
-        server.loginWith(user: user) { (error) in
+        server.signUp(with: user) { (error) in
             if let error = error  {
                 DispatchQueue.main.async {
                     Config.showAlert(on: self, style: .alert, title: "Sign Up Error", message: error.localizedDescription)

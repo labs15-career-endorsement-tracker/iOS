@@ -25,6 +25,10 @@ class Server {
     enum Endpoints: String {
         case signup = "/signup"
         case login = "/login"
+        case users = "/users"
+        case tracks = "/tracks"
+        case requirements = "/requirements"
+        case steps = "/requirements/:requirementsId/steps"
     }
     
     enum HTTPHeaderKeys: String {
@@ -107,5 +111,21 @@ class Server {
     }
     
     
+   func fetch(completion: @escaping (Error?)->Void) {
+       let signUpURL = baseURL!.appendingPathComponent(Endpoints.users.rawValue)
+     //   let backgroundContext = CoreDataStack.shared.container.newBackgroundContext()
+        
+        var request = URLRequest(url: signUpURL)
+        request.httpMethod = HTTPMethods.get.rawValue
+        request.setValue(HTTPHeaderKeys.ContentTypes.json.rawValue, forHTTPHeaderField: HTTPHeaderKeys.contentType.rawValue)
+    
+        dataGetter.fetchData(with: request) { (_, _, error) in
+            if let error = error {
+                completion(error)
+            } else {
+                completion(nil)
+            }
+        }
+    }
     
 }

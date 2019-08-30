@@ -12,7 +12,7 @@ import UIKit
 class HomeCollectionViewController: UICollectionViewController {
     
     // MARK: - Instances
-    
+    let server = Server()
     let taskController = TaskController()
     
     // MARK: - VC Lifecycle

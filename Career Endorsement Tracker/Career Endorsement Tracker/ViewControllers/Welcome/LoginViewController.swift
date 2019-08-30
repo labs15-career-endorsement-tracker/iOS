@@ -50,9 +50,10 @@ class LoginViewContoller: UIViewController {
                 }
                 return
             } else {
-                // Save the bearer token to user defaults
+                // Save the encoded and decoded bearer tokens to user defaults
                 let defaults = UserDefaults.standard
-                defaults.set(self.server.encodedBearer, forKey: "EncodedBearerToken")
+                defaults.set(self.server.encodedBearer, forKey: UserDefaultsKeys.encodedBearer)
+                defaults.set(self.server.bearer, forKey: UserDefaultsKeys.decodedBearer)
                 
                 DispatchQueue.main.async {
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -65,7 +66,8 @@ class LoginViewContoller: UIViewController {
     
     func updateViews() {
         navigationController?.navigationBar.barTintColor =  #colorLiteral(red: 0.1592672765, green: 0.432379216, blue: 0.4243381619, alpha: 1)
-        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+       // self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+         self.navigationController?.navigationBar.tintColor = Config.buttonTitleColor
         // Login Btn
         loginButton.layer.masksToBounds = true
         loginButton.layer.cornerRadius = Config.buttonCornerRadius

@@ -10,14 +10,36 @@ import Foundation
 import UIKit
 
 //Model for user signed in
-struct CurrentUser {
-    let uid: String
-    var name: String
-    var email: String
+//struct CurrentUser: Encodable {
+//    var first_name: String = ""
+//    var last_name: String = ""
+//    var email: String
+//    var password: String
+//    var tracks_id: Int = -1
+//
+//    init( first_name: String, last_name: String, email: String, password: String, tracks_id: Int) {
+//        (self.first_name, self.last_name, self.email, self.password, self.tracks_id) = (first_name, last_name, email, password, tracks_id)
+//    }
+//
+//    init( email: String, password: String) {
+//        (self.email, self.password) = (email, password)
+//    }
+
     
-    init(uid: String, dictionary: [String: Any]) {
-        self.uid = uid
-        self.name = dictionary["name"] as? String ?? ""
-        self.email = dictionary["email"] as? String ?? ""
-    }
+    // With device_token
+    struct CurrentUser: Encodable {
+        var first_name: String = ""
+        var last_name: String = ""
+        var email: String
+        var password: String
+        var tracks_id: Int = -1
+        var device_token: String = ""
+
+        init( first_name: String, last_name: String, email: String, password: String, tracks_id: Int, device_token: String) {
+            (self.first_name, self.last_name, self.email, self.password, self.tracks_id, self.device_token) = (first_name, last_name, email, password, tracks_id, device_token)
+        }
+
+        init( email: String, password: String) {
+            (self.email, self.password) = (email, password)
+        }
 }

@@ -6,10 +6,20 @@
 //  Copyright © 2019 Lambda School. All rights reserved.
 //
 
+
 import Foundation
 import UIKit
 
 class DataGetter {
+    
+    enum NetworkError: Error {
+        case noAuth
+        case otherError
+        case badData
+        case noDecode
+        case httpNon200StatusCode(code: Int)
+    }
+    
     //setting constants
     enum HTTPError: Error {
         case non200StatusCode
@@ -18,10 +28,10 @@ class DataGetter {
     
     //retrieves data
     func fetchData(with request: URLRequest, requestID: String? = nil, completion: @escaping (String?, Data?, Error?) -> Void) {
-        
+        // bob_ross@happylittlemistakes.com
         //data task
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            //error handling
+            //error handling     
             if let error = error {
                 print(error)
                 completion(requestID, nil, error)

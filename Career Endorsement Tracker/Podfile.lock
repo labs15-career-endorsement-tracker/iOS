@@ -1,20 +1,16 @@
 PODS:
-  - JGProgressHUD (2.0.3)
-  - LBTAComponents (1.1)
+  - FoldingCell (5.0.1)
 
 DEPENDENCIES:
-  - JGProgressHUD
-  - LBTAComponents
+  - FoldingCell
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - JGProgressHUD
-    - LBTAComponents
+    - FoldingCell
 
 SPEC CHECKSUMS:
-  JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
-  LBTAComponents: 2e7719683ddcf1cdf7280700438c0c6a5f7da550
+  FoldingCell: 9197b915a415af9e52a857964066797af6a51c2b
 
-PODFILE CHECKSUM: 737b0e255cc3ce790dda41deca2ef68490f6008a
+PODFILE CHECKSUM: 86b828f73752536e6a48dc42de176c4eb515442b
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.6.1

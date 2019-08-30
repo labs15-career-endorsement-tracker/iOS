@@ -1,4 +1,4 @@
-framework module Pods_Career_Endorsement_Tracker {
+module Pods_Career_Endorsement_Tracker {
   umbrella header "Pods-Career Endorsement Tracker-umbrella.h"
 
   export *

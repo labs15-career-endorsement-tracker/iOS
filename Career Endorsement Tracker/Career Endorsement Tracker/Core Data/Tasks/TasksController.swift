@@ -18,7 +18,7 @@ class TasksController {
             if let error = error {
                 print("ERROR: \(error.localizedDescription)")
             }
-            print("HERE users pulled down: ", self.tasks.count)
+            print("HERE tasks pulled down: ", self.tasks.count)
         }
         
     }

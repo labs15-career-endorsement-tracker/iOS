@@ -1,6 +1,6 @@
 Documentation
 
-# Xcode
+# Xcode ignores
 build/*
 *.pbxuser
 !default.pbxuser

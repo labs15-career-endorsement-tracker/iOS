@@ -1,1 +1,1 @@
-../../../Target Support Files/FoldingCell/FoldingCell-umbrella.h
+/Users/victor/LambdaTL/iOS/Career Endorsement Tracker/Pods/Target Support Files/FoldingCell/FoldingCell-umbrella.h

@@ -27,6 +27,9 @@
 		570CE90E2315D6B300077B72 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */; };
 		570CE9112315F32200077B72 /* WelcomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE9102315F32200077B72 /* WelcomeNavigationController.swift */; };
 		570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE9122315F37200077B72 /* WelcomeViewController.swift */; };
+		577EB1AF2319B7CF00EDB960 /* TracksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EB1AE2319B7CF00EDB960 /* TracksController.swift */; };
+		577EB1B12319BB4B00EDB960 /* TaskTracksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EB1B02319BB4B00EDB960 /* TaskTracksController.swift */; };
+		577EB1B52319BE9600EDB960 /* TasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EB1B42319BE9600EDB960 /* TasksController.swift */; };
 		5784F9EB230729B600C11198 /* DataGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EA230729B600C11198 /* DataGetter.swift */; };
 		5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EC23072A1600C11198 /* CurrentUser.swift */; };
 		5784F9EF23072BFB00C11198 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EE23072BFB00C11198 /* Config.swift */; };
@@ -104,6 +107,9 @@
 		570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		570CE9102315F32200077B72 /* WelcomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeNavigationController.swift; sourceTree = "<group>"; };
 		570CE9122315F37200077B72 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		577EB1AE2319B7CF00EDB960 /* TracksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksController.swift; sourceTree = "<group>"; };
+		577EB1B02319BB4B00EDB960 /* TaskTracksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTracksController.swift; sourceTree = "<group>"; };
+		577EB1B42319BE9600EDB960 /* TasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksController.swift; sourceTree = "<group>"; };
 		5784F9EA230729B600C11198 /* DataGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGetter.swift; sourceTree = "<group>"; };
 		5784F9EC23072A1600C11198 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		5784F9EE23072BFB00C11198 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -345,6 +351,7 @@
 			children = (
 				FAA6DF212310828500B1DA7D /* Tasks+Convenience.swift */,
 				FAA6DF2A2310831800B1DA7D /* TasksRepresentation.swift */,
+				577EB1B42319BE9600EDB960 /* TasksController.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -354,6 +361,7 @@
 			children = (
 				FA8AAD7D23158E2100DA36A5 /* TasksTracks+Convenience.swift */,
 				FA8AAD8923158E7A00DA36A5 /* TaskTracksRepresentation.swift */,
+				577EB1B02319BB4B00EDB960 /* TaskTracksController.swift */,
 			);
 			path = Tasks_tracks;
 			sourceTree = "<group>";
@@ -363,6 +371,7 @@
 			children = (
 				FA8AAD7F23158E3700DA36A5 /* Tracks+Convenience.swift */,
 				FA8AAD8B23158E8500DA36A5 /* TracksRepresentation.swift */,
+				577EB1AE2319B7CF00EDB960 /* TracksController.swift */,
 			);
 			path = Tracks;
 			sourceTree = "<group>";
@@ -597,6 +606,7 @@
 				FA8AAD8C23158E8500DA36A5 /* TracksRepresentation.swift in Sources */,
 				FACADFE523174587001BBE9C /* Database.swift in Sources */,
 				FAA6DF222310828500B1DA7D /* Tasks+Convenience.swift in Sources */,
+				577EB1B12319BB4B00EDB960 /* TaskTracksController.swift in Sources */,
 				570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */,
 				5784F9EB230729B600C11198 /* DataGetter.swift in Sources */,
 				FAA6DF2023107E1400B1DA7D /* CareerModel.xcdatamodeld in Sources */,
@@ -607,6 +617,7 @@
 				FA8AAD8823158E6400DA36A5 /* Resources+Convenience.swift in Sources */,
 				FA8AAD8023158E3700DA36A5 /* Tracks+Convenience.swift in Sources */,
 				FA8AAD8A23158E7A00DA36A5 /* TaskTracksRepresentation.swift in Sources */,
+				577EB1B52319BE9600EDB960 /* TasksController.swift in Sources */,
 				FA8AAD8E23158E8F00DA36A5 /* UserRepresentation.swift in Sources */,
 				FA8AAD8223158E4100DA36A5 /* User+Convenience.swift in Sources */,
 				570CE8FC2315CA7E00077B72 /* LoginViewController.swift in Sources */,
@@ -615,6 +626,7 @@
 				3738EC5523061D800083158B /* AppDelegate.swift in Sources */,
 				570CE8E723144E1700077B72 /* RequirementsTableViewCell.swift in Sources */,
 				FACADFDE2316FEDE001BBE9C /* Extensions.swift in Sources */,
+				577EB1AF2319B7CF00EDB960 /* TracksController.swift in Sources */,
 				570CE8E523143FC000077B72 /* HomeTableViewController.swift in Sources */,
 				5784F9EF23072BFB00C11198 /* Config.swift in Sources */,
 				FA8AAD9223158EA300DA36A5 /* StepsRepresentation.swift in Sources */,

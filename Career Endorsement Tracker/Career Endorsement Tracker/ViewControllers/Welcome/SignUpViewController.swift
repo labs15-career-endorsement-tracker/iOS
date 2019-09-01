@@ -162,7 +162,6 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         // Validate track
         func isValidTrack() -> Bool {
             if( (1...5).contains(track_id) ) {
-                print("The track ID is: \(track_id)")
                 trackTextField.resignFirstResponder()
                 return true
             } else {

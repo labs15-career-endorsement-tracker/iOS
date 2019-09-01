@@ -21,7 +21,6 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     var lastName: String = ""
     var email: String = ""
     var password: String = ""
-    var confirmationPassword: String = ""
     var track_id: Int = 0
 
     // MARK: - Outlets
@@ -77,25 +76,30 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     // MARK: - Signup
     func signUp() {
         // Validation actions for text fields
-
-    
-//        let user = CurrentUser(first_name: firstName, last_name: lastName, email: email, password: password, tracks_id: trackID)
+        let user = CurrentUser(first_name: firstName, last_name: lastName, email: email, password: password, tracks_id: track_id)
         
-        server.signUp(with: user) { (error) in
-            if let error = error  {
-                DispatchQueue.main.async {
-                    Config.showAlert(on: self, style: .alert, title: "Sign Up Error", message: error.localizedDescription)
-                }
-                return
-            } else {
-                DispatchQueue.main.async {
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
-                    self.present(vc, animated: true, completion: nil)
-                }
-            }
-            
-        }
+        
+        
+//        server.signUp(with: user) { (error) in
+//            if let error = error  {
+//                DispatchQueue.main.async {
+//                    Config.showAlert(on: self, style: .alert, title: "Sign Up Error", message: error.localizedDescription)
+//                }
+//                return
+//            } else {
+//                // Save the encoded and decoded bearer tokens to user defaults
+//                let defaults = UserDefaults.standard
+//
+//                defaults.set(self.server.encodedBearer, forKey: UserDefaultsKeys.encodedBearer)
+//
+//                DispatchQueue.main.async {
+//                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                    let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
+//                    self.present(vc, animated: true, completion: nil)
+//                }
+//            }
+//
+//        }
         
     }
     

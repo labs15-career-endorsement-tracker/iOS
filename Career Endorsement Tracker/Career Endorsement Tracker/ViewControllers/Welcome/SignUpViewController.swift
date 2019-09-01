@@ -72,66 +72,12 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         trackTextField.text = lambdaTracks[row]
         track_id = row
     }
-    
-    
-    
-    // MARK: Text Field Validation Actions
-    // first name
-    @IBAction func firstNameTextFieldChanged(_ sender: UITextField) {
-        lastNameTextField.isEnabled = true
-    }
-    
-    // last name
-    @IBAction func lasttNameTextFieldChanged(_ sender: UITextField) {
-        emailTextField.isEnabled = true
-    }
-    
-    
-    
-    
-    
-    
-    // email address
-    @IBAction func emailTextFieldChanged(_ sender: UITextField) {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        let isValidEmail = emailTest.evaluate(with: emailTextField.text)
-        if (isValidEmail) {
-            passwordTextField.isEnabled = true
-            validatePasswordTextField.isEnabled = true
-        } else {
-            lastNameTextField.becomeFirstResponder()
-            Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Please enter a valid email address.")
-            emailTextField.text = nil
-        }
-    }
-    
 
     
-    
-    
-    
     // MARK: - Signup
-    
     func signUp() {
-        
         // Validation actions for text fields
-//
-//        guard let firstName = firstNameTextField.text, !firstName.isEmpty, let lastName = lastNameTextField.text, !lastName.isEmpty, !lastName.isEmpty, track = trackID, track != -1, let username = emailTextField.text, !username.isEmpty, let password = passwordTextField.text, !password.isEmpty else {
-//            Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Please make sure all fields are completed.")
-//            return
-//        }
-        guard let firstName = firstNameTextField.text, !firstName.isEmpty,
-                let lastName = lastNameTextField.text,  !lastName.isEmpty,
-                let email = emailTextField.text, !email.isEmpty,
-            let password = passwordTextField.text, !password.isEmpty else {
-                Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Please make sure all fields are completed.")
-                return
-        }
-    
-        let device_token = UserDefaults.standard.string(forKey: UserDefaultsKeys.deviceToken) ?? ""
-            
-        let user = CurrentUser(first_name: firstName, last_name: lastName, email: email, password: password, tracks_id: trackID, device_token: device_token)
+
     
 //        let user = CurrentUser(first_name: firstName, last_name: lastName, email: email, password: password, tracks_id: trackID)
         
@@ -154,7 +100,6 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
     // MARK: - UI
-    
     func updateViews() {
         registerButton.layer.masksToBounds = true
         registerButton.layer.cornerRadius = Config.buttonCornerRadius
@@ -163,20 +108,6 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     // MARK: Validation Functions and Actions
 
-    //name check
-    func isValidName(testStr:String) -> Bool {
-        let nameRegEx = "^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$"
-        let nameTest = NSPredicate(format:"SELF MATCHES %@", nameRegEx)
-        return nameTest.evaluate(with: testStr)
-    }
-    
-    //email check
-    func isValidEmail(testStr:String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: testStr)
-    }
     
     
     

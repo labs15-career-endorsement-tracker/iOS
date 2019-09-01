@@ -34,7 +34,46 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var trackTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     
+    // MARK: - VC Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Create the picker view for the track selection
+        let trackPicker = UIPickerView()
+        trackTextField.inputView = trackPicker
+        trackPicker.delegate = self
+        
+        updateViews()
+    }
+    
+    
     // MARK: - Actions
+    @IBAction func registerButtonPressed(_ sender: Any) {
+        signUp()
+    }
+    
+    
+    // MARK: - Pickerview
+    // Picker view for track selection
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return lambdaTracks.count
+    }
+    
+    func pickerView( _ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return lambdaTracks[row]
+    }
+    
+    func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        trackTextField.text = lambdaTracks[row]
+        track_id = row
+    }
+    
+    
     
     // MARK: Text Field Validation Actions
     // first name
@@ -46,6 +85,11 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBAction func lasttNameTextFieldChanged(_ sender: UITextField) {
         emailTextField.isEnabled = true
     }
+    
+    
+    
+    
+    
     
     // email address
     @IBAction func emailTextFieldChanged(_ sender: UITextField) {
@@ -100,59 +144,8 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         }
     }
     
-    @IBAction func registerButtonPressed(_ sender: Any) {
-        signUp()
-    }
     
-    // MARK: - VC Lifecycle
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        lastNameTextField.isEnabled = false
-        emailTextField.isEnabled = false
-        passwordTextField.isEnabled = false
-        validatePasswordTextField.isEnabled = false
-//        registerButton.isEnabled = false
-        
-        // Disable password autofill
-        if #available(iOS 12, *) {
-            // iOS 12: Not the best solution, but it works.
-            emailTextField.textContentType = .oneTimeCode
-            passwordTextField.textContentType = .oneTimeCode
-        } else {
-            // iOS 11: Disables the autofill accessory view.
-            // For more information see the explanation below.
-            emailTextField.textContentType = .init(rawValue: "")
-            passwordTextField.textContentType = .init(rawValue: "")
-        }
-        
-        // Create the picker view for the track selection
-        let trackPicker = UIPickerView()
-        trackTextField.inputView = trackPicker
-        trackPicker.delegate = self
-        
-        updateViews()
-    }
-    
-    // MARK: - Pickerview
-    
-    // Picker view for track selection
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return lambdaTracks.count
-    }
-    
-    func pickerView( _ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return lambdaTracks[row]
-    }
-    
-    func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        trackTextField.text = lambdaTracks[row]
-    }
     
     // MARK: - Signup
     

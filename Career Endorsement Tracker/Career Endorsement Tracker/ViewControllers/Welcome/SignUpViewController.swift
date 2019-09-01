@@ -106,43 +106,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         }
     }
     
-    // password
-    // TODO: Validate passwords
-    
-    @IBAction func first_nameDidEndOnExit(_ sender: UITextField) {
-        print("first_nameDidEndOnExit")
-        let charCount = firstNameTextField.text?.count ?? 0
-        if (charCount < 8) {
-            print("first_Name TextField.text?.count = \(charCount)")
-            self.becomeFirstResponder()
-        }
-    }
-    @IBAction func fnEditingDidEnd(_ sender: UITextField) {
-        print("irst_nameEditingDidEnd")
-        let charCount = firstNameTextField.text?.count ?? 0
-        
-        if (charCount < 8) {
-            print("first_Name TextField.text?.count = \(charCount)")
-            self.becomeFirstResponder()
-        }
-    }
-    @IBAction func trackSelected(_ sender: UITextField) {
-        let selectedTrack = trackTextField.text
-        switch(selectedTrack) {
-        case "Full-Stack Web":
-            trackID = 1
-        case "iOS":
-            trackID = 2
-        case "Data Science":
-            trackID = 3
-        case "Android":
-            trackID = 4
-        case "UX Design":
-            trackID = 5
-        default:
-            Config.showAlert(on: self, style: .alert, title: "SignUp Error", message:  "Please select a track")
-        }
-    }
+
     
     
     

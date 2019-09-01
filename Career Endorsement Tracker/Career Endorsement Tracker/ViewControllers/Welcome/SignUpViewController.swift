@@ -14,7 +14,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     // MARK: - Instances
 
     let server = Server()
-    let lambdaTracks: [String] = [ "Full-Stack Web", "iOS", "Data Science", "Android", "UX Design"]
+    let lambdaTracks: [String] = ["Select your track", "Full-Stack Web", "iOS", "Data Science", "Android", "UX Design"]
     
     // Form fields
     var firstName: String = ""

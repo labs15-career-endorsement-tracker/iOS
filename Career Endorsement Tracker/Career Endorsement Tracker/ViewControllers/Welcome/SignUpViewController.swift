@@ -15,11 +15,14 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
     let server = Server()
     let lambdaTracks: [String] = [ "Full-Stack Web", "iOS", "Data Science", "Android", "UX Design"]
-//    var firstName: String = ""
-//    var lastName: String = ""
-//    var emailAddr: String = ""
-//    var password: String = ""
-    var trackID: Int = -1
+    
+    // Form fields
+    var firstName: String = ""
+    var lastName: String = ""
+    var email: String = ""
+    var password: String = ""
+    var confirmationPassword: String = ""
+    var track_id: Int = 0
 
     // MARK: - Outlets
     

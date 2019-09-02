@@ -101,11 +101,27 @@ class Server {
             return
         }
         
-        dataGetter.fetchData(with: request) { (_, _, error) in
+        dataGetter.fetchData(with: request) { (_, data, error) in
             if let error = error {
                 completion(error)
             } else {
                 completion(nil)
+            }
+            
+            guard let data = data else {
+                completion(DataGetter.NetworkError.badData)
+                return
+            }
+            
+            // Save the endoded bearer token so that it can be saved to user defaults
+            self.encodedBearer = data
+            
+            let decoder = JSONDecoder()
+            do {
+                self.bearer = try decoder.decode(Bearer.self, from: data)
+                completion(nil)
+            } catch {
+                completion(error)
             }
         }
     }

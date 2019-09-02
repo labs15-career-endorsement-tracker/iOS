@@ -91,9 +91,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" textContentType="name"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="name"/>
                                                 <connections>
-                                                    <action selector="firstNameTextFieldChanged:" destination="Adi-gS-jZe" eventType="editingChanged" id="MuJ-GO-DDy"/>
+                                                    <outlet property="delegate" destination="Adi-gS-jZe" id="jox-Ds-s29"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
@@ -102,40 +102,43 @@
                                         <rect key="frame" x="0.0" y="38" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" textContentType="name"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="name"/>
                                         <connections>
-                                            <action selector="lasttNameTextFieldChanged:" destination="Adi-gS-jZe" eventType="editingDidEnd" id="Sd4-36-fWv"/>
+                                            <outlet property="delegate" destination="Adi-gS-jZe" id="E3U-5U-SeP"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="izK-sW-s9C">
                                         <rect key="frame" x="0.0" y="76" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                         <connections>
-                                            <action selector="emailTextFieldChanged:" destination="Adi-gS-jZe" eventType="editingDidEnd" id="QbH-k9-QvN"/>
+                                            <outlet property="delegate" destination="Adi-gS-jZe" id="bQ5-UQ-P5D"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password (8 - 16 characters)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yii-rL-pL6">
                                         <rect key="frame" x="0.0" y="114" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Adi-gS-jZe" id="QOD-vx-EY5"/>
+                                        </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Validate Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aet-yJ-djG">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aet-yJ-djG">
                                         <rect key="frame" x="0.0" y="152" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Adi-gS-jZe" id="LFs-8G-R3p"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Track" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ytr-Jy-dd5">
                                         <rect key="frame" x="0.0" y="190" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" textContentType="name"/>
-                                        <connections>
-                                            <action selector="trackSelected:" destination="Adi-gS-jZe" eventType="editingDidEnd" id="RmI-22-fCd"/>
-                                        </connections>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -165,13 +168,13 @@
                         <viewLayoutGuide key="safeArea" id="pv7-aZ-ITD"/>
                     </view>
                     <connections>
+                        <outlet property="confirmPasswordTextField" destination="aet-yJ-djG" id="FaX-SX-Zrf"/>
                         <outlet property="emailTextField" destination="izK-sW-s9C" id="GaP-aw-MB5"/>
                         <outlet property="firstNameTextField" destination="58b-wS-89H" id="EZ3-Yq-nnQ"/>
                         <outlet property="lastNameTextField" destination="MYh-hE-dXV" id="DFX-r0-SGr"/>
                         <outlet property="passwordTextField" destination="Yii-rL-pL6" id="7Sh-9S-yHS"/>
                         <outlet property="registerButton" destination="K3d-fx-fhV" id="v8G-SS-8xT"/>
                         <outlet property="trackTextField" destination="Ytr-Jy-dd5" id="BVx-z8-iyK"/>
-                        <outlet property="validatePasswordTextField" destination="aet-yJ-djG" id="FaX-SX-Zrf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTV-Am-zOc" userLabel="First Responder" sceneMemberID="firstResponder"/>

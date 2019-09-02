@@ -16,7 +16,12 @@ class Config {
     static let buttonTitleFontSize: CGFloat = 18
     static let buttonTitleColor = UIColor.white
     static let buttonCornerRadius: CGFloat = 7
+    
+    
+    // Textfield highlight color
+    static let textFieldBorderColor = UIColor(red: 173.0/256.0, green: 216.0/256.0, blue: 144/256.0, alpha: 1.0).cgColor
 
+    
     // App theme colors
     static var themeNavBarTint = UIColor(red: 41.0/256.0, green: 110.0/256.0, blue: 108.0/256.0, alpha: 1.0)
     static var themeButtonColor = UIColor(red: 33.0/256.0, green: 92.0/256.0, blue: 89.0/256.0, alpha: 1.0)

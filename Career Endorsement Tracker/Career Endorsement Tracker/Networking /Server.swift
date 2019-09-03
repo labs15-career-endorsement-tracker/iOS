@@ -43,7 +43,7 @@ class Server {
     
     
     func loginWith(user: CurrentUser, completion: @escaping (Error?)->Void) {
-        let loginURL = baseURL!.appendingPathComponent(Endpoints.login)
+        let loginURL = baseURL!.appendingPathComponent(Endpoints.login.rawValue)
          print("loginURL = \(loginURL)")
         var request = URLRequest(url: loginURL)
         request.httpMethod = HTTPMethods.post.rawValue
@@ -129,7 +129,7 @@ class Server {
     
     
    func fetch(completion: @escaping (Error?)->Void) {
-       let signUpURL = baseURL!.appendingPathComponent(Endpoints.users)
+       let signUpURL = baseURL!.appendingPathComponent(Endpoints.users.rawValue)
      //   let backgroundContext = CoreDataStack.shared.container.newBackgroundContext()
         
         var request = URLRequest(url: signUpURL)

@@ -7,65 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2167FF9288F9F8E6D8476A6E71E9A0FE /* FoldingCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ED988AF1646E8C680FD29A2B449CC8C /* FoldingCell-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6125325BF5B9F8A1E9E84228FEAF7F9D /* FoldingCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F60D131D7435D2443284BD0E536514 /* FoldingCell-dummy.m */; };
-		8B247526B17B9D96ACED70732B052440 /* Pods-OneSignalNotificationServiceExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 193DE045A4E454BFC797D8CB51F0C831 /* Pods-OneSignalNotificationServiceExtension-dummy.m */; };
-		A1BBB90D047433BE75D774D074331E33 /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F31CBBBC3C72AB28367280971C3A3A /* FoldingCell.swift */; };
-		A4D09A919AED328E502FE812E3D96D12 /* Pods-Career Endorsement Tracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6319D14FEE7BF163347FBDF69FDBE595 /* Pods-Career Endorsement Tracker-dummy.m */; };
-		BB5F29E661436B3D24F59D36814555B3 /* Pods-Career Endorsement Tracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D33E04A982C9645D3B756544D50D0E58 /* Pods-Career Endorsement Tracker-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4794DDC24ED5F67F92E49975BB2334A7 /* Pods-Career Endorsement Tracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C8FCA74BDE2294D84D51818E4F0202 /* Pods-Career Endorsement Tracker-dummy.m */; };
+		521F9C68FC8A9ABB1591D3CFB49F7C28 /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13038B9A9C04D1806AFF068947C73C0 /* FoldingCell.swift */; };
+		5229BDDACF6C6E05B888A041129C3589 /* FoldingCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C7433780788A07A23F357B7B49188270 /* FoldingCell-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8FEBDBB78DC145247B1342DBA22FD169 /* Pods-Career Endorsement Tracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77238F9570D4B72BE6DC857C0DEF656F /* Pods-Career Endorsement Tracker-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C58E603F61379F7F178F338080721844 /* Pods-OneSignalNotificationServiceExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 310F8A7E6C0BC1D3F16F3FFC4E7BBD44 /* Pods-OneSignalNotificationServiceExtension-dummy.m */; };
+		E55B45AFC2ED5D840F7D5E065134C156 /* FoldingCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF1D7F890F10CB649B30315963D8119 /* FoldingCell-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FC123895498DFD9675571F014135CEB6 /* PBXContainerItemProxy */ = {
+		E54539BD22229F1A32EC75E220914171 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A983770812F919D34BAD7D2C5A7EA95C;
+			remoteGlobalIDString = 59D315FAFC1964F78522D3650C30D7BB;
 			remoteInfo = FoldingCell;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0954FC30747DAE822F8CEE03CAAAFEC3 /* Pods-Career Endorsement Tracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Career Endorsement Tracker-acknowledgements.plist"; sourceTree = "<group>"; };
-		1809E2EE5B501F587F96A3CE966751B2 /* libPods-Career Endorsement Tracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Career Endorsement Tracker.a"; path = "libPods-Career Endorsement Tracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		193DE045A4E454BFC797D8CB51F0C831 /* Pods-OneSignalNotificationServiceExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OneSignalNotificationServiceExtension-dummy.m"; sourceTree = "<group>"; };
-		2ED988AF1646E8C680FD29A2B449CC8C /* FoldingCell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoldingCell-umbrella.h"; sourceTree = "<group>"; };
-		4AF3B972C94DFF11700E306F18F01DF3 /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-OneSignalNotificationServiceExtension.a"; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5989A42E4529B7EC2AAC327E52676ECC /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
-		6319D14FEE7BF163347FBDF69FDBE595 /* Pods-Career Endorsement Tracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Career Endorsement Tracker-dummy.m"; sourceTree = "<group>"; };
-		7608CFE8840AE033F5179A2B22E566FF /* FoldingCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FoldingCell.xcconfig; sourceTree = "<group>"; };
-		77144A8D35D7BE9861C69E2ED1441FA8 /* libFoldingCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFoldingCell.a; path = libFoldingCell.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BE8B698E21D230347A90E2DF6B2F583 /* Pods-Career Endorsement Tracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Career Endorsement Tracker.modulemap"; sourceTree = "<group>"; };
-		899B221C3A3C7D4F868E3219EB3260E9 /* Pods-Career Endorsement Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Career Endorsement Tracker.release.xcconfig"; sourceTree = "<group>"; };
-		91F60D131D7435D2443284BD0E536514 /* FoldingCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FoldingCell-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A37B0137CAE82362DC0A31785A6E32DD /* Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A3F31CBBBC3C72AB28367280971C3A3A /* FoldingCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoldingCell.swift; path = FoldingCell/FoldingCell/FoldingCell.swift; sourceTree = "<group>"; };
-		B03A1C8A8A6DEB64DB4DE563309EF041 /* FoldingCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FoldingCell.modulemap; sourceTree = "<group>"; };
-		C3E364F140E46F4BA331458B654D64D7 /* Pods-Career Endorsement Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Career Endorsement Tracker.debug.xcconfig"; sourceTree = "<group>"; };
-		CCB04414414EC048FA9665988521FCBE /* FoldingCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoldingCell-prefix.pch"; sourceTree = "<group>"; };
-		D33E04A982C9645D3B756544D50D0E58 /* Pods-Career Endorsement Tracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Career Endorsement Tracker-umbrella.h"; sourceTree = "<group>"; };
-		EB4295DDA05957E2DFB6515F68D34D17 /* Pods-Career Endorsement Tracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Career Endorsement Tracker-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FE3FB35BE36B2AE9CEB80DF9B64AFFAC /* Pods-OneSignalNotificationServiceExtension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OneSignalNotificationServiceExtension-acknowledgements.plist"; sourceTree = "<group>"; };
-		FF793BC35531E88DBDC36863BF43DC66 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		05B065A0D3E618A844FE640719A98C08 /* Pods-OneSignalNotificationServiceExtension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OneSignalNotificationServiceExtension-acknowledgements.plist"; sourceTree = "<group>"; };
+		1620F4E0A5A3386B3A657949ED8EF42D /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-OneSignalNotificationServiceExtension.a"; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		177EA93C1BA95596C72C78D94464DD22 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		263E1C9BD47FA6B583DB8129217C80AE /* Pods-Career Endorsement Tracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Career Endorsement Tracker.modulemap"; sourceTree = "<group>"; };
+		2D448489AB678031ED795B04C175CC3D /* Pods-Career Endorsement Tracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Career Endorsement Tracker-acknowledgements.markdown"; sourceTree = "<group>"; };
+		310F8A7E6C0BC1D3F16F3FFC4E7BBD44 /* Pods-OneSignalNotificationServiceExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OneSignalNotificationServiceExtension-dummy.m"; sourceTree = "<group>"; };
+		35C8FCA74BDE2294D84D51818E4F0202 /* Pods-Career Endorsement Tracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Career Endorsement Tracker-dummy.m"; sourceTree = "<group>"; };
+		37F0DC1F58B4C0C4436200E420D70421 /* libPods-Career Endorsement Tracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Career Endorsement Tracker.a"; path = "libPods-Career Endorsement Tracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46BA4509396A2260397939A6D560673F /* FoldingCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FoldingCell.modulemap; sourceTree = "<group>"; };
+		52423094473790EBCEDDAC5E0A5204C5 /* Pods-Career Endorsement Tracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Career Endorsement Tracker-acknowledgements.plist"; sourceTree = "<group>"; };
+		77238F9570D4B72BE6DC857C0DEF656F /* Pods-Career Endorsement Tracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Career Endorsement Tracker-umbrella.h"; sourceTree = "<group>"; };
+		7EF1D7F890F10CB649B30315963D8119 /* FoldingCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FoldingCell-dummy.m"; sourceTree = "<group>"; };
+		80E5ABE76255DB3D001D88D044552E79 /* libFoldingCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFoldingCell.a; path = libFoldingCell.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C13AE1443705BF344C7D221C9B6E4105 /* FoldingCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FoldingCell.xcconfig; sourceTree = "<group>"; };
+		C7433780788A07A23F357B7B49188270 /* FoldingCell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoldingCell-umbrella.h"; sourceTree = "<group>"; };
+		CEC1DDBF46AE51A34318C4E71B224A40 /* Pods-Career Endorsement Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Career Endorsement Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		D346BCCA941C454180D6C9D997D6C712 /* Pods-Career Endorsement Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Career Endorsement Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		D6BCF8E47EA3F5012ECA0FDABCA60535 /* FoldingCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoldingCell-prefix.pch"; sourceTree = "<group>"; };
+		DAD708836B7CFBC7B2EB5553350ADD9D /* Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E08A7A7D6335DB933E41A81DD39C0423 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		E13038B9A9C04D1806AFF068947C73C0 /* FoldingCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoldingCell.swift; path = FoldingCell/FoldingCell/FoldingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		481F1B65997194FCD4F38CD27B26E8B0 /* Frameworks */ = {
+		001AC81640B585627796316D504C0C47 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1D327C28688CBD28A60B6B7AB067CAE /* Frameworks */ = {
+		904CB43DCF167F2671F5ED293FF56A98 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E6E63432B022B11C7BA5B5518CD5A0A3 /* Frameworks */ = {
+		B4F8DE418AE0781A4B579191E9FDC395 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -75,139 +75,157 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		34EE8A40DC64B373DD9DCE35030FF161 /* Pods-OneSignalNotificationServiceExtension */ = {
+		05C1AF8819FC36275028CDB9DEF0DA63 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A37B0137CAE82362DC0A31785A6E32DD /* Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown */,
-				FE3FB35BE36B2AE9CEB80DF9B64AFFAC /* Pods-OneSignalNotificationServiceExtension-acknowledgements.plist */,
-				193DE045A4E454BFC797D8CB51F0C831 /* Pods-OneSignalNotificationServiceExtension-dummy.m */,
-				5989A42E4529B7EC2AAC327E52676ECC /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
-				FF793BC35531E88DBDC36863BF43DC66 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+				A3908B520E116CDD85A9586F5DCAA462 /* FoldingCell */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		0B39A5FBBC9160363254A907F7420883 /* Pods-OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				DAD708836B7CFBC7B2EB5553350ADD9D /* Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown */,
+				05B065A0D3E618A844FE640719A98C08 /* Pods-OneSignalNotificationServiceExtension-acknowledgements.plist */,
+				310F8A7E6C0BC1D3F16F3FFC4E7BBD44 /* Pods-OneSignalNotificationServiceExtension-dummy.m */,
+				177EA93C1BA95596C72C78D94464DD22 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				E08A7A7D6335DB933E41A81DD39C0423 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			name = "Pods-OneSignalNotificationServiceExtension";
 			path = "Target Support Files/Pods-OneSignalNotificationServiceExtension";
 			sourceTree = "<group>";
 		};
-		36C520C52706731A343A57749530C6DD /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B03A1C8A8A6DEB64DB4DE563309EF041 /* FoldingCell.modulemap */,
-				7608CFE8840AE033F5179A2B22E566FF /* FoldingCell.xcconfig */,
-				91F60D131D7435D2443284BD0E536514 /* FoldingCell-dummy.m */,
-				CCB04414414EC048FA9665988521FCBE /* FoldingCell-prefix.pch */,
-				2ED988AF1646E8C680FD29A2B449CC8C /* FoldingCell-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FoldingCell";
-			sourceTree = "<group>";
-		};
-		5E2E837F4D3D6100695DBA2860D6D9DF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				77144A8D35D7BE9861C69E2ED1441FA8 /* libFoldingCell.a */,
-				1809E2EE5B501F587F96A3CE966751B2 /* libPods-Career Endorsement Tracker.a */,
-				4AF3B972C94DFF11700E306F18F01DF3 /* libPods-OneSignalNotificationServiceExtension.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		859A7B35540E7C693E5ECB63489C40ED /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8EAA4D1A41768C71D186E10D75B5AF5E /* Pods-Career Endorsement Tracker */,
-				34EE8A40DC64B373DD9DCE35030FF161 /* Pods-OneSignalNotificationServiceExtension */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		8EAA4D1A41768C71D186E10D75B5AF5E /* Pods-Career Endorsement Tracker */ = {
-			isa = PBXGroup;
-			children = (
-				7BE8B698E21D230347A90E2DF6B2F583 /* Pods-Career Endorsement Tracker.modulemap */,
-				EB4295DDA05957E2DFB6515F68D34D17 /* Pods-Career Endorsement Tracker-acknowledgements.markdown */,
-				0954FC30747DAE822F8CEE03CAAAFEC3 /* Pods-Career Endorsement Tracker-acknowledgements.plist */,
-				6319D14FEE7BF163347FBDF69FDBE595 /* Pods-Career Endorsement Tracker-dummy.m */,
-				D33E04A982C9645D3B756544D50D0E58 /* Pods-Career Endorsement Tracker-umbrella.h */,
-				C3E364F140E46F4BA331458B654D64D7 /* Pods-Career Endorsement Tracker.debug.xcconfig */,
-				899B221C3A3C7D4F868E3219EB3260E9 /* Pods-Career Endorsement Tracker.release.xcconfig */,
-			);
-			name = "Pods-Career Endorsement Tracker";
-			path = "Target Support Files/Pods-Career Endorsement Tracker";
-			sourceTree = "<group>";
-		};
-		CF1408CF629C7361332E53B88F7BD30C = {
-			isa = PBXGroup;
-			children = (
-				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				FD0CFEF2BD79C7B3700287EB0AEFD81E /* Pods */,
-				5E2E837F4D3D6100695DBA2860D6D9DF /* Products */,
-				859A7B35540E7C693E5ECB63489C40ED /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E82C9B4C7CDEB2BB451B47F4E6350A90 /* FoldingCell */ = {
+		563313456F865721ED49663CA2BB8046 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A3F31CBBBC3C72AB28367280971C3A3A /* FoldingCell.swift */,
-				36C520C52706731A343A57749530C6DD /* Support Files */,
+				46BA4509396A2260397939A6D560673F /* FoldingCell.modulemap */,
+				C13AE1443705BF344C7D221C9B6E4105 /* FoldingCell.xcconfig */,
+				7EF1D7F890F10CB649B30315963D8119 /* FoldingCell-dummy.m */,
+				D6BCF8E47EA3F5012ECA0FDABCA60535 /* FoldingCell-prefix.pch */,
+				C7433780788A07A23F357B7B49188270 /* FoldingCell-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FoldingCell";
+			sourceTree = "<group>";
+		};
+		5F9431970D7B615096A02DF0D4A69CE8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB70F3CC8F4C2A029AEC8201A14EC30A /* Pods-Career Endorsement Tracker */,
+				0B39A5FBBC9160363254A907F7420883 /* Pods-OneSignalNotificationServiceExtension */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
+				05C1AF8819FC36275028CDB9DEF0DA63 /* Pods */,
+				EA641099388C9FE02AA09063F7B1DCB0 /* Products */,
+				5F9431970D7B615096A02DF0D4A69CE8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A3908B520E116CDD85A9586F5DCAA462 /* FoldingCell */ = {
+			isa = PBXGroup;
+			children = (
+				E13038B9A9C04D1806AFF068947C73C0 /* FoldingCell.swift */,
+				563313456F865721ED49663CA2BB8046 /* Support Files */,
 			);
 			name = FoldingCell;
 			path = FoldingCell;
 			sourceTree = "<group>";
 		};
-		FD0CFEF2BD79C7B3700287EB0AEFD81E /* Pods */ = {
+		BB70F3CC8F4C2A029AEC8201A14EC30A /* Pods-Career Endorsement Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				E82C9B4C7CDEB2BB451B47F4E6350A90 /* FoldingCell */,
+				263E1C9BD47FA6B583DB8129217C80AE /* Pods-Career Endorsement Tracker.modulemap */,
+				2D448489AB678031ED795B04C175CC3D /* Pods-Career Endorsement Tracker-acknowledgements.markdown */,
+				52423094473790EBCEDDAC5E0A5204C5 /* Pods-Career Endorsement Tracker-acknowledgements.plist */,
+				35C8FCA74BDE2294D84D51818E4F0202 /* Pods-Career Endorsement Tracker-dummy.m */,
+				77238F9570D4B72BE6DC857C0DEF656F /* Pods-Career Endorsement Tracker-umbrella.h */,
+				CEC1DDBF46AE51A34318C4E71B224A40 /* Pods-Career Endorsement Tracker.debug.xcconfig */,
+				D346BCCA941C454180D6C9D997D6C712 /* Pods-Career Endorsement Tracker.release.xcconfig */,
 			);
-			name = Pods;
+			name = "Pods-Career Endorsement Tracker";
+			path = "Target Support Files/Pods-Career Endorsement Tracker";
+			sourceTree = "<group>";
+		};
+		EA641099388C9FE02AA09063F7B1DCB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80E5ABE76255DB3D001D88D044552E79 /* libFoldingCell.a */,
+				37F0DC1F58B4C0C4436200E420D70421 /* libPods-Career Endorsement Tracker.a */,
+				1620F4E0A5A3386B3A657949ED8EF42D /* libPods-OneSignalNotificationServiceExtension.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		41246E0297BEDB5FA9460F7412B65B05 /* Headers */ = {
+		2DCB15D039F354F065B277382D9D3BF6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2167FF9288F9F8E6D8476A6E71E9A0FE /* FoldingCell-umbrella.h in Headers */,
+				8FEBDBB78DC145247B1342DBA22FD169 /* Pods-Career Endorsement Tracker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BCFC0C33F99538B3E4166EBAE88A1D1 /* Headers */ = {
+		B405507C82EF3255C2837352E7F05FEA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB5F29E661436B3D24F59D36814555B3 /* Pods-Career Endorsement Tracker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E2C9C11CC862A80F5CF5BE859A61CE0B /* Headers */ = {
+		C238A363FDF6A2C1CE519675B677884B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5229BDDACF6C6E05B888A041129C3589 /* FoldingCell-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A983770812F919D34BAD7D2C5A7EA95C /* FoldingCell */ = {
+		360CB29B02F3F9966FC8C136A6625C6E /* Pods-Career Endorsement Tracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AB84BC8420374B966D27A01F73921A2 /* Build configuration list for PBXNativeTarget "FoldingCell" */;
+			buildConfigurationList = 647CB8FA7E89F301B1B42C485214373B /* Build configuration list for PBXNativeTarget "Pods-Career Endorsement Tracker" */;
 			buildPhases = (
-				41246E0297BEDB5FA9460F7412B65B05 /* Headers */,
-				36A6EEB185DC996F698562FF6A2C69C0 /* Sources */,
-				481F1B65997194FCD4F38CD27B26E8B0 /* Frameworks */,
-				09885C11BE9FCE2589BF373ABF973158 /* Copy generated compatibility header */,
+				2DCB15D039F354F065B277382D9D3BF6 /* Headers */,
+				20870EFDEA72082DEE96AEC7869B5CBF /* Sources */,
+				001AC81640B585627796316D504C0C47 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B822651A05072EADB69637BA2428426 /* PBXTargetDependency */,
+			);
+			name = "Pods-Career Endorsement Tracker";
+			productName = "Pods-Career Endorsement Tracker";
+			productReference = 37F0DC1F58B4C0C4436200E420D70421 /* libPods-Career Endorsement Tracker.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		59D315FAFC1964F78522D3650C30D7BB /* FoldingCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A0FE18245259DAEE57CC632921F520A /* Build configuration list for PBXNativeTarget "FoldingCell" */;
+			buildPhases = (
+				C238A363FDF6A2C1CE519675B677884B /* Headers */,
+				2E86B6A590286E4BE82F7DC9C5AD732B /* Sources */,
+				904CB43DCF167F2671F5ED293FF56A98 /* Frameworks */,
+				143F5DD702F4B5242622816F3F6EEBBD /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
@@ -215,16 +233,16 @@
 			);
 			name = FoldingCell;
 			productName = FoldingCell;
-			productReference = 77144A8D35D7BE9861C69E2ED1441FA8 /* libFoldingCell.a */;
+			productReference = 80E5ABE76255DB3D001D88D044552E79 /* libFoldingCell.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		BD0F10574EB554D7E668F50D2A5B77DF /* Pods-OneSignalNotificationServiceExtension */ = {
+		711CB60C05F39FC278D239431520A4C0 /* Pods-OneSignalNotificationServiceExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 930C567E397114F65AFFBFCD3192FE3B /* Build configuration list for PBXNativeTarget "Pods-OneSignalNotificationServiceExtension" */;
+			buildConfigurationList = 099F7F4BF78D17ADB51A34ACF6A4AA3F /* Build configuration list for PBXNativeTarget "Pods-OneSignalNotificationServiceExtension" */;
 			buildPhases = (
-				E2C9C11CC862A80F5CF5BE859A61CE0B /* Headers */,
-				25728D165E5F9799A7466E1918C6B1CA /* Sources */,
-				E6E63432B022B11C7BA5B5518CD5A0A3 /* Frameworks */,
+				B405507C82EF3255C2837352E7F05FEA /* Headers */,
+				42410250CCF2B1FFA14EDEFF17B632CE /* Sources */,
+				B4F8DE418AE0781A4B579191E9FDC395 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,57 +250,39 @@
 			);
 			name = "Pods-OneSignalNotificationServiceExtension";
 			productName = "Pods-OneSignalNotificationServiceExtension";
-			productReference = 4AF3B972C94DFF11700E306F18F01DF3 /* libPods-OneSignalNotificationServiceExtension.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		C765FC081E1A36213FBC9C9419937740 /* Pods-Career Endorsement Tracker */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DE3832E4BE49418A70DC40CE89A69147 /* Build configuration list for PBXNativeTarget "Pods-Career Endorsement Tracker" */;
-			buildPhases = (
-				9BCFC0C33F99538B3E4166EBAE88A1D1 /* Headers */,
-				5BA738B9D68781F6FCA1D0AB13C639C5 /* Sources */,
-				E1D327C28688CBD28A60B6B7AB067CAE /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1D46D1EC3C88EEBD4738E549F277D7A5 /* PBXTargetDependency */,
-			);
-			name = "Pods-Career Endorsement Tracker";
-			productName = "Pods-Career Endorsement Tracker";
-			productReference = 1809E2EE5B501F587F96A3CE966751B2 /* libPods-Career Endorsement Tracker.a */;
+			productReference = 1620F4E0A5A3386B3A657949ED8EF42D /* libPods-OneSignalNotificationServiceExtension.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 			};
-			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 5E2E837F4D3D6100695DBA2860D6D9DF /* Products */;
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = EA641099388C9FE02AA09063F7B1DCB0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A983770812F919D34BAD7D2C5A7EA95C /* FoldingCell */,
-				C765FC081E1A36213FBC9C9419937740 /* Pods-Career Endorsement Tracker */,
-				BD0F10574EB554D7E668F50D2A5B77DF /* Pods-OneSignalNotificationServiceExtension */,
+				59D315FAFC1964F78522D3650C30D7BB /* FoldingCell */,
+				360CB29B02F3F9966FC8C136A6625C6E /* Pods-Career Endorsement Tracker */,
+				711CB60C05F39FC278D239431520A4C0 /* Pods-OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		09885C11BE9FCE2589BF373ABF973158 /* Copy generated compatibility header */ = {
+		143F5DD702F4B5242622816F3F6EEBBD /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -305,124 +305,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/FoldingCell/FoldingCell.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/FoldingCell/FoldingCell-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			showEnvVarsInLog = 1;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		25728D165E5F9799A7466E1918C6B1CA /* Sources */ = {
+		20870EFDEA72082DEE96AEC7869B5CBF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B247526B17B9D96ACED70732B052440 /* Pods-OneSignalNotificationServiceExtension-dummy.m in Sources */,
+				4794DDC24ED5F67F92E49975BB2334A7 /* Pods-Career Endorsement Tracker-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		36A6EEB185DC996F698562FF6A2C69C0 /* Sources */ = {
+		2E86B6A590286E4BE82F7DC9C5AD732B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6125325BF5B9F8A1E9E84228FEAF7F9D /* FoldingCell-dummy.m in Sources */,
-				A1BBB90D047433BE75D774D074331E33 /* FoldingCell.swift in Sources */,
+				E55B45AFC2ED5D840F7D5E065134C156 /* FoldingCell-dummy.m in Sources */,
+				521F9C68FC8A9ABB1591D3CFB49F7C28 /* FoldingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5BA738B9D68781F6FCA1D0AB13C639C5 /* Sources */ = {
+		42410250CCF2B1FFA14EDEFF17B632CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4D09A919AED328E502FE812E3D96D12 /* Pods-Career Endorsement Tracker-dummy.m in Sources */,
+				C58E603F61379F7F178F338080721844 /* Pods-OneSignalNotificationServiceExtension-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1D46D1EC3C88EEBD4738E549F277D7A5 /* PBXTargetDependency */ = {
+		4B822651A05072EADB69637BA2428426 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FoldingCell;
-			target = A983770812F919D34BAD7D2C5A7EA95C /* FoldingCell */;
-			targetProxy = FC123895498DFD9675571F014135CEB6 /* PBXContainerItemProxy */;
+			target = 59D315FAFC1964F78522D3650C30D7BB /* FoldingCell */;
+			targetProxy = E54539BD22229F1A32EC75E220914171 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1694024222DF14CB4B1553AE47947FC1 /* Release */ = {
+		26DFB5EADCF866D31612F2AEA1F0CB17 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF793BC35531E88DBDC36863BF43DC66 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		1BF5303079444E3E4C1EB764B6D881E7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7608CFE8840AE033F5179A2B22E566FF /* FoldingCell.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/FoldingCell/FoldingCell-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MODULEMAP_FILE = Headers/Public/FoldingCell/FoldingCell.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = FoldingCell;
-				PRODUCT_NAME = FoldingCell;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		36AB739F298A263DA5ABADF5E71FA2EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7608CFE8840AE033F5179A2B22E566FF /* FoldingCell.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/FoldingCell/FoldingCell-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MODULEMAP_FILE = Headers/Public/FoldingCell/FoldingCell.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = FoldingCell;
-				PRODUCT_NAME = FoldingCell;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		6D3910F5F95BFD6155EB4924DC79AFD1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3E364F140E46F4BA331458B654D64D7 /* Pods-Career Endorsement Tracker.debug.xcconfig */;
+			baseConfigurationReference = CEC1DDBF46AE51A34318C4E71B224A40 /* Pods-Career Endorsement Tracker.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -438,34 +365,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		81C8128D16DA3082E0F6B68492B3583A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 899B221C3A3C7D4F868E3219EB3260E9 /* Pods-Career Endorsement Tracker.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
+		60DAF49CA7A9F362148D49C3C3123B2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -497,66 +403,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		916E0404255105F480DC4950B7625F7A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -583,15 +431,41 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		EA288B1E011142CBC3463CD549EEF27E /* Debug */ = {
+		8C7A3EF78003679544FCDC459BAFB403 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5989A42E4529B7EC2AAC327E52676ECC /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			baseConfigurationReference = C13AE1443705BF344C7D221C9B6E4105 /* FoldingCell.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/FoldingCell/FoldingCell-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/FoldingCell/FoldingCell.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = FoldingCell;
+				PRODUCT_NAME = FoldingCell;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8D88632C3A08812D876A2A78E6D6EFEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 177EA93C1BA95596C72C78D94464DD22 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -611,46 +485,179 @@
 			};
 			name = Debug;
 		};
+		BA61753C1AAD83DE40CCFC5C60E79562 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E08A7A7D6335DB933E41A81DD39C0423 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C4EAA84F44D044E108500A81C635F21E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		C90785A111811D57F2CC64FDF3022FBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C13AE1443705BF344C7D221C9B6E4105 /* FoldingCell.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/FoldingCell/FoldingCell-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/FoldingCell/FoldingCell.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = FoldingCell;
+				PRODUCT_NAME = FoldingCell;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E84B992B016F1F73CC835B9AE2AB69C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D346BCCA941C454180D6C9D997D6C712 /* Pods-Career Endorsement Tracker.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0AB84BC8420374B966D27A01F73921A2 /* Build configuration list for PBXNativeTarget "FoldingCell" */ = {
+		099F7F4BF78D17ADB51A34ACF6A4AA3F /* Build configuration list for PBXNativeTarget "Pods-OneSignalNotificationServiceExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1BF5303079444E3E4C1EB764B6D881E7 /* Debug */,
-				36AB739F298A263DA5ABADF5E71FA2EF /* Release */,
+				8D88632C3A08812D876A2A78E6D6EFEA /* Debug */,
+				BA61753C1AAD83DE40CCFC5C60E79562 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				916E0404255105F480DC4950B7625F7A /* Debug */,
-				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
+				60DAF49CA7A9F362148D49C3C3123B2A /* Debug */,
+				C4EAA84F44D044E108500A81C635F21E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		930C567E397114F65AFFBFCD3192FE3B /* Build configuration list for PBXNativeTarget "Pods-OneSignalNotificationServiceExtension" */ = {
+		5A0FE18245259DAEE57CC632921F520A /* Build configuration list for PBXNativeTarget "FoldingCell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EA288B1E011142CBC3463CD549EEF27E /* Debug */,
-				1694024222DF14CB4B1553AE47947FC1 /* Release */,
+				C90785A111811D57F2CC64FDF3022FBE /* Debug */,
+				8C7A3EF78003679544FCDC459BAFB403 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE3832E4BE49418A70DC40CE89A69147 /* Build configuration list for PBXNativeTarget "Pods-Career Endorsement Tracker" */ = {
+		647CB8FA7E89F301B1B42C485214373B /* Build configuration list for PBXNativeTarget "Pods-Career Endorsement Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6D3910F5F95BFD6155EB4924DC79AFD1 /* Debug */,
-				81C8128D16DA3082E0F6B68492B3583A /* Release */,
+				26DFB5EADCF866D31612F2AEA1F0CB17 /* Debug */,
+				E84B992B016F1F73CC835B9AE2AB69C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 }

@@ -22,6 +22,14 @@ class Server {
     var bearer: Bearer?
     var encodedBearer: Data?
     
+    enum Endpoints: String {
+        case login = "/login"
+        case users = "/users"
+        case tracks = "/tracks"
+        case requirements = "/requirements"
+        case steps = "/requirements/:requirementsId/steps"
+    }
+    
     enum HTTPHeaderKeys: String {
         case contentType = "Content-Type"
         case auth = "Authorization"
@@ -78,7 +86,9 @@ class Server {
     
     
     func signUp(with user: CurrentUser, completion: @escaping (Error?)->Void) {
-        let signUpURL = baseURL!.appendingPathComponent(Endpoints.users)
+      
+        let signUpURL = baseURL!.appendingPathComponent(Endpoints.users.rawValue)
+
         
         var request = URLRequest(url: signUpURL)
         request.httpMethod = HTTPMethods.post.rawValue

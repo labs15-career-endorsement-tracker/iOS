@@ -91,6 +91,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             // The input values are validated, send the sign up request to the server.
             server.signUp(with: user, completion: { (error) in
                 if let error = error  {
+                    print(error)
                     DispatchQueue.main.async {
                         Config.showAlert(on: self, style: .alert, title: "Sign Up Error", message: error.localizedDescription)
                     }

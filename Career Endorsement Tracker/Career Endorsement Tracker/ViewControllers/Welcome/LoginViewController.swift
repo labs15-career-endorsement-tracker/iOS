@@ -53,7 +53,7 @@ class LoginViewContoller: UIViewController {
                 // Save the encoded and decoded bearer tokens to user defaults
                 let defaults = UserDefaults.standard
                 defaults.set(self.server.encodedBearer, forKey: UserDefaultsKeys.encodedBearer)
-//                defaults.set(self.server.bearer, forKey: UserDefaultsKeys.decodedBearer)
+                defaults.set(true, forKey: UserDefaultsKeys.ifUserLoggedIn)
                 
                 DispatchQueue.main.async {
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)

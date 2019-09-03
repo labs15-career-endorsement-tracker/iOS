@@ -9,7 +9,7 @@
 import Foundation
 
 struct UserDefaultsKeys {
-    static let ifUserLoggedIn = "ifUserLoggedIn"
+    static let ifUserLoggedIn = "isLoggedIn"
     static let deviceToken = "device_token"
     
     // Bearer Tokens

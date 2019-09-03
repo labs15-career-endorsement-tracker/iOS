@@ -20,7 +20,6 @@ class TaskTracksController {
             }
             print("HERE tasks tracks pulled down: ", self.tasksTracks.count)
         }
-        
     }
     // MARK: - Properties
     

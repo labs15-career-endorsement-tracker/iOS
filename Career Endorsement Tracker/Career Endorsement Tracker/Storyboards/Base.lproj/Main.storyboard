@@ -122,6 +122,7 @@
                                 <connections>
                                     <outlet property="taskDescription" destination="gEb-Xf-Pai" id="bBG-0G-lFi"/>
                                     <outlet property="taskNameLabel" destination="BbW-TK-gP1" id="orz-Z2-I7j"/>
+                                    <segue destination="m2x-Eg-KsC" kind="show" id="15u-ma-DcC"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -135,6 +136,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z4O-wS-Gkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1800.0000000000002" y="-606.02678571428567"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="oDM-NB-1LY">
+            <objects>
+                <tableViewController id="m2x-Eg-KsC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="F5x-46-0ug">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Xwq-ea-edW">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="212"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FwA-zS-zI0">
+                                    <rect key="frame" x="132" y="105" width="150" height="2"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </progressView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wqG-QP-K7L">
+                                <rect key="frame" x="0.0" y="240" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wqG-QP-K7L" id="xDF-UU-lDY">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m2x-Eg-KsC" id="UFU-bX-v5v"/>
+                            <outlet property="delegate" destination="m2x-Eg-KsC" id="n1E-Nc-IOz"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2By-pQ-LyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2518.840579710145" y="-606.02678571428567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jc1-Tn-mzy">

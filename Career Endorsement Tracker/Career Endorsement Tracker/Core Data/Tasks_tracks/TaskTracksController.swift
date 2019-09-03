@@ -105,7 +105,7 @@ class TaskTracksController {
                 // save changes to disk
                 try CoreDataStack.shared.save(context: backgroundContext)
             } catch {
-                NSLog("Error decoding tasks: \(error)")
+                NSLog("Error decoding taskTrack: \(error.localizedDescription)")
                 return completion(error)
             }
             completion(nil)

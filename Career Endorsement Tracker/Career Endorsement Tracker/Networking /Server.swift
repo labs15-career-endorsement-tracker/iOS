@@ -22,15 +22,6 @@ class Server {
     var bearer: Bearer?
     var encodedBearer: Data?
     
-    enum Endpoints: String {
-        case signup = "/signup"
-        case login = "/login"
-        case users = "/users"
-        case tracks = "/tracks"
-        case requirements = "/requirements"
-        case steps = "/requirements/:requirementsId/steps"
-    }
-    
     enum HTTPHeaderKeys: String {
         case contentType = "Content-Type"
         case auth = "Authorization"
@@ -44,7 +35,7 @@ class Server {
     
     
     func loginWith(user: CurrentUser, completion: @escaping (Error?)->Void) {
-        let loginURL = baseURL!.appendingPathComponent(Endpoints.login.rawValue)
+        let loginURL = baseURL!.appendingPathComponent(Endpoints.login)
          print("loginURL = \(loginURL)")
         var request = URLRequest(url: loginURL)
         request.httpMethod = HTTPMethods.post.rawValue
@@ -87,7 +78,7 @@ class Server {
     
     
     func signUp(with user: CurrentUser, completion: @escaping (Error?)->Void) {
-        let signUpURL = baseURL!.appendingPathComponent(Endpoints.signup.rawValue)
+        let signUpURL = baseURL!.appendingPathComponent(Endpoints.users)
         
         var request = URLRequest(url: signUpURL)
         request.httpMethod = HTTPMethods.post.rawValue
@@ -128,7 +119,7 @@ class Server {
     
     
    func fetch(completion: @escaping (Error?)->Void) {
-       let signUpURL = baseURL!.appendingPathComponent(Endpoints.users.rawValue)
+       let signUpURL = baseURL!.appendingPathComponent(Endpoints.users)
      //   let backgroundContext = CoreDataStack.shared.container.newBackgroundContext()
         
         var request = URLRequest(url: signUpURL)

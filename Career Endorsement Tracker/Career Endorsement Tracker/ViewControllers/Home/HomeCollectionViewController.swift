@@ -20,6 +20,7 @@ class HomeCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        checkCoreData()
         server.fetch { (error) in
             if let error = error {
                 print(error)
@@ -31,6 +32,16 @@ class HomeCollectionViewController: UICollectionViewController {
         updateView()
     }
     
+    private func checkCoreData(){
+        let tasksController = TasksController()
+        let tracksController = TracksController()
+        let userController = UserController()
+        let taskTracksController = TaskTracksController()
+        let userStepsCompletedController = UserStepsCompletedController()
+        let stepsController = StepsController()
+
+        
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         collectionView.reloadData()

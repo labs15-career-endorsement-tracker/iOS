@@ -23,3 +23,11 @@ struct UserDefaultsKeys {
     static let password = "password"
     static let tracksID = "tracks_id"
 }
+
+struct Endpoints {
+    static let login = "/login"
+    static let users = "/users"
+    static let tracks = "/tracks"
+    static let requirements = "/requirements"
+    static let steps = "/requirements/:requirementsId/steps"
+}

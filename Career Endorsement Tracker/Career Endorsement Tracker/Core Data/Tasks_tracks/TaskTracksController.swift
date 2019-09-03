@@ -20,7 +20,6 @@ class TaskTracksController {
             }
             print("HERE tasks tracks pulled down: ", self.tasksTracks.count)
         }
-        
     }
     // MARK: - Properties
     
@@ -106,7 +105,7 @@ class TaskTracksController {
                 // save changes to disk
                 try CoreDataStack.shared.save(context: backgroundContext)
             } catch {
-                NSLog("Error decoding tasks: \(error)")
+                NSLog("Error decoding taskTrack: \(error.localizedDescription)")
                 return completion(error)
             }
             completion(nil)

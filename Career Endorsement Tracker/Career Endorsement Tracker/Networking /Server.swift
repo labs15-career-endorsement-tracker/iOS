@@ -23,7 +23,6 @@ class Server {
     var encodedBearer: Data?
     
     enum Endpoints: String {
-        case signup = "/signup"
         case login = "/login"
         case users = "/users"
         case tracks = "/tracks"
@@ -87,7 +86,7 @@ class Server {
     
     
     func signUp(with user: CurrentUser, completion: @escaping (Error?)->Void) {
-        let signUpURL = baseURL!.appendingPathComponent(Endpoints.signup.rawValue)
+        let signUpURL = baseURL!.appendingPathComponent(Endpoints.users.rawValue)
         
         var request = URLRequest(url: signUpURL)
         request.httpMethod = HTTPMethods.post.rawValue

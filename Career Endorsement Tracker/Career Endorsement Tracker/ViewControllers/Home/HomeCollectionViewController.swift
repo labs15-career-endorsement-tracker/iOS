@@ -26,7 +26,7 @@ class HomeCollectionViewController: UICollectionViewController {
                 print(error)
                 return
             } else {
-              print("Success")
+              print("Successfully fetched data from ")
             }
         }
         updateView()

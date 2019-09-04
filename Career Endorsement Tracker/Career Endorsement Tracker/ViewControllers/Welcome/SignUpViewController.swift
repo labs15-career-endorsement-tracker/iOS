@@ -50,7 +50,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         colorTextfield(fieldName: firstNameTextField)
-        firstNameTextField.becomeFirstResponder()
+  //      firstNameTextField.becomeFirstResponder()
     }
     
     

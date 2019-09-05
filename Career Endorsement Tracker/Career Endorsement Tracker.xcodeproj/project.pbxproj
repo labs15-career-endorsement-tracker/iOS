@@ -12,7 +12,6 @@
 		3738EC5C23061D830083158B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3738EC5B23061D830083158B /* Assets.xcassets */; };
 		3738EC5F23061D830083158B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3738EC5D23061D830083158B /* LaunchScreen.storyboard */; };
 		3738EC67230628770083158B /* CareerEndorsementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738EC66230628770083158B /* CareerEndorsementViewController.swift */; };
-		401CACBE0CB350AAF4C656BE /* Pods_Career_Endorsement_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E980E4AE8E808939D84F4457 /* Pods_Career_Endorsement_Tracker.framework */; };
 		570CE8E523143FC000077B72 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8E423143FC000077B72 /* HomeTableViewController.swift */; };
 		570CE8E723144E1700077B72 /* RequirementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8E623144E1600077B72 /* RequirementsTableViewCell.swift */; };
 		570CE8F92315CA5C00077B72 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8F82315CA5C00077B72 /* Server.swift */; };
@@ -26,6 +25,8 @@
 		570CE90E2315D6B300077B72 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */; };
 		570CE9112315F32200077B72 /* WelcomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE9102315F32200077B72 /* WelcomeNavigationController.swift */; };
 		570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE9122315F37200077B72 /* WelcomeViewController.swift */; };
+		57191C782320E81200542F37 /* HomeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57191C772320E81200542F37 /* HomeDetailTableViewController.swift */; };
+		57191C7A2320EDD300542F37 /* HomeDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57191C792320EDD300542F37 /* HomeDetailTableViewCell.swift */; };
 		577EB1AF2319B7CF00EDB960 /* TracksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EB1AE2319B7CF00EDB960 /* TracksController.swift */; };
 		577EB1B12319BB4B00EDB960 /* TaskTracksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EB1B02319BB4B00EDB960 /* TaskTracksController.swift */; };
 		577EB1B52319BE9600EDB960 /* TasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EB1B42319BE9600EDB960 /* TasksController.swift */; };
@@ -33,8 +34,7 @@
 		5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EC23072A1600C11198 /* CurrentUser.swift */; };
 		5784F9EF23072BFB00C11198 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EE23072BFB00C11198 /* Config.swift */; };
 		5784F9F123072D5600C11198 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5784F9F023072D5600C11198 /* Welcome.storyboard */; };
-		FA5D9B16230F181B00DC9BC1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D9B15230F181B00DC9BC1 /* NotificationService.swift */; };
-		FA5D9B1A230F181B00DC9BC1 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA5D9B13230F181B00DC9BC1 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE39B7DB22CECF9A3CCF0096 /* Pods_Career_Endorsement_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525363B8898C98916DC833E7 /* Pods_Career_Endorsement_Tracker.framework */; };
 		FA66A39F23187B1C00980AB6 /* UserStepsCompletedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A39E23187B1C00980AB6 /* UserStepsCompletedController.swift */; };
 		FA66A3A123198ECC00980AB6 /* StepsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A3A023198ECC00980AB6 /* StepsController.swift */; };
 		FA66A3A32319919C00980AB6 /* ResourcesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A3A22319919C00980AB6 /* ResourcesController.swift */; };
@@ -62,16 +62,6 @@
 		FACADFE523174587001BBE9C /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACADFE423174587001BBE9C /* Database.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		FA5D9B18230F181B00DC9BC1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3738EC4923061D800083158B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FA5D9B12230F181B00DC9BC1;
-			remoteInfo = OneSignalNotificationServiceExtension;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		FA5D9B1E230F181B00DC9BC1 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -79,7 +69,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				FA5D9B1A230F181B00DC9BC1 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +84,7 @@
 		3738EC5E23061D830083158B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3738EC6023061D830083158B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3738EC66230628770083158B /* CareerEndorsementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerEndorsementViewController.swift; sourceTree = "<group>"; };
+		525363B8898C98916DC833E7 /* Pods_Career_Endorsement_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Career_Endorsement_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		570CE8E423143FC000077B72 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		570CE8E623144E1600077B72 /* RequirementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementsTableViewCell.swift; sourceTree = "<group>"; };
 		570CE8F82315CA5C00077B72 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
@@ -108,6 +98,8 @@
 		570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		570CE9102315F32200077B72 /* WelcomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeNavigationController.swift; sourceTree = "<group>"; };
 		570CE9122315F37200077B72 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		57191C772320E81200542F37 /* HomeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailTableViewController.swift; sourceTree = "<group>"; };
+		57191C792320EDD300542F37 /* HomeDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailTableViewCell.swift; sourceTree = "<group>"; };
 		577EB1AE2319B7CF00EDB960 /* TracksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksController.swift; sourceTree = "<group>"; };
 		577EB1B02319BB4B00EDB960 /* TaskTracksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTracksController.swift; sourceTree = "<group>"; };
 		577EB1B42319BE9600EDB960 /* TasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksController.swift; sourceTree = "<group>"; };
@@ -117,8 +109,6 @@
 		5784F9F023072D5600C11198 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		8AF928B366F43FF466A3D843 /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C6DD038EA49314E0BE8940 /* Pods-Career Endorsement Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug.xcconfig"; sourceTree = "<group>"; };
-		E980E4AE8E808939D84F4457 /* Pods_Career_Endorsement_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Career_Endorsement_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA5D9B13230F181B00DC9BC1 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5D9B15230F181B00DC9BC1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FA5D9B17230F181B00DC9BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA66A39E23187B1C00980AB6 /* UserStepsCompletedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStepsCompletedController.swift; sourceTree = "<group>"; };
@@ -155,14 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				401CACBE0CB350AAF4C656BE /* Pods_Career_Endorsement_Tracker.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA5D9B10230F181B00DC9BC1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				CE39B7DB22CECF9A3CCF0096 /* Pods_Career_Endorsement_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				3738EC5123061D800083158B /* Career Endorsement Tracker.app */,
-				FA5D9B13230F181B00DC9BC1 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,15 +206,6 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		374CB3A82318B881009A8C2D /* Steps */ = {
-			isa = PBXGroup;
-			children = (
-				FA9E0458232099E50088B075 /* StepsCollectionViewCell.swift */,
-				FA9E045A23209B1E0088B075 /* StepsViewController.swift */,
-			);
-			path = Steps;
-			sourceTree = "<group>";
-		};
 		570CE8FA2315CA6E00077B72 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +223,8 @@
 				570CE9042315D4BE00077B72 /* HomeCollectionViewController.swift */,
 				570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */,
 				570CE8E423143FC000077B72 /* HomeTableViewController.swift */,
+				57191C772320E81200542F37 /* HomeDetailTableViewController.swift */,
+				57191C792320EDD300542F37 /* HomeDetailTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -277,7 +252,6 @@
 		5784F9E3230728F800C11198 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				374CB3A82318B881009A8C2D /* Steps */,
 				570CE9032315D4AA00077B72 /* Home */,
 				570CE8FA2315CA6E00077B72 /* Welcome */,
 			);
@@ -431,7 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				8AF928B366F43FF466A3D843 /* libPods-OneSignalNotificationServiceExtension.a */,
-				E980E4AE8E808939D84F4457 /* Pods_Career_Endorsement_Tracker.framework */,
+				525363B8898C98916DC833E7 /* Pods_Career_Endorsement_Tracker.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -448,34 +422,16 @@
 				3738EC4E23061D800083158B /* Frameworks */,
 				3738EC4F23061D800083158B /* Resources */,
 				FA5D9B1E230F181B00DC9BC1 /* Embed App Extensions */,
-				615BDFD7A0B34BA8A4CD1649 /* [CP] Embed Pods Frameworks */,
+				03304D91C0A903F1EFC6346E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FA5D9B19230F181B00DC9BC1 /* PBXTargetDependency */,
 			);
 			name = "Career Endorsement Tracker";
 			productName = "Career Endorsement Tracker";
 			productReference = 3738EC5123061D800083158B /* Career Endorsement Tracker.app */;
 			productType = "com.apple.product-type.application";
-		};
-		FA5D9B12230F181B00DC9BC1 /* OneSignalNotificationServiceExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FA5D9B1D230F181B00DC9BC1 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
-			buildPhases = (
-				FA5D9B0F230F181B00DC9BC1 /* Sources */,
-				FA5D9B10230F181B00DC9BC1 /* Frameworks */,
-				FA5D9B11230F181B00DC9BC1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = OneSignalNotificationServiceExtension;
-			productName = OneSignalNotificationServiceExtension;
-			productReference = FA5D9B13230F181B00DC9BC1 /* OneSignalNotificationServiceExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -501,14 +457,6 @@
 							};
 						};
 					};
-					FA5D9B12230F181B00DC9BC1 = {
-						CreatedOnToolsVersion = 10.3;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
-					};
 				};
 			};
 			buildConfigurationList = 3738EC4C23061D800083158B /* Build configuration list for PBXProject "Career Endorsement Tracker" */;
@@ -525,7 +473,6 @@
 			projectRoot = "";
 			targets = (
 				3738EC5023061D800083158B /* Career Endorsement Tracker */,
-				FA5D9B12230F181B00DC9BC1 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -543,17 +490,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA5D9B11230F181B00DC9BC1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		08D6C1A9FE707657A6D62121 /* [CP] Check Pods Manifest.lock */ = {
+		03304D91C0A903F1EFC6346E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -561,21 +501,23 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Career Endorsement Tracker-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		615BDFD7A0B34BA8A4CD1649 /* [CP] Embed Pods Frameworks */ = {
+		08D6C1A9FE707657A6D62121 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -591,8 +533,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBRadioCheckboxButton.framework",
+				"$(DERIVED_FILE_DIR)/Pods-Career Endorsement Tracker-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -611,8 +552,10 @@
 				570CE9022315CAE800077B72 /* Bearer.swift in Sources */,
 				FA8AAD8C23158E8500DA36A5 /* TracksRepresentation.swift in Sources */,
 				FACADFE523174587001BBE9C /* Database.swift in Sources */,
+				57191C782320E81200542F37 /* HomeDetailTableViewController.swift in Sources */,
 				FAA6DF222310828500B1DA7D /* Tasks+Convenience.swift in Sources */,
 				577EB1B12319BB4B00EDB960 /* TaskTracksController.swift in Sources */,
+				57191C7A2320EDD300542F37 /* HomeDetailTableViewCell.swift in Sources */,
 				570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */,
 				5784F9EB230729B600C11198 /* DataGetter.swift in Sources */,
 				FAA6DF2023107E1400B1DA7D /* CareerModel.xcdatamodeld in Sources */,
@@ -654,23 +597,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA5D9B0F230F181B00DC9BC1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FA5D9B16230F181B00DC9BC1 /* NotificationService.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FA5D9B19230F181B00DC9BC1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FA5D9B12230F181B00DC9BC1 /* OneSignalNotificationServiceExtension */;
-			targetProxy = FA5D9B18230F181B00DC9BC1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3738EC5823061D800083158B /* Main.storyboard */ = {
@@ -850,48 +777,6 @@
 			};
 			name = Release;
 		};
-		FA5D9B1B230F181B00DC9BC1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
-				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.endrsd.Career-Endorsement-Tracker.OneSignalNotificationServiceExtension";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		FA5D9B1C230F181B00DC9BC1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
-				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.endrsd.Career-Endorsement-Tracker.OneSignalNotificationServiceExtension";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -909,15 +794,6 @@
 			buildConfigurations = (
 				3738EC6423061D830083158B /* Debug */,
 				3738EC6523061D830083158B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FA5D9B1D230F181B00DC9BC1 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FA5D9B1B230F181B00DC9BC1 /* Debug */,
-				FA5D9B1C230F181B00DC9BC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

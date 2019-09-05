@@ -83,13 +83,8 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     // MARK: - Signup
     func signUp() {
         // Validate the user input
-        if !validiateAllInput() {
-            Config.showAlert(on: self, style: .alert, title: "Sign Up Error", message: "Please make sure all fields are valid and completed.")
-        } else {
-            let user = CurrentUser(first_name: firstName, last_name: lastName, email: email, password: password, tracks_id: track_id)
-            
             // The input values are validated, send the sign up request to the server.
-            server.signUp(with: user, completion: { (error) in
+        server.signUpWith(firstName: firstNameTextField.text!, lastName: lastNameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, trackID: track_id, completion: { (error) in
                 if let error = error  {
                     print(error)
                     DispatchQueue.main.async {
@@ -99,8 +94,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 } else {
                     // Save the encoded and decoded bearer tokens to user defaults
                     let defaults = UserDefaults.standard
-                    defaults.set(self.server.encodedBearer, forKey: UserDefaultsKeys.encodedBearer)
-                    
+                    defaults.set(true, forKey: "isLoggedIn")
                     DispatchQueue.main.async {
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                         let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
@@ -109,8 +103,6 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 }
                 
             })
-        } // end else
-        
     }
     
     // MARK: - UI

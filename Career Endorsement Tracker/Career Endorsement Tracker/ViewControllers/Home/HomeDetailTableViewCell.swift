@@ -29,8 +29,10 @@ class HomeDetailTableViewCell: UITableViewCell {
         stepTextView.text = step.steps_description
         if step.is_complete {
             submitCompletionButton.backgroundColor = .green
+            submitCompletionButton.setTitle("Completed", for: .normal)
         } else {
             submitCompletionButton.backgroundColor = .red
+            submitCompletionButton.setTitle("Not Completed", for: .normal)
         }
     }
     
@@ -40,12 +42,9 @@ class HomeDetailTableViewCell: UITableViewCell {
             print("no step")
             return
         }
-        let isCompleted = !step.is_complete
-        if isCompleted {
-            submitCompletionButton.backgroundColor = .green
-        } else {
-            submitCompletionButton.backgroundColor = .red
-        }
+        
+        let isCompleted = step.is_complete
+        
         guard let server = server else {
             print("no server")
             return

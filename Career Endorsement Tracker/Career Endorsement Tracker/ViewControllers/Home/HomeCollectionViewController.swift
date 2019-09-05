@@ -73,8 +73,10 @@ class HomeCollectionViewController: UICollectionViewController {
         server.fetchRequirements(withId: token) { (reqResult, error) in
             if let error = error {
                 print(error)
-                self.hud.dismiss(animated: true)
-                Config.showAlert(on: self, style: .alert, title: "Fetching Error", message: error.localizedDescription)
+                DispatchQueue.main.async {
+                    self.hud.dismiss(animated: true)
+                    Config.showAlert(on: self, style: .alert, title: "Fetching Error", message: error.localizedDescription)
+                }
                 return
             }
             if let reqResult = reqResult {

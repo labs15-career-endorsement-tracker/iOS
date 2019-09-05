@@ -14,12 +14,15 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     // MARK: - Instances
 
     let server = Server()
-    let lambdaTracks: [String] = [ "Full-Stack Web", "iOS", "Data Science", "Android", "UX Design"]
-//    var firstName: String = ""
-//    var lastName: String = ""
-//    var emailAddr: String = ""
-//    var password: String = ""
-    var trackID: Int = -1
+    let lambdaTracks: [String] = ["Select your track", "Full-Stack Web", "iOS", "Data Science", "Android", "UX Design"]
+    
+    // Form fields
+    var firstName: String = ""
+    var lastName: String = ""
+    var email: String = ""
+    var password: String = ""
+    var confirmationPassword: String = ""
+    var track_id: Int = 0
 
     // MARK: - Outlets
     
@@ -27,102 +30,14 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var validatePasswordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var trackTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
-    
-    // MARK: - Actions
-    
-    // MARK: Text Field Validation Actions
-    // first name
-    @IBAction func firstNameTextFieldChanged(_ sender: UITextField) {
-        lastNameTextField.isEnabled = true
-    }
-    
-    // last name
-    @IBAction func lasttNameTextFieldChanged(_ sender: UITextField) {
-        emailTextField.isEnabled = true
-    }
-    
-    // email address
-    @IBAction func emailTextFieldChanged(_ sender: UITextField) {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        let isValidEmail = emailTest.evaluate(with: emailTextField.text)
-        if (isValidEmail) {
-            passwordTextField.isEnabled = true
-            validatePasswordTextField.isEnabled = true
-        } else {
-            lastNameTextField.becomeFirstResponder()
-            Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Please enter a valid email address.")
-            emailTextField.text = nil
-        }
-    }
-    
-    // password
-    // TODO: Validate passwords
-    
-    @IBAction func first_nameDidEndOnExit(_ sender: UITextField) {
-        print("first_nameDidEndOnExit")
-        let charCount = firstNameTextField.text?.count ?? 0
-        if (charCount < 8) {
-            print("first_Name TextField.text?.count = \(charCount)")
-            self.becomeFirstResponder()
-        }
-    }
-    @IBAction func fnEditingDidEnd(_ sender: UITextField) {
-        print("irst_nameEditingDidEnd")
-        let charCount = firstNameTextField.text?.count ?? 0
-        
-        if (charCount < 8) {
-            print("first_Name TextField.text?.count = \(charCount)")
-            self.becomeFirstResponder()
-        }
-    }
-    @IBAction func trackSelected(_ sender: UITextField) {
-        let selectedTrack = trackTextField.text
-        switch(selectedTrack) {
-        case "Full-Stack Web":
-            trackID = 1
-        case "iOS":
-            trackID = 2
-        case "Data Science":
-            trackID = 3
-        case "Android":
-            trackID = 4
-        case "UX Design":
-            trackID = 5
-        default:
-            Config.showAlert(on: self, style: .alert, title: "SignUp Error", message:  "Please select a track")
-        }
-    }
-    
-    @IBAction func registerButtonPressed(_ sender: Any) {
-        signUp()
-    }
     
     // MARK: - VC Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        lastNameTextField.isEnabled = false
-        emailTextField.isEnabled = false
-        passwordTextField.isEnabled = false
-        validatePasswordTextField.isEnabled = false
-//        registerButton.isEnabled = false
-        
-        // Disable password autofill
-        if #available(iOS 12, *) {
-            // iOS 12: Not the best solution, but it works.
-            emailTextField.textContentType = .oneTimeCode
-            passwordTextField.textContentType = .oneTimeCode
-        } else {
-            // iOS 11: Disables the autofill accessory view.
-            // For more information see the explanation below.
-            emailTextField.textContentType = .init(rawValue: "")
-            passwordTextField.textContentType = .init(rawValue: "")
-        }
         
         // Create the picker view for the track selection
         let trackPicker = UIPickerView()
@@ -132,8 +47,20 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         updateViews()
     }
     
-    // MARK: - Pickerview
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        colorTextfield(fieldName: firstNameTextField)
+  //      firstNameTextField.becomeFirstResponder()
+    }
     
+    
+    // MARK: - Actions
+    @IBAction func registerButtonPressed(_ sender: Any) {
+        signUp()
+    }
+    
+    
+    // MARK: - Pickerview
     // Picker view for track selection
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -149,52 +76,36 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         trackTextField.text = lambdaTracks[row]
+        track_id = row
     }
+
     
     // MARK: - Signup
-    
     func signUp() {
-        
-        // Validation actions for text fields
-//
-//        guard let firstName = firstNameTextField.text, !firstName.isEmpty, let lastName = lastNameTextField.text, !lastName.isEmpty, !lastName.isEmpty, track = trackID, track != -1, let username = emailTextField.text, !username.isEmpty, let password = passwordTextField.text, !password.isEmpty else {
-//            Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Please make sure all fields are completed.")
-//            return
-//        }
-        guard let firstName = firstNameTextField.text, !firstName.isEmpty,
-                let lastName = lastNameTextField.text,  !lastName.isEmpty,
-                let email = emailTextField.text, !email.isEmpty,
-            let password = passwordTextField.text, !password.isEmpty else {
-                Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Please make sure all fields are completed.")
-                return
-        }
-    
-        let device_token = UserDefaults.standard.string(forKey: UserDefaultsKeys.deviceToken) ?? ""
-            
-        let user = CurrentUser(first_name: firstName, last_name: lastName, email: email, password: password, tracks_id: trackID, device_token: device_token)
-    
-//        let user = CurrentUser(first_name: firstName, last_name: lastName, email: email, password: password, tracks_id: trackID)
-        
-        server.loginWith(user: user) { (error) in
-            if let error = error  {
-                DispatchQueue.main.async {
-                    Config.showAlert(on: self, style: .alert, title: "Sign Up Error", message: error.localizedDescription)
+        // Validate the user input
+            // The input values are validated, send the sign up request to the server.
+        server.signUpWith(firstName: firstNameTextField.text!, lastName: lastNameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, trackID: track_id, completion: { (error) in
+                if let error = error  {
+                    print(error)
+                    DispatchQueue.main.async {
+                        Config.showAlert(on: self, style: .alert, title: "Sign Up Error", message: error.localizedDescription)
+                    }
+                    return
+                } else {
+                    // Save the encoded and decoded bearer tokens to user defaults
+                    let defaults = UserDefaults.standard
+                    defaults.set(true, forKey: "isLoggedIn")
+                    DispatchQueue.main.async {
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
+                        self.present(vc, animated: true, completion: nil)
+                    }
                 }
-                return
-            } else {
-                DispatchQueue.main.async {
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
-                    self.present(vc, animated: true, completion: nil)
-                }
-            }
-            
-        }
-        
+                
+            })
     }
     
     // MARK: - UI
-    
     func updateViews() {
         registerButton.layer.masksToBounds = true
         registerButton.layer.cornerRadius = Config.buttonCornerRadius
@@ -202,23 +113,147 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     
     // MARK: Validation Functions and Actions
-
-    //name check
-    func isValidName(testStr:String) -> Bool {
-        let nameRegEx = "^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$"
-        let nameTest = NSPredicate(format:"SELF MATCHES %@", nameRegEx)
-        return nameTest.evaluate(with: testStr)
-    }
     
-    //email check
-    func isValidEmail(testStr:String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+    // Final validation before sending data to server
+        func validiateAllInput() -> Bool {
+            if isValidName(nameStr: firstName),
+                isValidName(nameStr: lastName),
+                isValidEmail(emailStr: email),
+                isValidPassword(passwordStr: password),
+                confirmPassword(confirmPasswordStr: confirmationPassword),
+                isValidTrack() {
+                return true
+            } else {
+                return false
+            }
+        }
         
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: testStr)
+        // Validate a name
+        func isValidName(nameStr:String) -> Bool {
+            let nameRegEx = "^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$"
+            let nameTest = NSPredicate(format:"SELF MATCHES %@", nameRegEx)
+            return nameTest.evaluate(with: nameStr)
+        }
+        
+        //Validate email
+        func isValidEmail(emailStr:String) -> Bool {
+            let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+            return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: emailStr)
+        }
+        
+        // Validate password of 8-16 characters
+        func isValidPassword(passwordStr:String) -> Bool {
+            let passwordRegEx = "^.*(?=.{8,16})(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*\\d)|(?=.*[!@#$&*]).*$"
+            return  NSPredicate(format:"SELF MATCHES %@", passwordRegEx).evaluate(with: passwordStr)
+        }
+        
+        // Confirm password
+        func confirmPassword(confirmPasswordStr:String) -> Bool {
+            return  NSPredicate(format:"SELF MATCHES %@", password).evaluate(with: confirmPasswordStr)
+        }
+        
+        // Validate track
+        func isValidTrack() -> Bool {
+            if( (1...5).contains(track_id) ) {
+                trackTextField.resignFirstResponder()
+                return true
+            } else {
+                print("Bad trackID")
+                return false
+            }
+        }
     }
     
-    
-    
-    
-}
+    // MARK: - Textfield Delegation Extension
+    extension SignUpViewController: UITextFieldDelegate {
+        
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            // Validate first name
+            if textField == firstNameTextField {
+                if let firstName = firstNameTextField.text, isValidName(nameStr: firstName) {
+                    self.firstName = firstName
+                    resetColors(fieldName: firstNameTextField)
+                    colorTextfield(fieldName: lastNameTextField)
+                    lastNameTextField.becomeFirstResponder()
+                    return true
+                } else {
+                    Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Please enter a valid first name.")
+                }
+            } // End validate lastName
+                
+                // Validate last name
+            else if textField == lastNameTextField {
+                if let lastName = lastNameTextField.text, isValidName(nameStr: lastName) {
+                    self.lastName = lastName
+                    resetColors(fieldName: lastNameTextField)
+                    colorTextfield(fieldName: emailTextField)
+                    emailTextField.becomeFirstResponder()
+                    return true
+                } else {
+                    Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Please enter a valid last name.")
+                }
+            } // End validate lastName
+                
+                // Validate email
+            else if textField == emailTextField {
+                if let email = emailTextField.text, isValidEmail(emailStr: email) {
+                    self.email = email
+                    resetColors(fieldName: emailTextField)
+                    colorTextfield(fieldName: passwordTextField)
+                    passwordTextField.becomeFirstResponder()
+                    return true
+                } else {
+                    //     emailTextField.layer.borderColor = Config.textFieldBorderColor
+                    Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Please enter a valid email address.")
+                }
+            } // End validate email
+                
+                // Validate password
+            else if textField == passwordTextField {
+                if let password = passwordTextField.text,  isValidPassword(passwordStr: password) {
+                    self.password = password
+                    resetColors(fieldName: passwordTextField)
+                    colorTextfield(fieldName: confirmPasswordTextField)
+                    confirmPasswordTextField.becomeFirstResponder()
+                    return true
+                } else {
+                    passwordTextField.text = nil
+                    Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: " Password must be 8-16 characters, with at least one capital, numeric or special character")
+                }
+            } // End validate email
+                
+                // Validate confirm password
+            else if textField == confirmPasswordTextField {
+                if let confirmationPassword = confirmPasswordTextField.text, confirmPassword(confirmPasswordStr: confirmationPassword)  {
+                    self.confirmationPassword = confirmationPassword
+                    resetColors(fieldName: confirmPasswordTextField)
+                    colorTextfield(fieldName: trackTextField)
+                    trackTextField.becomeFirstResponder()
+                    return true
+                } else {
+                    passwordTextField.text = nil
+                    confirmPasswordTextField.text = nil
+                    passwordTextField.becomeFirstResponder()
+                    colorTextfield(fieldName: passwordTextField)
+                    resetColors(fieldName: confirmPasswordTextField)
+                    Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Passwords do not match.")
+                    
+                }
+            }  // End validate confirm password
+            
+            return false  // There were problems with one or more fields
+        }
+        
+        // Highlight
+        func colorTextfield(fieldName: UITextField) {
+            fieldName.layer.borderWidth = 1
+            fieldName.layer.cornerRadius = 5.0
+            fieldName.layer.borderColor = Config.textFieldBorderColor
+        }
+        
+        func resetColors(fieldName: UITextField) {
+            fieldName.layer.borderWidth = 0
+            fieldName.layer.borderColor = UIColor.lightGray.cgColor
+        }
+        
+} // End Textfield Delegation Extension

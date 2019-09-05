@@ -3,7 +3,7 @@
 //  Career Endorsement Tracker
 //
 //  Created by Victor  on 8/27/19.
-//  Copyright © 2019 Lambda School. All rights reserved.
+//  Copyright © 2019 Lambda School. All rights reserved
 //
 
 import Foundation
@@ -16,6 +16,7 @@ enum HTTPMethods: String {
 }
 
 class Server {
+    typealias CompletionHandler = (Error?) -> Void
     
     let dataGetter = DataGetter()
     
@@ -23,8 +24,12 @@ class Server {
     var encodedBearer: Data?
     
     enum Endpoints: String {
-        case signup = "/signup"
         case login = "/login"
+        case users = "/users"
+        case tracks = "/tracks"
+        case requirements = "/requirements"
+        case steps = "/steps"
+        case step = "/step"
     }
     
     enum HTTPHeaderKeys: String {
@@ -54,13 +59,55 @@ class Server {
             return
         }
         
-        // bob_ross@happylittlemistakes.com
-        
-        
         dataGetter.fetchData(with: request) { (_, data, error) in
             if let error = error {
                 completion(error)
                 return
+            }
+            print("no error")
+            guard let data = data else {
+                completion(DataGetter.NetworkError.badData)
+                return
+            }
+            print("good data")
+            // Save the endoded bearer token so that it can be saved to user defaults
+            self.encodedBearer = data
+            
+            let decoder = JSONDecoder()
+            do {
+                self.bearer = try decoder.decode(Bearer.self, from: data)
+                UserDefaults.standard.set(self.bearer?.token, forKey: "token")
+                completion(nil)
+            } catch {
+                completion(error)
+            }
+        }
+    }
+    
+    
+    func signUpWith(firstName: String, lastName: String, email: String, password: String, trackID: Int, completion: @escaping (Error?)->Void) {
+      
+        let signUpURL = baseURL!.appendingPathComponent(Endpoints.users.rawValue)
+
+        
+        var request = URLRequest(url: signUpURL)
+        request.httpMethod = HTTPMethods.post.rawValue
+        request.setValue(HTTPHeaderKeys.ContentTypes.json.rawValue, forHTTPHeaderField: HTTPHeaderKeys.contentType.rawValue)
+        
+        do {
+            let userParams = ["first_name": firstName, "last_name": lastName, "email": email, "password": password, "tracks_id": trackID] as [String: Any]
+            let json = try JSONSerialization.data(withJSONObject: userParams, options: .prettyPrinted)
+            request.httpBody = json
+        } catch {
+            completion(error)
+            return
+        }
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                completion(error)
+            } else {
+                completion(nil)
             }
             
             guard let data = data else {
@@ -74,6 +121,7 @@ class Server {
             let decoder = JSONDecoder()
             do {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
+                UserDefaults.standard.set(self.bearer?.token, forKey: "token")
                 completion(nil)
             } catch {
                 completion(error)
@@ -82,30 +130,124 @@ class Server {
     }
     
     
-    func signUp(with user: CurrentUser, completion: @escaping (Error?)->Void) {
-        let signUpURL = baseURL!.appendingPathComponent(Endpoints.signup.rawValue)
+    func fetchRequirements(withId id: String, completion: @escaping ([Requirement]?, Error?)->Void) {
+
+        let requirementsURL = baseURL!.appendingPathComponent(Endpoints.requirements.rawValue)
+        print(id)
+        var request = URLRequest(url: requirementsURL)
+        request.httpMethod = HTTPMethods.get.rawValue
+        request.addValue("Bearer \(id)", forHTTPHeaderField: "Authorization")
         
-        var request = URLRequest(url: signUpURL)
-        request.httpMethod = HTTPMethods.post.rawValue
-        request.setValue(HTTPHeaderKeys.ContentTypes.json.rawValue, forHTTPHeaderField: HTTPHeaderKeys.contentType.rawValue)
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                completion(nil, error)
+            } else {
+                completion(nil, nil)
+            }
+            
+            guard let data = data else {
+                completion(nil, DataGetter.NetworkError.badData)
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            do {
+                let data = try decoder.decode([Requirement].self, from: data)
+                completion(data, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+    
+    func fetchRequirement(withId id: String, withReqId reqId: Int, completion: @escaping (Requirement?, Error?)->Void) {
         
-        let encoder = JSONEncoder()
+        let requirementURL = baseURL!.appendingPathComponent("\(Endpoints.requirements.rawValue)/\(reqId)")
+        print(requirementURL)
+        var request = URLRequest(url: requirementURL)
+        request.httpMethod = HTTPMethods.get.rawValue
+        request.addValue("Bearer \(id)", forHTTPHeaderField: "Authorization")
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                completion(nil, error)
+            } else {
+                completion(nil, nil)
+            }
+            
+            guard let data = data else {
+                completion(nil, DataGetter.NetworkError.badData)
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            do {
+                let data = try decoder.decode(Requirement.self, from: data)
+                completion(data, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+    
+    func fetchSteps(withId id: String, withReqId reqId: Int, completion: @escaping ([Step]?, Error?)->Void) {
+        
+        let stepsURL = baseURL!.appendingPathComponent("/requirements/\(reqId)\(Endpoints.steps.rawValue)")
+        print(stepsURL)
+        print(id)
+        var request = URLRequest(url: stepsURL)
+        request.httpMethod = HTTPMethods.get.rawValue
+        request.addValue("Bearer \(id)", forHTTPHeaderField: "Authorization")
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                completion(nil, error)
+            } else {
+                completion(nil, nil)
+            }
+            
+            guard let data = data else {
+                completion(nil, DataGetter.NetworkError.badData)
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            do {
+                let data = try decoder.decode([Step].self, from: data)
+                completion(data, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+    
+    func updateStep(withId id: String, withReqId reqId: Int, withStepId stepId: Int, isComplete: Bool, completion: @escaping (Error?)->Void) {
+        
+        let postUpdatedStepURL = baseURL!.appendingPathComponent("/requirements/\(reqId)\(Endpoints.steps.rawValue)/\(stepId)")
+        print(postUpdatedStepURL)
+        var request = URLRequest(url: postUpdatedStepURL)
+        request.httpMethod = HTTPMethods.put.rawValue
+        request.addValue("Bearer \(id)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        print("request: \(request)")
         do {
-            request.httpBody = try encoder.encode(user)
+            let params = ["is_complete": isComplete] as [String: Any]
+            print(params)
+            let json = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+            request.httpBody = json
         } catch {
-            completion(error)
-            return
+            print("Error encoding item object: \(error)")
         }
         
-        dataGetter.fetchData(with: request) { (_, _, error) in
+        dataGetter.fetchData(with: request) { (_, data, error) in
             if let error = error {
+                print("error updating step")
                 completion(error)
             } else {
                 completion(nil)
             }
         }
     }
-    
-    
+        
     
 }

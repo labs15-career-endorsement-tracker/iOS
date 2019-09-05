@@ -24,6 +24,7 @@ class DataGetter {
     enum HTTPError: Error {
         case non200StatusCode
         case noData
+        case conflict
     }
     
     //retrieves data
@@ -36,9 +37,9 @@ class DataGetter {
                 print(error)
                 completion(requestID, nil, error)
                 return
-            } else if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+            } else if let response = response as? HTTPURLResponse, !(200...201).contains(response.statusCode) {
                 print("non 200 http response: \(response.statusCode)")
-                let myError = HTTPError.non200StatusCode
+                let myError = response.statusCode == 409 ?  HTTPError.conflict :  HTTPError.non200StatusCode  // Must check if user already exists (response 409)
                 completion(requestID, nil, myError)
                 return
             }

@@ -1,38 +1,37 @@
 //
-//  UserController.swift
+//  ResourcesController.swift
 //  Career Endorsement Tracker
 //
-//  Created by Alex on 8/28/19.
+//  Created by Alex on 8/30/19.
 //  Copyright © 2019 Lambda School. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
-class UserController {
-
+class ResourcesController {
+    
     // MARK: - Init
     
     init(){
-        fetchUsersFromServer { (error) in
+        fetchResourcesFromServer { (error) in
             if let error = error {
                 print("ERROR: \(error.localizedDescription)")
             }
-            print("HERE users pulled down: ", self.users.count)
+            print("HERE resources pulled down: ", self.resources.count)
         }
-        
     }
     // MARK: - Properties
     
-    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v0/users")!
-    
-    var users: [User] {
-        let request: NSFetchRequest<User> = User.fetchRequest()
+    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v0/resources")!
+
+    var resources: [Resources] {
+        let request: NSFetchRequest<Resources> = Resources.fetchRequest()
         //Sort by timestamp
         //request.sortDescriptors = [NSSortDescriptor(key: "timeStamp", ascending: true)]
         return (try? CoreDataStack.shared.mainContext.fetch(request)) ?? []
     }
-
+    
     // MARK: - Save Persistent Store
     
     func saveToPersistentStore(){
@@ -46,13 +45,13 @@ class UserController {
     }
     
     typealias CompletionHandler = (Error?) -> Void
-
-    func fetchSingleUserFromPersistentStore(identifier: String, context: NSManagedObjectContext) -> User? {
+    
+    func fetchSingleResourceFromPersistentStore(identifier: String, context: NSManagedObjectContext) -> Resources? {
         // 1. create fetch request from User
-        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        let fetchRequest: NSFetchRequest<Resources> = Resources.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "identifier == %@", identifier)
         
-        var result: User?
+        var result: Resources?
         
         do {
             result = try context.fetch(fetchRequest).first
@@ -62,29 +61,30 @@ class UserController {
         return result
     }
     
-    private func updateUsers(with representations: [UserRepresentation], in context: NSManagedObjectContext) {
+    private func updateResources(with representations: [ResourcesRepresentation], in context: NSManagedObjectContext) {
         context.performAndWait {
-            for userRep in representations {
-                let identifier = userRep.id
+            for resourceRep in representations {
+                let identifier = resourceRep.id
                 
-                let user = self.fetchSingleUserFromPersistentStore(identifier: identifier, context: context)
-                if let user = user, user != userRep {
-                    // if we have a User then update it
-                    user.email = userRep.email
-                    user.first_name = userRep.first_name
-                    user.is_admin = userRep.is_admin
-                    user.last_name = userRep.last_name
-                    user.tracks_id = userRep.tracks_id
-                    user.device_token = userRep.device_token
-                } else if user == nil {
-                    // if we have no User then create one
-                    _ = User(userRepresentation: userRep, context: context)
+                let resource = self.fetchSingleResourceFromPersistentStore(identifier: identifier, context: context)
+                if let resource = resource, resource != resourceRep {
+                    // if we have a Resource then update it
+                    
+                    resource.tasks_id = resourceRep.tasks_id
+                    resource.title = resourceRep.title
+                    resource.type = resourceRep.type
+                    resource.url = resourceRep.url
+                    resource.id = resourceRep.id
+                    
+                } else if resource == nil {
+                    // if we have no Resource then create one
+                    _ = Resources(resourcesRepresentation: resourceRep, context: context)
                 }
             }
         }
     }
     
-    func fetchUsersFromServer(completion: @escaping CompletionHandler = { _ in}){
+    func fetchResourcesFromServer(completion: @escaping CompletionHandler = { _ in}){
         var requestURL = URLRequest(url: baseURL)
         requestURL.httpMethod = "GET"
         requestURL.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -93,7 +93,7 @@ class UserController {
         
         URLSession.shared.dataTask(with: requestURL)  { (data, _, error) in
             if let error = error {
-                return NSLog("Error fetching users: \(error)")
+                return NSLog("Error fetching resources: \(error)")
             }
             
             guard let data = data else {
@@ -102,10 +102,10 @@ class UserController {
             }
             
             do {
-                let userRepresentationDict = try JSONDecoder().decode([String: UserRepresentation].self, from: data)
-                let userRepresentation = Array(userRepresentationDict.values)
+                let resourceRepresentationDict = try JSONDecoder().decode([String: ResourcesRepresentation].self, from: data)
+                let resourceRepresentation = Array(resourceRepresentationDict.values)
                 
-                self.updateUsers(with: userRepresentation, in: backgroundContext)
+                self.updateResources(with: resourceRepresentation, in: backgroundContext)
                 
                 // save changes to disk
                 try CoreDataStack.shared.save(context: backgroundContext)
@@ -116,6 +116,4 @@ class UserController {
             completion(nil)
             }.resume()
     }
-
-
 }

@@ -1,38 +1,38 @@
 //
-//  UserController.swift
+//  TasksController.swift
 //  Career Endorsement Tracker
 //
-//  Created by Alex on 8/28/19.
+//  Created by Victor  on 8/30/19.
 //  Copyright © 2019 Lambda School. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
-class UserController {
-
+class TasksController {
+    
     // MARK: - Init
     
     init(){
-        fetchUsersFromServer { (error) in
+        fetchTasksFromServer { (error) in
             if let error = error {
                 print("ERROR: \(error.localizedDescription)")
             }
-            print("HERE users pulled down: ", self.users.count)
+            print("HERE tasks pulled down: ", self.tasks.count)
         }
         
     }
     // MARK: - Properties
     
-    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v0/users")!
+    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v0/requirements/")!
     
-    var users: [User] {
-        let request: NSFetchRequest<User> = User.fetchRequest()
+    var tasks: [Tasks] {
+        let request: NSFetchRequest<Tasks> = Tasks.fetchRequest()
         //Sort by timestamp
         //request.sortDescriptors = [NSSortDescriptor(key: "timeStamp", ascending: true)]
         return (try? CoreDataStack.shared.mainContext.fetch(request)) ?? []
     }
-
+    
     // MARK: - Save Persistent Store
     
     func saveToPersistentStore(){
@@ -46,13 +46,13 @@ class UserController {
     }
     
     typealias CompletionHandler = (Error?) -> Void
-
-    func fetchSingleUserFromPersistentStore(identifier: String, context: NSManagedObjectContext) -> User? {
+    
+    func fetchSingleTaskFromPersistentStore(identifier: String, context: NSManagedObjectContext) -> Tasks? {
         // 1. create fetch request from User
-        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        let fetchRequest: NSFetchRequest<Tasks> = Tasks.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "identifier == %@", identifier)
         
-        var result: User?
+        var result: Tasks?
         
         do {
             result = try context.fetch(fetchRequest).first
@@ -62,29 +62,28 @@ class UserController {
         return result
     }
     
-    private func updateUsers(with representations: [UserRepresentation], in context: NSManagedObjectContext) {
+    private func updateTasks(with representations: [TasksRepresentation], in context: NSManagedObjectContext) {
         context.performAndWait {
-            for userRep in representations {
-                let identifier = userRep.id
+            for tasksRep in representations {
+                let identifier = tasksRep.id
                 
-                let user = self.fetchSingleUserFromPersistentStore(identifier: identifier, context: context)
-                if let user = user, user != userRep {
+                let task = self.fetchSingleTaskFromPersistentStore(identifier: identifier, context: context)
+                if let task = task, task != tasksRep {
                     // if we have a User then update it
-                    user.email = userRep.email
-                    user.first_name = userRep.first_name
-                    user.is_admin = userRep.is_admin
-                    user.last_name = userRep.last_name
-                    user.tracks_id = userRep.tracks_id
-                    user.device_token = userRep.device_token
-                } else if user == nil {
+                    task.id = tasksRep.id
+                    task.is_endorsement_requirement = tasksRep.is_endorsement_requirement
+                    task.is_required = tasksRep.is_required
+                    task.title = tasksRep.title
+                    task.tasks_description = tasksRep.tasks_description
+                } else if task == nil {
                     // if we have no User then create one
-                    _ = User(userRepresentation: userRep, context: context)
+                    _ = Tasks(taskRepresentation: tasksRep, context: context)
                 }
             }
         }
     }
     
-    func fetchUsersFromServer(completion: @escaping CompletionHandler = { _ in}){
+    func fetchTasksFromServer(completion: @escaping CompletionHandler = { _ in}){
         var requestURL = URLRequest(url: baseURL)
         requestURL.httpMethod = "GET"
         requestURL.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -93,7 +92,7 @@ class UserController {
         
         URLSession.shared.dataTask(with: requestURL)  { (data, _, error) in
             if let error = error {
-                return NSLog("Error fetching users: \(error)")
+                return NSLog("Error fetching tasks: \(error)")
             }
             
             guard let data = data else {
@@ -102,10 +101,10 @@ class UserController {
             }
             
             do {
-                let userRepresentationDict = try JSONDecoder().decode([String: UserRepresentation].self, from: data)
-                let userRepresentation = Array(userRepresentationDict.values)
+                let tasksRepresentationDict = try JSONDecoder().decode([String: TasksRepresentation].self, from: data)
+                let tasksRepresentation = Array(tasksRepresentationDict.values)
                 
-                self.updateUsers(with: userRepresentation, in: backgroundContext)
+                self.updateTasks(with: tasksRepresentation, in: backgroundContext)
                 
                 // save changes to disk
                 try CoreDataStack.shared.save(context: backgroundContext)
@@ -116,6 +115,8 @@ class UserController {
             completion(nil)
             }.resume()
     }
-
-
+    
+    
 }
+
+

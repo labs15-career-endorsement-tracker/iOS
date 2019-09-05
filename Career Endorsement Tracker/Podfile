@@ -2,13 +2,13 @@
  platform :ios, '9.0'
 
 target 'Career Endorsement Tracker' do
-  #pod 'OneSignal', '>= 2.6.2', '< 3.0'
-  #pod 'LBTAComponents'
-  #pod 'JGProgressHUD'
-  pod 'FoldingCell'
+  use_frameworks!
 
-end
+# Pods for Endrsd
 
-target 'OneSignalNotificationServiceExtension' do
-  #pod 'OneSignal', '>= 2.6.2', '< 3.0'
+
+pod 'JGProgressHUD'
+pod 'FoldingCell'
+
+
 end

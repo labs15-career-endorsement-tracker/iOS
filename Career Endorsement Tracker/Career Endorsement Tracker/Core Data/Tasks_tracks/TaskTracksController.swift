@@ -1,38 +1,37 @@
 //
-//  UserController.swift
+//  TaskTracksController.swift
 //  Career Endorsement Tracker
 //
-//  Created by Alex on 8/28/19.
+//  Created by Victor  on 8/30/19.
 //  Copyright © 2019 Lambda School. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
-class UserController {
-
+class TaskTracksController {
+    
     // MARK: - Init
     
-    init(){
-        fetchUsersFromServer { (error) in
+    init() {
+        fetchTasksTracksFromServer { (error) in
             if let error = error {
                 print("ERROR: \(error.localizedDescription)")
             }
-            print("HERE users pulled down: ", self.users.count)
+            print("HERE tasks tracks pulled down: ", self.tasksTracks.count)
         }
-        
     }
     // MARK: - Properties
     
-    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v0/users")!
+    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v0/requirements")!
     
-    var users: [User] {
-        let request: NSFetchRequest<User> = User.fetchRequest()
+    var tasksTracks: [TasksTracks] {
+        let request: NSFetchRequest<TasksTracks> = TasksTracks.fetchRequest()
         //Sort by timestamp
         //request.sortDescriptors = [NSSortDescriptor(key: "timeStamp", ascending: true)]
         return (try? CoreDataStack.shared.mainContext.fetch(request)) ?? []
     }
-
+    
     // MARK: - Save Persistent Store
     
     func saveToPersistentStore(){
@@ -46,45 +45,41 @@ class UserController {
     }
     
     typealias CompletionHandler = (Error?) -> Void
-
-    func fetchSingleUserFromPersistentStore(identifier: String, context: NSManagedObjectContext) -> User? {
+    
+    func fetchSingleTaskTrackFromPersistentStore(identifier: String, context: NSManagedObjectContext) -> TasksTracks? {
         // 1. create fetch request from User
-        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        let fetchRequest: NSFetchRequest<TasksTracks> = TasksTracks.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "identifier == %@", identifier)
         
-        var result: User?
+        var result: TasksTracks?
         
         do {
             result = try context.fetch(fetchRequest).first
         } catch let fetchError {
-            print("Error fetching single user: \(fetchError.localizedDescription)")
+            print("Error fetching single task: \(fetchError.localizedDescription)")
         }
         return result
     }
     
-    private func updateUsers(with representations: [UserRepresentation], in context: NSManagedObjectContext) {
+    private func updateTasksTracks(with representations: [TaskTracksRepresentation], in context: NSManagedObjectContext) {
         context.performAndWait {
-            for userRep in representations {
-                let identifier = userRep.id
+            for tasksTracksRep in representations {
+                let identifier = tasksTracksRep.id
                 
-                let user = self.fetchSingleUserFromPersistentStore(identifier: identifier, context: context)
-                if let user = user, user != userRep {
+                let taskTrack = self.fetchSingleTaskTrackFromPersistentStore(identifier: identifier, context: context)
+                if let taskTrack = taskTrack, taskTrack != tasksTracksRep {
                     // if we have a User then update it
-                    user.email = userRep.email
-                    user.first_name = userRep.first_name
-                    user.is_admin = userRep.is_admin
-                    user.last_name = userRep.last_name
-                    user.tracks_id = userRep.tracks_id
-                    user.device_token = userRep.device_token
-                } else if user == nil {
+                    taskTrack.tasks_id = tasksTracksRep.tasks_id
+                    taskTrack.tracks_id = tasksTracksRep.tracks_id
+                } else if taskTrack == nil {
                     // if we have no User then create one
-                    _ = User(userRepresentation: userRep, context: context)
+                    _ = TasksTracks(taskTracksRepresentation: tasksTracksRep, context: context)
                 }
             }
         }
     }
     
-    func fetchUsersFromServer(completion: @escaping CompletionHandler = { _ in}){
+    func fetchTasksTracksFromServer(completion: @escaping CompletionHandler = { _ in}){
         var requestURL = URLRequest(url: baseURL)
         requestURL.httpMethod = "GET"
         requestURL.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -93,7 +88,7 @@ class UserController {
         
         URLSession.shared.dataTask(with: requestURL)  { (data, _, error) in
             if let error = error {
-                return NSLog("Error fetching users: \(error)")
+                return NSLog("Error fetching tasks tracks: \(error)")
             }
             
             guard let data = data else {
@@ -102,20 +97,21 @@ class UserController {
             }
             
             do {
-                let userRepresentationDict = try JSONDecoder().decode([String: UserRepresentation].self, from: data)
-                let userRepresentation = Array(userRepresentationDict.values)
+                let taskTracksRepresentationDict = try JSONDecoder().decode([String: TaskTracksRepresentation].self, from: data)
+                let taskTracksRepresentation = Array(taskTracksRepresentationDict.values)
                 
-                self.updateUsers(with: userRepresentation, in: backgroundContext)
+                self.updateTasksTracks(with: taskTracksRepresentation, in: backgroundContext)
                 
                 // save changes to disk
                 try CoreDataStack.shared.save(context: backgroundContext)
             } catch {
-                NSLog("Error decoding tasks: \(error)")
+                NSLog("Error decoding taskTrack: \(error.localizedDescription)")
                 return completion(error)
             }
             completion(nil)
             }.resume()
     }
-
-
+    
+    
 }
+

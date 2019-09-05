@@ -11,15 +11,21 @@ import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var taskNameLabel: UILabel!
     @IBOutlet weak var taskDescription: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
+    
+    // MARK: - Properties
     
     var requirement: Requirement? {
         didSet {
             updateViews()
         }
     }
+    
+    // MARK: - Methods
     
     func updateViews() {
         guard let requirement = requirement else {return}

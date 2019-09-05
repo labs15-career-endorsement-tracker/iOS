@@ -10,6 +10,8 @@ import UIKit
 
 class StepsViewController: UIViewController {
 
+    // MARK: - VC Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +34,8 @@ extension StepsViewController: UICollectionViewDelegate {
     
 }
 extension StepsViewController: UICollectionViewDataSource {
+    // MARK: - Collection View
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }

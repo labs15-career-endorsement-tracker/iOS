@@ -14,7 +14,6 @@ extension Notification.Name {
     static let didSubmit = Notification.Name("didSubmit")
 }
 
-
 class HomeCollectionViewController: UICollectionViewController {
     
     // MARK: - Instances
@@ -38,9 +37,6 @@ class HomeCollectionViewController: UICollectionViewController {
         updateView()
     }
     
-    
-    
-    
     // MARK: - Collection View
     
     //gets count from task array
@@ -59,7 +55,7 @@ class HomeCollectionViewController: UICollectionViewController {
         return cell
     }
     
-    // MARK: - UI
+    // MARK: - Helper Method
     
     func updateView() {
         let layout = UICollectionViewFlowLayout()
@@ -69,6 +65,8 @@ class HomeCollectionViewController: UICollectionViewController {
         
         collectionView.collectionViewLayout = layout
     }
+    
+    //MARK: Network Call
     
     func fetchRequirementsFromServer() {
         let token = UserDefaults.standard.object(forKey: "token") as! String
@@ -88,6 +86,8 @@ class HomeCollectionViewController: UICollectionViewController {
             }
         }
     }
+    
+    //MARK: Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowSegue" {

@@ -13,10 +13,6 @@ struct tracks: Codable {
     let title: String
 }
 
-struct track: Codable {
-    var requirements: [Requirement]
-}
-
 struct Requirement: Codable {
     var id: Int
     var tracks_id: Int

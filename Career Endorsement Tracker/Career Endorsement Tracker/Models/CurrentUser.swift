@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
     
-    // With device_token
+// With device_token
 struct CurrentUser: Encodable {
     var first_name: String = ""
     var last_name: String = ""

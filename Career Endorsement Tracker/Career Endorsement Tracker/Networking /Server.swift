@@ -22,8 +22,6 @@ class Server {
     
     var bearer: Bearer?
     var encodedBearer: Data?
-    var requirements: [Requirement] = []
-    var steps: [Step] = []
     
     enum Endpoints: String {
         case login = "/login"
@@ -123,6 +121,7 @@ class Server {
             let decoder = JSONDecoder()
             do {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
+                UserDefaults.standard.set(self.bearer?.token, forKey: "token")
                 completion(nil)
             } catch {
                 completion(error)

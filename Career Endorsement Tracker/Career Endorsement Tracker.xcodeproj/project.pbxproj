@@ -204,13 +204,6 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		374CB3A82318B881009A8C2D /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		570CE8FA2315CA6E00077B72 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,7 +250,6 @@
 		5784F9E3230728F800C11198 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				374CB3A82318B881009A8C2D /* New Group */,
 				570CE9032315D4AA00077B72 /* Home */,
 				570CE8FA2315CA6E00077B72 /* Welcome */,
 			);

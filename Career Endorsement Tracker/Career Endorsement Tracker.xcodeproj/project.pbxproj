@@ -39,6 +39,8 @@
 		FA66A3A123198ECC00980AB6 /* StepsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A3A023198ECC00980AB6 /* StepsController.swift */; };
 		FA66A3A32319919C00980AB6 /* ResourcesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A3A22319919C00980AB6 /* ResourcesController.swift */; };
 		FA71175D2321D12F0077947E /* Steps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA71175C2321D12F0077947E /* Steps.storyboard */; };
+		FA7117642321D2320077947E /* StepsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7117632321D2320077947E /* StepsCollectionViewCell.swift */; };
+		FA7117662321D2460077947E /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7117652321D2460077947E /* StepsViewController.swift */; };
 		FA8AAD7E23158E2100DA36A5 /* TasksTracks+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AAD7D23158E2100DA36A5 /* TasksTracks+Convenience.swift */; };
 		FA8AAD8023158E3700DA36A5 /* Tracks+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AAD7F23158E3700DA36A5 /* Tracks+Convenience.swift */; };
 		FA8AAD8223158E4100DA36A5 /* User+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AAD8123158E4100DA36A5 /* User+Convenience.swift */; };
@@ -114,6 +116,8 @@
 		FA66A3A023198ECC00980AB6 /* StepsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsController.swift; sourceTree = "<group>"; };
 		FA66A3A22319919C00980AB6 /* ResourcesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesController.swift; sourceTree = "<group>"; };
 		FA71175C2321D12F0077947E /* Steps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Steps.storyboard; sourceTree = "<group>"; };
+		FA7117632321D2320077947E /* StepsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA7117652321D2460077947E /* StepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
 		FA8AAD7D23158E2100DA36A5 /* TasksTracks+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TasksTracks+Convenience.swift"; sourceTree = "<group>"; };
 		FA8AAD7F23158E3700DA36A5 /* Tracks+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tracks+Convenience.swift"; sourceTree = "<group>"; };
 		FA8AAD8123158E4100DA36A5 /* User+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Convenience.swift"; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 		5784F9E3230728F800C11198 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA71175E2321D1A10077947E /* Steps */,
 				570CE9032315D4AA00077B72 /* Home */,
 				570CE8FA2315CA6E00077B72 /* Welcome */,
 			);
@@ -305,6 +310,15 @@
 				FA5D9B17230F181B00DC9BC1 /* Info.plist */,
 			);
 			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		FA71175E2321D1A10077947E /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				FA7117632321D2320077947E /* StepsCollectionViewCell.swift */,
+				FA7117652321D2460077947E /* StepsViewController.swift */,
+			);
+			path = Steps;
 			sourceTree = "<group>";
 		};
 		FAA6DF1B23107B3300B1DA7D /* Core Data */ = {
@@ -573,7 +587,9 @@
 				FA66A3A123198ECC00980AB6 /* StepsController.swift in Sources */,
 				3738EC5523061D800083158B /* AppDelegate.swift in Sources */,
 				570CE8E723144E1700077B72 /* RequirementsTableViewCell.swift in Sources */,
+				FA7117662321D2460077947E /* StepsViewController.swift in Sources */,
 				FACADFDE2316FEDE001BBE9C /* Extensions.swift in Sources */,
+				FA7117642321D2320077947E /* StepsCollectionViewCell.swift in Sources */,
 				577EB1AF2319B7CF00EDB960 /* TracksController.swift in Sources */,
 				570CE8E523143FC000077B72 /* HomeTableViewController.swift in Sources */,
 				5784F9EF23072BFB00C11198 /* Config.swift in Sources */,

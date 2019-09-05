@@ -13,10 +13,22 @@ struct tracks: Codable {
     let title: String
 }
 
-struct track: Codable {
-    var requirements: [Requirement]
+struct Requirement: Codable {
+    var id: Int
+    var tracks_id: Int
+    var tasks_id: Int
+    var title: String
+    var is_required: Bool
+    var tasks_description: String
+    var is_endorsement_requirement: Bool
+    var progress: Int
 }
 
-struct Requirement: Codable {
-    var description: String
+struct Step: Codable {
+    var id: Int
+    var number: Int
+    var steps_description: String
+    var is_required: Bool
+    var tasks_id: Int
+    var is_complete: Bool
 }

@@ -8,64 +8,54 @@
 
 import Foundation
 import UIKit
+import JGProgressHUD
+
+extension Notification.Name {
+    static let didSubmit = Notification.Name("didSubmit")
+}
 
 class HomeCollectionViewController: UICollectionViewController {
     
     // MARK: - Instances
     let server = Server()
-    let taskController = TaskController()
+    var requirements: [Requirement] = []
+    
+    //displays progress sign
+    let hud: JGProgressHUD = {
+        let hud = JGProgressHUD(style: .light)
+        hud.interactionType = .blockAllTouches
+        return hud
+    }()
     
     // MARK: - VC Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        checkCoreData()
-        server.fetch { (error) in
-            if let error = error {
-                print(error)
-                return
-            } else {
-              print("Successfully fetched data from ")
-            }
-        }
+        hud.textLabel.text = "Loading Requirements..."
+        hud.show(in: view, animated: true)
+        fetchRequirementsFromServer()
         updateView()
-    }
-    
-    private func checkCoreData(){
-        let tasksController = TasksController()
-        let tracksController = TracksController()
-        let userController = UserController()
-        let taskTracksController = TaskTracksController()
-        let userStepsCompletedController = UserStepsCompletedController()
-        let stepsController = StepsController()
-
-        
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        collectionView.reloadData()
     }
     
     // MARK: - Collection View
     
     //gets count from task array
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return taskController.tasks.count
+        return requirements.count
     }
     
     //configures each cell
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! HomeCollectionViewCell
         
-        let task = taskController.tasks[indexPath.item]
-        cell.task = task
+        let requirement = requirements[indexPath.item]
+        cell.requirement = requirement
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = 15
         return cell
     }
     
-    // MARK: - UI
+    // MARK: - Helper Method
     
     func updateView() {
         let layout = UICollectionViewFlowLayout()
@@ -74,5 +64,43 @@ class HomeCollectionViewController: UICollectionViewController {
         layout.minimumLineSpacing = 30
         
         collectionView.collectionViewLayout = layout
+    }
+    
+    //MARK: Network Call
+    
+    func fetchRequirementsFromServer() {
+        let token = UserDefaults.standard.object(forKey: "token") as! String
+        server.fetchRequirements(withId: token) { (reqResult, error) in
+            if let error = error {
+                print(error)
+                self.hud.dismiss(animated: true)
+                Config.showAlert(on: self, style: .alert, title: "Fetching Error", message: error.localizedDescription)
+                return
+            }
+            if let reqResult = reqResult {
+                self.requirements = reqResult
+                DispatchQueue.main.async {
+                    self.hud.dismiss(animated: true)
+                    self.collectionView.reloadData()
+                }
+            }
+        }
+    }
+    
+    //MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowSegue" {
+            guard let destinationVC = segue.destination as? HomeDetailTableViewController else {
+                print("NO destination")
+                return
+            }
+            guard let indexPath = collectionView.indexPathsForSelectedItems?.first else {
+                return
+            }
+            destinationVC.server = server
+            destinationVC.id = requirements[indexPath.item].id
+            destinationVC.requirement = requirements[indexPath.item]
+        }
     }
 }

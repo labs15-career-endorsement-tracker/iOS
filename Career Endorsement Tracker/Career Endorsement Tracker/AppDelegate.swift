@@ -38,9 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - End OneSignal
         
-        let ifLoggedIn = UserDefaults.standard.bool(forKey: UserDefaultsKeys.ifUserLoggedIn)
         
-        if ifLoggedIn {
+        if UserDefaults.standard.bool(forKey: "isLoggedIn") {
             // user is already logged in, present chat VC, but from MainVC, in order to unwind back to mainVC when user log out.
             print("user is already logged in")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Ilw-5x-Ckf">
+            <objects>
+                <viewController id="Iue-FM-s7W" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hl0-5y-ldD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xdl-2J-qgZ">
+                                <rect key="frame" x="0.0" y="108" width="414" height="788"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a02-pr-Ljs">
+                                    <size key="itemSize" width="388" height="51"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="steps_cell" id="5ZM-4z-rji" customClass="StepsCollectionViewCell" customModule="Career_Endorsement_Tracker" customModuleProvider="target">
+                                        <rect key="frame" x="13" y="0.0" width="388" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="51"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZw-Mj-LGJ" customClass="RadioButton" customModule="MBRadioCheckboxButton">
+                                                    <rect key="frame" x="16" y="10.5" width="207" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="zb5-5U-sVH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <state key="normal" title="Complete LinkedIn Profile">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.40814721580000002" green="0.46255367990000001" blue="0.57942390440000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="pZw-Mj-LGJ" firstAttribute="centerY" secondItem="5ZM-4z-rji" secondAttribute="centerY" id="RmE-J4-XSJ"/>
+                                            <constraint firstItem="pZw-Mj-LGJ" firstAttribute="leading" secondItem="5ZM-4z-rji" secondAttribute="leadingMargin" constant="8" id="uDQ-uc-MQi"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resume Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dI-LE-7di">
+                                <rect key="frame" x="20" y="62" width="173" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Completed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2h4-il-wnW">
+                                <rect key="frame" x="302" y="73" width="85" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Py-ne-oJw">
+                                <rect key="frame" x="332" y="51" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7dI-LE-7di" firstAttribute="top" secondItem="Ly9-xk-54l" secondAttribute="top" constant="18" id="WrE-Kt-GxR"/>
+                            <constraint firstAttribute="bottom" secondItem="Xdl-2J-qgZ" secondAttribute="bottom" id="jA2-ax-mSQ"/>
+                            <constraint firstItem="7dI-LE-7di" firstAttribute="leading" secondItem="Ly9-xk-54l" secondAttribute="leading" constant="20" id="nvk-CN-H7d"/>
+                            <constraint firstItem="Xdl-2J-qgZ" firstAttribute="top" secondItem="7dI-LE-7di" secondAttribute="bottom" constant="16" id="pbc-gd-5JO"/>
+                            <constraint firstItem="2h4-il-wnW" firstAttribute="top" secondItem="6Py-ne-oJw" secondAttribute="bottom" id="q6J-3m-oLO"/>
+                            <constraint firstItem="6Py-ne-oJw" firstAttribute="centerX" secondItem="2h4-il-wnW" secondAttribute="centerX" id="qMu-Go-6nS"/>
+                            <constraint firstItem="Xdl-2J-qgZ" firstAttribute="leading" secondItem="Ly9-xk-54l" secondAttribute="leading" id="tzU-Yw-uPA"/>
+                            <constraint firstItem="Xdl-2J-qgZ" firstAttribute="trailing" secondItem="Ly9-xk-54l" secondAttribute="trailing" id="u44-84-eWX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ly9-xk-54l"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6vc-Zz-lj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234.7826086956522" y="-685.04464285714278"/>
+        </scene>
+    </scenes>
+</document>

@@ -31,7 +31,15 @@ class HomeDetailTableViewController: UITableViewController {
         hud.show(in: view, animated: true)
         fetchStepsFromServer()
         updateViews()
+        NotificationCenter.default.addObserver(self, selector: #selector(submitButtonPressed(notificaiton:)), name: .didSubmit, object: nil)
     }
+    
+    @objc func submitButtonPressed(notificaiton: Notification) {
+        //handles logic for submit button pressed
+        fetchStepsFromServer()
+        updateViews()
+    }
+    
     
     func updateViews() {
         guard let requirement = requirement else {
@@ -54,6 +62,7 @@ class HomeDetailTableViewController: UITableViewController {
         }
     
         let step = steps[indexPath.row]
+        cell.server = server
         cell.step = step
         return cell
     }

@@ -31,6 +31,7 @@ class Server {
         case tracks = "/tracks"
         case requirements = "/requirements"
         case steps = "/steps"
+        case step = "/step"
     }
     
     enum HTTPHeaderKeys: String {
@@ -190,5 +191,34 @@ class Server {
             }
         }
     }
+    
+    func updateStep(withId id: String, withReqId reqId: Int, withStepId stepId: Int, isComplete: Bool, completion: @escaping (Error?)->Void) {
+        
+        let postUpdatedStepURL = baseURL!.appendingPathComponent("/requirements/\(reqId)\(Endpoints.steps.rawValue)/\(stepId)")
+        print(postUpdatedStepURL)
+        var request = URLRequest(url: postUpdatedStepURL)
+        request.httpMethod = HTTPMethods.put.rawValue
+        request.addValue("Bearer \(id)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        print("request: \(request)")
+        do {
+            let params = ["is_complete": false] as [String: Any]
+            print(params)
+            let json = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+            request.httpBody = json
+        } catch {
+            print("Error encoding item object: \(error)")
+        }
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                print("error updating step")
+                completion(error)
+            } else {
+                completion(nil)
+            }
+        }
+    }
+        
     
 }

@@ -186,6 +186,9 @@
                                             <state key="normal" title="Not Completed">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="submitCompletionButtonPressed:" destination="wqG-QP-K7L" eventType="touchUpInside" id="IfX-cY-KpK"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -199,6 +202,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="stepTextView" destination="PGa-g2-b1o" id="olK-w6-zgX"/>
+                                    <outlet property="submitCompletionButton" destination="J9k-fg-oNe" id="7bU-i5-WC7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

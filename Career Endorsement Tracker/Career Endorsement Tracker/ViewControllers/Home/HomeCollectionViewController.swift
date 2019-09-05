@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 import JGProgressHUD
 
+extension Notification.Name {
+    static let didSubmit = Notification.Name("didSubmit")
+}
+
+
 class HomeCollectionViewController: UICollectionViewController {
     
     // MARK: - Instances
@@ -32,6 +37,9 @@ class HomeCollectionViewController: UICollectionViewController {
         fetchRequirementsFromServer()
         updateView()
     }
+    
+    
+    
     
     // MARK: - Collection View
     

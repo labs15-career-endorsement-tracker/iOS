@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		032BFFAEF1071764E97FEE8B /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF928B366F43FF466A3D843 /* libPods-OneSignalNotificationServiceExtension.a */; };
 		3738EC5523061D800083158B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738EC5423061D800083158B /* AppDelegate.swift */; };
 		3738EC5A23061D800083158B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3738EC5823061D800083158B /* Main.storyboard */; };
 		3738EC5C23061D830083158B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3738EC5B23061D830083158B /* Assets.xcassets */; };
 		3738EC5F23061D830083158B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3738EC5D23061D830083158B /* LaunchScreen.storyboard */; };
 		3738EC67230628770083158B /* CareerEndorsementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738EC66230628770083158B /* CareerEndorsementViewController.swift */; };
-		3FB756B0E818B9A002E67AA1 /* libPods-Career Endorsement Tracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 648647ED1E50BB6B0FC4B3E9 /* libPods-Career Endorsement Tracker.a */; };
+		401CACBE0CB350AAF4C656BE /* Pods_Career_Endorsement_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E980E4AE8E808939D84F4457 /* Pods_Career_Endorsement_Tracker.framework */; };
 		570CE8E523143FC000077B72 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8E423143FC000077B72 /* HomeTableViewController.swift */; };
 		570CE8E723144E1700077B72 /* RequirementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8E623144E1600077B72 /* RequirementsTableViewCell.swift */; };
 		570CE8F92315CA5C00077B72 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8F82315CA5C00077B72 /* Server.swift */; };
@@ -51,6 +50,9 @@
 		FA8AAD9023158E9B00DA36A5 /* User_steps_completedRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AAD8F23158E9B00DA36A5 /* User_steps_completedRepresentation.swift */; };
 		FA8AAD9223158EA300DA36A5 /* StepsRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AAD9123158EA300DA36A5 /* StepsRepresentation.swift */; };
 		FA8AAD9423158EAA00DA36A5 /* ResourcesRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AAD9323158EAA00DA36A5 /* ResourcesRepresentation.swift */; };
+		FA9E0455232098D60088B075 /* Steps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9E0454232098D60088B075 /* Steps.storyboard */; };
+		FA9E0459232099E50088B075 /* StepsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9E0458232099E50088B075 /* StepsCollectionViewCell.swift */; };
+		FA9E045B23209B1E0088B075 /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9E045A23209B1E0088B075 /* StepsViewController.swift */; };
 		FAA6DF1D23107BDB00B1DA7D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6DF1C23107BDB00B1DA7D /* CoreDataStack.swift */; };
 		FAA6DF2023107E1400B1DA7D /* CareerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA6DF1E23107E1400B1DA7D /* CareerModel.xcdatamodeld */; };
 		FAA6DF222310828500B1DA7D /* Tasks+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6DF212310828500B1DA7D /* Tasks+Convenience.swift */; };
@@ -86,7 +88,6 @@
 
 /* Begin PBXFileReference section */
 		1D1A97918061F171028B36D4 /* Pods-Career Endorsement Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.release.xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.release.xcconfig"; sourceTree = "<group>"; };
-		26871EADF2319160A5DDC6DC /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		3738EC5123061D800083158B /* Career Endorsement Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Career Endorsement Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3738EC5423061D800083158B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		3738EC5923061D800083158B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,9 +115,9 @@
 		5784F9EC23072A1600C11198 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		5784F9EE23072BFB00C11198 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		5784F9F023072D5600C11198 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
-		648647ED1E50BB6B0FC4B3E9 /* libPods-Career Endorsement Tracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Career Endorsement Tracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AF928B366F43FF466A3D843 /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C6DD038EA49314E0BE8940 /* Pods-Career Endorsement Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		E980E4AE8E808939D84F4457 /* Pods_Career_Endorsement_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Career_Endorsement_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5D9B13230F181B00DC9BC1 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5D9B15230F181B00DC9BC1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FA5D9B17230F181B00DC9BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,6 +136,9 @@
 		FA8AAD8F23158E9B00DA36A5 /* User_steps_completedRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_steps_completedRepresentation.swift; sourceTree = "<group>"; };
 		FA8AAD9123158EA300DA36A5 /* StepsRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsRepresentation.swift; sourceTree = "<group>"; };
 		FA8AAD9323158EAA00DA36A5 /* ResourcesRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesRepresentation.swift; sourceTree = "<group>"; };
+		FA9E0454232098D60088B075 /* Steps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Steps.storyboard; sourceTree = "<group>"; };
+		FA9E0458232099E50088B075 /* StepsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA9E045A23209B1E0088B075 /* StepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
 		FAA6DF1C23107BDB00B1DA7D /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		FAA6DF1F23107E1400B1DA7D /* CareerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CareerModel.xcdatamodel; sourceTree = "<group>"; };
 		FAA6DF212310828500B1DA7D /* Tasks+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+Convenience.swift"; sourceTree = "<group>"; };
@@ -144,7 +148,6 @@
 		FACADFE423174587001BBE9C /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		FAE9606D230F1AB7006E7467 /* Career Endorsement Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Career Endorsement Tracker.entitlements"; sourceTree = "<group>"; };
 		FAE9606E230F1C89006E7467 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
-		FE6AE4FA7D64ABA26C147CA6 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FB756B0E818B9A002E67AA1 /* libPods-Career Endorsement Tracker.a in Frameworks */,
+				401CACBE0CB350AAF4C656BE /* Pods_Career_Endorsement_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +163,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				032BFFAEF1071764E97FEE8B /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,8 +174,6 @@
 			children = (
 				C9C6DD038EA49314E0BE8940 /* Pods-Career Endorsement Tracker.debug.xcconfig */,
 				1D1A97918061F171028B36D4 /* Pods-Career Endorsement Tracker.release.xcconfig */,
-				FE6AE4FA7D64ABA26C147CA6 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
-				26871EADF2319160A5DDC6DC /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -224,11 +224,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		374CB3A82318B881009A8C2D /* New Group */ = {
+		374CB3A82318B881009A8C2D /* Steps */ = {
 			isa = PBXGroup;
 			children = (
+				FA9E0458232099E50088B075 /* StepsCollectionViewCell.swift */,
+				FA9E045A23209B1E0088B075 /* StepsViewController.swift */,
 			);
-			path = "New Group";
+			path = Steps;
 			sourceTree = "<group>";
 		};
 		570CE8FA2315CA6E00077B72 /* Welcome */ = {
@@ -275,7 +277,7 @@
 		5784F9E3230728F800C11198 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				374CB3A82318B881009A8C2D /* New Group */,
+				374CB3A82318B881009A8C2D /* Steps */,
 				570CE9032315D4AA00077B72 /* Home */,
 				570CE8FA2315CA6E00077B72 /* Welcome */,
 			);
@@ -308,6 +310,7 @@
 				5784F9F023072D5600C11198 /* Welcome.storyboard */,
 				3738EC5823061D800083158B /* Main.storyboard */,
 				3738EC5D23061D830083158B /* LaunchScreen.storyboard */,
+				FA9E0454232098D60088B075 /* Steps.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -427,8 +430,8 @@
 		FFA804A24F4F6DEE9477576E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				648647ED1E50BB6B0FC4B3E9 /* libPods-Career Endorsement Tracker.a */,
 				8AF928B366F43FF466A3D843 /* libPods-OneSignalNotificationServiceExtension.a */,
+				E980E4AE8E808939D84F4457 /* Pods_Career_Endorsement_Tracker.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				3738EC4E23061D800083158B /* Frameworks */,
 				3738EC4F23061D800083158B /* Resources */,
 				FA5D9B1E230F181B00DC9BC1 /* Embed App Extensions */,
+				615BDFD7A0B34BA8A4CD1649 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -460,7 +464,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA5D9B1D230F181B00DC9BC1 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
 			buildPhases = (
-				C7A9D99C239EFA0D6C9BA92C /* [CP] Check Pods Manifest.lock */,
 				FA5D9B0F230F181B00DC9BC1 /* Sources */,
 				FA5D9B10230F181B00DC9BC1 /* Frameworks */,
 				FA5D9B11230F181B00DC9BC1 /* Resources */,
@@ -533,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3738EC5F23061D830083158B /* LaunchScreen.storyboard in Resources */,
+				FA9E0455232098D60088B075 /* Steps.storyboard in Resources */,
 				5784F9F123072D5600C11198 /* Welcome.storyboard in Resources */,
 				3738EC5C23061D830083158B /* Assets.xcassets in Resources */,
 				3738EC5A23061D800083158B /* Main.storyboard in Resources */,
@@ -571,7 +575,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C7A9D99C239EFA0D6C9BA92C /* [CP] Check Pods Manifest.lock */ = {
+		615BDFD7A0B34BA8A4CD1649 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -579,18 +583,20 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
+				"${BUILT_PRODUCTS_DIR}/MBRadioCheckboxButton/MBRadioCheckboxButton.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBRadioCheckboxButton.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -635,10 +641,12 @@
 				570CE9092315D57700077B72 /* Task.swift in Sources */,
 				5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */,
 				3738EC67230628770083158B /* CareerEndorsementViewController.swift in Sources */,
+				FA9E045B23209B1E0088B075 /* StepsViewController.swift in Sources */,
 				570CE90B2315D59F00077B72 /* Lambda.swift in Sources */,
 				570CE9072315D56500077B72 /* TaskController.swift in Sources */,
 				FA8AAD7E23158E2100DA36A5 /* TasksTracks+Convenience.swift in Sources */,
 				570CE9052315D4BE00077B72 /* HomeCollectionViewController.swift in Sources */,
+				FA9E0459232099E50088B075 /* StepsCollectionViewCell.swift in Sources */,
 				FA66A39F23187B1C00980AB6 /* UserStepsCompletedController.swift in Sources */,
 				570CE8F92315CA5C00077B72 /* Server.swift in Sources */,
 				570CE9112315F32200077B72 /* WelcomeNavigationController.swift in Sources */,
@@ -844,7 +852,6 @@
 		};
 		FA5D9B1B230F181B00DC9BC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE6AE4FA7D64ABA26C147CA6 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -866,7 +873,6 @@
 		};
 		FA5D9B1C230F181B00DC9BC1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26871EADF2319160A5DDC6DC /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;

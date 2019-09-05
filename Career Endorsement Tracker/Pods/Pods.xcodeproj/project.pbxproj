@@ -7,207 +7,323 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2167FF9288F9F8E6D8476A6E71E9A0FE /* FoldingCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ED988AF1646E8C680FD29A2B449CC8C /* FoldingCell-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6125325BF5B9F8A1E9E84228FEAF7F9D /* FoldingCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F60D131D7435D2443284BD0E536514 /* FoldingCell-dummy.m */; };
-		8B247526B17B9D96ACED70732B052440 /* Pods-OneSignalNotificationServiceExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 193DE045A4E454BFC797D8CB51F0C831 /* Pods-OneSignalNotificationServiceExtension-dummy.m */; };
-		A1BBB90D047433BE75D774D074331E33 /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F31CBBBC3C72AB28367280971C3A3A /* FoldingCell.swift */; };
-		A4D09A919AED328E502FE812E3D96D12 /* Pods-Career Endorsement Tracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6319D14FEE7BF163347FBDF69FDBE595 /* Pods-Career Endorsement Tracker-dummy.m */; };
-		BB5F29E661436B3D24F59D36814555B3 /* Pods-Career Endorsement Tracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D33E04A982C9645D3B756544D50D0E58 /* Pods-Career Endorsement Tracker-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0D1A1132D099BBAF2CD64A8F6E4A460D /* Pods-Career Endorsement Tracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7A58A40E3037BA0ED44759D97F64AB /* Pods-Career Endorsement Tracker-dummy.m */; };
+		12A0C5E8C1DD044CD21177CCC28856F0 /* CheckboxButtonContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A627CC6C9300B00BC93A7656567391 /* CheckboxButtonContainerView.swift */; };
+		134940B3275F45D8EC53EA4F0A745EED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		136753C9E3FD454D5CB87A9977A15A65 /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463C56F15AEBD5B5B91A1B65F841602 /* FoldingCell.swift */; };
+		2175BCA5A1A67ACDD1C5D8430FAF1997 /* CheckboxButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA8C49EB0F451052F8170E62A02AFB8 /* CheckboxButtonContainer.swift */; };
+		3DB4AD739F4FEB0FAF4A3CA0D9D50EC5 /* CheckboxLineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4CF9007439E7C0FE6B4E1C204CC44D /* CheckboxLineStyle.swift */; };
+		524E46362091B63732B8B0DE69623BF6 /* CheckBoxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7999EDD8591570CF49E204AFB149296A /* CheckBoxColor.swift */; };
+		54C515002DF46E15D862CDBCFB4D8309 /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15023B9FAE0607E252369620A46304E /* CheckboxButton.swift */; };
+		602F4979AC853D766A1A1F9F1A54DB3A /* Pods-Career Endorsement Tracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 08EA8D59271107CF1E02DAD558819984 /* Pods-Career Endorsement Tracker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64EF4360D1D5E639B5BB039A798C36B2 /* RadioButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E98AA9D68D07438C995B34A20975AC /* RadioButtonContainer.swift */; };
+		6C52A599C18A784A135AA37051B6DC84 /* MBRadioCheckboxButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FC6B912C8F3AFE8325B32385AE7D6B68 /* MBRadioCheckboxButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		849D9705305C102F77F19624D12EE9E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		94CC4C401A65CF9C123AE435E5A72476 /* FoldingCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91490EC3B78D2AFB893D26EE66349150 /* FoldingCell-dummy.m */; };
+		9BD4CCE316628B0180B51E3CE1B6AA24 /* RadioButtonCircleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C56C43B4B6B20C6D841AF51E3BC758 /* RadioButtonCircleStyle.swift */; };
+		B662AF3E1C64DF7E99D5540E347B47CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		B916E5BA61C4E5800A300690D619FB9C /* RadioButtonContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAAD647BDF18BB71874295DF91942DC /* RadioButtonContainerView.swift */; };
+		C047DAFDF1A75C161F2D39E14EE92F86 /* RadioButtonColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28194B45C53C13FB6DB5E1A1BD32DB1 /* RadioButtonColor.swift */; };
+		CEE79844DFCF4BCDD468D12D4CE61383 /* MBRadioCheckboxButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 723A24004C4EE32877F0F1D85766C9AB /* MBRadioCheckboxButton-dummy.m */; };
+		E39ED61EF09974CA82D04B01735D1D6A /* FoldingCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD98E7AEC6AB2EDC4C7DDA546F134F64 /* FoldingCell-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E76D35696F1A53BB54FD1DFF563DAF0E /* RadioCheckboxBaseContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404692B9BE83E321338931D0637FE465 /* RadioCheckboxBaseContainer.swift */; };
+		EBCAD1C2207A518DEC73C00226055014 /* RadioCheckboxBaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F9FCF9A64033B5EC5817822C343D0 /* RadioCheckboxBaseButton.swift */; };
+		F43FA74C0E7BC5D1F35B51E2F22A83A1 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF7706D5B78A311865331AD4999DF70 /* RadioButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FC123895498DFD9675571F014135CEB6 /* PBXContainerItemProxy */ = {
+		29832C56B39FE129AD366A87E2C0E9A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A983770812F919D34BAD7D2C5A7EA95C;
+			remoteGlobalIDString = C195A385B19D6305B805EDCD3092739B;
 			remoteInfo = FoldingCell;
+		};
+		B7AF87F346CD6C50BA65540C9F156ACB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2AEA142F93879882000E2062C138235;
+			remoteInfo = MBRadioCheckboxButton;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0954FC30747DAE822F8CEE03CAAAFEC3 /* Pods-Career Endorsement Tracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Career Endorsement Tracker-acknowledgements.plist"; sourceTree = "<group>"; };
-		1809E2EE5B501F587F96A3CE966751B2 /* libPods-Career Endorsement Tracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Career Endorsement Tracker.a"; path = "libPods-Career Endorsement Tracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		193DE045A4E454BFC797D8CB51F0C831 /* Pods-OneSignalNotificationServiceExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OneSignalNotificationServiceExtension-dummy.m"; sourceTree = "<group>"; };
-		2ED988AF1646E8C680FD29A2B449CC8C /* FoldingCell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoldingCell-umbrella.h"; sourceTree = "<group>"; };
-		4AF3B972C94DFF11700E306F18F01DF3 /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-OneSignalNotificationServiceExtension.a"; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5989A42E4529B7EC2AAC327E52676ECC /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
-		6319D14FEE7BF163347FBDF69FDBE595 /* Pods-Career Endorsement Tracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Career Endorsement Tracker-dummy.m"; sourceTree = "<group>"; };
-		7608CFE8840AE033F5179A2B22E566FF /* FoldingCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FoldingCell.xcconfig; sourceTree = "<group>"; };
-		77144A8D35D7BE9861C69E2ED1441FA8 /* libFoldingCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFoldingCell.a; path = libFoldingCell.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BE8B698E21D230347A90E2DF6B2F583 /* Pods-Career Endorsement Tracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Career Endorsement Tracker.modulemap"; sourceTree = "<group>"; };
-		899B221C3A3C7D4F868E3219EB3260E9 /* Pods-Career Endorsement Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Career Endorsement Tracker.release.xcconfig"; sourceTree = "<group>"; };
-		91F60D131D7435D2443284BD0E536514 /* FoldingCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FoldingCell-dummy.m"; sourceTree = "<group>"; };
+		024156F61252E4A938087DF831F36CCF /* Pods-Career Endorsement Tracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Career Endorsement Tracker-acknowledgements.markdown"; sourceTree = "<group>"; };
+		08A627CC6C9300B00BC93A7656567391 /* CheckboxButtonContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxButtonContainerView.swift; path = Source/CheckboxButton/CheckboxButtonContainerView.swift; sourceTree = "<group>"; };
+		08EA8D59271107CF1E02DAD558819984 /* Pods-Career Endorsement Tracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Career Endorsement Tracker-umbrella.h"; sourceTree = "<group>"; };
+		0DBA8ED0F821EA604E3DBD6BDCC2A7BC /* FoldingCell-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FoldingCell-Info.plist"; sourceTree = "<group>"; };
+		0F48F995CB2A9EE87F18BA58E24B6B3F /* Pods-Career Endorsement Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Career Endorsement Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		1A7F9FCF9A64033B5EC5817822C343D0 /* RadioCheckboxBaseButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioCheckboxBaseButton.swift; path = Source/BaseButton/RadioCheckboxBaseButton.swift; sourceTree = "<group>"; };
+		30D08136F41BE0E6DCA5C5D30283A6BB /* MBRadioCheckboxButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBRadioCheckboxButton.modulemap; sourceTree = "<group>"; };
+		404692B9BE83E321338931D0637FE465 /* RadioCheckboxBaseContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioCheckboxBaseContainer.swift; path = Source/BaseButton/RadioCheckboxBaseContainer.swift; sourceTree = "<group>"; };
+		58FBACC57EB5AF5303173538AF1540AD /* MBRadioCheckboxButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBRadioCheckboxButton.framework; path = MBRadioCheckboxButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DA23C64384F5746AD8BAD3255056B85 /* MBRadioCheckboxButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBRadioCheckboxButton.xcconfig; sourceTree = "<group>"; };
+		723A24004C4EE32877F0F1D85766C9AB /* MBRadioCheckboxButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBRadioCheckboxButton-dummy.m"; sourceTree = "<group>"; };
+		753558B412430EF3BA15ACC337AF1CC6 /* FoldingCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoldingCell-prefix.pch"; sourceTree = "<group>"; };
+		77E0F964AB1D4ED2B58EBFF54EBF4F8D /* MBRadioCheckboxButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBRadioCheckboxButton-prefix.pch"; sourceTree = "<group>"; };
+		7895D82ADD25F77D94834DD8E3E897FF /* FoldingCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FoldingCell.xcconfig; sourceTree = "<group>"; };
+		78AB7854FE8AD0D43C0DD74C8B67CCE5 /* FoldingCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FoldingCell.framework; path = FoldingCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7999EDD8591570CF49E204AFB149296A /* CheckBoxColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckBoxColor.swift; path = Source/CheckboxButton/CheckBoxColor.swift; sourceTree = "<group>"; };
+		8B4CF9007439E7C0FE6B4E1C204CC44D /* CheckboxLineStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxLineStyle.swift; path = Source/CheckboxButton/CheckboxLineStyle.swift; sourceTree = "<group>"; };
+		8C7A58A40E3037BA0ED44759D97F64AB /* Pods-Career Endorsement Tracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Career Endorsement Tracker-dummy.m"; sourceTree = "<group>"; };
+		91490EC3B78D2AFB893D26EE66349150 /* FoldingCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FoldingCell-dummy.m"; sourceTree = "<group>"; };
+		94A97904E5D6F33097499F444626925F /* Pods-Career Endorsement Tracker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Career Endorsement Tracker-Info.plist"; sourceTree = "<group>"; };
+		9ACC918DDCDC4EF4310BBC5DA34E6477 /* MBRadioCheckboxButton-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MBRadioCheckboxButton-Info.plist"; sourceTree = "<group>"; };
+		9D715001FAF35DC77385612375512899 /* Pods-Career Endorsement Tracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Career Endorsement Tracker.modulemap"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A37B0137CAE82362DC0A31785A6E32DD /* Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A3F31CBBBC3C72AB28367280971C3A3A /* FoldingCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoldingCell.swift; path = FoldingCell/FoldingCell/FoldingCell.swift; sourceTree = "<group>"; };
-		B03A1C8A8A6DEB64DB4DE563309EF041 /* FoldingCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FoldingCell.modulemap; sourceTree = "<group>"; };
-		C3E364F140E46F4BA331458B654D64D7 /* Pods-Career Endorsement Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Career Endorsement Tracker.debug.xcconfig"; sourceTree = "<group>"; };
-		CCB04414414EC048FA9665988521FCBE /* FoldingCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoldingCell-prefix.pch"; sourceTree = "<group>"; };
-		D33E04A982C9645D3B756544D50D0E58 /* Pods-Career Endorsement Tracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Career Endorsement Tracker-umbrella.h"; sourceTree = "<group>"; };
-		EB4295DDA05957E2DFB6515F68D34D17 /* Pods-Career Endorsement Tracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Career Endorsement Tracker-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FE3FB35BE36B2AE9CEB80DF9B64AFFAC /* Pods-OneSignalNotificationServiceExtension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OneSignalNotificationServiceExtension-acknowledgements.plist"; sourceTree = "<group>"; };
-		FF793BC35531E88DBDC36863BF43DC66 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		9EF7706D5B78A311865331AD4999DF70 /* RadioButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioButton.swift; path = Source/RadioButton/RadioButton.swift; sourceTree = "<group>"; };
+		A28194B45C53C13FB6DB5E1A1BD32DB1 /* RadioButtonColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioButtonColor.swift; path = Source/RadioButton/RadioButtonColor.swift; sourceTree = "<group>"; };
+		A77B805FAC11322403FC56F3D5E7A7A4 /* Pods_Career_Endorsement_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Career_Endorsement_Tracker.framework; path = "Pods-Career Endorsement Tracker.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD98E7AEC6AB2EDC4C7DDA546F134F64 /* FoldingCell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoldingCell-umbrella.h"; sourceTree = "<group>"; };
+		AFA8C49EB0F451052F8170E62A02AFB8 /* CheckboxButtonContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxButtonContainer.swift; path = Source/CheckboxButton/CheckboxButtonContainer.swift; sourceTree = "<group>"; };
+		B5E98AA9D68D07438C995B34A20975AC /* RadioButtonContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioButtonContainer.swift; path = Source/RadioButton/RadioButtonContainer.swift; sourceTree = "<group>"; };
+		BA6E21A3217ADD0DF8D3B215132764ED /* Pods-Career Endorsement Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Career Endorsement Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		BDAAD647BDF18BB71874295DF91942DC /* RadioButtonContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioButtonContainerView.swift; path = Source/RadioButton/RadioButtonContainerView.swift; sourceTree = "<group>"; };
+		C15023B9FAE0607E252369620A46304E /* CheckboxButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxButton.swift; path = Source/CheckboxButton/CheckboxButton.swift; sourceTree = "<group>"; };
+		C463C56F15AEBD5B5B91A1B65F841602 /* FoldingCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoldingCell.swift; path = FoldingCell/FoldingCell/FoldingCell.swift; sourceTree = "<group>"; };
+		C53DED54B67C2FAB78AD15C5A07E969C /* Pods-Career Endorsement Tracker-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Career Endorsement Tracker-frameworks.sh"; sourceTree = "<group>"; };
+		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CBB40035757078E8F9A59480A15520BD /* FoldingCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FoldingCell.modulemap; sourceTree = "<group>"; };
+		CC4C6E78A7CED96A049CBBED5F1620DB /* Pods-Career Endorsement Tracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Career Endorsement Tracker-acknowledgements.plist"; sourceTree = "<group>"; };
+		F0C56C43B4B6B20C6D841AF51E3BC758 /* RadioButtonCircleStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioButtonCircleStyle.swift; path = Source/RadioButton/RadioButtonCircleStyle.swift; sourceTree = "<group>"; };
+		FC6B912C8F3AFE8325B32385AE7D6B68 /* MBRadioCheckboxButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBRadioCheckboxButton-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		481F1B65997194FCD4F38CD27B26E8B0 /* Frameworks */ = {
+		17C493A0EBF5E9CC05F4B242ACF9A609 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				134940B3275F45D8EC53EA4F0A745EED /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1D327C28688CBD28A60B6B7AB067CAE /* Frameworks */ = {
+		27284E0098C10A3E1D9C42B42CD4B1AE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B662AF3E1C64DF7E99D5540E347B47CC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E6E63432B022B11C7BA5B5518CD5A0A3 /* Frameworks */ = {
+		E8B2889A731E68E21CAE0DB533D79453 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849D9705305C102F77F19624D12EE9E6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		34EE8A40DC64B373DD9DCE35030FF161 /* Pods-OneSignalNotificationServiceExtension */ = {
+		0815EF46CD6FC7A6F5E045C04A40CC12 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A37B0137CAE82362DC0A31785A6E32DD /* Pods-OneSignalNotificationServiceExtension-acknowledgements.markdown */,
-				FE3FB35BE36B2AE9CEB80DF9B64AFFAC /* Pods-OneSignalNotificationServiceExtension-acknowledgements.plist */,
-				193DE045A4E454BFC797D8CB51F0C831 /* Pods-OneSignalNotificationServiceExtension-dummy.m */,
-				5989A42E4529B7EC2AAC327E52676ECC /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
-				FF793BC35531E88DBDC36863BF43DC66 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+				8D5B8AEBCC63023E9EEAE63A22FA52E5 /* Pods-Career Endorsement Tracker */,
 			);
-			name = "Pods-OneSignalNotificationServiceExtension";
-			path = "Target Support Files/Pods-OneSignalNotificationServiceExtension";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		36C520C52706731A343A57749530C6DD /* Support Files */ = {
+		4193491EE204392C18CC689D127A1123 /* FoldingCell */ = {
 			isa = PBXGroup;
 			children = (
-				B03A1C8A8A6DEB64DB4DE563309EF041 /* FoldingCell.modulemap */,
-				7608CFE8840AE033F5179A2B22E566FF /* FoldingCell.xcconfig */,
-				91F60D131D7435D2443284BD0E536514 /* FoldingCell-dummy.m */,
-				CCB04414414EC048FA9665988521FCBE /* FoldingCell-prefix.pch */,
-				2ED988AF1646E8C680FD29A2B449CC8C /* FoldingCell-umbrella.h */,
+				C463C56F15AEBD5B5B91A1B65F841602 /* FoldingCell.swift */,
+				727D2D1D6D6415687582B30EDD4CF787 /* Support Files */,
+			);
+			name = FoldingCell;
+			path = FoldingCell;
+			sourceTree = "<group>";
+		};
+		5036543E6ACBB276A1CF76215B808297 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78AB7854FE8AD0D43C0DD74C8B67CCE5 /* FoldingCell.framework */,
+				58FBACC57EB5AF5303173538AF1540AD /* MBRadioCheckboxButton.framework */,
+				A77B805FAC11322403FC56F3D5E7A7A4 /* Pods_Career_Endorsement_Tracker.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		516BE60D42E8A855BC328F208AA85A6D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				30D08136F41BE0E6DCA5C5D30283A6BB /* MBRadioCheckboxButton.modulemap */,
+				6DA23C64384F5746AD8BAD3255056B85 /* MBRadioCheckboxButton.xcconfig */,
+				723A24004C4EE32877F0F1D85766C9AB /* MBRadioCheckboxButton-dummy.m */,
+				9ACC918DDCDC4EF4310BBC5DA34E6477 /* MBRadioCheckboxButton-Info.plist */,
+				77E0F964AB1D4ED2B58EBFF54EBF4F8D /* MBRadioCheckboxButton-prefix.pch */,
+				FC6B912C8F3AFE8325B32385AE7D6B68 /* MBRadioCheckboxButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MBRadioCheckboxButton";
+			sourceTree = "<group>";
+		};
+		727D2D1D6D6415687582B30EDD4CF787 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBB40035757078E8F9A59480A15520BD /* FoldingCell.modulemap */,
+				7895D82ADD25F77D94834DD8E3E897FF /* FoldingCell.xcconfig */,
+				91490EC3B78D2AFB893D26EE66349150 /* FoldingCell-dummy.m */,
+				0DBA8ED0F821EA604E3DBD6BDCC2A7BC /* FoldingCell-Info.plist */,
+				753558B412430EF3BA15ACC337AF1CC6 /* FoldingCell-prefix.pch */,
+				AD98E7AEC6AB2EDC4C7DDA546F134F64 /* FoldingCell-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FoldingCell";
 			sourceTree = "<group>";
 		};
-		5E2E837F4D3D6100695DBA2860D6D9DF /* Products */ = {
+		8D5B8AEBCC63023E9EEAE63A22FA52E5 /* Pods-Career Endorsement Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				77144A8D35D7BE9861C69E2ED1441FA8 /* libFoldingCell.a */,
-				1809E2EE5B501F587F96A3CE966751B2 /* libPods-Career Endorsement Tracker.a */,
-				4AF3B972C94DFF11700E306F18F01DF3 /* libPods-OneSignalNotificationServiceExtension.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		859A7B35540E7C693E5ECB63489C40ED /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8EAA4D1A41768C71D186E10D75B5AF5E /* Pods-Career Endorsement Tracker */,
-				34EE8A40DC64B373DD9DCE35030FF161 /* Pods-OneSignalNotificationServiceExtension */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		8EAA4D1A41768C71D186E10D75B5AF5E /* Pods-Career Endorsement Tracker */ = {
-			isa = PBXGroup;
-			children = (
-				7BE8B698E21D230347A90E2DF6B2F583 /* Pods-Career Endorsement Tracker.modulemap */,
-				EB4295DDA05957E2DFB6515F68D34D17 /* Pods-Career Endorsement Tracker-acknowledgements.markdown */,
-				0954FC30747DAE822F8CEE03CAAAFEC3 /* Pods-Career Endorsement Tracker-acknowledgements.plist */,
-				6319D14FEE7BF163347FBDF69FDBE595 /* Pods-Career Endorsement Tracker-dummy.m */,
-				D33E04A982C9645D3B756544D50D0E58 /* Pods-Career Endorsement Tracker-umbrella.h */,
-				C3E364F140E46F4BA331458B654D64D7 /* Pods-Career Endorsement Tracker.debug.xcconfig */,
-				899B221C3A3C7D4F868E3219EB3260E9 /* Pods-Career Endorsement Tracker.release.xcconfig */,
+				9D715001FAF35DC77385612375512899 /* Pods-Career Endorsement Tracker.modulemap */,
+				024156F61252E4A938087DF831F36CCF /* Pods-Career Endorsement Tracker-acknowledgements.markdown */,
+				CC4C6E78A7CED96A049CBBED5F1620DB /* Pods-Career Endorsement Tracker-acknowledgements.plist */,
+				8C7A58A40E3037BA0ED44759D97F64AB /* Pods-Career Endorsement Tracker-dummy.m */,
+				C53DED54B67C2FAB78AD15C5A07E969C /* Pods-Career Endorsement Tracker-frameworks.sh */,
+				94A97904E5D6F33097499F444626925F /* Pods-Career Endorsement Tracker-Info.plist */,
+				08EA8D59271107CF1E02DAD558819984 /* Pods-Career Endorsement Tracker-umbrella.h */,
+				0F48F995CB2A9EE87F18BA58E24B6B3F /* Pods-Career Endorsement Tracker.debug.xcconfig */,
+				BA6E21A3217ADD0DF8D3B215132764ED /* Pods-Career Endorsement Tracker.release.xcconfig */,
 			);
 			name = "Pods-Career Endorsement Tracker";
 			path = "Target Support Files/Pods-Career Endorsement Tracker";
+			sourceTree = "<group>";
+		};
+		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				FD0CFEF2BD79C7B3700287EB0AEFD81E /* Pods */,
-				5E2E837F4D3D6100695DBA2860D6D9DF /* Products */,
-				859A7B35540E7C693E5ECB63489C40ED /* Targets Support Files */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				D59881BEF0D90CF76320B1736F0AAFD5 /* Pods */,
+				5036543E6ACBB276A1CF76215B808297 /* Products */,
+				0815EF46CD6FC7A6F5E045C04A40CC12 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E82C9B4C7CDEB2BB451B47F4E6350A90 /* FoldingCell */ = {
+		D59881BEF0D90CF76320B1736F0AAFD5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A3F31CBBBC3C72AB28367280971C3A3A /* FoldingCell.swift */,
-				36C520C52706731A343A57749530C6DD /* Support Files */,
-			);
-			name = FoldingCell;
-			path = FoldingCell;
-			sourceTree = "<group>";
-		};
-		FD0CFEF2BD79C7B3700287EB0AEFD81E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E82C9B4C7CDEB2BB451B47F4E6350A90 /* FoldingCell */,
+				4193491EE204392C18CC689D127A1123 /* FoldingCell */,
+				E49A6E017AFE948FB5FF607188F41B85 /* MBRadioCheckboxButton */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E49A6E017AFE948FB5FF607188F41B85 /* MBRadioCheckboxButton */ = {
+			isa = PBXGroup;
+			children = (
+				C15023B9FAE0607E252369620A46304E /* CheckboxButton.swift */,
+				AFA8C49EB0F451052F8170E62A02AFB8 /* CheckboxButtonContainer.swift */,
+				08A627CC6C9300B00BC93A7656567391 /* CheckboxButtonContainerView.swift */,
+				7999EDD8591570CF49E204AFB149296A /* CheckBoxColor.swift */,
+				8B4CF9007439E7C0FE6B4E1C204CC44D /* CheckboxLineStyle.swift */,
+				9EF7706D5B78A311865331AD4999DF70 /* RadioButton.swift */,
+				F0C56C43B4B6B20C6D841AF51E3BC758 /* RadioButtonCircleStyle.swift */,
+				A28194B45C53C13FB6DB5E1A1BD32DB1 /* RadioButtonColor.swift */,
+				B5E98AA9D68D07438C995B34A20975AC /* RadioButtonContainer.swift */,
+				BDAAD647BDF18BB71874295DF91942DC /* RadioButtonContainerView.swift */,
+				1A7F9FCF9A64033B5EC5817822C343D0 /* RadioCheckboxBaseButton.swift */,
+				404692B9BE83E321338931D0637FE465 /* RadioCheckboxBaseContainer.swift */,
+				516BE60D42E8A855BC328F208AA85A6D /* Support Files */,
+			);
+			name = MBRadioCheckboxButton;
+			path = MBRadioCheckboxButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		41246E0297BEDB5FA9460F7412B65B05 /* Headers */ = {
+		511DF34384AD5F12FEAC03984A9C4C49 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2167FF9288F9F8E6D8476A6E71E9A0FE /* FoldingCell-umbrella.h in Headers */,
+				602F4979AC853D766A1A1F9F1A54DB3A /* Pods-Career Endorsement Tracker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BCFC0C33F99538B3E4166EBAE88A1D1 /* Headers */ = {
+		7FADCE5EF690FF7C6E3569DAD5D91E9E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB5F29E661436B3D24F59D36814555B3 /* Pods-Career Endorsement Tracker-umbrella.h in Headers */,
+				E39ED61EF09974CA82D04B01735D1D6A /* FoldingCell-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E2C9C11CC862A80F5CF5BE859A61CE0B /* Headers */ = {
+		C821F50F22320F065075668BACAF3478 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C52A599C18A784A135AA37051B6DC84 /* MBRadioCheckboxButton-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A983770812F919D34BAD7D2C5A7EA95C /* FoldingCell */ = {
+		69FDFC4359776C86F4481B401F967E09 /* Pods-Career Endorsement Tracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AB84BC8420374B966D27A01F73921A2 /* Build configuration list for PBXNativeTarget "FoldingCell" */;
+			buildConfigurationList = 1824CB979B152668CF854F1CB238EB42 /* Build configuration list for PBXNativeTarget "Pods-Career Endorsement Tracker" */;
 			buildPhases = (
-				41246E0297BEDB5FA9460F7412B65B05 /* Headers */,
-				36A6EEB185DC996F698562FF6A2C69C0 /* Sources */,
-				481F1B65997194FCD4F38CD27B26E8B0 /* Frameworks */,
-				09885C11BE9FCE2589BF373ABF973158 /* Copy generated compatibility header */,
+				511DF34384AD5F12FEAC03984A9C4C49 /* Headers */,
+				F911603B83DC7ABF4E1F75C8017AF08E /* Sources */,
+				E8B2889A731E68E21CAE0DB533D79453 /* Frameworks */,
+				1A75B2EDD1FFE63B0F12A84BDA2A0940 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB6DC3220DD291C65B37C6AAC1DF0D5A /* PBXTargetDependency */,
+				63198E9388733F3DE90A54B7F5FD60B4 /* PBXTargetDependency */,
+			);
+			name = "Pods-Career Endorsement Tracker";
+			productName = "Pods-Career Endorsement Tracker";
+			productReference = A77B805FAC11322403FC56F3D5E7A7A4 /* Pods_Career_Endorsement_Tracker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A2AEA142F93879882000E2062C138235 /* MBRadioCheckboxButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6B3A83F408A9189E4A00AEDC391FD45 /* Build configuration list for PBXNativeTarget "MBRadioCheckboxButton" */;
+			buildPhases = (
+				C821F50F22320F065075668BACAF3478 /* Headers */,
+				08AFB5DD94F10420372376AC3305807B /* Sources */,
+				27284E0098C10A3E1D9C42B42CD4B1AE /* Frameworks */,
+				3E4A28632D28A5D7A0C91DBF862FF542 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MBRadioCheckboxButton;
+			productName = MBRadioCheckboxButton;
+			productReference = 58FBACC57EB5AF5303173538AF1540AD /* MBRadioCheckboxButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C195A385B19D6305B805EDCD3092739B /* FoldingCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4F17D5592FB7C6A34A7A1FDB62EEC54 /* Build configuration list for PBXNativeTarget "FoldingCell" */;
+			buildPhases = (
+				7FADCE5EF690FF7C6E3569DAD5D91E9E /* Headers */,
+				9AB8C0FF76D609AAF70D3B6FBDCD1724 /* Sources */,
+				17C493A0EBF5E9CC05F4B242ACF9A609 /* Frameworks */,
+				D5FB6B58C1054E80F20929954778A2F3 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -215,43 +331,8 @@
 			);
 			name = FoldingCell;
 			productName = FoldingCell;
-			productReference = 77144A8D35D7BE9861C69E2ED1441FA8 /* libFoldingCell.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		BD0F10574EB554D7E668F50D2A5B77DF /* Pods-OneSignalNotificationServiceExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 930C567E397114F65AFFBFCD3192FE3B /* Build configuration list for PBXNativeTarget "Pods-OneSignalNotificationServiceExtension" */;
-			buildPhases = (
-				E2C9C11CC862A80F5CF5BE859A61CE0B /* Headers */,
-				25728D165E5F9799A7466E1918C6B1CA /* Sources */,
-				E6E63432B022B11C7BA5B5518CD5A0A3 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-OneSignalNotificationServiceExtension";
-			productName = "Pods-OneSignalNotificationServiceExtension";
-			productReference = 4AF3B972C94DFF11700E306F18F01DF3 /* libPods-OneSignalNotificationServiceExtension.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		C765FC081E1A36213FBC9C9419937740 /* Pods-Career Endorsement Tracker */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DE3832E4BE49418A70DC40CE89A69147 /* Build configuration list for PBXNativeTarget "Pods-Career Endorsement Tracker" */;
-			buildPhases = (
-				9BCFC0C33F99538B3E4166EBAE88A1D1 /* Headers */,
-				5BA738B9D68781F6FCA1D0AB13C639C5 /* Sources */,
-				E1D327C28688CBD28A60B6B7AB067CAE /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1D46D1EC3C88EEBD4738E549F277D7A5 /* PBXTargetDependency */,
-			);
-			name = "Pods-Career Endorsement Tracker";
-			productName = "Pods-Career Endorsement Tracker";
-			productReference = 1809E2EE5B501F587F96A3CE966751B2 /* libPods-Career Endorsement Tracker.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 78AB7854FE8AD0D43C0DD74C8B67CCE5 /* FoldingCell.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -259,273 +340,109 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 5E2E837F4D3D6100695DBA2860D6D9DF /* Products */;
+			productRefGroup = 5036543E6ACBB276A1CF76215B808297 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A983770812F919D34BAD7D2C5A7EA95C /* FoldingCell */,
-				C765FC081E1A36213FBC9C9419937740 /* Pods-Career Endorsement Tracker */,
-				BD0F10574EB554D7E668F50D2A5B77DF /* Pods-OneSignalNotificationServiceExtension */,
+				C195A385B19D6305B805EDCD3092739B /* FoldingCell */,
+				A2AEA142F93879882000E2062C138235 /* MBRadioCheckboxButton */,
+				69FDFC4359776C86F4481B401F967E09 /* Pods-Career Endorsement Tracker */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		09885C11BE9FCE2589BF373ABF973158 /* Copy generated compatibility header */ = {
-			isa = PBXShellScriptBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		1A75B2EDD1FFE63B0F12A84BDA2A0940 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
-				"${PODS_ROOT}/Headers/Public/FoldingCell/FoldingCell.modulemap",
-				"${PODS_ROOT}/Headers/Public/FoldingCell/FoldingCell-umbrella.h",
-			);
-			name = "Copy generated compatibility header";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
-				"${BUILT_PRODUCTS_DIR}/FoldingCell-umbrella.h",
-				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E4A28632D28A5D7A0C91DBF862FF542 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/FoldingCell/FoldingCell.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/FoldingCell/FoldingCell-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
-/* End PBXShellScriptBuildPhase section */
+		D5FB6B58C1054E80F20929954778A2F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		25728D165E5F9799A7466E1918C6B1CA /* Sources */ = {
+		08AFB5DD94F10420372376AC3305807B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B247526B17B9D96ACED70732B052440 /* Pods-OneSignalNotificationServiceExtension-dummy.m in Sources */,
+				54C515002DF46E15D862CDBCFB4D8309 /* CheckboxButton.swift in Sources */,
+				2175BCA5A1A67ACDD1C5D8430FAF1997 /* CheckboxButtonContainer.swift in Sources */,
+				12A0C5E8C1DD044CD21177CCC28856F0 /* CheckboxButtonContainerView.swift in Sources */,
+				524E46362091B63732B8B0DE69623BF6 /* CheckBoxColor.swift in Sources */,
+				3DB4AD739F4FEB0FAF4A3CA0D9D50EC5 /* CheckboxLineStyle.swift in Sources */,
+				CEE79844DFCF4BCDD468D12D4CE61383 /* MBRadioCheckboxButton-dummy.m in Sources */,
+				F43FA74C0E7BC5D1F35B51E2F22A83A1 /* RadioButton.swift in Sources */,
+				9BD4CCE316628B0180B51E3CE1B6AA24 /* RadioButtonCircleStyle.swift in Sources */,
+				C047DAFDF1A75C161F2D39E14EE92F86 /* RadioButtonColor.swift in Sources */,
+				64EF4360D1D5E639B5BB039A798C36B2 /* RadioButtonContainer.swift in Sources */,
+				B916E5BA61C4E5800A300690D619FB9C /* RadioButtonContainerView.swift in Sources */,
+				EBCAD1C2207A518DEC73C00226055014 /* RadioCheckboxBaseButton.swift in Sources */,
+				E76D35696F1A53BB54FD1DFF563DAF0E /* RadioCheckboxBaseContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		36A6EEB185DC996F698562FF6A2C69C0 /* Sources */ = {
+		9AB8C0FF76D609AAF70D3B6FBDCD1724 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6125325BF5B9F8A1E9E84228FEAF7F9D /* FoldingCell-dummy.m in Sources */,
-				A1BBB90D047433BE75D774D074331E33 /* FoldingCell.swift in Sources */,
+				94CC4C401A65CF9C123AE435E5A72476 /* FoldingCell-dummy.m in Sources */,
+				136753C9E3FD454D5CB87A9977A15A65 /* FoldingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5BA738B9D68781F6FCA1D0AB13C639C5 /* Sources */ = {
+		F911603B83DC7ABF4E1F75C8017AF08E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4D09A919AED328E502FE812E3D96D12 /* Pods-Career Endorsement Tracker-dummy.m in Sources */,
+				0D1A1132D099BBAF2CD64A8F6E4A460D /* Pods-Career Endorsement Tracker-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1D46D1EC3C88EEBD4738E549F277D7A5 /* PBXTargetDependency */ = {
+		63198E9388733F3DE90A54B7F5FD60B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBRadioCheckboxButton;
+			target = A2AEA142F93879882000E2062C138235 /* MBRadioCheckboxButton */;
+			targetProxy = B7AF87F346CD6C50BA65540C9F156ACB /* PBXContainerItemProxy */;
+		};
+		DB6DC3220DD291C65B37C6AAC1DF0D5A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FoldingCell;
-			target = A983770812F919D34BAD7D2C5A7EA95C /* FoldingCell */;
-			targetProxy = FC123895498DFD9675571F014135CEB6 /* PBXContainerItemProxy */;
+			target = C195A385B19D6305B805EDCD3092739B /* FoldingCell */;
+			targetProxy = 29832C56B39FE129AD366A87E2C0E9A7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1694024222DF14CB4B1553AE47947FC1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF793BC35531E88DBDC36863BF43DC66 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		1BF5303079444E3E4C1EB764B6D881E7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7608CFE8840AE033F5179A2B22E566FF /* FoldingCell.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/FoldingCell/FoldingCell-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MODULEMAP_FILE = Headers/Public/FoldingCell/FoldingCell.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = FoldingCell;
-				PRODUCT_NAME = FoldingCell;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		36AB739F298A263DA5ABADF5E71FA2EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7608CFE8840AE033F5179A2B22E566FF /* FoldingCell.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/FoldingCell/FoldingCell-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MODULEMAP_FILE = Headers/Public/FoldingCell/FoldingCell.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = FoldingCell;
-				PRODUCT_NAME = FoldingCell;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		6D3910F5F95BFD6155EB4924DC79AFD1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3E364F140E46F4BA331458B654D64D7 /* Pods-Career Endorsement Tracker.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		81C8128D16DA3082E0F6B68492B3583A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 899B221C3A3C7D4F868E3219EB3260E9 /* Pods-Career Endorsement Tracker.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		916E0404255105F480DC4950B7625F7A /* Debug */ = {
+		07488D4657FB0A78086563621D425F8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -584,41 +501,296 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		EA288B1E011142CBC3463CD549EEF27E /* Debug */ = {
+		09FA10FAD0FB6E02CF50FE5F4BDADBFA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5989A42E4529B7EC2AAC327E52676ECC /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			baseConfigurationReference = 6DA23C64384F5746AD8BAD3255056B85 /* MBRadioCheckboxButton.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MBRadioCheckboxButton/MBRadioCheckboxButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBRadioCheckboxButton/MBRadioCheckboxButton-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MBRadioCheckboxButton/MBRadioCheckboxButton.modulemap";
+				PRODUCT_MODULE_NAME = MBRadioCheckboxButton;
+				PRODUCT_NAME = MBRadioCheckboxButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		39081ED377C78FC7D2CCC5034498E359 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DA23C64384F5746AD8BAD3255056B85 /* MBRadioCheckboxButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MBRadioCheckboxButton/MBRadioCheckboxButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBRadioCheckboxButton/MBRadioCheckboxButton-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MBRadioCheckboxButton/MBRadioCheckboxButton.modulemap";
+				PRODUCT_MODULE_NAME = MBRadioCheckboxButton;
+				PRODUCT_NAME = MBRadioCheckboxButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		42EB81401945115FF911D175C1819542 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F48F995CB2A9EE87F18BA58E24B6B3F /* Pods-Career Endorsement Tracker.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		52BB3C40D00577FED874872BEBF0EF89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA6E21A3217ADD0DF8D3B215132764ED /* Pods-Career Endorsement Tracker.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A1962E6FF39BBAC201A2E5DDF99557DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A6AC984ABE96749CB8E7A798C6FDB568 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7895D82ADD25F77D94834DD8E3E897FF /* FoldingCell.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FoldingCell/FoldingCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FoldingCell/FoldingCell-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FoldingCell/FoldingCell.modulemap";
+				PRODUCT_MODULE_NAME = FoldingCell;
+				PRODUCT_NAME = FoldingCell;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AA97D4CAFE91E11B03297BAAD1AA761F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7895D82ADD25F77D94834DD8E3E897FF /* FoldingCell.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FoldingCell/FoldingCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FoldingCell/FoldingCell-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FoldingCell/FoldingCell.modulemap";
+				PRODUCT_MODULE_NAME = FoldingCell;
+				PRODUCT_NAME = FoldingCell;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0AB84BC8420374B966D27A01F73921A2 /* Build configuration list for PBXNativeTarget "FoldingCell" */ = {
+		1824CB979B152668CF854F1CB238EB42 /* Build configuration list for PBXNativeTarget "Pods-Career Endorsement Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1BF5303079444E3E4C1EB764B6D881E7 /* Debug */,
-				36AB739F298A263DA5ABADF5E71FA2EF /* Release */,
+				42EB81401945115FF911D175C1819542 /* Debug */,
+				52BB3C40D00577FED874872BEBF0EF89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -626,26 +798,26 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				916E0404255105F480DC4950B7625F7A /* Debug */,
-				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
+				07488D4657FB0A78086563621D425F8A /* Debug */,
+				A1962E6FF39BBAC201A2E5DDF99557DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		930C567E397114F65AFFBFCD3192FE3B /* Build configuration list for PBXNativeTarget "Pods-OneSignalNotificationServiceExtension" */ = {
+		A6B3A83F408A9189E4A00AEDC391FD45 /* Build configuration list for PBXNativeTarget "MBRadioCheckboxButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EA288B1E011142CBC3463CD549EEF27E /* Debug */,
-				1694024222DF14CB4B1553AE47947FC1 /* Release */,
+				09FA10FAD0FB6E02CF50FE5F4BDADBFA /* Debug */,
+				39081ED377C78FC7D2CCC5034498E359 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE3832E4BE49418A70DC40CE89A69147 /* Build configuration list for PBXNativeTarget "Pods-Career Endorsement Tracker" */ = {
+		E4F17D5592FB7C6A34A7A1FDB62EEC54 /* Build configuration list for PBXNativeTarget "FoldingCell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6D3910F5F95BFD6155EB4924DC79AFD1 /* Debug */,
-				81C8128D16DA3082E0F6B68492B3583A /* Release */,
+				A6AC984ABE96749CB8E7A798C6FDB568 /* Debug */,
+				AA97D4CAFE91E11B03297BAAD1AA761F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -37,6 +37,10 @@ class HomeCollectionViewController: UICollectionViewController {
         updateView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        fetchRequirementsFromServer()
+    }
+    
     // MARK: - Collection View
     
     //gets count from task array
@@ -55,6 +59,8 @@ class HomeCollectionViewController: UICollectionViewController {
         return cell
     }
     
+    
+    
     // MARK: - Helper Method
     
     func updateView() {
@@ -64,6 +70,7 @@ class HomeCollectionViewController: UICollectionViewController {
         layout.minimumLineSpacing = 30
         
         collectionView.collectionViewLayout = layout
+        
     }
     
     //MARK: Network Call

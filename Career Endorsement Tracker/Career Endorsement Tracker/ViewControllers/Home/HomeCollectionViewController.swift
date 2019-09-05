@@ -8,16 +8,26 @@
 
 import Foundation
 import UIKit
+import JGProgressHUD
 
 class HomeCollectionViewController: UICollectionViewController {
     
     // MARK: - Instances
     let server = Server()
     
+    //displays progress sign
+    let hud: JGProgressHUD = {
+        let hud = JGProgressHUD(style: .light)
+        hud.interactionType = .blockAllTouches
+        return hud
+    }()
+    
     // MARK: - VC Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hud.textLabel.text = "Loading Requirements..."
+        hud.show(in: view, animated: true)
         fetchRequirementsFromServer()
         updateView()
     }
@@ -61,10 +71,13 @@ class HomeCollectionViewController: UICollectionViewController {
         server.fetchRequirements(withId: token) { (error) in
             if let error = error {
                 print(error)
+                self.hud.dismiss(animated: true)
+                Config.showAlert(on: self, style: .alert, title: "Fetching Error", message: error.localizedDescription)
                 return
             }
             print("Fucking success bitches")
             DispatchQueue.main.async {
+                self.hud.dismiss(animated: true)
                 self.collectionView.reloadData()
             }
         }

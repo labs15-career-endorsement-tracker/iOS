@@ -74,13 +74,15 @@
                             <outlet property="delegate" destination="30O-bI-pWV" id="EBK-QY-Kol"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Home" id="Xie-rN-QpK"/>
+                    <navigationItem key="navigationItem" title="Home" id="Xie-rN-QpK">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="mB1-ok-ODM"/>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z4O-wS-Gkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1800.0000000000002" y="-606.02678571428567"/>
         </scene>
-        <!--Home Detail Table View Controller-->
+        <!--Title-->
         <scene sceneID="oDM-NB-1LY">
             <objects>
                 <tableViewController id="m2x-Eg-KsC" customClass="HomeDetailTableViewController" customModule="Career_Endorsement_Tracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -155,6 +157,7 @@
                             <outlet property="delegate" destination="m2x-Eg-KsC" id="n1E-Nc-IOz"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="Hw3-iS-3SE"/>
                     <connections>
                         <outlet property="requirementProgessView" destination="FwA-zS-zI0" id="Hbp-sL-Lil"/>
                     </connections>

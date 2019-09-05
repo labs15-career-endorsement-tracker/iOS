@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,11 @@
 		3738EC5C23061D830083158B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3738EC5B23061D830083158B /* Assets.xcassets */; };
 		3738EC5F23061D830083158B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3738EC5D23061D830083158B /* LaunchScreen.storyboard */; };
 		3738EC67230628770083158B /* CareerEndorsementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738EC66230628770083158B /* CareerEndorsementViewController.swift */; };
+		3758984A2321BCEC00363B60 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 375898492321BCEC00363B60 /* Lato-Bold.ttf */; };
+		3758984E2321BD1600363B60 /* BarlowCondensed-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3758984D2321BD1600363B60 /* BarlowCondensed-Black.ttf */; };
+		375898502321BD2000363B60 /* BarlowCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3758984F2321BD2000363B60 /* BarlowCondensed-Bold.ttf */; };
+		375898522321BD2900363B60 /* BarlowCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 375898512321BD2900363B60 /* BarlowCondensed-Regular.ttf */; };
+		375898542321C0EE00363B60 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 375898532321C0EE00363B60 /* Lato-Regular.ttf */; };
 		570CE8E523143FC000077B72 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8E423143FC000077B72 /* HomeTableViewController.swift */; };
 		570CE8E723144E1700077B72 /* RequirementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8E623144E1600077B72 /* RequirementsTableViewCell.swift */; };
 		570CE8F92315CA5C00077B72 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8F82315CA5C00077B72 /* Server.swift */; };
@@ -82,6 +87,11 @@
 		3738EC5E23061D830083158B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3738EC6023061D830083158B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3738EC66230628770083158B /* CareerEndorsementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerEndorsementViewController.swift; sourceTree = "<group>"; };
+		375898492321BCEC00363B60 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		3758984D2321BD1600363B60 /* BarlowCondensed-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowCondensed-Black.ttf"; sourceTree = "<group>"; };
+		3758984F2321BD2000363B60 /* BarlowCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		375898512321BD2900363B60 /* BarlowCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		375898532321C0EE00363B60 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		525363B8898C98916DC833E7 /* Pods_Career_Endorsement_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Career_Endorsement_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		570CE8E423143FC000077B72 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		570CE8E623144E1600077B72 /* RequirementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementsTableViewCell.swift; sourceTree = "<group>"; };
@@ -272,6 +282,11 @@
 				3738EC6023061D830083158B /* Info.plist */,
 				3738EC5B23061D830083158B /* Assets.xcassets */,
 				FACADFDD2316FEDE001BBE9C /* Extensions.swift */,
+				3758984D2321BD1600363B60 /* BarlowCondensed-Black.ttf */,
+				3758984F2321BD2000363B60 /* BarlowCondensed-Bold.ttf */,
+				375898512321BD2900363B60 /* BarlowCondensed-Regular.ttf */,
+				375898492321BCEC00363B60 /* Lato-Bold.ttf */,
+				375898532321C0EE00363B60 /* Lato-Regular.ttf */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -479,10 +494,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				375898522321BD2900363B60 /* BarlowCondensed-Regular.ttf in Resources */,
 				3738EC5F23061D830083158B /* LaunchScreen.storyboard in Resources */,
+				3758984A2321BCEC00363B60 /* Lato-Bold.ttf in Resources */,
 				5784F9F123072D5600C11198 /* Welcome.storyboard in Resources */,
+				375898542321C0EE00363B60 /* Lato-Regular.ttf in Resources */,
+				375898502321BD2000363B60 /* BarlowCondensed-Bold.ttf in Resources */,
 				3738EC5C23061D830083158B /* Assets.xcassets in Resources */,
 				3738EC5A23061D800083158B /* Main.storyboard in Resources */,
+				3758984E2321BD1600363B60 /* BarlowCondensed-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,18 +515,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
-				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

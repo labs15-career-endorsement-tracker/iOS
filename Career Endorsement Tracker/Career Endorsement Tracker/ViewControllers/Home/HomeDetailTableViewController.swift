@@ -12,8 +12,12 @@ import JGProgressHUD
 
 class HomeDetailTableViewController: UITableViewController {
     
+    @IBOutlet weak var requirementProgessView: UIProgressView!
+    
     var server: Server?
     var id: Int?
+    var steps: [Step] = []
+    var requirement: Requirement?
     
     let hud: JGProgressHUD = {
         let hud = JGProgressHUD(style: .light)
@@ -25,36 +29,39 @@ class HomeDetailTableViewController: UITableViewController {
         super.viewDidLoad()
         hud.textLabel.text = "Loading Requirements..."
         hud.show(in: view, animated: true)
-        guard let id = id else {
-            print("No id")
+        fetchStepsFromServer()
+        updateViews()
+    }
+    
+    func updateViews() {
+        guard let requirement = requirement else {
+            print("no requirement")
             return
         }
-        fetchStepsFromServer()
-        print(id)
+        title = requirement.title
+        let progress = Float(requirement.progress)
+        let finalProgress = progress / 100
+        requirementProgessView.setProgress(finalProgress, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let server = server else {
-            print("no server")
-            return 0
-        }
-        return server.steps.count
+        return steps.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "StepCell", for: indexPath) as? HomeDetailTableViewCell else {
             return UITableViewCell()
         }
-        guard let server = server else {
-            print("No server")
-            return cell
-        }
-        
-        let step = server.steps[indexPath.row]
+    
+        let step = steps[indexPath.row]
         cell.step = step
-        
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 144
+    }
+    
     
     func fetchStepsFromServer() {
         let token = UserDefaults.standard.object(forKey: "token") as! String
@@ -66,17 +73,20 @@ class HomeDetailTableViewController: UITableViewController {
             print("no id")
             return
         }
-        server.fetchSteps(withId: token, withReqId: id) { (error) in
+        server.fetchSteps(withId: token, withReqId: id) { (stepsResult, error) in
             if let error = error {
                 print(error)
                 self.hud.dismiss(animated: true)
                 Config.showAlert(on: self, style: .alert, title: "Fetching Error", message: error.localizedDescription)
                 return
             }
-            print("Fucking success bitches")
-            DispatchQueue.main.async {
-                self.hud.dismiss(animated: true)
-                self.tableView.reloadData()
+            
+            if let stepsResult = stepsResult {
+                self.steps = stepsResult
+                DispatchQueue.main.async {
+                    self.hud.dismiss(animated: true)
+                    self.tableView.reloadData()
+                }
             }
         }
     }

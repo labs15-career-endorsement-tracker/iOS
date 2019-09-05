@@ -11,8 +11,7 @@ import UIKit
 
 
 class HomeDetailTableViewCell: UITableViewCell {
-    @IBOutlet weak var stepLabel: UILabel!
-    
+    @IBOutlet weak var stepTextView: UITextView!
     var step: Step? {
         didSet {
             updateViews()
@@ -24,6 +23,6 @@ class HomeDetailTableViewCell: UITableViewCell {
             print("No step")
             return
         }
-        stepLabel.text = step.steps_description
+        stepTextView.text = step.steps_description
     }
 }

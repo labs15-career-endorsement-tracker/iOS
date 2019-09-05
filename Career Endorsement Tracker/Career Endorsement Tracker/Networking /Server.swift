@@ -16,6 +16,7 @@ enum HTTPMethods: String {
 }
 
 class Server {
+    typealias CompletionHandler = (Error?) -> Void
     
     let dataGetter = DataGetter()
     
@@ -129,7 +130,7 @@ class Server {
     }
     
     
-    func fetchRequirements(withId id: String, completion: @escaping (Error?)->Void) {
+    func fetchRequirements(withId id: String, completion: @escaping ([Requirement]?, Error?)->Void) {
 
         let requirementsURL = baseURL!.appendingPathComponent(Endpoints.requirements.rawValue)
         print(id)
@@ -139,29 +140,27 @@ class Server {
         
         dataGetter.fetchData(with: request) { (_, data, error) in
             if let error = error {
-                completion(error)
+                completion(nil, error)
             } else {
-                completion(nil)
+                completion(nil, nil)
             }
             
             guard let data = data else {
-                completion(DataGetter.NetworkError.badData)
+                completion(nil, DataGetter.NetworkError.badData)
                 return
             }
             
             let decoder = JSONDecoder()
             do {
                 let data = try decoder.decode([Requirement].self, from: data)
-                self.requirements = data
-                print(self.requirements)
-                completion(nil)
+                completion(data, nil)
             } catch {
-                completion(error)
+                completion(nil, error)
             }
         }
     }
     
-    func fetchSteps(withId id: String, withReqId reqId: Int, completion: @escaping (Error?)->Void) {
+    func fetchSteps(withId id: String, withReqId reqId: Int, completion: @escaping ([Step]?, Error?)->Void) {
         
         let stepsURL = baseURL!.appendingPathComponent("/requirements/\(reqId)\(Endpoints.steps.rawValue)")
         print(stepsURL)
@@ -172,24 +171,22 @@ class Server {
         
         dataGetter.fetchData(with: request) { (_, data, error) in
             if let error = error {
-                completion(error)
+                completion(nil, error)
             } else {
-                completion(nil)
+                completion(nil, nil)
             }
             
             guard let data = data else {
-                completion(DataGetter.NetworkError.badData)
+                completion(nil, DataGetter.NetworkError.badData)
                 return
             }
             
             let decoder = JSONDecoder()
             do {
                 let data = try decoder.decode([Step].self, from: data)
-                self.steps = data
-                print(self.steps)
-                completion(nil)
+                completion(data, nil)
             } catch {
-                completion(error)
+                completion(nil, error)
             }
         }
     }

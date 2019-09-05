@@ -14,6 +14,7 @@ class HomeCollectionViewController: UICollectionViewController {
     
     // MARK: - Instances
     let server = Server()
+    var requirements: [Requirement] = []
     
     //displays progress sign
     let hud: JGProgressHUD = {
@@ -32,23 +33,18 @@ class HomeCollectionViewController: UICollectionViewController {
         updateView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        collectionView.reloadData()
-    }
-    
     // MARK: - Collection View
     
     //gets count from task array
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return server.requirements.count
+        return requirements.count
     }
     
     //configures each cell
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! HomeCollectionViewCell
         
-        let requirement = server.requirements[indexPath.item]
+        let requirement = requirements[indexPath.item]
         cell.requirement = requirement
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = 15
@@ -68,17 +64,19 @@ class HomeCollectionViewController: UICollectionViewController {
     
     func fetchRequirementsFromServer() {
         let token = UserDefaults.standard.object(forKey: "token") as! String
-        server.fetchRequirements(withId: token) { (error) in
+        server.fetchRequirements(withId: token) { (reqResult, error) in
             if let error = error {
                 print(error)
                 self.hud.dismiss(animated: true)
                 Config.showAlert(on: self, style: .alert, title: "Fetching Error", message: error.localizedDescription)
                 return
             }
-            print("Fucking success bitches")
-            DispatchQueue.main.async {
-                self.hud.dismiss(animated: true)
-                self.collectionView.reloadData()
+            if let reqResult = reqResult {
+                self.requirements = reqResult
+                DispatchQueue.main.async {
+                    self.hud.dismiss(animated: true)
+                    self.collectionView.reloadData()
+                }
             }
         }
     }
@@ -93,7 +91,8 @@ class HomeCollectionViewController: UICollectionViewController {
                 return
             }
             destinationVC.server = server
-            destinationVC.id = server.requirements[indexPath.row].id
+            destinationVC.id = requirements[indexPath.item].id
+            destinationVC.requirement = requirements[indexPath.item]
         }
     }
 }

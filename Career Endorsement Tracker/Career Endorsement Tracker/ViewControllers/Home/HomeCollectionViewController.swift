@@ -82,4 +82,18 @@ class HomeCollectionViewController: UICollectionViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowSegue" {
+            guard let destinationVC = segue.destination as? HomeDetailTableViewController else {
+                print("NO destination")
+                return
+            }
+            guard let indexPath = collectionView.indexPathsForSelectedItems?.first else {
+                return
+            }
+            destinationVC.server = server
+            destinationVC.id = server.requirements[indexPath.row].id
+        }
+    }
 }

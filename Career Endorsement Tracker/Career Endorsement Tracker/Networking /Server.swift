@@ -22,13 +22,14 @@ class Server {
     var bearer: Bearer?
     var encodedBearer: Data?
     var requirements: [Requirement] = []
+    var steps: [Step] = []
     
     enum Endpoints: String {
         case login = "/login"
         case users = "/users"
         case tracks = "/tracks"
         case requirements = "/requirements"
-        case steps = "/requirements/:requirementsId/steps"
+        case steps = "/steps"
     }
     
     enum HTTPHeaderKeys: String {
@@ -153,6 +154,39 @@ class Server {
                 let data = try decoder.decode([Requirement].self, from: data)
                 self.requirements = data
                 print(self.requirements)
+                completion(nil)
+            } catch {
+                completion(error)
+            }
+        }
+    }
+    
+    func fetchSteps(withId id: String, withReqId reqId: Int, completion: @escaping (Error?)->Void) {
+        
+        let stepsURL = baseURL!.appendingPathComponent("/requirements/\(reqId)\(Endpoints.steps.rawValue)")
+        print(stepsURL)
+        print(id)
+        var request = URLRequest(url: stepsURL)
+        request.httpMethod = HTTPMethods.get.rawValue
+        request.addValue("Bearer \(id)", forHTTPHeaderField: "Authorization")
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                completion(error)
+            } else {
+                completion(nil)
+            }
+            
+            guard let data = data else {
+                completion(DataGetter.NetworkError.badData)
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            do {
+                let data = try decoder.decode([Step].self, from: data)
+                self.steps = data
+                print(self.steps)
                 completion(nil)
             } catch {
                 completion(error)

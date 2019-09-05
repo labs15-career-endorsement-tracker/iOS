@@ -27,3 +27,12 @@ struct Requirement: Codable {
     var is_endorsement_requirement: Bool
     var progress: Int
 }
+
+struct Step: Codable {
+    var id: Int
+    var number: Int
+    var steps_description: String
+    var is_required: Bool
+    var tasks_id: Int
+    var is_complete: Bool
+}

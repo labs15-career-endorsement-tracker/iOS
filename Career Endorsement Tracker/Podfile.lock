@@ -1,20 +1,24 @@
 PODS:
   - FoldingCell (5.0.1)
   - JGProgressHUD (2.0.3)
+  - MBRadioCheckboxButton (2.0)
 
 DEPENDENCIES:
   - FoldingCell
   - JGProgressHUD
+  - MBRadioCheckboxButton
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - FoldingCell
     - JGProgressHUD
+    - MBRadioCheckboxButton
 
 SPEC CHECKSUMS:
   FoldingCell: 9197b915a415af9e52a857964066797af6a51c2b
   JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
+  MBRadioCheckboxButton: 6e2a2cdc441e292e45b64c4e65eb8fc1fc05eef2
 
-PODFILE CHECKSUM: d773b617f3f6f3f7c8f32e63f5348c789bbb5ee0
+PODFILE CHECKSUM: 7854d99bee057f78986de8bcdcb33521ae152b4e
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.7.5

@@ -3,7 +3,7 @@
 //  Career Endorsement Tracker
 //
 //  Created by Victor  on 8/27/19.
-//  Copyright © 2019 Lambda School. All rights reserved.
+//  Copyright © 2019 Lambda School. All rights reserved
 //
 
 import Foundation
@@ -21,6 +21,7 @@ class Server {
     
     var bearer: Bearer?
     var encodedBearer: Data?
+    var requirements: [Requirement] = []
     
     enum Endpoints: String {
         case login = "/login"
@@ -57,26 +58,24 @@ class Server {
             return
         }
         
-        // bob_ross@happylittlemistakes.com
-        
-        
         dataGetter.fetchData(with: request) { (_, data, error) in
             if let error = error {
                 completion(error)
                 return
             }
-            
+            print("no error")
             guard let data = data else {
                 completion(DataGetter.NetworkError.badData)
                 return
             }
-            
+            print("good data")
             // Save the endoded bearer token so that it can be saved to user defaults
             self.encodedBearer = data
             
             let decoder = JSONDecoder()
             do {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
+                UserDefaults.standard.set(self.bearer?.token, forKey: "token")
                 completion(nil)
             } catch {
                 completion(error)
@@ -85,7 +84,7 @@ class Server {
     }
     
     
-    func signUp(with user: CurrentUser, completion: @escaping (Error?)->Void) {
+    func signUpWith(firstName: String, lastName: String, email: String, password: String, trackID: Int, completion: @escaping (Error?)->Void) {
       
         let signUpURL = baseURL!.appendingPathComponent(Endpoints.users.rawValue)
 
@@ -94,9 +93,10 @@ class Server {
         request.httpMethod = HTTPMethods.post.rawValue
         request.setValue(HTTPHeaderKeys.ContentTypes.json.rawValue, forHTTPHeaderField: HTTPHeaderKeys.contentType.rawValue)
         
-        let encoder = JSONEncoder()
         do {
-            request.httpBody = try encoder.encode(user)
+            let userParams = ["first_name": firstName, "last_name": lastName, "email": email, "password": password, "tracks_id": trackID] as [String: Any]
+            let json = try JSONSerialization.data(withJSONObject: userParams, options: .prettyPrinted)
+            request.httpBody = json
         } catch {
             completion(error)
             return
@@ -128,19 +128,34 @@ class Server {
     }
     
     
-   func fetch(completion: @escaping (Error?)->Void) {
-       let signUpURL = baseURL!.appendingPathComponent(Endpoints.users.rawValue)
-     //   let backgroundContext = CoreDataStack.shared.container.newBackgroundContext()
-        
-        var request = URLRequest(url: signUpURL)
+    func fetchRequirements(withId id: String, completion: @escaping (Error?)->Void) {
+
+        let requirementsURL = baseURL!.appendingPathComponent(Endpoints.requirements.rawValue)
+        print(id)
+        var request = URLRequest(url: requirementsURL)
         request.httpMethod = HTTPMethods.get.rawValue
-        request.setValue(HTTPHeaderKeys.ContentTypes.json.rawValue, forHTTPHeaderField: HTTPHeaderKeys.contentType.rawValue)
-    
-        dataGetter.fetchData(with: request) { (_, _, error) in
+        request.addValue("Bearer \(id)", forHTTPHeaderField: "Authorization")
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
             if let error = error {
                 completion(error)
             } else {
                 completion(nil)
+            }
+            
+            guard let data = data else {
+                completion(DataGetter.NetworkError.badData)
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            do {
+                let data = try decoder.decode([Requirement].self, from: data)
+                self.requirements = data
+                print(self.requirements)
+                completion(nil)
+            } catch {
+                completion(error)
             }
         }
     }

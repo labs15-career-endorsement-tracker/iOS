@@ -18,5 +18,12 @@ struct track: Codable {
 }
 
 struct Requirement: Codable {
-    var description: String
+    var id: Int
+    var tracks_id: Int
+    var tasks_id: Int
+    var title: String
+    var is_required: Bool
+    var tasks_description: String
+    var is_endorsement_requirement: Bool
+    var progress: Int
 }

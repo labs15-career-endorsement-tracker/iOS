@@ -13,35 +13,15 @@ class HomeCollectionViewController: UICollectionViewController {
     
     // MARK: - Instances
     let server = Server()
-    let taskController = TaskController()
     
     // MARK: - VC Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        checkCoreData()
-        server.fetch { (error) in
-            if let error = error {
-                print(error)
-                return
-            } else {
-              print("Successfully fetched data from ")
-            }
-        }
+        fetchRequirementsFromServer()
         updateView()
     }
     
-    private func checkCoreData(){
-        let tasksController = TasksController()
-        let tracksController = TracksController()
-        let userController = UserController()
-        let taskTracksController = TaskTracksController()
-        let userStepsCompletedController = UserStepsCompletedController()
-        let stepsController = StepsController()
-
-        
-    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         collectionView.reloadData()
@@ -51,15 +31,15 @@ class HomeCollectionViewController: UICollectionViewController {
     
     //gets count from task array
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return taskController.tasks.count
+        return server.requirements.count
     }
     
     //configures each cell
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! HomeCollectionViewCell
         
-        let task = taskController.tasks[indexPath.item]
-        cell.task = task
+        let requirement = server.requirements[indexPath.item]
+        cell.requirement = requirement
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = 15
         return cell
@@ -74,5 +54,19 @@ class HomeCollectionViewController: UICollectionViewController {
         layout.minimumLineSpacing = 30
         
         collectionView.collectionViewLayout = layout
+    }
+    
+    func fetchRequirementsFromServer() {
+        let token = UserDefaults.standard.object(forKey: "token") as! String
+        server.fetchRequirements(withId: token) { (error) in
+            if let error = error {
+                print(error)
+                return
+            }
+            print("Fucking success bitches")
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
     }
 }

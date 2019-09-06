@@ -29,13 +29,14 @@ class HomeDetailTableViewCell: UITableViewCell {
             return
         }
         stepTextView.text = step.steps_description
+        stepTextView.sizeToFit()
         if step.is_complete {
-//            submitCompletionButton.backgroundColor = .green
+            submitCompletionButton.backgroundColor = .green
             submitCompletionButton.setImage(completedImage, for: .normal)
 //            submitCompletionButton.setImage("checkedBox, for: .normal)
 //            submitCompletionButton.setTitle("Completed", for: .normal)
         } else {
-//            submitCompletionButton.backgroundColor = .red
+            submitCompletionButton.backgroundColor = .red
 //            submitCompletionButton.setTitle("Not Completed", for: .normal)
             submitCompletionButton.setImage(incompleteImage, for: .normal)
         }

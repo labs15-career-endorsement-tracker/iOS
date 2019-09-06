@@ -105,11 +105,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.91280847787857056" green="0.92954796552658081" blue="0.94384670257568359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="Xwq-ea-edW">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FwA-zS-zI0">
-                                    <rect key="frame" x="132" y="129" width="150" height="2"/>
+                                    <rect key="frame" x="132" y="34" width="150" height="2"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="150" id="GTN-b4-KDP"/>
                                     </constraints>
@@ -124,43 +124,43 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="StepCell" rowHeight="140" id="wqG-QP-K7L" customClass="HomeDetailTableViewCell" customModule="Career_Endorsement_Tracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="288" width="414" height="140"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wqG-QP-K7L" id="xDF-UU-lDY">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="139.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fuD-TU-qc0">
-                                            <rect key="frame" x="20" y="24.5" width="372" height="90.5"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9k-fg-oNe">
-                                                    <rect key="frame" x="0.0" y="35.5" width="20" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="3dT-Xa-neF"/>
-                                                        <constraint firstAttribute="width" constant="20" id="9x6-Xm-wK4"/>
-                                                    </constraints>
-                                                    <state key="normal" image="uncheckedBox">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="submitCompletionButtonPressed:" destination="wqG-QP-K7L" eventType="touchUpInside" id="IfX-cY-KpK"/>
-                                                    </connections>
-                                                </button>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PGa-g2-b1o">
-                                                    <rect key="frame" x="36" y="0.0" width="336" height="90.5"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                    <color key="textColor" red="0.062745098039215685" green="0.27843137254901962" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                            </subviews>
-                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9k-fg-oNe">
+                                            <rect key="frame" x="20" y="60" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="DoF-8H-gra"/>
+                                                <constraint firstAttribute="width" constant="20" id="omy-fG-vGB"/>
+                                            </constraints>
+                                            <state key="normal" image="uncheckedBox">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="submitCompletionButtonPressed:" destination="wqG-QP-K7L" eventType="touchUpInside" id="IfX-cY-KpK"/>
+                                            </connections>
+                                        </button>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PGa-g2-b1o">
+                                            <rect key="frame" x="48" y="24.5" width="338" height="90.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="90.5" id="FF7-t2-cMs"/>
+                                            </constraints>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <color key="textColor" red="0.062745098039215685" green="0.27843137254901962" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="fuD-TU-qc0" firstAttribute="centerX" secondItem="xDF-UU-lDY" secondAttribute="centerX" id="CHC-QI-lZW"/>
-                                        <constraint firstItem="PGa-g2-b1o" firstAttribute="top" secondItem="xDF-UU-lDY" secondAttribute="top" constant="24.5" id="bVC-gI-TYv"/>
-                                        <constraint firstItem="fuD-TU-qc0" firstAttribute="centerY" secondItem="xDF-UU-lDY" secondAttribute="centerY" id="dry-zz-CAT"/>
-                                        <constraint firstAttribute="bottom" secondItem="PGa-g2-b1o" secondAttribute="bottom" constant="24.5" id="eS0-io-JFb"/>
+                                        <constraint firstItem="J9k-fg-oNe" firstAttribute="centerY" secondItem="xDF-UU-lDY" secondAttribute="centerY" id="Gfp-pi-Jwk"/>
+                                        <constraint firstItem="PGa-g2-b1o" firstAttribute="leading" secondItem="J9k-fg-oNe" secondAttribute="trailing" constant="8" id="KdH-9p-I9m"/>
+                                        <constraint firstItem="PGa-g2-b1o" firstAttribute="centerY" secondItem="xDF-UU-lDY" secondAttribute="centerY" id="Ktr-iC-97C"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="PGa-g2-b1o" secondAttribute="trailing" constant="8" id="kFg-7l-9Rp"/>
+                                        <constraint firstItem="PGa-g2-b1o" firstAttribute="leading" secondItem="J9k-fg-oNe" secondAttribute="trailing" constant="8" id="voh-cR-C6j"/>
+                                        <constraint firstItem="J9k-fg-oNe" firstAttribute="leading" secondItem="xDF-UU-lDY" secondAttribute="leadingMargin" id="zNh-3N-RK9"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.91280847789999997" green="0.92954796549999996" blue="0.94384670260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -355,6 +355,6 @@
         <image name="uncheckedBox" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LX5-k9-VJ4"/>
+        <segue reference="15u-ma-DcC"/>
     </inferredMetricsTieBreakers>
 </document>

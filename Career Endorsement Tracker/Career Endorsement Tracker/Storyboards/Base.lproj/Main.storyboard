@@ -94,7 +94,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z4O-wS-Gkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1711.5942028985507" y="-606.02678571428567"/>
+            <point key="canvasLocation" x="1594" y="-1272"/>
         </scene>
         <!--Title-->
         <scene sceneID="oDM-NB-1LY">
@@ -184,42 +184,16 @@
             </objects>
             <point key="canvasLocation" x="2442.0289855072465" y="-606.02678571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="Lee-lp-ulS">
             <objects>
-                <viewController id="H7V-Pu-c1d" sceneMemberID="viewController">
+                <viewController id="H7V-Pu-c1d" customClass="HomeViewController" customModule="Career_Endorsement_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dvz-U8-VXb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ek1-CL-zat">
-                                <rect key="frame" x="20" y="44" width="374" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Xxc-5f-3lh">
-                                        <rect key="frame" x="0.0" y="27" width="130" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" red="0.062745098040000002" green="0.2784313725" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvL-qR-7Ll">
-                                        <rect key="frame" x="295" y="18" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HxO-aN-CkJ">
-                                        <rect key="frame" x="295" y="47" width="42" height="39"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gmj-lv-n0Q">
-                                <rect key="frame" x="1" y="202" width="414" height="594"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gmj-lv-n0Q">
+                                <rect key="frame" x="0.0" y="202" width="414" height="660"/>
                                 <color key="backgroundColor" red="0.91280847789999997" green="0.92954796549999996" blue="0.94384670260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gyL-fU-orf">
                                     <size key="itemSize" width="365" height="150"/>
@@ -274,6 +248,7 @@
                                         <connections>
                                             <outlet property="progressView" destination="R4r-mF-Cbe" id="f2f-r9-9dh"/>
                                             <outlet property="taskNameLabel" destination="xMf-HI-tXt" id="MpA-Rw-LGE"/>
+                                            <segue destination="m2x-Eg-KsC" kind="show" identifier="ShowSegue" id="LX5-k9-VJ4"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -282,14 +257,51 @@
                                     <outlet property="delegate" destination="30O-bI-pWV" id="tUY-gd-fal"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ek1-CL-zat">
+                                <rect key="frame" x="20" y="88" width="374" height="86"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Xxc-5f-3lh">
+                                        <rect key="frame" x="0.0" y="27" width="130" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.062745098040000002" green="0.2784313725" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvL-qR-7Ll">
+                                        <rect key="frame" x="295" y="18" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HxO-aN-CkJ">
+                                        <rect key="frame" x="295" y="47" width="42" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gmj-lv-n0Q" firstAttribute="leading" secondItem="6Cs-F4-K3a" secondAttribute="leading" id="63t-Md-PIr"/>
+                            <constraint firstItem="Ek1-CL-zat" firstAttribute="leading" secondItem="6Cs-F4-K3a" secondAttribute="leading" constant="20" id="HMy-Mr-oMY"/>
+                            <constraint firstItem="gmj-lv-n0Q" firstAttribute="top" secondItem="Ek1-CL-zat" secondAttribute="bottom" constant="72" id="Jxz-x2-OzL"/>
+                            <constraint firstItem="6Cs-F4-K3a" firstAttribute="bottom" secondItem="gmj-lv-n0Q" secondAttribute="bottom" id="QAs-N1-3vM"/>
+                            <constraint firstItem="6Cs-F4-K3a" firstAttribute="trailing" secondItem="Ek1-CL-zat" secondAttribute="trailing" constant="20" id="RJN-ze-XOh"/>
+                            <constraint firstItem="Ek1-CL-zat" firstAttribute="top" secondItem="6Cs-F4-K3a" secondAttribute="top" id="W3j-aa-b3M"/>
+                            <constraint firstAttribute="trailing" secondItem="gmj-lv-n0Q" secondAttribute="trailing" id="y2n-nY-L4t"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Cs-F4-K3a"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ZVH-kD-ghM"/>
+                    <connections>
+                        <outlet property="collectionView" destination="gmj-lv-n0Q" id="BKF-fL-0FR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8X-71-zF3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3227.536231884058" y="-588.61607142857144"/>
+            <point key="canvasLocation" x="1683" y="-606"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UFH-KX-9pv">
@@ -328,7 +340,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="30O-bI-pWV" kind="relationship" relationship="rootViewController" id="dEL-nw-afS"/>
+                        <segue destination="H7V-Pu-c1d" kind="relationship" relationship="rootViewController" id="4rU-ET-j2F"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WE1-Tf-GcM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -342,4 +354,7 @@
         <image name="to-do-list (2)" width="32" height="32"/>
         <image name="uncheckedBox" width="50" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="LX5-k9-VJ4"/>
+    </inferredMetricsTieBreakers>
 </document>

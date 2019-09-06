@@ -11,8 +11,14 @@ import UIKit
 
 
 class HomeDetailTableViewCell: UITableViewCell {
+    
+    // MARK: - Outlets
+    
     @IBOutlet weak var submitCompletionButton: UIButton!
     @IBOutlet weak var stepTextView: UITextView!
+    @IBOutlet weak var checkLbl: UILabel!
+    
+    // MARK: - Properties
     
     var server: Server?
     var step: Step? {
@@ -20,6 +26,8 @@ class HomeDetailTableViewCell: UITableViewCell {
             updateViews()
         }
     }
+    let completedImage = UIImage(named: "checkBox")
+    let incompleteImage = UIImage(named: "uncheckedBox")
     
     private func updateViews() {
         guard let step = step else {
@@ -27,16 +35,22 @@ class HomeDetailTableViewCell: UITableViewCell {
             return
         }
         stepTextView.text = step.steps_description
+        stepTextView.sizeToFit()
         if step.is_complete {
             submitCompletionButton.backgroundColor = .green
-            submitCompletionButton.setTitle("Completed", for: .normal)
+            submitCompletionButton.setImage(completedImage, for: .normal)
+            checkLbl.isHidden = false
+//            submitCompletionButton.setImage("checkedBox, for: .normal)
+//            submitCompletionButton.setTitle("Completed", for: .normal)
         } else {
             submitCompletionButton.backgroundColor = .red
-            submitCompletionButton.setTitle("Not Completed", for: .normal)
+            checkLbl.isHidden = true
+//            submitCompletionButton.setTitle("Not Completed", for: .normal)
+            submitCompletionButton.setImage(incompleteImage, for: .normal)
         }
     }
     
-    @IBAction func submitCompletionButtonPressed(_ sender: Any) {
+    @IBAction func submitCompletionButtonPressed(_ sender: UIButton) {
         
         guard let step = step else {
             print("no step")

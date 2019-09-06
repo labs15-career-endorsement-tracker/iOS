@@ -41,6 +41,7 @@
 		5784F9EF23072BFB00C11198 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EE23072BFB00C11198 /* Config.swift */; };
 		5784F9F123072D5600C11198 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5784F9F023072D5600C11198 /* Welcome.storyboard */; };
 		CE39B7DB22CECF9A3CCF0096 /* Pods_Career_Endorsement_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525363B8898C98916DC833E7 /* Pods_Career_Endorsement_Tracker.framework */; };
+		FA593528232300C4003621A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA593527232300C4003621A8 /* HomeViewController.swift */; };
 		FA66A39F23187B1C00980AB6 /* UserStepsCompletedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A39E23187B1C00980AB6 /* UserStepsCompletedController.swift */; };
 		FA66A3A123198ECC00980AB6 /* StepsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A3A023198ECC00980AB6 /* StepsController.swift */; };
 		FA66A3A32319919C00980AB6 /* ResourcesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A3A22319919C00980AB6 /* ResourcesController.swift */; };
@@ -119,6 +120,7 @@
 		5784F9F023072D5600C11198 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		8AF928B366F43FF466A3D843 /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C6DD038EA49314E0BE8940 /* Pods-Career Endorsement Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		FA593527232300C4003621A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA5D9B15230F181B00DC9BC1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FA5D9B17230F181B00DC9BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA66A39E23187B1C00980AB6 /* UserStepsCompletedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStepsCompletedController.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			children = (
 				570CE9032315D4AA00077B72 /* Home */,
 				570CE8FA2315CA6E00077B72 /* Welcome */,
+				FA593527232300C4003621A8 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				570CE8E723144E1700077B72 /* RequirementsTableViewCell.swift in Sources */,
 				FACADFDE2316FEDE001BBE9C /* Extensions.swift in Sources */,
 				577EB1AF2319B7CF00EDB960 /* TracksController.swift in Sources */,
+				FA593528232300C4003621A8 /* HomeViewController.swift in Sources */,
 				570CE8E523143FC000077B72 /* HomeTableViewController.swift in Sources */,
 				5784F9EF23072BFB00C11198 /* Config.swift in Sources */,
 				FA8AAD9223158EA300DA36A5 /* StepsRepresentation.swift in Sources */,

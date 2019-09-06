@@ -20,6 +20,8 @@ class HomeDetailTableViewCell: UITableViewCell {
             updateViews()
         }
     }
+    let completedImage = UIImage(named: "checkBox")
+    let incompleteImage = UIImage(named: "uncheckedBox")
     
     private func updateViews() {
         guard let step = step else {
@@ -28,15 +30,18 @@ class HomeDetailTableViewCell: UITableViewCell {
         }
         stepTextView.text = step.steps_description
         if step.is_complete {
-            submitCompletionButton.backgroundColor = .green
-            submitCompletionButton.setTitle("Completed", for: .normal)
+//            submitCompletionButton.backgroundColor = .green
+            submitCompletionButton.setImage(completedImage, for: .normal)
+//            submitCompletionButton.setImage("checkedBox, for: .normal)
+//            submitCompletionButton.setTitle("Completed", for: .normal)
         } else {
-            submitCompletionButton.backgroundColor = .red
-            submitCompletionButton.setTitle("Not Completed", for: .normal)
+//            submitCompletionButton.backgroundColor = .red
+//            submitCompletionButton.setTitle("Not Completed", for: .normal)
+            submitCompletionButton.setImage(incompleteImage, for: .normal)
         }
     }
     
-    @IBAction func submitCompletionButtonPressed(_ sender: Any) {
+    @IBAction func submitCompletionButtonPressed(_ sender: UIButton) {
         
         guard let step = step else {
             print("no step")

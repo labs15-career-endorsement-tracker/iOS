@@ -1,17 +1,16 @@
 //
-//  HomeCollectionViewController.swift
+//  HomeViewController.swift
 //  Career Endorsement Tracker
 //
-//  Created by Victor  on 8/27/19.
+//  Created by Alex on 9/5/19.
 //  Copyright © 2019 Lambda School. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import JGProgressHUD
 
-class HomeCollectionViewController: UICollectionViewController {
-    
+class HomeViewController: UIViewController {
+
     // MARK: - Instances
     let server = Server()
     var requirements: [Requirement] = []
@@ -36,26 +35,6 @@ class HomeCollectionViewController: UICollectionViewController {
     override func viewDidAppear(_ animated: Bool) {
         fetchRequirementsFromServer()
     }
-    
-    // MARK: - Collection View
-    
-    //gets count from task array
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return requirements.count
-    }
-    
-    //configures each cell
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! HomeCollectionViewCell
-        
-        let requirement = requirements[indexPath.item]
-        cell.requirement = requirement
-        cell.layer.masksToBounds = true
-        cell.layer.cornerRadius = 15
-        return cell
-    }
-    
-    
     
     // MARK: - Helper Method
     
@@ -108,4 +87,29 @@ class HomeCollectionViewController: UICollectionViewController {
             destinationVC.requirement = requirements[indexPath.item]
         }
     }
+
+}
+
+extension HomeViewController: UICollectionViewDelegate {
+    
+}
+extension HomeViewController: UICollectionViewDataSource {
+    // MARK: - Collection View
+    
+    //gets count from task array
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return requirements.count
+    }
+    
+    //configures each cell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! HomeCollectionViewCell
+        
+        let requirement = requirements[indexPath.item]
+        cell.requirement = requirement
+        cell.layer.masksToBounds = true
+        cell.layer.cornerRadius = 15
+        return cell
+    }
+    
 }

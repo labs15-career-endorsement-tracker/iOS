@@ -20,3 +20,7 @@ extension UITextField {
         self.layer.masksToBounds = true
     }
 }
+
+extension Notification.Name {
+    static let didSubmit = Notification.Name("didSubmit")
+}

@@ -41,6 +41,7 @@
 		FA71175D2321D12F0077947E /* Steps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA71175C2321D12F0077947E /* Steps.storyboard */; };
 		FA7117642321D2320077947E /* StepsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7117632321D2320077947E /* StepsCollectionViewCell.swift */; };
 		FA7117662321D2460077947E /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7117652321D2460077947E /* StepsViewController.swift */; };
+		FA7117682321E9040077947E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7117672321E9040077947E /* HomeViewController.swift */; };
 		FA8AAD7E23158E2100DA36A5 /* TasksTracks+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AAD7D23158E2100DA36A5 /* TasksTracks+Convenience.swift */; };
 		FA8AAD8023158E3700DA36A5 /* Tracks+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AAD7F23158E3700DA36A5 /* Tracks+Convenience.swift */; };
 		FA8AAD8223158E4100DA36A5 /* User+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AAD8123158E4100DA36A5 /* User+Convenience.swift */; };
@@ -118,6 +119,7 @@
 		FA71175C2321D12F0077947E /* Steps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Steps.storyboard; sourceTree = "<group>"; };
 		FA7117632321D2320077947E /* StepsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA7117652321D2460077947E /* StepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
+		FA7117672321E9040077947E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA8AAD7D23158E2100DA36A5 /* TasksTracks+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TasksTracks+Convenience.swift"; sourceTree = "<group>"; };
 		FA8AAD7F23158E3700DA36A5 /* Tracks+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tracks+Convenience.swift"; sourceTree = "<group>"; };
 		FA8AAD8123158E4100DA36A5 /* User+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Convenience.swift"; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				570CE8E423143FC000077B72 /* HomeTableViewController.swift */,
 				57191C772320E81200542F37 /* HomeDetailTableViewController.swift */,
 				57191C792320EDD300542F37 /* HomeDetailTableViewCell.swift */,
+				FA7117672321E9040077947E /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				57191C7A2320EDD300542F37 /* HomeDetailTableViewCell.swift in Sources */,
 				570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */,
 				5784F9EB230729B600C11198 /* DataGetter.swift in Sources */,
+				FA7117682321E9040077947E /* HomeViewController.swift in Sources */,
 				FAA6DF2023107E1400B1DA7D /* CareerModel.xcdatamodeld in Sources */,
 				570CE90E2315D6B300077B72 /* HomeCollectionViewCell.swift in Sources */,
 				570CE9002315CA9700077B72 /* SignUpViewController.swift in Sources */,

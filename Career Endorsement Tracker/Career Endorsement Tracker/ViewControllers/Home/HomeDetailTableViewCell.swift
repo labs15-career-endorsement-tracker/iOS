@@ -11,8 +11,14 @@ import UIKit
 
 
 class HomeDetailTableViewCell: UITableViewCell {
+    
+    // MARK: - Outlets
+    
     @IBOutlet weak var submitCompletionButton: UIButton!
     @IBOutlet weak var stepTextView: UITextView!
+    @IBOutlet weak var checkLbl: UILabel!
+    
+    // MARK: - Properties
     
     var server: Server?
     var step: Step? {
@@ -33,10 +39,12 @@ class HomeDetailTableViewCell: UITableViewCell {
         if step.is_complete {
             submitCompletionButton.backgroundColor = .green
             submitCompletionButton.setImage(completedImage, for: .normal)
+            checkLbl.isHidden = false
 //            submitCompletionButton.setImage("checkedBox, for: .normal)
 //            submitCompletionButton.setTitle("Completed", for: .normal)
         } else {
             submitCompletionButton.backgroundColor = .red
+            checkLbl.isHidden = true
 //            submitCompletionButton.setTitle("Not Completed", for: .normal)
             submitCompletionButton.setImage(incompleteImage, for: .normal)
         }

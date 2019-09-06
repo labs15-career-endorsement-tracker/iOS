@@ -41,7 +41,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circles" translatesAutoresizingMaskIntoConstraints="NO" id="9bp-XC-fd9">
-                                            <rect key="frame" x="0.0" y="0.0" width="365.00000000000006" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="365" height="150"/>
                                             <viewLayoutGuide key="safeArea" id="nuq-ZQ-cVi"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbW-TK-gP1">
@@ -153,9 +153,17 @@
                                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEl-oD-oCp">
+                                            <rect key="frame" x="19" y="59" width="23" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="PEl-oD-oCp" firstAttribute="centerY" secondItem="J9k-fg-oNe" secondAttribute="centerY" id="6Bc-49-vy5"/>
                                         <constraint firstItem="J9k-fg-oNe" firstAttribute="centerY" secondItem="xDF-UU-lDY" secondAttribute="centerY" id="Gfp-pi-Jwk"/>
+                                        <constraint firstItem="PEl-oD-oCp" firstAttribute="centerX" secondItem="J9k-fg-oNe" secondAttribute="centerX" id="J8K-T8-XIG"/>
                                         <constraint firstItem="PGa-g2-b1o" firstAttribute="leading" secondItem="J9k-fg-oNe" secondAttribute="trailing" constant="8" id="KdH-9p-I9m"/>
                                         <constraint firstItem="PGa-g2-b1o" firstAttribute="centerY" secondItem="xDF-UU-lDY" secondAttribute="centerY" id="Ktr-iC-97C"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="PGa-g2-b1o" secondAttribute="trailing" constant="8" id="kFg-7l-9Rp"/>
@@ -165,6 +173,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.91280847789999997" green="0.92954796549999996" blue="0.94384670260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
+                                    <outlet property="checkLbl" destination="PEl-oD-oCp" id="F3q-Kj-9HG"/>
                                     <outlet property="stepTextView" destination="PGa-g2-b1o" id="olK-w6-zgX"/>
                                     <outlet property="submitCompletionButton" destination="J9k-fg-oNe" id="7bU-i5-WC7"/>
                                 </connections>
@@ -210,7 +219,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circles" translatesAutoresizingMaskIntoConstraints="NO" id="2I5-bg-9DX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="365.00000000000006" height="150"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="365" height="150"/>
                                                     <viewLayoutGuide key="safeArea" id="DT0-RQ-49y"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMf-HI-tXt">

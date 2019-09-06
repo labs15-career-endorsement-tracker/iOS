@@ -22,6 +22,10 @@ class HomeViewController: UIViewController {
         return hud
     }()
     
+    // MARK: - Outlets
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     // MARK: - VC Lifecycle
     
     override func viewDidLoad() {
@@ -75,13 +79,8 @@ class HomeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowSegue" {
-            guard let destinationVC = segue.destination as? HomeDetailTableViewController else {
-                print("NO destination")
-                return
-            }
-            guard let indexPath = collectionView.indexPathsForSelectedItems?.first else {
-                return
-            }
+            guard let destinationVC = segue.destination as? HomeDetailTableViewController else {return print("NO destination")}
+            guard let indexPath = collectionView.indexPathsForSelectedItems?.first else {return}
             destinationVC.server = server
             destinationVC.id = requirements[indexPath.item].id
             destinationVC.requirement = requirements[indexPath.item]
@@ -97,12 +96,12 @@ extension HomeViewController: UICollectionViewDataSource {
     // MARK: - Collection View
     
     //gets count from task array
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return requirements.count
     }
     
     //configures each cell
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! HomeCollectionViewCell
         
         let requirement = requirements[indexPath.item]

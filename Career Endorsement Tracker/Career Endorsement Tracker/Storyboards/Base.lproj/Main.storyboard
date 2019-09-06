@@ -79,12 +79,12 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z4O-wS-Gkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800.0000000000002" y="-606.02678571428567"/>
+            <point key="canvasLocation" x="1712" y="-814"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="XU7-0m-xW3">
             <objects>
-                <viewController id="tdY-yU-l0g" sceneMemberID="viewController">
+                <viewController id="tdY-yU-l0g" customClass="HomeViewController" customModule="Career_Endorsement_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sui-n9-6yI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,8 +138,11 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="progressView" destination="uOK-qP-rtE" id="CjL-Pi-cxh"/>
-                                            <outlet property="taskDescription" destination="Gdt-1f-FYI" id="LgJ-pT-XYN"/>
+                                            <outlet property="progressView2" destination="uOK-qP-rtE" id="fJZ-xM-vE3"/>
+                                            <outlet property="taskDescription2" destination="Gdt-1f-FYI" id="U27-jF-pT2"/>
                                             <outlet property="taskNameLabel" destination="Laj-Sh-JAW" id="QkF-xw-QyG"/>
+                                            <outlet property="taskNameLbl2" destination="Laj-Sh-JAW" id="zQd-ST-yhH"/>
+                                            <segue destination="m2x-Eg-KsC" kind="show" identifier="ShowSegue" id="hDD-rY-mMe"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -158,10 +161,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ul8-EX-BeB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="I5S-jH-J8Q"/>
+                    <connections>
+                        <outlet property="collectionView" destination="MCl-5g-Jp6" id="uWV-08-38q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NAL-Gv-zMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1856" y="57"/>
+            <point key="canvasLocation" x="1767" y="-159"/>
         </scene>
         <!--Home Detail Table View Controller-->
         <scene sceneID="oDM-NB-1LY">
@@ -283,7 +290,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="30O-bI-pWV" kind="relationship" relationship="rootViewController" id="dEL-nw-afS"/>
+                        <segue destination="tdY-yU-l0g" kind="relationship" relationship="rootViewController" id="zBp-wn-MVz"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WE1-Tf-GcM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -294,4 +301,7 @@
     <resources>
         <image name="to-do-list (2)" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hDD-rY-mMe"/>
+    </inferredMetricsTieBreakers>
 </document>

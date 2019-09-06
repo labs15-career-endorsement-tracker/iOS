@@ -17,6 +17,7 @@
 		375898502321BD2000363B60 /* BarlowCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3758984F2321BD2000363B60 /* BarlowCondensed-Bold.ttf */; };
 		375898522321BD2900363B60 /* BarlowCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 375898512321BD2900363B60 /* BarlowCondensed-Regular.ttf */; };
 		375898542321C0EE00363B60 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 375898532321C0EE00363B60 /* Lato-Regular.ttf */; };
+		377AB69323229B240040D7CD /* BarlowCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377AB69223229B240040D7CD /* BarlowCondensed-SemiBold.ttf */; };
 		570CE8E523143FC000077B72 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8E423143FC000077B72 /* HomeTableViewController.swift */; };
 		570CE8E723144E1700077B72 /* RequirementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8E623144E1600077B72 /* RequirementsTableViewCell.swift */; };
 		570CE8F92315CA5C00077B72 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8F82315CA5C00077B72 /* Server.swift */; };
@@ -92,6 +93,7 @@
 		3758984F2321BD2000363B60 /* BarlowCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		375898512321BD2900363B60 /* BarlowCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		375898532321C0EE00363B60 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		377AB69223229B240040D7CD /* BarlowCondensed-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
 		525363B8898C98916DC833E7 /* Pods_Career_Endorsement_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Career_Endorsement_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		570CE8E423143FC000077B72 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		570CE8E623144E1600077B72 /* RequirementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementsTableViewCell.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				FACADFDD2316FEDE001BBE9C /* Extensions.swift */,
 				3758984D2321BD1600363B60 /* BarlowCondensed-Black.ttf */,
 				3758984F2321BD2000363B60 /* BarlowCondensed-Bold.ttf */,
+				377AB69223229B240040D7CD /* BarlowCondensed-SemiBold.ttf */,
 				375898512321BD2900363B60 /* BarlowCondensed-Regular.ttf */,
 				375898492321BCEC00363B60 /* Lato-Bold.ttf */,
 				375898532321C0EE00363B60 /* Lato-Regular.ttf */,
@@ -498,6 +501,7 @@
 				3738EC5F23061D830083158B /* LaunchScreen.storyboard in Resources */,
 				3758984A2321BCEC00363B60 /* Lato-Bold.ttf in Resources */,
 				5784F9F123072D5600C11198 /* Welcome.storyboard in Resources */,
+				377AB69323229B240040D7CD /* BarlowCondensed-SemiBold.ttf in Resources */,
 				375898542321C0EE00363B60 /* Lato-Regular.ttf in Resources */,
 				375898502321BD2000363B60 /* BarlowCondensed-Bold.ttf in Resources */,
 				3738EC5C23061D830083158B /* Assets.xcassets in Resources */,

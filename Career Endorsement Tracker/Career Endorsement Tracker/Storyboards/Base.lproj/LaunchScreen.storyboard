@@ -9,11 +9,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="BarlowCondensed-Bold.ttf">
-            <string>BarlowCondensed-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -23,25 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="spaceBG" translatesAutoresizingMaskIntoConstraints="NO" id="H1U-Uc-VfJ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="JT4-ZY-f3M">
+                                <rect key="frame" x="143" y="435" width="128" height="26"/>
+                                <color key="tintColor" red="0.062745098040000002" green="0.2784313725" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENDRSD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9U-yl-G5W">
-                                <rect key="frame" x="122.5" y="412" width="169.5" height="72"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="169.5" id="CVl-sn-y6r"/>
-                                    <constraint firstAttribute="height" constant="72" id="jbx-70-fQp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="BarlowCondensed-Bold" family="Barlow Condensed" pointSize="60"/>
-                                <color key="textColor" red="0.1057824269" green="0.27909794449999997" blue="0.32786482569999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="L9U-yl-G5W" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="75L-0J-o41"/>
-                            <constraint firstItem="L9U-yl-G5W" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ex2-0c-qtQ"/>
+                            <constraint firstItem="JT4-ZY-f3M" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cb4-oo-UpF"/>
+                            <constraint firstItem="JT4-ZY-f3M" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="d1g-jl-Gtj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -52,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="spaceBG" width="1386" height="1800"/>
+        <image name="logo" width="128" height="26"/>
     </resources>
 </document>

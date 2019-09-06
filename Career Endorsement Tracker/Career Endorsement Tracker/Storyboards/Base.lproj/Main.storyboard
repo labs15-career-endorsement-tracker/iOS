@@ -259,7 +259,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2By-pQ-LyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2518.840579710145" y="-606.02678571428567"/>
+            <point key="canvasLocation" x="2665" y="-467"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UFH-KX-9pv">
@@ -304,6 +304,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WE1-Tf-GcM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="889.85507246376824" y="-606.02678571428567"/>
+        </scene>
+        <!--Steps View Controller-->
+        <scene sceneID="kac-ck-aaP">
+            <objects>
+                <viewController id="5sH-ai-7DC" customClass="StepsViewController" customModule="Career_Endorsement_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4zk-Wc-bh6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="frr-np-qsd">
+                                <rect key="frame" x="0.0" y="108" width="414" height="788"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f12-Ga-0zi">
+                                    <size key="itemSize" width="388" height="51"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="steps_cell" id="Chp-Yg-87H" customClass="StepsCollectionViewCell" customModule="Career_Endorsement_Tracker" customModuleProvider="target">
+                                        <rect key="frame" x="13" y="0.0" width="388" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="51"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieR-Ew-M8o" customClass="RadioButton" customModule="MBRadioCheckboxButton">
+                                                    <rect key="frame" x="16" y="10.5" width="207" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="rw2-Vi-Efp"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <state key="normal" title="Complete LinkedIn Profile">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.40814721580000002" green="0.46255367990000001" blue="0.57942390440000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="ieR-Ew-M8o" firstAttribute="leading" secondItem="Chp-Yg-87H" secondAttribute="leadingMargin" constant="8" id="NNx-a5-yhU"/>
+                                            <constraint firstItem="ieR-Ew-M8o" firstAttribute="centerY" secondItem="Chp-Yg-87H" secondAttribute="centerY" id="bwN-Yx-xLT"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resume Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APm-8N-KlS">
+                                <rect key="frame" x="20" y="62" width="173" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Completed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56N-Yj-104">
+                                <rect key="frame" x="302" y="73" width="85" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsO-gX-6qe">
+                                <rect key="frame" x="332" y="51" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="frr-np-qsd" firstAttribute="trailing" secondItem="NkE-kL-QbR" secondAttribute="trailing" id="Gah-k4-7Oj"/>
+                            <constraint firstItem="frr-np-qsd" firstAttribute="leading" secondItem="NkE-kL-QbR" secondAttribute="leading" id="O3z-Te-5oy"/>
+                            <constraint firstItem="APm-8N-KlS" firstAttribute="top" secondItem="NkE-kL-QbR" secondAttribute="top" constant="18" id="PQU-h9-9oA"/>
+                            <constraint firstItem="APm-8N-KlS" firstAttribute="leading" secondItem="NkE-kL-QbR" secondAttribute="leading" constant="20" id="Vv2-3e-ThR"/>
+                            <constraint firstAttribute="bottom" secondItem="frr-np-qsd" secondAttribute="bottom" id="hT5-ZI-Za9"/>
+                            <constraint firstItem="frr-np-qsd" firstAttribute="top" secondItem="APm-8N-KlS" secondAttribute="bottom" constant="16" id="ld0-jg-Ey1"/>
+                            <constraint firstItem="GsO-gX-6qe" firstAttribute="centerX" secondItem="56N-Yj-104" secondAttribute="centerX" id="r7A-2C-KKm"/>
+                            <constraint firstItem="56N-Yj-104" firstAttribute="top" secondItem="GsO-gX-6qe" secondAttribute="bottom" id="svX-8e-I3C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NkE-kL-QbR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9VW-oD-XHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3435" y="-467"/>
         </scene>
     </scenes>
     <resources>

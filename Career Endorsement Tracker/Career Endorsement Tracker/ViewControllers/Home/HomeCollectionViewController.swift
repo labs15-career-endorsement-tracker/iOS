@@ -37,10 +37,6 @@ class HomeCollectionViewController: UICollectionViewController {
         updateView()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        fetchRequirementsFromServer()
-    }
-    
     // MARK: - Collection View
     
     //gets count from task array
@@ -59,8 +55,6 @@ class HomeCollectionViewController: UICollectionViewController {
         return cell
     }
     
-    
-    
     // MARK: - Helper Method
     
     func updateView() {
@@ -70,7 +64,6 @@ class HomeCollectionViewController: UICollectionViewController {
         layout.minimumLineSpacing = 30
         
         collectionView.collectionViewLayout = layout
-        
     }
     
     //MARK: Network Call
@@ -80,10 +73,8 @@ class HomeCollectionViewController: UICollectionViewController {
         server.fetchRequirements(withId: token) { (reqResult, error) in
             if let error = error {
                 print(error)
-                DispatchQueue.main.async {
-                    self.hud.dismiss(animated: true)
-                    Config.showAlert(on: self, style: .alert, title: "Fetching Error", message: error.localizedDescription)
-                }
+                self.hud.dismiss(animated: true)
+                Config.showAlert(on: self, style: .alert, title: "Fetching Error", message: error.localizedDescription)
                 return
             }
             if let reqResult = reqResult {

@@ -37,40 +37,9 @@ class HomeDetailTableViewController: UITableViewController {
     @objc func submitButtonPressed(notificaiton: Notification) {
         //handles logic for submit button pressed
         fetchStepsFromServer()
-        fetchSingleRequirementFromServer()
         updateViews()
     }
     
-    func fetchSingleRequirementFromServer() {
-        let token = UserDefaults.standard.object(forKey: "token") as! String
-        guard let server = server else {
-            print("no server")
-            return
-        }
-        guard let id = id else {
-            print("no id")
-            return
-        }
-        server.fetchRequirements(withId: token) { (RequirementsResult, error) in
-            if let error = error {
-                DispatchQueue.main.async {
-                    self.hud.dismiss(animated: true)
-                    Config.showAlert(on: self, style: .alert, title: "Fetching Error", message: error.localizedDescription)
-                }
-                return
-            }
-            if let requirementsResult = RequirementsResult {
-                let array = requirementsResult.filter { $0.id == id }
-                let requirement = array[0]
-                let progress = Float(requirement.progress)
-                let finalProgress = progress / 100
-                DispatchQueue.main.async {
-                    self.requirementProgessView.setProgress(finalProgress, animated: true)
-                    self.tableView.reloadData()
-                }
-            }
-        }
-    }
     
     func updateViews() {
         guard let requirement = requirement else {
@@ -116,10 +85,8 @@ class HomeDetailTableViewController: UITableViewController {
         server.fetchSteps(withId: token, withReqId: id) { (stepsResult, error) in
             if let error = error {
                 print(error)
-                DispatchQueue.main.async {
-                    self.hud.dismiss(animated: true)
-                    Config.showAlert(on: self, style: .alert, title: "Fetching Error", message: error.localizedDescription)
-                }
+                self.hud.dismiss(animated: true)
+                Config.showAlert(on: self, style: .alert, title: "Fetching Error", message: error.localizedDescription)
                 return
             }
             

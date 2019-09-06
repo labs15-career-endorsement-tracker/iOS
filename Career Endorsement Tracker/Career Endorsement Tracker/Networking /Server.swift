@@ -160,36 +160,6 @@ class Server {
         }
     }
     
-    func fetchRequirement(withId id: String, withReqId reqId: Int, completion: @escaping (Requirement?, Error?)->Void) {
-        
-        let requirementURL = baseURL!.appendingPathComponent("\(Endpoints.requirements.rawValue)/\(reqId)")
-        print(requirementURL)
-        var request = URLRequest(url: requirementURL)
-        request.httpMethod = HTTPMethods.get.rawValue
-        request.addValue("Bearer \(id)", forHTTPHeaderField: "Authorization")
-        
-        dataGetter.fetchData(with: request) { (_, data, error) in
-            if let error = error {
-                completion(nil, error)
-            } else {
-                completion(nil, nil)
-            }
-            
-            guard let data = data else {
-                completion(nil, DataGetter.NetworkError.badData)
-                return
-            }
-            
-            let decoder = JSONDecoder()
-            do {
-                let data = try decoder.decode(Requirement.self, from: data)
-                completion(data, nil)
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-    
     func fetchSteps(withId id: String, withReqId reqId: Int, completion: @escaping ([Step]?, Error?)->Void) {
         
         let stepsURL = baseURL!.appendingPathComponent("/requirements/\(reqId)\(Endpoints.steps.rawValue)")
@@ -231,7 +201,7 @@ class Server {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         print("request: \(request)")
         do {
-            let params = ["is_complete": isComplete] as [String: Any]
+            let params = ["is_complete": false] as [String: Any]
             print(params)
             let json = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
             request.httpBody = json

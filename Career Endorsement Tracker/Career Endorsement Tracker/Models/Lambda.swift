@@ -13,7 +13,7 @@ struct tracks: Codable {
     let title: String
 }
 
-struct Requirement: Codable, Equatable {
+struct Requirement: Codable {
     var id: Int
     var tracks_id: Int
     var tasks_id: Int

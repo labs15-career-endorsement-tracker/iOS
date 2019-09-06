@@ -62,7 +62,6 @@
                                     <constraint firstItem="bNZ-Tz-v0j" firstAttribute="centerX" secondItem="gEb-Xf-Pai" secondAttribute="centerX" id="rLZ-iD-tQd"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="progressView" destination="bNZ-Tz-v0j" id="BtS-AQ-RLQ"/>
                                     <outlet property="taskDescription" destination="gEb-Xf-Pai" id="bBG-0G-lFi"/>
                                     <outlet property="taskNameLabel" destination="BbW-TK-gP1" id="orz-Z2-I7j"/>
                                     <segue destination="m2x-Eg-KsC" kind="show" identifier="ShowSegue" id="15u-ma-DcC"/>

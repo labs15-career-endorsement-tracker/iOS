@@ -13,8 +13,25 @@ class HomeViewController: UIViewController {
 
     // MARK: - Outlets
     
+    @IBOutlet weak var logoutBtn: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
 
+    // MARK: - Actions
+    
+    @IBAction func logoutBtnPressed(_ sender: UIBarButtonItem) {
+        let signOutAction = UIAlertAction(title: "Sign Out", style: .destructive) {
+            (action) in
+            UserDefaults.standard.set(nil, forKey: "token")
+            UserDefaults.standard.set(nil, forKey: "id")
+            UserDefaults.standard.set(false, forKey: "isLoggedIn")
+            let storyboard = UIStoryboard(name: "Welcome", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeNavigationController")
+            self.present(vc, animated: true, completion: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        Config.showAlert(on: self, style: .actionSheet, title: nil, message: nil, actions: [signOutAction, cancelAction], completion: nil)
+    }
+    
     // MARK: - Instances
     let server = Server()
     var requirements: [Requirement] = []

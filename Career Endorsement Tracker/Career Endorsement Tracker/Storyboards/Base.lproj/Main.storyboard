@@ -193,7 +193,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gmj-lv-n0Q">
-                                <rect key="frame" x="0.0" y="202" width="414" height="660"/>
+                                <rect key="frame" x="0.0" y="202" width="414" height="852"/>
                                 <color key="backgroundColor" red="0.91280847789999997" green="0.92954796549999996" blue="0.94384670260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gyL-fU-orf">
                                     <size key="itemSize" width="365" height="150"/>
@@ -294,9 +294,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Cs-F4-K3a"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZVH-kD-ghM"/>
+                    <navigationItem key="navigationItem" id="ZVH-kD-ghM">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="FqQ-0X-NHv">
+                            <connections>
+                                <action selector="logoutBtnPressed:" destination="H7V-Pu-c1d" id="Hyz-WK-vxu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="gmj-lv-n0Q" id="BKF-fL-0FR"/>
+                        <outlet property="logoutBtn" destination="FqQ-0X-NHv" id="gsH-cK-afP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8X-71-zF3" userLabel="First Responder" sceneMemberID="firstResponder"/>

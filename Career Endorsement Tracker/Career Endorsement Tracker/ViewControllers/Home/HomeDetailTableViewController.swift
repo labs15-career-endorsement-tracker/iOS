@@ -24,6 +24,7 @@ class HomeDetailTableViewController: UITableViewController {
         hud.interactionType = .blockAllTouches
         return hud
     }()
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()

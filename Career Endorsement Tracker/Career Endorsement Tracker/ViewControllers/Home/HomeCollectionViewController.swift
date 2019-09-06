@@ -76,7 +76,10 @@ class HomeCollectionViewController: UICollectionViewController {
     //MARK: Network Call
     
     func fetchRequirementsFromServer() {
-        let token = UserDefaults.standard.object(forKey: "token") as! String
+        guard let token = UserDefaults.standard.object(forKey: "token") as? String else {
+            print("no token")
+            return
+        }
         server.fetchRequirements(withId: token) { (reqResult, error) in
             if let error = error {
                 print(error)

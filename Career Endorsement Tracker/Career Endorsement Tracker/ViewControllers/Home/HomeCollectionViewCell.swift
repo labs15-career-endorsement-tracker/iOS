@@ -14,7 +14,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
     // MARK: - Outlets
     
     @IBOutlet weak var taskNameLabel: UILabel!
-    @IBOutlet weak var taskDescription: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
     
     // MARK: - Properties
@@ -28,10 +27,15 @@ class HomeCollectionViewCell: UICollectionViewCell {
     // MARK: - Methods
     
     func updateViews() {
-        guard let requirement = requirement else {return}
+        guard let requirement = requirement else {
+            print("no requiremetn")
+            return}
+        print(requirement.title)
         taskNameLabel.text = requirement.title
         let progress = Float(requirement.progress)
         let finalProgress = progress / 100
+        print("last line")
         progressView.setProgress(finalProgress, animated: true)
+        print("error line")
     }
 }

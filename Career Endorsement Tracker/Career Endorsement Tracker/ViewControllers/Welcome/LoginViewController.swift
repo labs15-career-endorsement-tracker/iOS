@@ -41,8 +41,7 @@ class LoginViewContoller: UIViewController {
                 Config.showAlert(on: self, style: .alert, title: "Login Error", message: "Please make sure all fields are completed.")
                 return
         }
-        let user = CurrentUser(email: username, password: password)
-        
+        let user = LoggedInUser(email: username, password: password)
         server.loginWith(user: user, completion: { (error) in
             if let error = error {
                 DispatchQueue.main.async {

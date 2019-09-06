@@ -17,5 +17,6 @@ import UIKit
 
 struct Bearer: Codable {
     let token: String
+    let userId: Int
 }
 

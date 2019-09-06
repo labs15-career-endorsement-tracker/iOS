@@ -18,20 +18,31 @@ class Config {
     static let buttonCornerRadius: CGFloat = 7
     
     
-    // Textfield highlight color
-    static let textFieldBorderColor = UIColor(red: 173.0/256.0, green: 216.0/256.0, blue: 144/256.0, alpha: 1.0).cgColor
-
     
     // App theme colors
-    static var themeNavBarTint = UIColor(red: 41.0/256.0, green: 110.0/256.0, blue: 108.0/256.0, alpha: 1.0)
-    static var themeButtonColor = UIColor(red: 33.0/256.0, green: 92.0/256.0, blue: 89.0/256.0, alpha: 1.0)
-//    static var themeAlertBox = UIColor(red: x.0/256.0, green: x.0/256.0, blue: x.0/256.0, alpha: 1.0)
+    // Textfield highlight color
+    static let textFieldBorderColor = UIColor(red: 173.0/256.0, green: 216.0/256.0, blue: 144/256.0, alpha: 1.0).cgColor
     
-    static var themeTextRed = UIColor(red: 223.0/256.0, green: 16.0/256.0, blue: 65.0/256.0, alpha: 1.0)
-    static var themeDarkRed = UIColor(red: 188.0/256.0, green: 50.0/256.0, blue: 51.0/256.0, alpha: 1.0)
-    static var themeDarkGreen = UIColor(red: 41.0/256.0, green: 110.0/256.0, blue: 108.0/256.0, alpha: 1.0)
+    // Greens
+    static var themeDarkGreen = UIColor(red: 0.0/256.0, green: 147.0/256.0, blue: 30.0/256.0, alpha: 1.0)
     static var themeGreen = UIColor(red: 33.0/256.0, green: 92.0/256.0, blue: 89/256.0, alpha: 1.0)
-//    static var themeLightGreen = UIColor(red: x.0/256.0, green: x.0/256.0, blue: x.0/256.0, alpha: 1.0)
+    static var themeLightGreen = UIColor(red: 0.0/256.0, green: 147.0/256.0, blue: 30.0/256.0, alpha: 1.0)
+    
+    // Grays
+    static var themeDarkGray = UIColor(red: 201.0/256.0, green: 207.0/256.0, blue: 209.0/256.0, alpha: 1.0)
+    static var themeLightGray = UIColor(red: 233.0/256.0, green: 237.0/256.0, blue: 240.0/256.0, alpha: 1.0)
+    
+    // White-ish
+    static var themeWhite = UIColor(red: 251.0/256.0, green: 254.0/256.0, blue: 255.0/256.0, alpha: 1.0)
+    
+    // Blues
+    static var themeDarkBlue = UIColor(red: 16.0/256.0, green: 25.0/256.0, blue: 83.0/256.0, alpha: 1.0)
+    static var themeBlueGren = UIColor(red: 16.0/256.0, green: 71.0/256.0, blue: 83.0/256.0, alpha: 1.0)
+    static var themeLightPurple = UIColor(red: 172.0/256.0, green: 179.0/256.0, blue: 223.0/256.0, alpha: 1.0)
+    
+    // Orange
+    static var themeOrange = UIColor(red: 224.0/256.0, green: 106.0/256.0, blue: 63.0/256.0, alpha: 1.0)
+
 
     
     static func showAlert(on: UIViewController, style: UIAlertController.Style, title: String?, message: String?, actions: [UIAlertAction] = [ UIAlertAction(title: "OK", style: .default, handler: nil)], completion: (() -> Swift.Void)? = nil) {

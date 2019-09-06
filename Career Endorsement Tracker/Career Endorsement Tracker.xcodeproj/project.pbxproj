@@ -114,6 +114,9 @@
 		FA66A3A023198ECC00980AB6 /* StepsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsController.swift; sourceTree = "<group>"; };
 		FA66A3A22319919C00980AB6 /* ResourcesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesController.swift; sourceTree = "<group>"; };
 		FA71175A2321CC470077947E /* Steps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Steps.storyboard; sourceTree = "<group>"; };
+		FA7117692322DDA10077947E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		FA71176A2322DF9D0077947E /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		FA71176B2322DFAA0077947E /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		FA8AAD7D23158E2100DA36A5 /* TasksTracks+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TasksTracks+Convenience.swift"; sourceTree = "<group>"; };
 		FA8AAD7F23158E3700DA36A5 /* Tracks+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tracks+Convenience.swift"; sourceTree = "<group>"; };
 		FA8AAD8123158E4100DA36A5 /* User+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Convenience.swift"; sourceTree = "<group>"; };
@@ -293,6 +296,9 @@
 			isa = PBXGroup;
 			children = (
 				5784F9EE23072BFB00C11198 /* Config.swift */,
+				FA7117692322DDA10077947E /* Release.xcconfig */,
+				FA71176A2322DF9D0077947E /* Development.xcconfig */,
+				FA71176B2322DFAA0077947E /* Production.xcconfig */,
 			);
 			path = Constants;
 			sourceTree = "<group>";

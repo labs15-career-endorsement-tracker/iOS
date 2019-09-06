@@ -16,10 +16,17 @@ enum HTTPMethods: String {
 }
 
 class Server {
+    
+    struct Storyboard {
+        static let isStaging: Bool = false
+    }
+    
     typealias CompletionHandler = (Error?) -> Void
     
-    let dataGetter = DataGetter()
+    // MARK: - Properties
     
+    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v0")
+    let dataGetter = DataGetter()
     var bearer: Bearer?
     var encodedBearer: Data?
     
@@ -41,8 +48,7 @@ class Server {
         }
     }
     
-    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v0")
-    
+    // MARK: - Methods
     
     func loginWith(user: CurrentUser, completion: @escaping (Error?)->Void) {
         let loginURL = baseURL!.appendingPathComponent(Endpoints.login.rawValue)

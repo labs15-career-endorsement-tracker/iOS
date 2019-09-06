@@ -30,6 +30,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.delegate = self
+        collectionView.dataSource = self
         hud.textLabel.text = "Loading Requirements..."
         hud.show(in: view, animated: true)
         fetchRequirementsFromServer()

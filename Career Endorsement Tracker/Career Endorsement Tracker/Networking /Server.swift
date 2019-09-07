@@ -40,7 +40,7 @@ class Server {
         }
     }
     
-    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v0")
+    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v1")
     
     
     func loginWith(user: LoggedInUser, completion: @escaping (Error?)->Void) {

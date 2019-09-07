@@ -97,7 +97,7 @@ class RequirementsViewController: UIViewController {
                 self.currentUser = currentUser
                 DispatchQueue.main.async {
                     self.hud.dismiss(animated: true)
-                    self.overallProgressLabel.text = "%\(currentUser.progress)"
+                    self.overallProgressLabel.text = "\(currentUser.progress)%"
                     if self.userNameLabel.text == "Welcome, " {
                         self.userNameLabel.text = "Welcome, \(currentUser.first_name)"
                     }

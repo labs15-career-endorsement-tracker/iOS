@@ -15,7 +15,9 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var logoutBtn: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var overallProgressLabel: UILabel!
+    
     // MARK: - Actions
     
     @IBAction func logoutBtnPressed(_ sender: UIBarButtonItem) {
@@ -35,6 +37,7 @@ class HomeViewController: UIViewController {
     // MARK: - Instances
     let server = Server()
     var requirements: [Requirement] = []
+    var currentUser: CurrentUser?
     
     //displays progress sign
     let hud: JGProgressHUD = {
@@ -52,7 +55,7 @@ class HomeViewController: UIViewController {
         hud.textLabel.text = "Loading Requirements..."
         hud.show(in: view, animated: true)
         fetchRequirementsFromServer()
-        updateView()
+        updateViews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,14 +66,14 @@ class HomeViewController: UIViewController {
 
     // MARK: - Helper Method
     
-    func updateView() {
-        let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 30, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.width/1.1, height: UIScreen.main.bounds.width/3)
-        layout.minimumLineSpacing = 30
-        
-        collectionView.collectionViewLayout = layout
-        
+    func updateViews() {
+        let logo = UIImage(named: "logo")!
+        let imageView = UIImageView(image: logo)
+        self.navigationItem.titleView = imageView
+        guard let name = UserDefaults.standard.value(forKey: "firstName") as? String else {
+            return
+        }
+        userNameLabel.text = name
     }
     
     //MARK: Network Call

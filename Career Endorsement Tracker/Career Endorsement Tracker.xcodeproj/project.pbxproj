@@ -42,6 +42,7 @@
 		5784F9F123072D5600C11198 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5784F9F023072D5600C11198 /* Welcome.storyboard */; };
 		CE39B7DB22CECF9A3CCF0096 /* Pods_Career_Endorsement_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525363B8898C98916DC833E7 /* Pods_Career_Endorsement_Tracker.framework */; };
 		FA593528232300C4003621A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA593527232300C4003621A8 /* HomeViewController.swift */; };
+		FA59354E2326C11F003621A8 /* BreakOutToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59354D2326C11F003621A8 /* BreakOutToRefreshView.swift */; };
 		FA66A39F23187B1C00980AB6 /* UserStepsCompletedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A39E23187B1C00980AB6 /* UserStepsCompletedController.swift */; };
 		FA66A3A123198ECC00980AB6 /* StepsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A3A023198ECC00980AB6 /* StepsController.swift */; };
 		FA66A3A32319919C00980AB6 /* ResourcesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A3A22319919C00980AB6 /* ResourcesController.swift */; };
@@ -121,6 +122,7 @@
 		8AF928B366F43FF466A3D843 /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C6DD038EA49314E0BE8940 /* Pods-Career Endorsement Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		FA593527232300C4003621A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FA59354D2326C11F003621A8 /* BreakOutToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakOutToRefreshView.swift; sourceTree = "<group>"; };
 		FA5D9B15230F181B00DC9BC1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FA5D9B17230F181B00DC9BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA66A39E23187B1C00980AB6 /* UserStepsCompletedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStepsCompletedController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				374CB3A523186791009A8C2D /* Helpers */,
 				5784F9E1230728E900C11198 /* Models */,
 				FAA6DF1B23107B3300B1DA7D /* Core Data */,
+				FA59354C2326C114003621A8 /* Misc */,
 				5784F9E4230728FF00C11198 /* Networking  */,
 				FA59354B2326BFA6003621A8 /* Views */,
 				5784F9E3230728F800C11198 /* ViewControllers */,
@@ -219,7 +222,7 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		570CE8FA2315CA6E00077B72 /* Welcome */ = {
+		570CE8FA2315CA6E00077B72 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
 				570CE9102315F32200077B72 /* WelcomeNavigationController.swift */,
@@ -227,7 +230,7 @@
 				570CE8FB2315CA7E00077B72 /* LoginViewController.swift */,
 				570CE8FF2315CA9700077B72 /* SignUpViewController.swift */,
 			);
-			path = Welcome;
+			path = Signup;
 			sourceTree = "<group>";
 		};
 		570CE9032315D4AA00077B72 /* Home */ = {
@@ -264,7 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				570CE9032315D4AA00077B72 /* Home */,
-				570CE8FA2315CA6E00077B72 /* Welcome */,
+				570CE8FA2315CA6E00077B72 /* Signup */,
 				FA593527232300C4003621A8 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
@@ -321,6 +324,14 @@
 				57191C792320EDD300542F37 /* HomeDetailTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FA59354C2326C114003621A8 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				FA59354D2326C11F003621A8 /* BreakOutToRefreshView.swift */,
+			);
+			path = Misc;
 			sourceTree = "<group>";
 		};
 		FA5D9B14230F181B00DC9BC1 /* OneSignalNotificationServiceExtension */ = {
@@ -583,6 +594,7 @@
 				5784F9EB230729B600C11198 /* DataGetter.swift in Sources */,
 				FAA6DF2023107E1400B1DA7D /* CareerModel.xcdatamodeld in Sources */,
 				570CE90E2315D6B300077B72 /* HomeCollectionViewCell.swift in Sources */,
+				FA59354E2326C11F003621A8 /* BreakOutToRefreshView.swift in Sources */,
 				570CE9002315CA9700077B72 /* SignUpViewController.swift in Sources */,
 				FA8AAD8623158E5900DA36A5 /* Steps+Convenience.swift in Sources */,
 				FA8AAD8423158E4E00DA36A5 /* User_steps_completed+Convenience.swift in Sources */,

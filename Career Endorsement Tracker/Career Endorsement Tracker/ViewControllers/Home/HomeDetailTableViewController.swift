@@ -12,22 +12,23 @@ import JGProgressHUD
 
 class HomeDetailTableViewController: UITableViewController {
     
-    // MARK: - Outlets
-    
-    @IBOutlet weak var requirementProgessView: UIProgressView!
-    
     // MARK: - Properties
     
     var server: Server?
     var id: Int?
     var steps: [Step] = []
     var requirement: Requirement?
+    var refreshView: BreakOutToRefreshView!
     
     let hud: JGProgressHUD = {
         let hud = JGProgressHUD(style: .light)
         hud.interactionType = .blockAllTouches
         return hud
     }()
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var requirementProgessView: UIProgressView!
     
     // MARK: - Actions
     
@@ -47,6 +48,20 @@ class HomeDetailTableViewController: UITableViewController {
         fetchStepsFromServer()
         updateViews()
         NotificationCenter.default.addObserver(self, selector: #selector(submitButtonPressed(notificaiton:)), name: .didSubmit, object: nil)
+    }
+    
+    private func setupRefresh(){
+        refreshView = BreakOutToRefreshView(scrollView: tableView)
+        refreshView.refreshDelegate = self
+        
+        // configure the refresh view
+        refreshView.scenebackgroundColor = .white
+        refreshView.textColor = .black
+        refreshView.paddleColor = .brown
+        refreshView.ballColor = .darkGray
+        refreshView.blockColors = [.blue, .green, .red]
+        
+        tableView.addSubview(refreshView)
     }
     
     // MARK: - Methods
@@ -144,5 +159,29 @@ extension HomeDetailTableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 144
+    }
+}
+
+extension HomeDetailTableViewController {
+    
+    // MARK: - ScrollView
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        refreshView.scrollViewDidScroll(scrollView)
+    }
+    
+    override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        refreshView.scrollViewWillEndDragging(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
+    }
+    
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        refreshView.scrollViewWillBeginDragging(scrollView)
+    }
+}
+
+extension HomeDetailTableViewController: BreakOutToRefreshDelegate {
+    
+    func refreshViewDidRefresh(_ refreshView: BreakOutToRefreshView) {
+        // load stuff from the internet
     }
 }

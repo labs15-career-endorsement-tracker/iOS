@@ -48,6 +48,7 @@ class HomeDetailTableViewController: UITableViewController {
         fetchStepsFromServer()
         updateViews()
         NotificationCenter.default.addObserver(self, selector: #selector(submitButtonPressed(notificaiton:)), name: .didSubmit, object: nil)
+        setupRefresh()
     }
     
     private func setupRefresh(){

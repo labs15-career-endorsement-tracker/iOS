@@ -14,7 +14,7 @@ class HomeDetailTableViewController: UITableViewController {
     
     // MARK: - Properties
     
-    private let emitt = Emitter()
+    let emitt = Emitter()
     var server: Server?
     var id: Int?
     var steps: [Step] = []
@@ -105,7 +105,7 @@ class HomeDetailTableViewController: UITableViewController {
                 let progress = Float(requirement.progress)
                 let finalProgress = progress / 100
                 
-                if finalProgress == 1 {fullProgress()}
+                if finalProgress == 1 {self.fullProgress()}
                 
                 DispatchQueue.main.async {
                     self.requirementProgessView.setProgress(finalProgress, animated: true)
@@ -116,7 +116,7 @@ class HomeDetailTableViewController: UITableViewController {
     }
     
     private func fullProgress(){
-        
+        print("User has completed requirements")
     }
     func updateViews() {
         guard let requirement = requirement else {

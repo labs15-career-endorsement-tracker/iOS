@@ -12,7 +12,7 @@ extension HomeDetailTableViewController {
     
     // MARK: - Emitter
     
-    private func generateEmitterCells() -> [CAEmitterCell] {
+    func generateEmitterCells() -> [CAEmitterCell] {
         var cells:[CAEmitterCell] = [CAEmitterCell]()
         for index in 0..<16 {
             

@@ -1,5 +1,5 @@
 PODS:
-  - JGProgressHUD (2.0.3)
+  - JGProgressHUD (2.0.4)
 
 DEPENDENCIES:
   - JGProgressHUD
@@ -9,7 +9,7 @@ SPEC REPOS:
     - JGProgressHUD
 
 SPEC CHECKSUMS:
-  JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
+  JGProgressHUD: 62658b14e72cccf179efc7a13bcb54d30b92fc22
 
 PODFILE CHECKSUM: 027a9ddffba9a79c59e961451c4d5beb71a6ec69
 

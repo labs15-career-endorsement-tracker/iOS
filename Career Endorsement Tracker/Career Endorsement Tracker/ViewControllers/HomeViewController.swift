@@ -23,8 +23,8 @@ class HomeViewController: UIViewController {
     @IBAction func logoutBtnPressed(_ sender: UIBarButtonItem) {
         let signOutAction = UIAlertAction(title: "Sign Out", style: .destructive) {
             (action) in
-            UserDefaults.standard.set(nil, forKey: "token")
-            UserDefaults.standard.set(nil, forKey: "id")
+            UserDefaults.standard.removeObject(forKey: "token")
+            UserDefaults.standard.removeObject(forKey: "id")
             UserDefaults.standard.set(false, forKey: "isLoggedIn")
             let storyboard = UIStoryboard(name: "Welcome", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeNavigationController")
@@ -96,6 +96,38 @@ class HomeViewController: UIViewController {
                     self.collectionView.reloadData()
                 }
             }
+        }
+    }
+    
+    func fetchUserFromServer() {
+        guard let token = UserDefaults.standard.string(forKey: "token") else {
+            print("no token")
+            return
+        }
+        guard let id = UserDefaults.standard.object(forKey: "id") as? Int else {
+            return
+        }
+        server.fetchUser(withId: token, withUserId: id) { (CurrentUser, error) in
+            if let error = error {
+                print(error)
+                print("112 error")
+                DispatchQueue.main.async {
+                    self.hud.dismiss(animated: true)
+                    Config.showAlert(on: self, style: .alert, title: "Fetching Error", message: error.localizedDescription)
+                }
+                return
+            }
+            if let currentUser = CurrentUser {
+                self.currentUser = currentUser
+                DispatchQueue.main.async {
+                    self.hud.dismiss(animated: true)
+                    self.overallProgressLabel.text = "%\(currentUser.progress)"
+                    if self.userNameLabel.text == "Welcome, " {
+                        self.userNameLabel.text = "Welcome, \(currentUser.first_name)"
+                    }
+                }
+            }
+            
         }
     }
     

@@ -44,7 +44,7 @@ class Server {
     let baseURL = URL(string: "https://endrsd-api.herokuapp.com/api/v1")
     
     
-    func loginWith(user: CurrentUser, completion: @escaping (Error?)->Void) {
+    func loginWith(user: LoggedInUser, completion: @escaping (Error?)->Void) {
         let loginURL = baseURL!.appendingPathComponent(Endpoints.login.rawValue)
          print("loginURL = \(loginURL)")
         var request = URLRequest(url: loginURL)
@@ -64,12 +64,10 @@ class Server {
                 completion(error)
                 return
             }
-            print("no error")
             guard let data = data else {
                 completion(DataGetter.NetworkError.badData)
                 return
             }
-            print("good data")
             // Save the endoded bearer token so that it can be saved to user defaults
             self.encodedBearer = data
             
@@ -124,8 +122,6 @@ class Server {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
                 UserDefaults.standard.set(self.bearer?.token, forKey: "token")
                 UserDefaults.standard.set(self.bearer?.userId, forKey: "id")
-                UserDefaults.standard.set(firstName, forKey: "fistName")
-                UserDefaults.standard.set(email, forKey: "email")
                 completion(nil)
             } catch {
                 completion(error)
@@ -260,15 +256,19 @@ class Server {
         var request = URLRequest(url: userURL)
         request.httpMethod = HTTPMethods.get.rawValue
         request.addValue("Bearer \(id)", forHTTPHeaderField: "Authorization")
+        print(id)
+        print(UserDefaults.value(forKey: "token") ?? "No Token")
         
         dataGetter.fetchData(with: request) { (_, data, error) in
             if let error = error {
+                print("error fetching data - users/")
                 completion(nil, error)
             } else {
                 completion(nil, nil)
             }
             
             guard let data = data else {
+                print("data no good")
                 completion(nil, DataGetter.NetworkError.badData)
                 return
             }
@@ -278,6 +278,7 @@ class Server {
                 let data = try decoder.decode(CurrentUser.self, from: data)
                 completion(data, nil)
             } catch {
+                print(error.localizedDescription)
                 completion(nil, error)
             }
         }

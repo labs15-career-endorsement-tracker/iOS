@@ -15,14 +15,16 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var logoutBtn: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var overallProgressLabel: UILabel!
+    
     // MARK: - Actions
     
     @IBAction func logoutBtnPressed(_ sender: UIBarButtonItem) {
         let signOutAction = UIAlertAction(title: "Sign Out", style: .destructive) {
             (action) in
-            UserDefaults.standard.set(nil, forKey: "token")
-            UserDefaults.standard.set(nil, forKey: "id")
+            UserDefaults.standard.removeObject(forKey: "token")
+            UserDefaults.standard.removeObject(forKey: "id")
             UserDefaults.standard.set(false, forKey: "isLoggedIn")
             let storyboard = UIStoryboard(name: "Welcome", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeNavigationController")
@@ -35,6 +37,7 @@ class HomeViewController: UIViewController {
     // MARK: - Instances
     let server = Server()
     var requirements: [Requirement] = []
+    var currentUser: CurrentUser?
     
     //displays progress sign
     let hud: JGProgressHUD = {
@@ -52,7 +55,7 @@ class HomeViewController: UIViewController {
         hud.textLabel.text = "Loading Requirements..."
         hud.show(in: view, animated: true)
         fetchRequirementsFromServer()
-        updateView()
+        updateViews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,14 +66,14 @@ class HomeViewController: UIViewController {
 
     // MARK: - Helper Method
     
-    func updateView() {
-        let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 30, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.width/1.1, height: UIScreen.main.bounds.width/3)
-        layout.minimumLineSpacing = 30
-        
-        collectionView.collectionViewLayout = layout
-        
+    func updateViews() {
+        let logo = UIImage(named: "logo")!
+        let imageView = UIImageView(image: logo)
+        self.navigationItem.titleView = imageView
+        guard let name = UserDefaults.standard.value(forKey: "firstName") as? String else {
+            return
+        }
+        userNameLabel.text = name
     }
     
     //MARK: Network Call
@@ -93,6 +96,38 @@ class HomeViewController: UIViewController {
                     self.collectionView.reloadData()
                 }
             }
+        }
+    }
+    
+    func fetchUserFromServer() {
+        guard let token = UserDefaults.standard.string(forKey: "token") else {
+            print("no token")
+            return
+        }
+        guard let id = UserDefaults.standard.object(forKey: "id") as? Int else {
+            return
+        }
+        server.fetchUser(withId: token, withUserId: id) { (CurrentUser, error) in
+            if let error = error {
+                print(error)
+                print("112 error")
+                DispatchQueue.main.async {
+                    self.hud.dismiss(animated: true)
+                    Config.showAlert(on: self, style: .alert, title: "Fetching Error", message: error.localizedDescription)
+                }
+                return
+            }
+            if let currentUser = CurrentUser {
+                self.currentUser = currentUser
+                DispatchQueue.main.async {
+                    self.hud.dismiss(animated: true)
+                    self.overallProgressLabel.text = "%\(currentUser.progress)"
+                    if self.userNameLabel.text == "Welcome, " {
+                        self.userNameLabel.text = "Welcome, \(currentUser.first_name)"
+                    }
+                }
+            }
+            
         }
     }
     

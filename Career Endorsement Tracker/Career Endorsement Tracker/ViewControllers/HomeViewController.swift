@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
             (action) in
             UserDefaults.standard.removeObject(forKey: "token")
             UserDefaults.standard.removeObject(forKey: "id")
+            UserDefaults.standard.removeObject(forKey: "firstName")
             UserDefaults.standard.set(false, forKey: "isLoggedIn")
             let storyboard = UIStoryboard(name: "Welcome", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeNavigationController")
@@ -61,6 +62,7 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         fetchRequirementsFromServer()
+        fetchUserFromServer()
     }
 
 
@@ -71,9 +73,11 @@ class HomeViewController: UIViewController {
         let imageView = UIImageView(image: logo)
         self.navigationItem.titleView = imageView
         guard let name = UserDefaults.standard.value(forKey: "firstName") as? String else {
+            print("No Name")
             return
         }
-        userNameLabel.text = name
+        print(name)
+        userNameLabel.text = "Welcome, \(name)"
     }
     
     //MARK: Network Call
@@ -113,7 +117,7 @@ class HomeViewController: UIViewController {
                 print("112 error")
                 DispatchQueue.main.async {
                     self.hud.dismiss(animated: true)
-                    Config.showAlert(on: self, style: .alert, title: "Fetching Error", message: error.localizedDescription)
+                    Config.showAlert(on: self, style: .alert, title: "Error Fetching User", message: error.localizedDescription)
                 }
                 return
             }
@@ -121,7 +125,7 @@ class HomeViewController: UIViewController {
                 self.currentUser = currentUser
                 DispatchQueue.main.async {
                     self.hud.dismiss(animated: true)
-                    self.overallProgressLabel.text = "%\(currentUser.progress)"
+                    self.overallProgressLabel.text = "\(currentUser.progress)%"
                     if self.userNameLabel.text == "Welcome, " {
                         self.userNameLabel.text = "Welcome, \(currentUser.first_name)"
                     }

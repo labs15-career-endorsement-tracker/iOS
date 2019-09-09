@@ -12,7 +12,11 @@ import JGProgressHUD
 
 class HomeDetailTableViewController: UITableViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var requirementProgessView: UIProgressView!
+    
+    // MARK: - Properties
     
     var server: Server?
     var id: Int?
@@ -25,6 +29,17 @@ class HomeDetailTableViewController: UITableViewController {
         return hud
     }()
     
+    // MARK: - Actions
+    
+    @objc func submitButtonPressed(notificaiton: Notification) {
+        //handles logic for submit button pressed
+        fetchStepsFromServer()
+        fetchSingleRequirementFromServer()
+        updateViews()
+    }
+    
+    // MARK: - VC Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hud.textLabel.text = "Loading Requirements..."
@@ -34,12 +49,7 @@ class HomeDetailTableViewController: UITableViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(submitButtonPressed(notificaiton:)), name: .didSubmit, object: nil)
     }
     
-    @objc func submitButtonPressed(notificaiton: Notification) {
-        //handles logic for submit button pressed
-        fetchStepsFromServer()
-        fetchSingleRequirementFromServer()
-        updateViews()
-    }
+    // MARK: - Methods
     
     func fetchSingleRequirementFromServer() {
         let token = UserDefaults.standard.object(forKey: "token") as! String
@@ -83,26 +93,6 @@ class HomeDetailTableViewController: UITableViewController {
         requirementProgessView.setProgress(finalProgress, animated: true)
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return steps.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StepCell", for: indexPath) as? HomeDetailTableViewCell else {
-            return UITableViewCell()
-        }
-    
-        let step = steps[indexPath.row]
-        cell.server = server
-        cell.step = step
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 144
-    }
-    
-    
     func fetchStepsFromServer() {
         let token = UserDefaults.standard.object(forKey: "token") as! String
         guard let server = server else {
@@ -132,5 +122,27 @@ class HomeDetailTableViewController: UITableViewController {
             }
         }
     }
+}
+
+extension HomeDetailTableViewController {
+    // MARK: - Table view
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return steps.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StepCell", for: indexPath) as? HomeDetailTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        let step = steps[indexPath.row]
+        cell.server = server
+        cell.step = step
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 144
+    }
 }

@@ -122,6 +122,7 @@ class Server {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
                 UserDefaults.standard.set(self.bearer?.token, forKey: "token")
                 UserDefaults.standard.set(self.bearer?.userId, forKey: "id")
+                UserDefaults.standard.set(firstName, forKey: "firstName")
                 completion(nil)
             } catch {
                 completion(error)
@@ -256,8 +257,6 @@ class Server {
         var request = URLRequest(url: userURL)
         request.httpMethod = HTTPMethods.get.rawValue
         request.addValue("Bearer \(id)", forHTTPHeaderField: "Authorization")
-        print(id)
-        print(UserDefaults.value(forKey: "token") ?? "No Token")
         
         dataGetter.fetchData(with: request) { (_, data, error) in
             if let error = error {

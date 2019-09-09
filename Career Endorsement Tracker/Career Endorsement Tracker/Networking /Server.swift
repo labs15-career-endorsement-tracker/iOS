@@ -41,7 +41,7 @@ class Server {
         }
     }
     
-    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v0")
+    let baseURL = URL(string: "https://endrsd-api.herokuapp.com/api/v1")
     
     
     func loginWith(user: CurrentUser, completion: @escaping (Error?)->Void) {
@@ -77,6 +77,7 @@ class Server {
             do {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
                 UserDefaults.standard.set(self.bearer?.token, forKey: "token")
+                UserDefaults.standard.set(self.bearer?.userId, forKey: "id")
                 completion(nil)
             } catch {
                 completion(error)
@@ -122,6 +123,9 @@ class Server {
             do {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
                 UserDefaults.standard.set(self.bearer?.token, forKey: "token")
+                UserDefaults.standard.set(self.bearer?.userId, forKey: "id")
+                UserDefaults.standard.set(firstName, forKey: "fistName")
+                UserDefaults.standard.set(email, forKey: "email")
                 completion(nil)
             } catch {
                 completion(error)
@@ -248,6 +252,35 @@ class Server {
             }
         }
     }
+    
+    func fetchUser(withId id: String, withUserId userId: Int, completion: @escaping (CurrentUser?, Error?)->Void) {
         
+        let userURL = baseURL!.appendingPathComponent("users/\(userId)")
+        print(userURL)
+        var request = URLRequest(url: userURL)
+        request.httpMethod = HTTPMethods.get.rawValue
+        request.addValue("Bearer \(id)", forHTTPHeaderField: "Authorization")
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                completion(nil, error)
+            } else {
+                completion(nil, nil)
+            }
+            
+            guard let data = data else {
+                completion(nil, DataGetter.NetworkError.badData)
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            do {
+                let data = try decoder.decode(CurrentUser.self, from: data)
+                completion(data, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
     
 }

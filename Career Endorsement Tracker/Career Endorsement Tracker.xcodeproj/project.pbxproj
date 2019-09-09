@@ -18,7 +18,6 @@
 		375898522321BD2900363B60 /* BarlowCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 375898512321BD2900363B60 /* BarlowCondensed-Regular.ttf */; };
 		375898542321C0EE00363B60 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 375898532321C0EE00363B60 /* Lato-Regular.ttf */; };
 		377AB69323229B240040D7CD /* BarlowCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377AB69223229B240040D7CD /* BarlowCondensed-SemiBold.ttf */; };
-		570CE8E523143FC000077B72 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8E423143FC000077B72 /* HomeTableViewController.swift */; };
 		570CE8E723144E1700077B72 /* RequirementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8E623144E1600077B72 /* RequirementsTableViewCell.swift */; };
 		570CE8F92315CA5C00077B72 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8F82315CA5C00077B72 /* Server.swift */; };
 		570CE8FC2315CA7E00077B72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8FB2315CA7E00077B72 /* LoginViewController.swift */; };
@@ -62,6 +61,8 @@
 		FAA6DF2023107E1400B1DA7D /* CareerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA6DF1E23107E1400B1DA7D /* CareerModel.xcdatamodeld */; };
 		FAA6DF222310828500B1DA7D /* Tasks+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6DF212310828500B1DA7D /* Tasks+Convenience.swift */; };
 		FAA6DF2B2310831800B1DA7D /* TasksRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6DF2A2310831800B1DA7D /* TasksRepresentation.swift */; };
+		FAC48FC92326D123001CFC38 /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC48FC82326D123001CFC38 /* Emitter.swift */; };
+		FAC48FCB2326D15B001CFC38 /* HomeDetailView+Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC48FCA2326D15B001CFC38 /* HomeDetailView+Emitter.swift */; };
 		FACADFDE2316FEDE001BBE9C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACADFDD2316FEDE001BBE9C /* Extensions.swift */; };
 		FACADFE0231701A5001BBE9C /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACADFDF231701A5001BBE9C /* UserController.swift */; };
 		FACADFE523174587001BBE9C /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACADFE423174587001BBE9C /* Database.swift */; };
@@ -97,7 +98,6 @@
 		375898532321C0EE00363B60 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		377AB69223229B240040D7CD /* BarlowCondensed-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
 		525363B8898C98916DC833E7 /* Pods_Career_Endorsement_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Career_Endorsement_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		570CE8E423143FC000077B72 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		570CE8E623144E1600077B72 /* RequirementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementsTableViewCell.swift; sourceTree = "<group>"; };
 		570CE8F82315CA5C00077B72 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		570CE8FB2315CA7E00077B72 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +144,8 @@
 		FAA6DF1F23107E1400B1DA7D /* CareerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CareerModel.xcdatamodel; sourceTree = "<group>"; };
 		FAA6DF212310828500B1DA7D /* Tasks+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+Convenience.swift"; sourceTree = "<group>"; };
 		FAA6DF2A2310831800B1DA7D /* TasksRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksRepresentation.swift; sourceTree = "<group>"; };
+		FAC48FC82326D123001CFC38 /* Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
+		FAC48FCA2326D15B001CFC38 /* HomeDetailView+Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeDetailView+Emitter.swift"; sourceTree = "<group>"; };
 		FACADFDD2316FEDE001BBE9C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FACADFDF231701A5001BBE9C /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		FACADFE423174587001BBE9C /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
@@ -237,8 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				570CE9042315D4BE00077B72 /* HomeCollectionViewController.swift */,
-				570CE8E423143FC000077B72 /* HomeTableViewController.swift */,
 				57191C772320E81200542F37 /* HomeDetailTableViewController.swift */,
+				FAC48FCA2326D15B001CFC38 /* HomeDetailView+Emitter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -330,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				FA59354D2326C11F003621A8 /* BreakOutToRefreshView.swift */,
+				FAC48FC82326D123001CFC38 /* Emitter.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -543,9 +546,16 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -589,6 +599,7 @@
 				57191C782320E81200542F37 /* HomeDetailTableViewController.swift in Sources */,
 				FAA6DF222310828500B1DA7D /* Tasks+Convenience.swift in Sources */,
 				577EB1B12319BB4B00EDB960 /* TaskTracksController.swift in Sources */,
+				FAC48FC92326D123001CFC38 /* Emitter.swift in Sources */,
 				57191C7A2320EDD300542F37 /* HomeDetailTableViewCell.swift in Sources */,
 				570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */,
 				5784F9EB230729B600C11198 /* DataGetter.swift in Sources */,
@@ -612,10 +623,10 @@
 				FACADFDE2316FEDE001BBE9C /* Extensions.swift in Sources */,
 				577EB1AF2319B7CF00EDB960 /* TracksController.swift in Sources */,
 				FA593528232300C4003621A8 /* HomeViewController.swift in Sources */,
-				570CE8E523143FC000077B72 /* HomeTableViewController.swift in Sources */,
 				5784F9EF23072BFB00C11198 /* Config.swift in Sources */,
 				FA8AAD9223158EA300DA36A5 /* StepsRepresentation.swift in Sources */,
 				FA66A3A32319919C00980AB6 /* ResourcesController.swift in Sources */,
+				FAC48FCB2326D15B001CFC38 /* HomeDetailView+Emitter.swift in Sources */,
 				FAA6DF1D23107BDB00B1DA7D /* CoreDataStack.swift in Sources */,
 				570CE9092315D57700077B72 /* Task.swift in Sources */,
 				5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */,

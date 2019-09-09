@@ -14,6 +14,7 @@ class HomeDetailTableViewController: UITableViewController {
     
     // MARK: - Properties
     
+    private let emitt = Emitter()
     var server: Server?
     var id: Int?
     var steps: [Step] = []
@@ -49,6 +50,7 @@ class HomeDetailTableViewController: UITableViewController {
         updateViews()
         NotificationCenter.default.addObserver(self, selector: #selector(submitButtonPressed(notificaiton:)), name: .didSubmit, object: nil)
         setupRefresh()
+        startConfetti()
     }
     
     private func setupRefresh(){
@@ -66,6 +68,18 @@ class HomeDetailTableViewController: UITableViewController {
     }
     
     // MARK: - Methods
+    
+    private func startConfetti(){
+        emitt.emitter.emitterShape = CAEmitterLayerEmitterShape.line
+        emitt.emitter.emitterCells = generateEmitterCells()
+        emitt.emitter.emitterPosition = CGPoint(x: self.view.frame.size.width / 2, y: -10)
+        emitt.emitter.emitterSize = CGSize(width: self.view.frame.size.width, height: 2.0)
+        self.view.layer.addSublayer(emitt.emitter)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            self.emitt.endParticles()
+        }
+    }
     
     func fetchSingleRequirementFromServer() {
         let token = UserDefaults.standard.object(forKey: "token") as! String
@@ -90,6 +104,9 @@ class HomeDetailTableViewController: UITableViewController {
                 let requirement = array[0]
                 let progress = Float(requirement.progress)
                 let finalProgress = progress / 100
+                
+                if finalProgress == 1 {fullProgress()}
+                
                 DispatchQueue.main.async {
                     self.requirementProgessView.setProgress(finalProgress, animated: true)
                     self.tableView.reloadData()
@@ -98,6 +115,9 @@ class HomeDetailTableViewController: UITableViewController {
         }
     }
     
+    private func fullProgress(){
+        
+    }
     func updateViews() {
         guard let requirement = requirement else {
             print("no requirement")
@@ -184,5 +204,6 @@ extension HomeDetailTableViewController: BreakOutToRefreshDelegate {
     
     func refreshViewDidRefresh(_ refreshView: BreakOutToRefreshView) {
         // load stuff from the internet
+        print("Refreshed table view")
     }
 }

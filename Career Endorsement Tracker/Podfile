@@ -8,7 +8,5 @@ target 'Career Endorsement Tracker' do
 
 
 pod 'JGProgressHUD'
-pod 'FoldingCell'
-pod 'BreakOutToRefresh'
 
 end

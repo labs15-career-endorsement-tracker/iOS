@@ -8,11 +8,13 @@
 
 import UIKit
 import JGProgressHUD
+import UICircularProgressRing
 
 class HomeViewController: UIViewController {
 
     // MARK: - Outlets
     
+    @IBOutlet weak var progressBar: UICircularProgressRing!
     @IBOutlet weak var logoutBtn: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -72,12 +74,24 @@ class HomeViewController: UIViewController {
         let logo = UIImage(named: "logo")!
         let imageView = UIImageView(image: logo)
         self.navigationItem.titleView = imageView
-        guard let name = UserDefaults.standard.value(forKey: "firstName") as? String else {
-            print("No Name")
-            return
+        
+        //        progressBar.labelSize = 20
+        //        progressBar.safePercent = 10
+        //        progressBar.setProgress(to: 10.0, withAnimation: false)
+        //        progressBar.animate(toAngle: 90, duration: 2.5, completion: nil)
+        
+        //        progressBar.trackClr = UIColor.cyan
+        //        progressBar.progressClr = UIColor.purple
+        //        progressBar.setProgressWithAnimation(duration: 1.0, value: 0.60)
+        
+        progressBar.maxValue = 100
+        progressBar.style = .dashed(pattern: [1.0, 1.0])
+        progressBar.startProgress(to: 49, duration: 2.0) {
+            print("Done animating!")
         }
-        print(name)
-        userNameLabel.text = "Welcome, \(name)"
+        
+        guard let name = UserDefaults.standard.value(forKey: "firstName") as? String else {return print("No Name")}
+        userNameLabel.text = "Good evening, \(name)."
     }
     
     //MARK: Network Call

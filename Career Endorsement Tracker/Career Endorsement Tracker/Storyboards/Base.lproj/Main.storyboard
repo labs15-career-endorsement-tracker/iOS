@@ -264,26 +264,53 @@
                                     <outlet property="delegate" destination="30O-bI-pWV" id="tUY-gd-fal"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome, " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUq-KA-cNk">
-                                <rect key="frame" x="20" y="107" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good evening, Bob." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUq-KA-cNk">
+                                <rect key="frame" x="20" y="96" width="271.5" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0r-Ks-QJL">
-                                <rect key="frame" x="20" y="152" width="25" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="va7-YT-gy1" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
+                                <rect key="frame" x="282" y="96" width="112" height="98"/>
+                                <subviews>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0r-Ks-QJL">
+                                        <rect key="frame" x="43" y="38.5" width="26" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="2kM-Y0-1ZS"/>
+                                    <constraint firstItem="i0r-Ks-QJL" firstAttribute="centerX" secondItem="va7-YT-gy1" secondAttribute="centerX" id="5oP-Nv-zID"/>
+                                    <constraint firstItem="i0r-Ks-QJL" firstAttribute="centerY" secondItem="va7-YT-gy1" secondAttribute="centerY" id="FN5-Oi-L3q"/>
+                                    <constraint firstAttribute="width" secondItem="va7-YT-gy1" secondAttribute="height" multiplier="8:7" id="eyp-N2-XgS"/>
+                                    <constraint firstAttribute="width" constant="98" id="ye2-pf-Z9X"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Below are your requirements to be fully endorsed." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysy-zG-wht">
+                                <rect key="frame" x="20" y="139" width="272" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="272" id="fMS-kD-NLg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.062745098039215685" green="0.27843137254901962" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Cs-F4-K3a" firstAttribute="trailing" secondItem="va7-YT-gy1" secondAttribute="trailing" constant="20" id="4wk-QN-93v"/>
+                            <constraint firstItem="Ysy-zG-wht" firstAttribute="top" secondItem="SUq-KA-cNk" secondAttribute="bottom" constant="8" id="Mpa-NA-A60"/>
+                            <constraint firstItem="Ysy-zG-wht" firstAttribute="leading" secondItem="SUq-KA-cNk" secondAttribute="leading" id="PAQ-KH-7t5"/>
                             <constraint firstItem="gmj-lv-n0Q" firstAttribute="top" secondItem="Dvz-U8-VXb" secondAttribute="top" constant="202" id="YN8-wb-9Se"/>
                             <constraint firstAttribute="trailing" secondItem="gmj-lv-n0Q" secondAttribute="trailing" id="YU4-T8-yxO"/>
                             <constraint firstItem="gmj-lv-n0Q" firstAttribute="leading" secondItem="Dvz-U8-VXb" secondAttribute="leading" id="Yvw-bC-rA4"/>
+                            <constraint firstItem="gmj-lv-n0Q" firstAttribute="top" secondItem="va7-YT-gy1" secondAttribute="bottom" constant="8" id="atC-iC-get"/>
+                            <constraint firstItem="SUq-KA-cNk" firstAttribute="top" secondItem="6Cs-F4-K3a" secondAttribute="top" constant="8" id="daa-xI-R8W"/>
+                            <constraint firstItem="va7-YT-gy1" firstAttribute="top" secondItem="6Cs-F4-K3a" secondAttribute="top" constant="8" id="fkA-4l-iAS"/>
+                            <constraint firstItem="SUq-KA-cNk" firstAttribute="leading" secondItem="6Cs-F4-K3a" secondAttribute="leading" constant="20" id="tav-CG-pjR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Cs-F4-K3a"/>
                     </view>
@@ -298,6 +325,7 @@
                         <outlet property="collectionView" destination="gmj-lv-n0Q" id="BKF-fL-0FR"/>
                         <outlet property="logoutBtn" destination="FqQ-0X-NHv" id="gsH-cK-afP"/>
                         <outlet property="overallProgressLabel" destination="i0r-Ks-QJL" id="BQZ-wY-W0Q"/>
+                        <outlet property="progressBar" destination="va7-YT-gy1" id="cCD-oM-saP"/>
                         <outlet property="userNameLabel" destination="SUq-KA-cNk" id="cf6-zd-y4h"/>
                     </connections>
                 </viewController>

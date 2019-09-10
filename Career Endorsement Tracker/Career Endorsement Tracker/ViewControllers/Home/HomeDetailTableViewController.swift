@@ -59,12 +59,14 @@ class HomeDetailTableViewController: UITableViewController {
     // MARK: - Methods
     
     private func startConfetti(){
-        let currentWindow: UIWindow? = UIApplication.shared.keyWindow
         emitt.emitter.emitterShape = CAEmitterLayerEmitterShape.line
         emitt.emitter.emitterCells = generateEmitterCells()
         emitt.emitter.emitterPosition = CGPoint(x: self.view.frame.size.width / 2, y: -10)
         emitt.emitter.emitterSize = CGSize(width: self.view.frame.size.width, height: 2.0)
-        currentWindow?.layer.addSublayer(emitt.emitter)
+        DispatchQueue.main.async {
+            let currentWindow: UIWindow? = UIApplication.shared.keyWindow
+            currentWindow?.layer.addSublayer(self.emitt.emitter)
+        }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
             self.emitt.endParticles()

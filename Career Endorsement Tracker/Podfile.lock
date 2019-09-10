@@ -1,20 +1,16 @@
 PODS:
-  - FoldingCell (5.0.1)
   - JGProgressHUD (2.0.4)
 
 DEPENDENCIES:
-  - FoldingCell
   - JGProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - FoldingCell
     - JGProgressHUD
 
 SPEC CHECKSUMS:
-  FoldingCell: 9197b915a415af9e52a857964066797af6a51c2b
   JGProgressHUD: 62658b14e72cccf179efc7a13bcb54d30b92fc22
 
-PODFILE CHECKSUM: d773b617f3f6f3f7c8f32e63f5348c789bbb5ee0
+PODFILE CHECKSUM: a8ce5a90a8b34f0ebd8bf0b459d6bb652f8b38aa
 
 COCOAPODS: 1.6.0

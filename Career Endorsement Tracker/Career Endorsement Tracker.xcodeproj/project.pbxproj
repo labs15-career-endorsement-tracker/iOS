@@ -38,7 +38,7 @@
 		5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EC23072A1600C11198 /* CurrentUser.swift */; };
 		5784F9EF23072BFB00C11198 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EE23072BFB00C11198 /* Config.swift */; };
 		5784F9F123072D5600C11198 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5784F9F023072D5600C11198 /* Welcome.storyboard */; };
-		74DF655A169EFE6D13ECAA5E /* Pods_Career_Endorsement_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE5D500CFBE16143FE37EE6 /* Pods_Career_Endorsement_Tracker.framework */; };
+		8B1A47E6DB650A9E2097C2DF /* Pods_Career_Endorsement_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2655304858AE55A346C56459 /* Pods_Career_Endorsement_Tracker.framework */; };
 		FA593528232300C4003621A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA593527232300C4003621A8 /* HomeViewController.swift */; };
 		FA66A39F23187B1C00980AB6 /* UserStepsCompletedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A39E23187B1C00980AB6 /* UserStepsCompletedController.swift */; };
 		FA66A3A123198ECC00980AB6 /* StepsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A3A023198ECC00980AB6 /* StepsController.swift */; };
@@ -78,6 +78,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2655304858AE55A346C56459 /* Pods_Career_Endorsement_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Career_Endorsement_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3738EC5123061D800083158B /* Career Endorsement Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Career Endorsement Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3738EC5423061D800083158B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		3738EC5923061D800083158B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		375898512321BD2900363B60 /* BarlowCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		375898532321C0EE00363B60 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		377AB69223229B240040D7CD /* BarlowCondensed-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
+		46891488FCF47545042B550E /* Pods-Career Endorsement Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		570CE8E623144E1600077B72 /* RequirementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementsTableViewCell.swift; sourceTree = "<group>"; };
 		570CE8F82315CA5C00077B72 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		570CE8FB2315CA7E00077B72 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -111,9 +113,7 @@
 		5784F9EC23072A1600C11198 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		5784F9EE23072BFB00C11198 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		5784F9F023072D5600C11198 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
-		7EE5D500CFBE16143FE37EE6 /* Pods_Career_Endorsement_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Career_Endorsement_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		865BC61A493A4294CAF51743 /* Pods-Career Endorsement Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.release.xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.release.xcconfig"; sourceTree = "<group>"; };
-		E963E30135753B1A24D62AAB /* Pods-Career Endorsement Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		DE9D2FE32DC9894DA89D6827 /* Pods-Career Endorsement Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.release.xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		FA593527232300C4003621A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA5D9B15230F181B00DC9BC1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FA5D9B17230F181B00DC9BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74DF655A169EFE6D13ECAA5E /* Pods_Career_Endorsement_Tracker.framework in Frameworks */,
+				8B1A47E6DB650A9E2097C2DF /* Pods_Career_Endorsement_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,18 +158,10 @@
 		0D45AFB23C58BBE35B56D597 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E963E30135753B1A24D62AAB /* Pods-Career Endorsement Tracker.debug.xcconfig */,
-				865BC61A493A4294CAF51743 /* Pods-Career Endorsement Tracker.release.xcconfig */,
+				46891488FCF47545042B550E /* Pods-Career Endorsement Tracker.debug.xcconfig */,
+				DE9D2FE32DC9894DA89D6827 /* Pods-Career Endorsement Tracker.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		27195D97E97DEBE9116BCD1A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7EE5D500CFBE16143FE37EE6 /* Pods_Career_Endorsement_Tracker.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3738EC4823061D800083158B = {
@@ -180,7 +172,7 @@
 				FA5D9B14230F181B00DC9BC1 /* OneSignalNotificationServiceExtension */,
 				3738EC5223061D800083158B /* Products */,
 				0D45AFB23C58BBE35B56D597 /* Pods */,
-				27195D97E97DEBE9116BCD1A /* Frameworks */,
+				D44B776914366964B1B76E31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,6 +194,7 @@
 				5784F9E1230728E900C11198 /* Models */,
 				FAA6DF1B23107B3300B1DA7D /* Core Data */,
 				5784F9E4230728FF00C11198 /* Networking  */,
+				FABFB81123273AD600B4647E /* Misc */,
 				5784F9E3230728F800C11198 /* ViewControllers */,
 			);
 			path = "Career Endorsement Tracker";
@@ -312,6 +305,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		D44B776914366964B1B76E31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2655304858AE55A346C56459 /* Pods_Career_Endorsement_Tracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA5D9B14230F181B00DC9BC1 /* OneSignalNotificationServiceExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +409,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		FABFB81123273AD600B4647E /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		FACADFE323174573001BBE9C /* Database Mapping */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,12 +431,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3738EC6323061D830083158B /* Build configuration list for PBXNativeTarget "Career Endorsement Tracker" */;
 			buildPhases = (
-				8CD0E4DD5CDF825DD91FB540 /* [CP] Check Pods Manifest.lock */,
+				2664F8A2B5050309919D7F61 /* [CP] Check Pods Manifest.lock */,
 				3738EC4D23061D800083158B /* Sources */,
 				3738EC4E23061D800083158B /* Frameworks */,
 				3738EC4F23061D800083158B /* Resources */,
 				FA5D9B1E230F181B00DC9BC1 /* Embed App Extensions */,
-				114BE6B76BC7AA530D46E631 /* [CP] Embed Pods Frameworks */,
+				0C08775F19CB87F32160FCF5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -504,24 +512,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		114BE6B76BC7AA530D46E631 /* [CP] Embed Pods Frameworks */ = {
+		0C08775F19CB87F32160FCF5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8CD0E4DD5CDF825DD91FB540 /* [CP] Check Pods Manifest.lock */ = {
+		2664F8A2B5050309919D7F61 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -737,13 +750,13 @@
 		};
 		3738EC6423061D830083158B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E963E30135753B1A24D62AAB /* Pods-Career Endorsement Tracker.debug.xcconfig */;
+			baseConfigurationReference = 46891488FCF47545042B550E /* Pods-Career Endorsement Tracker.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Career Endorsement Tracker/Career Endorsement Tracker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = "Career Endorsement Tracker/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -758,13 +771,13 @@
 		};
 		3738EC6523061D830083158B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 865BC61A493A4294CAF51743 /* Pods-Career Endorsement Tracker.release.xcconfig */;
+			baseConfigurationReference = DE9D2FE32DC9894DA89D6827 /* Pods-Career Endorsement Tracker.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Career Endorsement Tracker/Career Endorsement Tracker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = "Career Endorsement Tracker/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 import JGProgressHUD
 
+extension Notification.Name {
+    static let didSubmit = Notification.Name("didSubmit")
+}
+
 class HomeDetailTableViewController: UITableViewController {
     
     @IBOutlet weak var requirementProgessView: UIProgressView!

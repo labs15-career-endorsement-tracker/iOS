@@ -18,6 +18,7 @@ class HomeDetailTableViewController: UITableViewController {
     
     // MARK: - Properties
     
+    let emitt = Emitter()
     var server: Server?
     var id: Int?
     var steps: [Step] = []

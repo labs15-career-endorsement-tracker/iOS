@@ -38,7 +38,7 @@
 		5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EC23072A1600C11198 /* CurrentUser.swift */; };
 		5784F9EF23072BFB00C11198 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EE23072BFB00C11198 /* Config.swift */; };
 		5784F9F123072D5600C11198 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5784F9F023072D5600C11198 /* Welcome.storyboard */; };
-		C23555C58DF757ADFCAC29B0 /* Pods_Career_Endorsement_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16A2C694A4F55B2F84BEACC /* Pods_Career_Endorsement_Tracker.framework */; };
+		74DF655A169EFE6D13ECAA5E /* Pods_Career_Endorsement_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE5D500CFBE16143FE37EE6 /* Pods_Career_Endorsement_Tracker.framework */; };
 		FA593528232300C4003621A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA593527232300C4003621A8 /* HomeViewController.swift */; };
 		FA66A39F23187B1C00980AB6 /* UserStepsCompletedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A39E23187B1C00980AB6 /* UserStepsCompletedController.swift */; };
 		FA66A3A123198ECC00980AB6 /* StepsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A3A023198ECC00980AB6 /* StepsController.swift */; };
@@ -111,9 +111,9 @@
 		5784F9EC23072A1600C11198 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		5784F9EE23072BFB00C11198 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		5784F9F023072D5600C11198 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
-		A16A2C694A4F55B2F84BEACC /* Pods_Career_Endorsement_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Career_Endorsement_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA3180B42150088BF535A9D8 /* Pods-Career Endorsement Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.release.xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.release.xcconfig"; sourceTree = "<group>"; };
-		BF19141FFFADA7483E90C29F /* Pods-Career Endorsement Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		7EE5D500CFBE16143FE37EE6 /* Pods_Career_Endorsement_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Career_Endorsement_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		865BC61A493A4294CAF51743 /* Pods-Career Endorsement Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.release.xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		E963E30135753B1A24D62AAB /* Pods-Career Endorsement Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		FA593527232300C4003621A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA5D9B15230F181B00DC9BC1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FA5D9B17230F181B00DC9BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C23555C58DF757ADFCAC29B0 /* Pods_Career_Endorsement_Tracker.framework in Frameworks */,
+				74DF655A169EFE6D13ECAA5E /* Pods_Career_Endorsement_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,10 +158,18 @@
 		0D45AFB23C58BBE35B56D597 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BF19141FFFADA7483E90C29F /* Pods-Career Endorsement Tracker.debug.xcconfig */,
-				BA3180B42150088BF535A9D8 /* Pods-Career Endorsement Tracker.release.xcconfig */,
+				E963E30135753B1A24D62AAB /* Pods-Career Endorsement Tracker.debug.xcconfig */,
+				865BC61A493A4294CAF51743 /* Pods-Career Endorsement Tracker.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		27195D97E97DEBE9116BCD1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EE5D500CFBE16143FE37EE6 /* Pods_Career_Endorsement_Tracker.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3738EC4823061D800083158B = {
@@ -172,7 +180,7 @@
 				FA5D9B14230F181B00DC9BC1 /* OneSignalNotificationServiceExtension */,
 				3738EC5223061D800083158B /* Products */,
 				0D45AFB23C58BBE35B56D597 /* Pods */,
-				E066CA9C2E048584B36CA38D /* Frameworks */,
+				27195D97E97DEBE9116BCD1A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -304,14 +312,6 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		E066CA9C2E048584B36CA38D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A16A2C694A4F55B2F84BEACC /* Pods_Career_Endorsement_Tracker.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		FA5D9B14230F181B00DC9BC1 /* OneSignalNotificationServiceExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,12 +423,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3738EC6323061D830083158B /* Build configuration list for PBXNativeTarget "Career Endorsement Tracker" */;
 			buildPhases = (
-				85EE036FE900E32AD2DEB6FF /* [CP] Check Pods Manifest.lock */,
+				8CD0E4DD5CDF825DD91FB540 /* [CP] Check Pods Manifest.lock */,
 				3738EC4D23061D800083158B /* Sources */,
 				3738EC4E23061D800083158B /* Frameworks */,
 				3738EC4F23061D800083158B /* Resources */,
 				FA5D9B1E230F181B00DC9BC1 /* Embed App Extensions */,
-				4AD3C0CB4897E0126FFBFFDC /* [CP] Embed Pods Frameworks */,
+				114BE6B76BC7AA530D46E631 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -504,7 +504,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4AD3C0CB4897E0126FFBFFDC /* [CP] Embed Pods Frameworks */ = {
+		114BE6B76BC7AA530D46E631 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -521,7 +521,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		85EE036FE900E32AD2DEB6FF /* [CP] Check Pods Manifest.lock */ = {
+		8CD0E4DD5CDF825DD91FB540 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -737,7 +737,7 @@
 		};
 		3738EC6423061D830083158B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF19141FFFADA7483E90C29F /* Pods-Career Endorsement Tracker.debug.xcconfig */;
+			baseConfigurationReference = E963E30135753B1A24D62AAB /* Pods-Career Endorsement Tracker.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -758,7 +758,7 @@
 		};
 		3738EC6523061D830083158B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA3180B42150088BF535A9D8 /* Pods-Career Endorsement Tracker.release.xcconfig */;
+			baseConfigurationReference = 865BC61A493A4294CAF51743 /* Pods-Career Endorsement Tracker.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

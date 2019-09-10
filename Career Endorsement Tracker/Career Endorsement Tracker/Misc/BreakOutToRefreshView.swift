@@ -105,7 +105,7 @@ open class BreakOutToRefreshView: SKView {
         isRefreshing = true
         
         presentScene(breakOutScene, transition: .doorsOpenVertical(withDuration: 0.4))
-        breakOutScene.updateLabel("Loading...")
+        breakOutScene.updateLabel("ENDRSD...")
         
         if self.scrollView.contentOffset.y < -60 {
             self.breakOutScene.reset()
@@ -239,7 +239,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
         createLoadingLabelNode()
         
         let paddle = createPaddle()
-        paddle.position = CGPoint(x: frame.size.width-30.0, y: frame.midY)
+        paddle.position = CGPoint(x: frame.size.width-40.0, y: frame.midY)
         addChild(paddle)
         
         createBall()
@@ -248,7 +248,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func createPaddle() -> SKSpriteNode {
-        let paddle = SKSpriteNode(color: paddleColor, size: CGSize(width: 5, height: 30))
+        let paddle = SKSpriteNode(color: paddleColor, size: CGSize(width: 5, height: 40))
         
         paddle.physicsBody = SKPhysicsBody(rectangleOf: paddle.size)
         paddle.physicsBody?.isDynamic = false
@@ -298,7 +298,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
         let ball = SKSpriteNode(color: ballColor, size: CGSize(width: 8, height: 8))
         
         
-        ball.position = CGPoint(x: frame.size.width - 30.0 - ball.size.width, y: frame.height*CGFloat(arc4random())/CGFloat(UINT32_MAX))
+        ball.position = CGPoint(x: frame.size.width - 40.0 - ball.size.width, y: frame.height*CGFloat(arc4random())/CGFloat(UINT32_MAX)) //30
         ball.name = ballName
         
         ball.physicsBody = SKPhysicsBody(circleOfRadius: ceil(ball.size.width/2.0))
@@ -321,7 +321,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func createLoadingLabelNode() {
-        let loadingLabelNode = SKLabelNode(text: "Loading...")
+        let loadingLabelNode = SKLabelNode(text: "ENDRSD...")
         loadingLabelNode.fontColor = textColor
         loadingLabelNode.fontSize = 20
         loadingLabelNode.position = CGPoint(x: frame.midX, y: frame.midY)
@@ -417,7 +417,7 @@ class StartScene: SKScene {
     }
     
     lazy var startLabelNode: SKLabelNode = {
-        let startNode = SKLabelNode(text: "Pull to Break Out!")
+        let startNode = SKLabelNode(text: "Pull to play Lambda Pong!") //Break Out
         startNode.fontColor = self.textColor
         startNode.fontSize = 20
         startNode.position = CGPoint(x: self.frame.midX, y: self.frame.midY)

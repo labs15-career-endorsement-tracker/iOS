@@ -69,8 +69,19 @@ class HomeViewController: UIViewController {
     // MARK: - Helper Method
     
     func updateViews() {
-        let logo = UIImage(named: "logo")!
+        guard let logo = UIImage(named: "logo-color") else {
+            // TODO: - Handle this error somehow
+            print("Error: Missing 'logo-color' image file!")
+            return
+        }
+        
         let imageView = UIImageView(image: logo)
+        
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.widthAnchor.constraint(equalToConstant: 144).isActive = true
+        imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 1.0/5.914).isActive = true
+        
+        
         self.navigationItem.titleView = imageView
         guard let name = UserDefaults.standard.value(forKey: "firstName") as? String else {
             print("No Name")

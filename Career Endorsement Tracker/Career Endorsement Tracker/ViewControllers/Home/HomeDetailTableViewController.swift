@@ -66,7 +66,7 @@ class HomeDetailTableViewController: UITableViewController {
         emitt.emitter.emitterSize = CGSize(width: self.view.frame.size.width, height: 2.0)
         self.view.layer.addSublayer(emitt.emitter)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
             self.emitt.endParticles()
         }
     }
@@ -121,6 +121,7 @@ class HomeDetailTableViewController: UITableViewController {
     
     private func fullProgress(){
         print("User has completed requirements")
+        //startConfetti()
     }
     
     func updateViews() {

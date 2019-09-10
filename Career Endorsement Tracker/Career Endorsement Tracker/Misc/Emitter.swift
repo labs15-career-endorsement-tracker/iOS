@@ -56,13 +56,13 @@ class Emitter {
             
             let cell = CAEmitterCell()
             
-            cell.birthRate = 4.0
+            cell.birthRate = 14.0
             cell.lifetime = 14.0 //14.0
             cell.lifetimeRange = 0
             cell.velocity = CGFloat(getRandomVelocity())
             cell.velocityRange = 0
             cell.emissionLongitude = CGFloat(Double.pi)
-            cell.emissionRange = 0.8 //5
+            cell.emissionRange = 0.8
             cell.spin = 3.5
             cell.spinRange = 0
             cell.color = getNextColor(i: index)

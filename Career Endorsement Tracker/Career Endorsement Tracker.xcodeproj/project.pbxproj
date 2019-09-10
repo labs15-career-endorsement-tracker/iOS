@@ -200,6 +200,8 @@
 				5784F9E1230728E900C11198 /* Models */,
 				FAA6DF1B23107B3300B1DA7D /* Core Data */,
 				5784F9E4230728FF00C11198 /* Networking  */,
+				FABFB820232740A500B4647E /* Misc */,
+				FABFB821232740B400B4647E /* Views */,
 				5784F9E3230728F800C11198 /* ViewControllers */,
 			);
 			path = "Career Endorsement Tracker";
@@ -215,7 +217,7 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		570CE8FA2315CA6E00077B72 /* Welcome */ = {
+		570CE8FA2315CA6E00077B72 /* Signin */ = {
 			isa = PBXGroup;
 			children = (
 				570CE9102315F32200077B72 /* WelcomeNavigationController.swift */,
@@ -223,7 +225,7 @@
 				570CE8FB2315CA7E00077B72 /* LoginViewController.swift */,
 				570CE8FF2315CA9700077B72 /* SignUpViewController.swift */,
 			);
-			path = Welcome;
+			path = Signin;
 			sourceTree = "<group>";
 		};
 		570CE9032315D4AA00077B72 /* Home */ = {
@@ -231,9 +233,7 @@
 			children = (
 				FA593527232300C4003621A8 /* HomeViewController.swift */,
 				FABFB81E23273CB800B4647E /* HomeDetailView+Emitter.swift */,
-				570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */,
 				57191C772320E81200542F37 /* HomeDetailTableViewController.swift */,
-				57191C792320EDD300542F37 /* HomeDetailTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -261,10 +261,8 @@
 		5784F9E3230728F800C11198 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FABFB81A23273C2E00B4647E /* Emitter.swift */,
-				FABFB81C23273C6800B4647E /* BreakOutToRefreshView.swift */,
 				570CE9032315D4AA00077B72 /* Home */,
-				570CE8FA2315CA6E00077B72 /* Welcome */,
+				570CE8FA2315CA6E00077B72 /* Signin */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -415,6 +413,24 @@
 				FA66A3A22319919C00980AB6 /* ResourcesController.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		FABFB820232740A500B4647E /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				FABFB81A23273C2E00B4647E /* Emitter.swift */,
+				FABFB81C23273C6800B4647E /* BreakOutToRefreshView.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		FABFB821232740B400B4647E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				57191C792320EDD300542F37 /* HomeDetailTableViewCell.swift */,
+				570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FACADFE323174573001BBE9C /* Database Mapping */ = {

@@ -18,7 +18,7 @@ extension HomeDetailTableViewController {
             
             let cell = CAEmitterCell()
             
-            cell.birthRate = 4.0
+            cell.birthRate = 8.0
             cell.lifetime = 14.0 //14.0
             cell.lifetimeRange = 0
             cell.velocity = CGFloat(getRandomVelocity())

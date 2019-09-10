@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class LoginViewContoller: UIViewController {
+class LoginViewContoller: UIViewController, UITextFieldDelegate {
     
     // MARK: - Instances
     
@@ -30,6 +30,7 @@ class LoginViewContoller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
+        passwordTextField.delegate = self
     }
     
     // MARK: - Methods
@@ -75,6 +76,12 @@ class LoginViewContoller: UIViewController {
         emailTextField.underlined(color: #colorLiteral(red: 0.1592672765, green: 0.432379216, blue: 0.4243381619, alpha: 1))
         //Password TF
         passwordTextField.underlined(color: #colorLiteral(red: 0.737254902, green: 0.1960784314, blue: 0.2, alpha: 1))
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        login()
+        return true
     }
     
 }

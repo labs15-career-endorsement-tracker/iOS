@@ -1,16 +1,20 @@
 PODS:
   - JGProgressHUD (2.0.4)
+  - UICircularProgressRing (6.2.1)
 
 DEPENDENCIES:
   - JGProgressHUD
+  - UICircularProgressRing
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - JGProgressHUD
+    - UICircularProgressRing
 
 SPEC CHECKSUMS:
   JGProgressHUD: 62658b14e72cccf179efc7a13bcb54d30b92fc22
+  UICircularProgressRing: b52543c79dbd89844e13f0053e3f565b7d7efc5c
 
-PODFILE CHECKSUM: a8ce5a90a8b34f0ebd8bf0b459d6bb652f8b38aa
+PODFILE CHECKSUM: 1834854c77a76f785c2b259fed3e133337134112
 
 COCOAPODS: 1.7.5

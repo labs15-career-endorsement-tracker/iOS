@@ -8,11 +8,13 @@
 
 import UIKit
 import JGProgressHUD
+import UICircularProgressRing
 
 class HomeViewController: UIViewController {
 
     // MARK: - Outlets
     
+    @IBOutlet weak var progressBar: UICircularProgressRing!
     @IBOutlet weak var logoutBtn: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -83,12 +85,27 @@ class HomeViewController: UIViewController {
         
         
         self.navigationItem.titleView = imageView
-        guard let name = UserDefaults.standard.value(forKey: "firstName") as? String else {
-            print("No Name")
-            return
+        
+        progressBar.maxValue = 100
+        progressBar.style = .dashed(pattern: [1.0, 1.0])
+
+        guard let name = UserDefaults.standard.value(forKey: "firstName") as? String else {return print("No Name")}
+        userNameLabel.text = "Good evening, \(name)."
+    }
+    
+    private func updateProgress(progress: Int){
+        //        progressBar.labelSize = 20
+        //        progressBar.safePercent = 10
+        //        progressBar.setProgress(to: 10.0, withAnimation: false)
+        //        progressBar.animate(toAngle: 90, duration: 2.5, completion: nil)
+        
+        //        progressBar.trackClr = UIColor.cyan
+        //        progressBar.progressClr = UIColor.purple
+        //        progressBar.setProgressWithAnimation(duration: 1.0, value: 0.60)
+        
+        progressBar.startProgress(to: CGFloat(progress), duration: 2.0) {
+            print("Done animating!")
         }
-        print(name)
-        userNameLabel.text = "Welcome, \(name)"
     }
     
     //MARK: Network Call
@@ -136,9 +153,10 @@ class HomeViewController: UIViewController {
                 self.currentUser = currentUser
                 DispatchQueue.main.async {
                     self.hud.dismiss(animated: true)
+                    self.updateProgress(progress: currentUser.progress)
                     self.overallProgressLabel.text = "\(currentUser.progress)%"
-                    if self.userNameLabel.text == "Welcome, " {
-                        self.userNameLabel.text = "Welcome, \(currentUser.first_name)"
+                    if self.userNameLabel.text == "Good evening, Bob." {
+                        self.userNameLabel.text = "Good evening, \(currentUser.first_name)."
                     }
                 }
             }

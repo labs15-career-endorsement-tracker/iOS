@@ -8,6 +8,6 @@ target 'Career Endorsement Tracker' do
 
 
 pod 'JGProgressHUD'
-
+pod 'UICircularProgressRing'
 
 end

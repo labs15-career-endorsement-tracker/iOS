@@ -16,18 +16,34 @@ extension Notification.Name {
 
 class HomeDetailTableViewController: UITableViewController {
     
-    @IBOutlet weak var requirementProgessView: UIProgressView!
+    // MARK: - Properties
     
     var server: Server?
     var id: Int?
     var steps: [Step] = []
     var requirement: Requirement?
     
+    
     let hud: JGProgressHUD = {
         let hud = JGProgressHUD(style: .light)
         hud.interactionType = .blockAllTouches
         return hud
     }()
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var requirementProgessView: UIProgressView!
+    
+    // MARK: - Actions
+    
+    @objc func submitButtonPressed(notificaiton: Notification) {
+        //handles logic for submit button pressed
+        fetchStepsFromServer()
+        fetchSingleRequirementFromServer()
+        updateViews()
+    }
+    
+    // MARK: - VC Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,11 +54,18 @@ class HomeDetailTableViewController: UITableViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(submitButtonPressed(notificaiton:)), name: .didSubmit, object: nil)
     }
     
-    @objc func submitButtonPressed(notificaiton: Notification) {
-        //handles logic for submit button pressed
-        fetchStepsFromServer()
-        fetchSingleRequirementFromServer()
-        updateViews()
+    // MARK: - Methods
+    
+    private func startConfetti(){
+        emitt.emitter.emitterShape = CAEmitterLayerEmitterShape.line
+        emitt.emitter.emitterCells = generateEmitterCells()
+        emitt.emitter.emitterPosition = CGPoint(x: self.view.frame.size.width / 2, y: -10)
+        emitt.emitter.emitterSize = CGSize(width: self.view.frame.size.width, height: 2.0)
+        self.view.layer.addSublayer(emitt.emitter)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            self.emitt.endParticles()
+        }
     }
     
     func fetchSingleRequirementFromServer() {
@@ -87,26 +110,6 @@ class HomeDetailTableViewController: UITableViewController {
         requirementProgessView.setProgress(finalProgress, animated: true)
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return steps.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StepCell", for: indexPath) as? HomeDetailTableViewCell else {
-            return UITableViewCell()
-        }
-    
-        let step = steps[indexPath.row]
-        cell.server = server
-        cell.step = step
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 144
-    }
-    
-    
     func fetchStepsFromServer() {
         let token = UserDefaults.standard.object(forKey: "token") as! String
         guard let server = server else {
@@ -137,4 +140,28 @@ class HomeDetailTableViewController: UITableViewController {
         }
     }
     
+}
+
+extension HomeDetailTableViewController {
+
+    // MARK: - Tableview
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return steps.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StepCell", for: indexPath) as? HomeDetailTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        let step = steps[indexPath.row]
+        cell.server = server
+        cell.step = step
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 144
+    }
 }

@@ -13,9 +13,6 @@
         <array key="BarlowCondensed-SemiBold.ttf">
             <string>BarlowCondensed-SemiBold</string>
         </array>
-        <array key="Lato-Regular.ttf">
-            <string>Lato-Regular</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Home-->
@@ -122,63 +119,6 @@
                                 <constraint firstItem="FwA-zS-zI0" firstAttribute="centerX" secondItem="Xwq-ea-edW" secondAttribute="centerX" id="qLN-L1-QAJ"/>
                             </constraints>
                         </view>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="StepCell" rowHeight="140" id="wqG-QP-K7L" customClass="HomeDetailTableViewCell" customModule="Career_Endorsement_Tracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="98" width="414" height="140"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wqG-QP-K7L" id="xDF-UU-lDY">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="139.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9k-fg-oNe">
-                                            <rect key="frame" x="20" y="60" width="20" height="20"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="DoF-8H-gra"/>
-                                                <constraint firstAttribute="width" constant="20" id="omy-fG-vGB"/>
-                                            </constraints>
-                                            <state key="normal" image="uncheckedBox">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="submitCompletionButtonPressed:" destination="wqG-QP-K7L" eventType="touchUpInside" id="IfX-cY-KpK"/>
-                                            </connections>
-                                        </button>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PGa-g2-b1o">
-                                            <rect key="frame" x="48" y="24.5" width="338" height="90.5"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="90.5" id="FF7-t2-cMs"/>
-                                            </constraints>
-                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                            <color key="textColor" red="0.062745098039215685" green="0.27843137254901962" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEl-oD-oCp">
-                                            <rect key="frame" x="18.5" y="59.5" width="23" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="PEl-oD-oCp" firstAttribute="centerY" secondItem="J9k-fg-oNe" secondAttribute="centerY" id="6Bc-49-vy5"/>
-                                        <constraint firstItem="J9k-fg-oNe" firstAttribute="centerY" secondItem="xDF-UU-lDY" secondAttribute="centerY" id="Gfp-pi-Jwk"/>
-                                        <constraint firstItem="PEl-oD-oCp" firstAttribute="centerX" secondItem="J9k-fg-oNe" secondAttribute="centerX" id="J8K-T8-XIG"/>
-                                        <constraint firstItem="PGa-g2-b1o" firstAttribute="leading" secondItem="J9k-fg-oNe" secondAttribute="trailing" constant="8" id="KdH-9p-I9m"/>
-                                        <constraint firstItem="PGa-g2-b1o" firstAttribute="centerY" secondItem="xDF-UU-lDY" secondAttribute="centerY" id="Ktr-iC-97C"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="PGa-g2-b1o" secondAttribute="trailing" constant="8" id="kFg-7l-9Rp"/>
-                                        <constraint firstItem="PGa-g2-b1o" firstAttribute="leading" secondItem="J9k-fg-oNe" secondAttribute="trailing" constant="8" id="voh-cR-C6j"/>
-                                        <constraint firstItem="J9k-fg-oNe" firstAttribute="leading" secondItem="xDF-UU-lDY" secondAttribute="leadingMargin" id="zNh-3N-RK9"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.91280847789999997" green="0.92954796549999996" blue="0.94384670260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <outlet property="checkLbl" destination="PEl-oD-oCp" id="F3q-Kj-9HG"/>
-                                    <outlet property="stepTextView" destination="PGa-g2-b1o" id="olK-w6-zgX"/>
-                                    <outlet property="submitCompletionButton" destination="J9k-fg-oNe" id="7bU-i5-WC7"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="m2x-Eg-KsC" id="UFU-bX-v5v"/>
                             <outlet property="delegate" destination="m2x-Eg-KsC" id="n1E-Nc-IOz"/>
@@ -377,9 +317,8 @@
     <resources>
         <image name="circles" width="249" height="136"/>
         <image name="to-do-list (2)" width="32" height="32"/>
-        <image name="uncheckedBox" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LX5-k9-VJ4"/>
+        <segue reference="15u-ma-DcC"/>
     </inferredMetricsTieBreakers>
 </document>

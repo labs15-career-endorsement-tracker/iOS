@@ -83,3 +83,6 @@ iOSInjectionProject/
 
 # macOS stuff
 .DS_Store
+
+# VScode settings
+.vscode/

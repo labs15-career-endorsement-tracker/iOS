@@ -4,9 +4,9 @@
 
 # The 'ENDRSD' iOS App
 
-[![Swift Version][https://img.shields.io/badge/swift-3.0-orange.svg]][https://swift.org/]
-[![Build Status][https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square]][https://travis-ci.org/dbader/node-datadog-metrics]
-[![License][https://img.shields.io/badge/license-mit-blue.svg]][license]
+[![Swift Version][swift-image]][swift-url]
+[![Build Status][travis-image]][travis-url]
+[![License][license-image]][license-url]
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)  
 [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
@@ -178,3 +178,18 @@ Remember that this project is licensed under the MIT license, and by submitting 
 ### Attribution
 
 These contribution guidelines have been adapted from [this good-Contributing.md-template](https://gist.github.com/PurpleBooth/b24679402957c63ec426).
+
+## Meta
+
+Distributed under the XYZ license. See `LICENSE` for more information.
+
+[https://github.com/labs15-career-endorsement-tracker/iOS](https://github.com/labs15-career-endorsement-tracker/iOS)
+
+[swift-image]: https://img.shields.io/badge/swift-3.0-orange.svg
+[swift-url]: https://swift.org/
+[license-image]: https://img.shields.io/badge/License-MIT-blue.svg
+[license-url]: LICENSE
+[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
+[codebeat-image]: https://codebeat.co/badges/c19b47ea-2f9d-45df-8458-b2d952fe9dad
+[codebeat-url]: https://codebeat.co/projects/github-com-vsouza-awesomeios-com

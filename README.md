@@ -43,7 +43,7 @@ Demo the app by downloading it from TestFlight.
 
 [ENDRSD Trello Board](https://trello.com/b/hKTAKrBD/endrsd)
 
-<p align="center">
+<p>
     <a href="https://trello.com/b/hKTAKrBD/endrsd">
         <img src="https://res.cloudinary.com/endrsd/image/upload/v1568019708/endrsd_trello_jg6kdd.png" alt="ENDRSD Trello Board" width="500">
     </a>
@@ -51,7 +51,7 @@ Demo the app by downloading it from TestFlight.
 
 [ENDRSD Release Canvas v1.0](https://www.notion.so/ENDRSD-v1-0-3e87edcf085e45dc993422f0668e0842)
 
-<p align="center">
+<p>
     <a href="https://www.notion.so/ENDRSD-v1-0-3e87edcf085e45dc993422f0668e0842">
         <img src="https://res.cloudinary.com/endrsd/image/upload/v1568019704/release_canvas_1_sm4hdq.png" alt="ENDRSD Notion document release canvas v1.0" width="500">
     </a>
@@ -59,7 +59,7 @@ Demo the app by downloading it from TestFlight.
 
 [UX Design files](https://www.figma.com/file/ZiMbxLkmEXaZQBB8BMoEAg/web_release-v1?node-id=253%3A220)
 
-<p align="center">
+<p>
     <a href="https://www.figma.com/file/ZiMbxLkmEXaZQBB8BMoEAg/web_release-v1?node-id=253%3A220">
         <img src="https://res.cloudinary.com/endrsd/image/upload/v1568180387/ios_mockup_iju8ud.png" alt="Figma design mockups for iOS" width="500">
     </a>

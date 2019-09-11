@@ -35,22 +35,35 @@ Demo the app by downloading it from TestFlight.
 |                                                                                         [Alex Mata](https://github.com/alexander-frost)                                                                                         |                                                                                      [Sameera Roussi](https://github.com/sameeraleola)                                                                                       |                                                                                        [Victor Ruiz](https://github.com/vicxruiz)                                                                                        |
 | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [<img src="https://media.licdn.com/dms/image/C5603AQHRbpDk-q8wRQ/profile-displayphoto-shrink_800_800/0?e=1571270400&v=beta&t=XbAXxDFqp9HpJcXDp0YdgiuPXrFp7667PY8pg8lOKuA" width = "120" />](https://github.com/alexander-frost) | [<img src="https://media.licdn.com/dms/image/C4E03AQHYAtIXaf1z4Q/profile-displayphoto-shrink_800_800/0?e=1571270400&v=beta&t=HHc-X-kcoeFuu1MTYQHGde9M3aa1WJEVOk-98OfAhEs" width = "120" />](https://github.com/sameeraleola) | [<img src="https://media.licdn.com/dms/image/C4E03AQF02srF_ss_iQ/profile-displayphoto-shrink_800_800/0?e=1571270400&v=beta&t=pBz0Pm1cHfDOdUN6wCq6qYDM8rlrHKaNhwsHn8MFUO0" width = "120" />](https://github.com/vicxruiz) |
-|                                                                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/alexander-frost)                                                                   |                                                                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/sameeraleola)                                                                   |                                                                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/vicxruiz)                                                                   |
-|                                                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/alexandert3977/)                                                 |                                                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/sameeraroussi/)                                                |                                                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/vicxruiz/)                                                 |
+|                                                                  [<img src="https://github.com/favicon.ico" width="25"> ](https://github.com/alexander-frost)                                                                   |                                                                  [<img src="https://github.com/favicon.ico" width="25"> ](https://github.com/sameeraleola)                                                                   |                                                                  [<img src="https://github.com/favicon.ico" width="25"> ](https://github.com/vicxruiz)                                                                   |
+|                                                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="25"> ](https://www.linkedin.com/in/alexandert3977/)                                                 |                                                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="25"> ](https://www.linkedin.com/in/sameeraroussi/)                                                |                                                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="25"> ](https://www.linkedin.com/in/vicxruiz/)                                                 |
 
-## Project Overview
+<br>
+<br>
 
-1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
+[ENDRSD Trello Board](https://trello.com/b/hKTAKrBD/endrsd)
 
-[Trello Board](https://trello.com/b/hKTAKrBD/endrsd)
+<p align="center">
+    <a href="https://trello.com/b/hKTAKrBD/endrsd">
+        <img src="https://res.cloudinary.com/endrsd/image/upload/v1568019708/endrsd_trello_jg6kdd.png" alt="ENDRSD Trello Board" width="500">
+    </a>
+</p>
 
-[Product Canvas](https://www.notion.so/Career-Endorsement-Tracker-38de5156701f4cebb29de81a4b6db1ad)
+[ENDRSD Release Canvas v1.0](https://www.notion.so/ENDRSD-v1-0-3e87edcf085e45dc993422f0668e0842)
 
-[UX Design files](https://www.notion.so/Mockups-4c32cd42f99447a998f6a6c619457f13)
+<p align="center">
+    <a href="https://www.notion.so/ENDRSD-v1-0-3e87edcf085e45dc993422f0668e0842">
+        <img src="https://res.cloudinary.com/endrsd/image/upload/v1568019704/release_canvas_1_sm4hdq.png" alt="ENDRSD Notion document release canvas v1.0" width="500">
+    </a>
+</p>
 
-ENDRSD is a dual-platform (WEB & iOS) application that provides easily accessible insight to one’s own learning progress (as a student) and any given students’ progress (as a coach/manager).
+[UX Design files](https://www.figma.com/file/ZiMbxLkmEXaZQBB8BMoEAg/web_release-v1?node-id=253%3A220)
 
-![](header.png)
+<p align="center">
+    <a href="https://www.figma.com/file/ZiMbxLkmEXaZQBB8BMoEAg/web_release-v1?node-id=253%3A220">
+        <img src="https://res.cloudinary.com/endrsd/image/upload/v1568180387/ios_mockup_iju8ud.png" alt="Figma design mockups for iOS" width="500">
+    </a>
+</p>
 
 ### Features
 

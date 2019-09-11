@@ -65,13 +65,13 @@ Demo the app by downloading it from TestFlight.
     </a>
 </p>
 
-### Features
+### Key Features
 
-- Users can sign-up and login via both platforms (WEB & iOS)
-- Logged-in users to see a list of their track-specific 'requirements'
-- A logged-in user will be able to view a list of 'steps' that are to be completed for each associated 'requirement'
-- A logged-in user will be able to manually toggle the 'completed' or 'incompleted' status of a 'step'
-- Logged-in users will be able to view their overall endorsement progress, which is always up-to-date with the latest changes
+- Students can create their own user accounts and passwords on iOS devices
+- Users are able to login & logout on iOS devices to protect their career endorsement information
+- With proper credentials, students are able to view a list of their track-specific career endorsement requirements on iOS devices
+- Students are able to track their overall endorsement progress on iOS devices, as well as stay up-to-date on the progress being made towards individual requirements for endorsement
+- Students can access static resources pertaining to specific endorsement requirements on their iOS devices, such as Airtable forms and lecture videos
 
 ### Authentication API here
 

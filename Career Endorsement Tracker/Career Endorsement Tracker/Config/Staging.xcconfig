@@ -1,0 +1,18 @@
+//
+//  Staging.xcconfig
+//  endrsd-ios
+//
+//  Created by Mikis Woodwinter on 9/5/19.
+//  Copyright © 2019 Labs15SuperTeam. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug (staging).xcconfig"
+
+API_BASE_URL = https:/$()/endrsd-api-staging.herokuapp.com/api/v1
+
+// App Settings
+APP_NAME = endrsd-ios (staging)
+APP_BUNDLE_ID = com.endrsd.ios-staging

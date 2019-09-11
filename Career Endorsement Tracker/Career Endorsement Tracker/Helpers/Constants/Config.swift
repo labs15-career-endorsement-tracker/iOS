@@ -23,6 +23,8 @@ class Config {
     // Textfield highlight color
     static let textFieldBorderColor = UIColor(red: 173.0/256.0, green: 216.0/256.0, blue: 144/256.0, alpha: 1.0).cgColor
     
+    static let cellColor = UIColor(red: 251.0/256.0, green: 254.0/256.0, blue: 255/256.0, alpha: 1.0).cgColor
+    
     // Greens
     static var themeDarkGreen = UIColor(red: 0.0/256.0, green: 147.0/256.0, blue: 30.0/256.0, alpha: 1.0)
     static var themeGreen = UIColor(red: 33.0/256.0, green: 92.0/256.0, blue: 89/256.0, alpha: 1.0)

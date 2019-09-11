@@ -4,9 +4,9 @@
 
 # The 'ENDRSD' iOS App
 
-[![Swift Version][swift-image]][swift-url]
-[![Build Status][travis-image]][travis-url]
-[![License][license-image]][license-url]
+[![Swift Version][https://img.shields.io/badge/swift-3.0-orange.svg]][https://swift.org/]
+[![Build Status][https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square]][https://travis-ci.org/dbader/node-datadog-metrics]
+[![License][https://img.shields.io/badge/license-mit-blue.svg]][license]
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)  
 [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)

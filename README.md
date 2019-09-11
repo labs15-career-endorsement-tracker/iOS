@@ -1,24 +1,8 @@
-# Labs15: Career Endorsement Tracker App (iOS Repo)
+<a href="https://lambdaschool.com/">
+    <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546601/lambda_logo_ffimws.png" title="Lambda School Logo" width="200" align="right">
+</a>
 
-🚫 Note: All lines that start with 🚫 are instructions and should be deleted before this is posted to your portfolio. This is intended to be a guideline. Feel free to add your own flare to it.
-
-🚫 The numbers 1️⃣ through 5️⃣ next to each item represent the week that part of the docs needs to be comepleted by. Make sure to delete the numbers by the end of Labs.
-
-🚫 Each student has a required minimum number of meaningful PRs each week per the rubric. Contributing to docs does NOT count as a PR to meet your weekly requirements.
-
-# ENDRSD App
-
-1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
-
-## Contributors
-
-|                                                                                         [Alex Mata](https://github.com/alexander-frost)                                                                                         |                                                                                      [Sameera Roussi](https://github.com/sameeraleola)                                                                                       |                                                                                        [Victor Ruiz](https://github.com/vicxruiz)                                                                                        |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [<img src="https://media.licdn.com/dms/image/C5603AQHRbpDk-q8wRQ/profile-displayphoto-shrink_800_800/0?e=1571270400&v=beta&t=XbAXxDFqp9HpJcXDp0YdgiuPXrFp7667PY8pg8lOKuA" width = "200" />](https://github.com/alexander-frost) | [<img src="https://media.licdn.com/dms/image/C4E03AQHYAtIXaf1z4Q/profile-displayphoto-shrink_800_800/0?e=1571270400&v=beta&t=HHc-X-kcoeFuu1MTYQHGde9M3aa1WJEVOk-98OfAhEs" width = "200" />](https://github.com/sameeraleola) | [<img src="https://media.licdn.com/dms/image/C4E03AQF02srF_ss_iQ/profile-displayphoto-shrink_800_800/0?e=1571270400&v=beta&t=pBz0Pm1cHfDOdUN6wCq6qYDM8rlrHKaNhwsHn8MFUO0" width = "200" />](https://github.com/vicxruiz) |
-|                                                                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/alexander-frost)                                                                   |                                                                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/sameeraleola)                                                                   |                                                                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/vicxruiz)                                                                   |
-|                                                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/alexandert3977/)                                                 |                                                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/sameeraroussi/)                                                |                                                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/vicxruiz/)                                                 |
-
-🚫 Optional examples of using badges with links for your tech stack, make sure to change these to fit your project
+# The 'ENDRSD' Project
 
 [![Swift Version][swift-image]][swift-url]
 [![Build Status][travis-image]][travis-url]
@@ -28,7 +12,31 @@
 [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-🚫 more info on using badges [here](https://github.com/badges/shields)
+<p align="center">
+    <a href="https://endrsd.com/">
+        <img src="https://res.cloudinary.com/endrsd/image/upload/v1568002293/new_logo_ltlpkr.png" alt="New ENDRSD logo" width="400">
+    </a>
+</p>
+
+<p align="center">
+    <img src="endrsd_demo_ios.gif" alt="GIF walk-through" width="600">
+</p>
+
+## Project Overview
+
+"ENDRSD" is a capstone project that was built as a centralized location for Lambda School students to access track-specific career endorsement requirements, as well as provide students with a fun and engaging way to track their career endorsement progress.
+
+Demo the project by clicking the ENDRSD logo (above the "Contributors" section) or find the deployed project at <a href="https://app.netlify.com/sites/labs15/deploys" style="padding-left: 20px"><img src="https://res.cloudinary.com/endrsd/image/upload/v1567551123/netlify_badge_tulh45.png" height="20" /><a/>
+
+<br>
+
+## Contributors
+
+|                                                                                         [Alex Mata](https://github.com/alexander-frost)                                                                                         |                                                                                      [Sameera Roussi](https://github.com/sameeraleola)                                                                                       |                                                                                        [Victor Ruiz](https://github.com/vicxruiz)                                                                                        |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [<img src="https://media.licdn.com/dms/image/C5603AQHRbpDk-q8wRQ/profile-displayphoto-shrink_800_800/0?e=1571270400&v=beta&t=XbAXxDFqp9HpJcXDp0YdgiuPXrFp7667PY8pg8lOKuA" width = "200" />](https://github.com/alexander-frost) | [<img src="https://media.licdn.com/dms/image/C4E03AQHYAtIXaf1z4Q/profile-displayphoto-shrink_800_800/0?e=1571270400&v=beta&t=HHc-X-kcoeFuu1MTYQHGde9M3aa1WJEVOk-98OfAhEs" width = "200" />](https://github.com/sameeraleola) | [<img src="https://media.licdn.com/dms/image/C4E03AQF02srF_ss_iQ/profile-displayphoto-shrink_800_800/0?e=1571270400&v=beta&t=pBz0Pm1cHfDOdUN6wCq6qYDM8rlrHKaNhwsHn8MFUO0" width = "200" />](https://github.com/vicxruiz) |
+|                                                                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/alexander-frost)                                                                   |                                                                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/sameeraleola)                                                                   |                                                                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/vicxruiz)                                                                   |
+|                                                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/alexandert3977/)                                                 |                                                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/sameeraroussi/)                                                |                                                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/vicxruiz/)                                                 |
 
 ## Project Overview
 

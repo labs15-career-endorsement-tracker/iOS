@@ -48,6 +48,9 @@ class HomeDetailTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.register(UINib(nibName: "StepCell", bundle: nil), forCellReuseIdentifier: StepCell.reuseId)
+        
         hud.textLabel.text = "Loading Requirements..."
         hud.show(in: view, animated: true)
         fetchStepsFromServer()
@@ -56,6 +59,12 @@ class HomeDetailTableViewController: UITableViewController {
         setupRefresh()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        tableView.reloadData()
+    }
+
     // MARK: - Methods
     
     private func startConfetti(){
@@ -178,18 +187,51 @@ extension HomeDetailTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StepCell", for: indexPath) as? HomeDetailTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StepTableViewCell", for: indexPath) as? StepCell else {
             return UITableViewCell()
         }
         
         let step = steps[indexPath.row]
-        cell.server = server
+        
         cell.step = step
+        cell.indexPath = indexPath
+        cell.delegate = self
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 144
+       return UITableView.automaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+}
+
+extension HomeDetailTableViewController: StepCellDelegate {
+    func didSelect(_ cell: StepCell, atIndexPath indexPath: IndexPath) {
+        let step = steps[indexPath.row]
+        
+        let isCompleted = step.is_complete
+        
+        guard let server = server else {
+            print("no server")
+            return
+        }
+        
+        let token = UserDefaults.standard.object(forKey: "token") as! String
+        
+        server.updateStep(withId: token, withReqId: step.tasks_id, withStepId: step.id, isComplete: isCompleted) { (error) in
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: .didSubmit, object: Any?.self)
+            }
+        }
     }
 }
 

@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CC78CC023283F86006CDFAE /* StepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC78CBE23283F86006CDFAE /* StepCell.swift */; };
+		2CC78CC123283F86006CDFAE /* StepCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CC78CBF23283F86006CDFAE /* StepCell.xib */; };
+		2CC78CC32328ABE0006CDFAE /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC78CC22328ABE0006CDFAE /* ShadowView.swift */; };
+		2CC78CC52328AEAD006CDFAE /* VerticallyCenteredTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC78CC42328AEAD006CDFAE /* VerticallyCenteredTextView.swift */; };
 		3738EC5523061D800083158B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738EC5423061D800083158B /* AppDelegate.swift */; };
 		3738EC5A23061D800083158B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3738EC5823061D800083158B /* Main.storyboard */; };
 		3738EC5C23061D830083158B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3738EC5B23061D830083158B /* Assets.xcassets */; };
@@ -83,6 +87,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2CC78CBE23283F86006CDFAE /* StepCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCell.swift; sourceTree = "<group>"; };
+		2CC78CBF23283F86006CDFAE /* StepCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepCell.xib; sourceTree = "<group>"; };
+		2CC78CC22328ABE0006CDFAE /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		2CC78CC42328AEAD006CDFAE /* VerticallyCenteredTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticallyCenteredTextView.swift; sourceTree = "<group>"; };
 		3738EC5123061D800083158B /* Career Endorsement Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Career Endorsement Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3738EC5423061D800083158B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		3738EC5923061D800083158B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -172,6 +180,17 @@
 				F24C9B4D3B28C9275F799F12 /* Pods-Career Endorsement Tracker.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		2CC78CBD23283F5A006CDFAE /* StepCell */ = {
+			isa = PBXGroup;
+			children = (
+				2CC78CBE23283F86006CDFAE /* StepCell.swift */,
+				2CC78CBF23283F86006CDFAE /* StepCell.xib */,
+				2CC78CC22328ABE0006CDFAE /* ShadowView.swift */,
+				2CC78CC42328AEAD006CDFAE /* VerticallyCenteredTextView.swift */,
+			);
+			path = StepCell;
 			sourceTree = "<group>";
 		};
 		3738EC4823061D800083158B = {
@@ -433,6 +452,7 @@
 		FABFB821232740B400B4647E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2CC78CBD23283F5A006CDFAE /* StepCell */,
 				57191C792320EDD300542F37 /* HomeDetailTableViewCell.swift */,
 				570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */,
 			);
@@ -529,6 +549,7 @@
 				3738EC5C23061D830083158B /* Assets.xcassets in Resources */,
 				3738EC5A23061D800083158B /* Main.storyboard in Resources */,
 				3758984E2321BD1600363B60 /* BarlowCondensed-Black.ttf in Resources */,
+				2CC78CC123283F86006CDFAE /* StepCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,18 +562,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -596,6 +610,7 @@
 				FACADFE523174587001BBE9C /* Database.swift in Sources */,
 				57191C782320E81200542F37 /* HomeDetailTableViewController.swift in Sources */,
 				FAA6DF222310828500B1DA7D /* Tasks+Convenience.swift in Sources */,
+				2CC78CC52328AEAD006CDFAE /* VerticallyCenteredTextView.swift in Sources */,
 				FABFB81B23273C2E00B4647E /* Emitter.swift in Sources */,
 				FAEC2D1323281615007AC7BA /* CircularProgress.swift in Sources */,
 				577EB1B12319BB4B00EDB960 /* TaskTracksController.swift in Sources */,
@@ -603,6 +618,7 @@
 				570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */,
 				5784F9EB230729B600C11198 /* DataGetter.swift in Sources */,
 				FAA6DF2023107E1400B1DA7D /* CareerModel.xcdatamodeld in Sources */,
+				2CC78CC32328ABE0006CDFAE /* ShadowView.swift in Sources */,
 				570CE90E2315D6B300077B72 /* HomeCollectionViewCell.swift in Sources */,
 				570CE9002315CA9700077B72 /* SignUpViewController.swift in Sources */,
 				FA8AAD8623158E5900DA36A5 /* Steps+Convenience.swift in Sources */,
@@ -627,6 +643,7 @@
 				FABFB8232328121800B4647E /* CircularProgressBar.swift in Sources */,
 				FAA6DF1D23107BDB00B1DA7D /* CoreDataStack.swift in Sources */,
 				570CE9092315D57700077B72 /* Task.swift in Sources */,
+				2CC78CC023283F86006CDFAE /* StepCell.swift in Sources */,
 				5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */,
 				3738EC67230628770083158B /* CareerEndorsementViewController.swift in Sources */,
 				570CE90B2315D59F00077B72 /* Lambda.swift in Sources */,

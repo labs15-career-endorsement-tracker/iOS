@@ -92,8 +92,49 @@ Demo the app by downloading it from TestFlight.
 🚫 These are examples, make sure this matches your project's requirements
 
 - iOS 8.0+
-- Xcode 7.3
+- Xcode 10.3
 - Cocoa Pods
+
+## Installation
+
+#### CocoaPods
+
+You can use [CocoaPods](http://cocoapods.org/) to install `YourLibrary` by adding it to your `Podfile`:
+
+```ruby
+platform :ios, '8.0'
+use_frameworks!
+pod 'YourLibrary'
+```
+
+To get the full benefits import `YourLibrary` wherever you import UIKit
+
+```swift
+import UIKit
+import YourLibrary
+```
+
+#### Carthage
+
+Create a `Cartfile` that lists the framework and run `carthage update`. Follow the [instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios) to add `$(SRCROOT)/Carthage/Build/iOS/YourLibrary.framework` to an iOS project.
+
+```
+github "yourUsername/yourlibrary"
+```
+
+#### Manually
+
+1. Download and drop `YourLibrary.swift` in your project.
+2. Congratulations!
+
+## Usage example
+
+```swift
+import EZSwiftExtensions
+ez.detectScreenShot { () -> () in
+    print("User took a screen shot")
+}
+```
 
 ## Contributing
 
@@ -139,16 +180,3 @@ Remember that this project is licensed under the MIT license, and by submitting 
 ### Attribution
 
 These contribution guidelines have been adapted from [this good-Contributing.md-template](https://gist.github.com/PurpleBooth/b24679402957c63ec426).
-
-## Documentation
-
-See [Backend Documentation](_link to your backend readme here_) for details on the backend of our project.
-
-[swift-image]: https://img.shields.io/badge/swift-3.0-orange.svg
-[swift-url]: https://swift.org/
-[license-image]: https://img.shields.io/badge/License-MIT-blue.svg
-[license-url]: LICENSE
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[codebeat-image]: https://codebeat.co/badges/c19b47ea-2f9d-45df-8458-b2d952fe9dad
-[codebeat-url]: https://codebeat.co/projects/github-com-vsouza-awesomeios-com

@@ -42,6 +42,7 @@
 		5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EC23072A1600C11198 /* CurrentUser.swift */; };
 		5784F9EF23072BFB00C11198 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EE23072BFB00C11198 /* Config.swift */; };
 		5784F9F123072D5600C11198 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5784F9F023072D5600C11198 /* Welcome.storyboard */; };
+		57A19605232852E000B000F9 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A19604232852E000B000F9 /* TestViewController.swift */; };
 		AC6B36FBC36CA20969EC80C5 /* Pods_Career_Endorsement_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658AB1242DE70C5007EDD27C /* Pods_Career_Endorsement_Tracker.framework */; };
 		FA593528232300C4003621A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA593527232300C4003621A8 /* HomeViewController.swift */; };
 		FA66A39F23187B1C00980AB6 /* UserStepsCompletedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66A39E23187B1C00980AB6 /* UserStepsCompletedController.swift */; };
@@ -125,6 +126,7 @@
 		5784F9EC23072A1600C11198 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		5784F9EE23072BFB00C11198 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		5784F9F023072D5600C11198 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		57A19604232852E000B000F9 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		658AB1242DE70C5007EDD27C /* Pods_Career_Endorsement_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Career_Endorsement_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24C9B4D3B28C9275F799F12 /* Pods-Career Endorsement Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.release.xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		FA593527232300C4003621A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				FA593527232300C4003621A8 /* HomeViewController.swift */,
 				FABFB81E23273CB800B4647E /* HomeDetailView+Emitter.swift */,
 				57191C772320E81200542F37 /* HomeDetailTableViewController.swift */,
+				57A19604232852E000B000F9 /* TestViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				2CC78CC52328AEAD006CDFAE /* VerticallyCenteredTextView.swift in Sources */,
 				FABFB81B23273C2E00B4647E /* Emitter.swift in Sources */,
 				FAEC2D1323281615007AC7BA /* CircularProgress.swift in Sources */,
+				57A19605232852E000B000F9 /* TestViewController.swift in Sources */,
 				577EB1B12319BB4B00EDB960 /* TaskTracksController.swift in Sources */,
 				57191C7A2320EDD300542F37 /* HomeDetailTableViewCell.swift in Sources */,
 				570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */,

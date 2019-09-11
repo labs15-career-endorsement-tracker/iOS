@@ -2,7 +2,7 @@
     <img src="https://res.cloudinary.com/endrsd/image/upload/v1567546601/lambda_logo_ffimws.png" title="Lambda School Logo" width="200" align="right">
 </a>
 
-# The 'ENDRSD' Project
+# The 'ENDRSD' iOS App
 
 [![Swift Version][swift-image]][swift-url]
 [![Build Status][travis-image]][travis-url]

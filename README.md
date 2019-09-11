@@ -89,8 +89,6 @@ Demo the app by downloading it from TestFlight.
 
 ## Requirements
 
-🚫 These are examples, make sure this matches your project's requirements
-
 - iOS 8.0+
 - Xcode 10.3
 - Cocoa Pods

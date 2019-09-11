@@ -41,11 +41,11 @@ class Server {
         }
     }
     
-    let baseURL = URL(string: "https://endrsd-api.herokuapp.com/api/v1")
+    let baseURL = Environment.apiBaseUrl
     
     
     func loginWith(user: LoggedInUser, completion: @escaping (Error?)->Void) {
-        let loginURL = baseURL!.appendingPathComponent(Endpoints.login.rawValue)
+        let loginURL = baseURL.appendingPathComponent(Endpoints.login.rawValue)
          print("loginURL = \(loginURL)")
         var request = URLRequest(url: loginURL)
         request.httpMethod = HTTPMethods.post.rawValue
@@ -86,7 +86,7 @@ class Server {
     
     func signUpWith(firstName: String, lastName: String, email: String, password: String, trackID: Int, completion: @escaping (Error?)->Void) {
       
-        let signUpURL = baseURL!.appendingPathComponent(Endpoints.users.rawValue)
+        let signUpURL = baseURL.appendingPathComponent(Endpoints.users.rawValue)
 
         
         var request = URLRequest(url: signUpURL)
@@ -133,7 +133,7 @@ class Server {
     
     func fetchRequirements(withId id: String, completion: @escaping ([Requirement]?, Error?)->Void) {
 
-        let requirementsURL = baseURL!.appendingPathComponent(Endpoints.requirements.rawValue)
+        let requirementsURL = baseURL.appendingPathComponent(Endpoints.requirements.rawValue)
         print(id)
         var request = URLRequest(url: requirementsURL)
         request.httpMethod = HTTPMethods.get.rawValue
@@ -163,7 +163,7 @@ class Server {
     
     func fetchRequirement(withId id: String, withReqId reqId: Int, completion: @escaping (Requirement?, Error?)->Void) {
         
-        let requirementURL = baseURL!.appendingPathComponent("\(Endpoints.requirements.rawValue)/\(reqId)")
+        let requirementURL = baseURL.appendingPathComponent("\(Endpoints.requirements.rawValue)/\(reqId)")
         print(requirementURL)
         var request = URLRequest(url: requirementURL)
         request.httpMethod = HTTPMethods.get.rawValue
@@ -193,7 +193,7 @@ class Server {
     
     func fetchSteps(withId id: String, withReqId reqId: Int, completion: @escaping ([Step]?, Error?)->Void) {
         
-        let stepsURL = baseURL!.appendingPathComponent("/requirements/\(reqId)\(Endpoints.steps.rawValue)")
+        let stepsURL = baseURL.appendingPathComponent("/requirements/\(reqId)\(Endpoints.steps.rawValue)")
         print(stepsURL)
         print(id)
         var request = URLRequest(url: stepsURL)
@@ -224,7 +224,7 @@ class Server {
     
     func updateStep(withId id: String, withReqId reqId: Int, withStepId stepId: Int, isComplete: Bool, completion: @escaping (Error?)->Void) {
         
-        let postUpdatedStepURL = baseURL!.appendingPathComponent("/requirements/\(reqId)\(Endpoints.steps.rawValue)/\(stepId)")
+        let postUpdatedStepURL = baseURL.appendingPathComponent("/requirements/\(reqId)\(Endpoints.steps.rawValue)/\(stepId)")
         print(postUpdatedStepURL)
         var request = URLRequest(url: postUpdatedStepURL)
         request.httpMethod = HTTPMethods.put.rawValue
@@ -252,7 +252,7 @@ class Server {
     
     func fetchUser(withId id: String, withUserId userId: Int, completion: @escaping (CurrentUser?, Error?)->Void) {
         
-        let userURL = baseURL!.appendingPathComponent("users/\(userId)")
+        let userURL = baseURL.appendingPathComponent("users/\(userId)")
         print(userURL)
         var request = URLRequest(url: userURL)
         request.httpMethod = HTTPMethods.get.rawValue

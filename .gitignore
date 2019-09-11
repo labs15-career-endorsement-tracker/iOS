@@ -15,6 +15,9 @@ build/*
 xcuserdata
 profile
 *.moved-aside
+Development.xcconfig
+Staging.xcconfig
+Production.xcconfig
 
 build
 .DS_Store

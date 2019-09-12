@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var overallProgressLabel: UILabel!
-    
+    @IBOutlet weak var overallProgressView: UIView!
     // MARK: - Actions
     
     @IBAction func logoutBtnPressed(_ sender: UIBarButtonItem) {
@@ -90,7 +90,7 @@ class HomeViewController: UIViewController {
         progressBar.style = .dashed(pattern: [1.0, 1.0])
 
         guard let name = UserDefaults.standard.value(forKey: "firstName") as? String else {return print("No Name")}
-        userNameLabel.text = "Good evening, \(name)."
+        userNameLabel.text = "Welcome, \(name)."
     }
     
     private func updateProgress(progress: Int){
@@ -155,8 +155,8 @@ class HomeViewController: UIViewController {
                     self.hud.dismiss(animated: true)
                     self.updateProgress(progress: currentUser.progress)
                     self.overallProgressLabel.text = "\(currentUser.progress)%"
-                    if self.userNameLabel.text == "Good evening, Bob." {
-                        self.userNameLabel.text = "Good evening, \(currentUser.first_name)."
+                    if self.userNameLabel.text == "Welcome, " {
+                        self.userNameLabel.text = "Welcome, \(currentUser.first_name)."
                     }
                 }
             }
@@ -202,8 +202,6 @@ extension HomeViewController: UICollectionViewDataSource {
         
         let requirement = requirements[indexPath.item]
         cell.requirement = requirement
-        cell.layer.masksToBounds = true
-        cell.layer.cornerRadius = 15
         return cell
     }
     

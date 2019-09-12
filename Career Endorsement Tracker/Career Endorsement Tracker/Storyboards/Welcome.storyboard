@@ -176,7 +176,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.9137254901960784" green="0.92941176470588238" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pv7-aZ-ITD" firstAttribute="trailing" secondItem="pDK-0U-UE9" secondAttribute="trailing" constant="20" id="79F-W2-8lr"/>
                             <constraint firstItem="pDK-0U-UE9" firstAttribute="leading" secondItem="pv7-aZ-ITD" secondAttribute="leading" constant="20" id="WuT-18-Nfr"/>
@@ -253,16 +253,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="OoY-YB-Mcv">
-                                <rect key="frame" x="20" y="292.5" width="301.5" height="75.5"/>
+                                <rect key="frame" x="20" y="290.5" width="243.5" height="77.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWm-BD-2V4">
-                                        <rect key="frame" x="0.0" y="0.0" width="301.5" height="51.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="243.5" height="53"/>
                                         <fontDescription key="fontDescription" name="BarlowCondensed-Bold" family="Barlow Condensed" pointSize="44"/>
                                         <color key="textColor" red="0.12941176469999999" green="0.36078431370000003" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign into your account below." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Py1-t1-yXg">
-                                        <rect key="frame" x="0.0" y="55.5" width="225.5" height="20"/>
+                                        <rect key="frame" x="0.0" y="57" width="221.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
                                         <color key="textColor" red="0.12941176469999999" green="0.36078431370000003" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -270,7 +270,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.9137254901960784" green="0.92941176470588238" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FLA-bk-0cn" firstAttribute="top" secondItem="pH1-t0-M6Q" secondAttribute="bottom" constant="48" id="Gwb-eu-r5s"/>
                             <constraint firstItem="OoY-YB-Mcv" firstAttribute="leading" secondItem="pH1-t0-M6Q" secondAttribute="leading" id="Irt-Ed-EF8"/>

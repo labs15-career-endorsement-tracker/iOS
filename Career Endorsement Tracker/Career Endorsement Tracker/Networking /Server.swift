@@ -30,6 +30,7 @@ class Server {
         case requirements = "/requirements"
         case steps = "/steps"
         case step = "/step"
+        case coach = ""
     }
     
     enum HTTPHeaderKeys: String {

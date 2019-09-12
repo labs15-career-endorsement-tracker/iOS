@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import JGProgressHUD
+import UICircularProgressRing
 
 extension Notification.Name {
     static let didSubmit = Notification.Name("didSubmit")
@@ -33,7 +34,8 @@ class HomeDetailTableViewController: UITableViewController {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var requirementProgessView: UIProgressView!
+    @IBOutlet weak var requirementProgessView: UICircularProgressRing!
+    @IBOutlet weak var progressLabel: UILabel!
     
     // MARK: - Actions
     
@@ -123,7 +125,8 @@ class HomeDetailTableViewController: UITableViewController {
                 let finalProgress = progress / 100
                 if finalProgress == 1 {self.fullProgress()}
                 DispatchQueue.main.async {
-                    self.requirementProgessView.setProgress(finalProgress, animated: true)
+                    self.updateProgress(progress: requirement.progress)
+                    self.progressLabel.text = "\(requirement.progress)%"
                     self.tableView.reloadData()
                 }
             }
@@ -141,9 +144,9 @@ class HomeDetailTableViewController: UITableViewController {
             return
         }
         title = requirement.title
-        let progress = Float(requirement.progress)
-        let finalProgress = progress / 100
-        requirementProgessView.setProgress(finalProgress, animated: true)
+        self.updateProgress(progress: requirement.progress)
+        requirementProgessView.maxValue = 100
+        requirementProgessView.style = .dashed(pattern: [1.0, 1.0])
     }
     
     func fetchStepsFromServer() {
@@ -176,6 +179,22 @@ class HomeDetailTableViewController: UITableViewController {
         }
     }
     
+    private func updateProgress(progress: Int){
+        //        progressBar.labelSize = 20
+        //        progressBar.safePercent = 10
+        //        progressBar.setProgress(to: 10.0, withAnimation: false)
+        //        progressBar.animate(toAngle: 90, duration: 2.5, completion: nil)
+        
+        //        progressBar.trackClr = UIColor.cyan
+        //        progressBar.progressClr = UIColor.purple
+        //        progressBar.setProgressWithAnimation(duration: 1.0, value: 0.60)
+        
+        requirementProgessView.startProgress(to: CGFloat(progress), duration: 2.0) {
+            print("Done animating!")
+        }
+    }
+
+    
 }
 
 extension HomeDetailTableViewController {
@@ -193,6 +212,7 @@ extension HomeDetailTableViewController {
         
         let step = steps[indexPath.row]
         
+        cell.backgroundColor = UIColor(red: 251/255, green: 254/255, blue: 255/255, alpha: 1)
         cell.step = step
         cell.indexPath = indexPath
         cell.delegate = self

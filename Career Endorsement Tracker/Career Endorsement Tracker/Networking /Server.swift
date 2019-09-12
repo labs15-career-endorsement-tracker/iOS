@@ -30,6 +30,7 @@ class Server {
         case requirements = "/requirements"
         case steps = "/steps"
         case step = "/step"
+        case coach = ""
     }
     
     enum HTTPHeaderKeys: String {
@@ -41,7 +42,7 @@ class Server {
         }
     }
     
-    let baseURL = Environment.apiBaseUrl
+    let baseURL = URL(string: "http://endrsd-api.herokuapp.com/api/v1")!
     
     
     func loginWith(user: LoggedInUser, completion: @escaping (Error?)->Void) {

@@ -41,11 +41,11 @@ class Server {
         }
     }
     
-    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v0")
+    let baseURL = Environment.apiBaseUrl
     
     
-    func loginWith(user: CurrentUser, completion: @escaping (Error?)->Void) {
-        let loginURL = baseURL!.appendingPathComponent(Endpoints.login.rawValue)
+    func loginWith(user: LoggedInUser, completion: @escaping (Error?)->Void) {
+        let loginURL = baseURL.appendingPathComponent(Endpoints.login.rawValue)
          print("loginURL = \(loginURL)")
         var request = URLRequest(url: loginURL)
         request.httpMethod = HTTPMethods.post.rawValue
@@ -64,12 +64,10 @@ class Server {
                 completion(error)
                 return
             }
-            print("no error")
             guard let data = data else {
                 completion(DataGetter.NetworkError.badData)
                 return
             }
-            print("good data")
             // Save the endoded bearer token so that it can be saved to user defaults
             self.encodedBearer = data
             
@@ -77,6 +75,7 @@ class Server {
             do {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
                 UserDefaults.standard.set(self.bearer?.token, forKey: "token")
+                UserDefaults.standard.set(self.bearer?.userId, forKey: "id")
                 completion(nil)
             } catch {
                 completion(error)
@@ -87,7 +86,7 @@ class Server {
     
     func signUpWith(firstName: String, lastName: String, email: String, password: String, trackID: Int, completion: @escaping (Error?)->Void) {
       
-        let signUpURL = baseURL!.appendingPathComponent(Endpoints.users.rawValue)
+        let signUpURL = baseURL.appendingPathComponent(Endpoints.users.rawValue)
 
         
         var request = URLRequest(url: signUpURL)
@@ -122,6 +121,8 @@ class Server {
             do {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
                 UserDefaults.standard.set(self.bearer?.token, forKey: "token")
+                UserDefaults.standard.set(self.bearer?.userId, forKey: "id")
+                UserDefaults.standard.set(firstName, forKey: "firstName")
                 completion(nil)
             } catch {
                 completion(error)
@@ -132,7 +133,7 @@ class Server {
     
     func fetchRequirements(withId id: String, completion: @escaping ([Requirement]?, Error?)->Void) {
 
-        let requirementsURL = baseURL!.appendingPathComponent(Endpoints.requirements.rawValue)
+        let requirementsURL = baseURL.appendingPathComponent(Endpoints.requirements.rawValue)
         print(id)
         var request = URLRequest(url: requirementsURL)
         request.httpMethod = HTTPMethods.get.rawValue
@@ -162,7 +163,7 @@ class Server {
     
     func fetchRequirement(withId id: String, withReqId reqId: Int, completion: @escaping (Requirement?, Error?)->Void) {
         
-        let requirementURL = baseURL!.appendingPathComponent("\(Endpoints.requirements.rawValue)/\(reqId)")
+        let requirementURL = baseURL.appendingPathComponent("\(Endpoints.requirements.rawValue)/\(reqId)")
         print(requirementURL)
         var request = URLRequest(url: requirementURL)
         request.httpMethod = HTTPMethods.get.rawValue
@@ -192,7 +193,7 @@ class Server {
     
     func fetchSteps(withId id: String, withReqId reqId: Int, completion: @escaping ([Step]?, Error?)->Void) {
         
-        let stepsURL = baseURL!.appendingPathComponent("/requirements/\(reqId)\(Endpoints.steps.rawValue)")
+        let stepsURL = baseURL.appendingPathComponent("/requirements/\(reqId)\(Endpoints.steps.rawValue)")
         print(stepsURL)
         print(id)
         var request = URLRequest(url: stepsURL)
@@ -223,7 +224,7 @@ class Server {
     
     func updateStep(withId id: String, withReqId reqId: Int, withStepId stepId: Int, isComplete: Bool, completion: @escaping (Error?)->Void) {
         
-        let postUpdatedStepURL = baseURL!.appendingPathComponent("/requirements/\(reqId)\(Endpoints.steps.rawValue)/\(stepId)")
+        let postUpdatedStepURL = baseURL.appendingPathComponent("/requirements/\(reqId)\(Endpoints.steps.rawValue)/\(stepId)")
         print(postUpdatedStepURL)
         var request = URLRequest(url: postUpdatedStepURL)
         request.httpMethod = HTTPMethods.put.rawValue
@@ -248,6 +249,38 @@ class Server {
             }
         }
     }
+    
+    func fetchUser(withId id: String, withUserId userId: Int, completion: @escaping (CurrentUser?, Error?)->Void) {
         
+        let userURL = baseURL.appendingPathComponent("users/\(userId)")
+        print(userURL)
+        var request = URLRequest(url: userURL)
+        request.httpMethod = HTTPMethods.get.rawValue
+        request.addValue("Bearer \(id)", forHTTPHeaderField: "Authorization")
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                print("error fetching data - users/")
+                completion(nil, error)
+            } else {
+                completion(nil, nil)
+            }
+            
+            guard let data = data else {
+                print("data no good")
+                completion(nil, DataGetter.NetworkError.badData)
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            do {
+                let data = try decoder.decode(CurrentUser.self, from: data)
+                completion(data, nil)
+            } catch {
+                print(error.localizedDescription)
+                completion(nil, error)
+            }
+        }
+    }
     
 }

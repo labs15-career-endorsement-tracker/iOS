@@ -30,14 +30,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xIv-bz-AmC">
-                                <rect key="frame" x="32" y="556" width="350" height="136"/>
+                                <rect key="frame" x="32" y="593" width="350" height="99"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="eEG-cG-dkH">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="28.5"/>
-                                        <color key="tintColor" red="0.062745098040000002" green="0.2784313725" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruf-sg-eOM">
-                                        <rect key="frame" x="0.0" y="36.5" width="350" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="45"/>
                                         <color key="backgroundColor" red="0.67843137254901964" green="0.84705882352941175" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="xtT-B5-5CO"/>
@@ -51,7 +47,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSA-Pt-xas">
-                                        <rect key="frame" x="0.0" y="89.5" width="350" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="53" width="350" height="46"/>
                                         <color key="backgroundColor" red="0.062745098040000002" green="0.2784313725" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="BarlowCondensed-Bold" family="Barlow Condensed" pointSize="24"/>
                                         <state key="normal" title="Sign Up">
@@ -63,16 +59,24 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-color" translatesAutoresizingMaskIntoConstraints="NO" id="eEG-cG-dkH">
+                                <rect key="frame" x="72" y="456" width="270" height="176"/>
+                                <color key="tintColor" red="0.062745098040000002" green="0.2784313725" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="F6Q-Mg-uXt" firstAttribute="leading" secondItem="6Wd-sh-i1A" secondAttribute="leading" id="A8I-Eb-Yqi"/>
+                            <constraint firstAttribute="trailing" secondItem="eEG-cG-dkH" secondAttribute="trailing" constant="72" id="Gyv-RO-esu"/>
                             <constraint firstItem="6Wd-sh-i1A" firstAttribute="trailing" secondItem="xIv-bz-AmC" secondAttribute="trailing" constant="32" id="Ouc-C3-pFl"/>
                             <constraint firstItem="F6Q-Mg-uXt" firstAttribute="top" secondItem="tVs-c5-3kX" secondAttribute="top" id="S0C-av-aZj"/>
                             <constraint firstItem="xIv-bz-AmC" firstAttribute="leading" secondItem="6Wd-sh-i1A" secondAttribute="leading" constant="32" id="Sbn-DE-VKp"/>
+                            <constraint firstItem="eEG-cG-dkH" firstAttribute="leading" secondItem="tVs-c5-3kX" secondAttribute="leading" constant="72" id="buU-vF-6Dg"/>
                             <constraint firstAttribute="bottom" secondItem="F6Q-Mg-uXt" secondAttribute="bottom" id="cKD-5z-7ZZ"/>
                             <constraint firstItem="6Wd-sh-i1A" firstAttribute="bottom" secondItem="xIv-bz-AmC" secondAttribute="bottom" constant="170" id="qv9-P0-ZpR"/>
+                            <constraint firstItem="eEG-cG-dkH" firstAttribute="centerX" secondItem="tVs-c5-3kX" secondAttribute="centerX" id="r06-jI-HOt"/>
                             <constraint firstItem="F6Q-Mg-uXt" firstAttribute="trailing" secondItem="6Wd-sh-i1A" secondAttribute="trailing" id="rp5-FU-XEB"/>
+                            <constraint firstItem="xIv-bz-AmC" firstAttribute="top" secondItem="eEG-cG-dkH" secondAttribute="bottom" constant="-39" id="spG-Qb-Hhh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Wd-sh-i1A"/>
                     </view>
@@ -249,16 +253,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="OoY-YB-Mcv">
-                                <rect key="frame" x="20" y="290.5" width="243.5" height="77.5"/>
+                                <rect key="frame" x="20" y="292.5" width="301.5" height="75.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWm-BD-2V4">
-                                        <rect key="frame" x="0.0" y="0.0" width="243.5" height="53"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="301.5" height="51.5"/>
                                         <fontDescription key="fontDescription" name="BarlowCondensed-Bold" family="Barlow Condensed" pointSize="44"/>
                                         <color key="textColor" red="0.12941176469999999" green="0.36078431370000003" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign into your account below." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Py1-t1-yXg">
-                                        <rect key="frame" x="0.0" y="57" width="221.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="225.5" height="20"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
                                         <color key="textColor" red="0.12941176469999999" green="0.36078431370000003" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -315,7 +319,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="128" height="26"/>
+        <image name="logo-color" width="1039" height="176"/>
         <image name="spaceBG" width="1386" height="1800"/>
     </resources>
 </document>

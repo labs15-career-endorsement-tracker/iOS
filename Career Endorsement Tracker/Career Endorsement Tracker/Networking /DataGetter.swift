@@ -39,6 +39,7 @@ class DataGetter {
                 return
             } else if let response = response as? HTTPURLResponse, !(200...201).contains(response.statusCode) {
                 print("non 200 http response: \(response.statusCode)")
+                print(String(data: data!, encoding: .utf8))
                 let myError = response.statusCode == 409 ?  HTTPError.conflict :  HTTPError.non200StatusCode  // Must check if user already exists (response 409)
                 completion(requestID, nil, myError)
                 return

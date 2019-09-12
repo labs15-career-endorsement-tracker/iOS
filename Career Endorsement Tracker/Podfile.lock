@@ -1,20 +1,20 @@
 PODS:
-  - FoldingCell (5.0.1)
-  - JGProgressHUD (2.0.3)
+  - JGProgressHUD (2.0.4)
+  - UICircularProgressRing (6.2.1)
 
 DEPENDENCIES:
-  - FoldingCell
   - JGProgressHUD
+  - UICircularProgressRing
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - FoldingCell
     - JGProgressHUD
+    - UICircularProgressRing
 
 SPEC CHECKSUMS:
-  FoldingCell: 9197b915a415af9e52a857964066797af6a51c2b
-  JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
+  JGProgressHUD: 62658b14e72cccf179efc7a13bcb54d30b92fc22
+  UICircularProgressRing: b52543c79dbd89844e13f0053e3f565b7d7efc5c
 
-PODFILE CHECKSUM: d773b617f3f6f3f7c8f32e63f5348c789bbb5ee0
+PODFILE CHECKSUM: 1834854c77a76f785c2b259fed3e133337134112
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.7.5

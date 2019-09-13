@@ -103,15 +103,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="Xwq-ea-edW">
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="Xwq-ea-edW">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="199"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bGy-rx-FKY">
-                                    <rect key="frame" x="8" y="35" width="398" height="129"/>
+                                    <rect key="frame" x="8" y="35" width="398" height="121.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjD-QM-9z1">
-                                            <rect key="frame" x="27" y="28" width="155" height="39"/>
+                                            <rect key="frame" x="27" y="28" width="155" height="31.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="155" id="ich-ZS-3F7"/>
                                             </constraints>
@@ -120,7 +120,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lM9-WV-fQK" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
-                                            <rect key="frame" x="228" y="15.5" width="112" height="98"/>
+                                            <rect key="frame" x="228" y="12" width="112" height="98"/>
                                             <subviews>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ls-4k-Rqo">
                                                     <rect key="frame" x="43" y="38.5" width="26" height="21"/>
@@ -278,7 +278,7 @@
                                                     <color key="trackTintColor" red="0.76862745099999996" green="0.90588235289999997" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </progressView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMf-HI-tXt">
-                                                    <rect key="frame" x="152" y="56" width="61.5" height="38.5"/>
+                                                    <rect key="frame" x="20" y="56" width="325" height="38.5"/>
                                                     <fontDescription key="fontDescription" name="BarlowCondensed-SemiBold" family="Barlow Condensed" pointSize="32"/>
                                                     <color key="textColor" red="0.1057824269" green="0.27909794449999997" blue="0.32786482569999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -288,10 +288,11 @@
                                         <color key="backgroundColor" red="0.98431372549019602" green="0.99607843137254903" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="R4r-mF-Cbe" firstAttribute="leading" secondItem="tgl-07-mMb" secondAttribute="leading" id="8U0-xy-sXN"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="xMf-HI-tXt" secondAttribute="trailing" constant="12" id="Lfa-Nu-9yh"/>
+                                            <constraint firstItem="xMf-HI-tXt" firstAttribute="leading" secondItem="tgl-07-mMb" secondAttribute="leadingMargin" constant="12" id="P2n-zB-Z7x"/>
                                             <constraint firstAttribute="trailing" secondItem="R4r-mF-Cbe" secondAttribute="trailing" id="V1G-uX-6Kg"/>
+                                            <constraint firstItem="xMf-HI-tXt" firstAttribute="top" secondItem="R4r-mF-Cbe" secondAttribute="bottom" constant="46" id="cuM-dd-IFr"/>
                                             <constraint firstItem="R4r-mF-Cbe" firstAttribute="top" secondItem="tgl-07-mMb" secondAttribute="top" id="pAT-vj-Aq7"/>
-                                            <constraint firstItem="xMf-HI-tXt" firstAttribute="centerX" secondItem="tgl-07-mMb" secondAttribute="centerX" id="pcF-pg-jtA"/>
-                                            <constraint firstItem="xMf-HI-tXt" firstAttribute="centerY" secondItem="tgl-07-mMb" secondAttribute="centerY" id="rLG-hv-86L"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="progressView" destination="R4r-mF-Cbe" id="f2f-r9-9dh"/>
@@ -349,7 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6v-l8-qD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1788" y="-438"/>
+            <point key="canvasLocation" x="1786.9565217391305" y="-438.61607142857139"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Lee-lp-ulS">

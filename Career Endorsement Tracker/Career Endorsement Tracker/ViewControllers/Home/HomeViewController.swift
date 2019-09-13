@@ -39,6 +39,7 @@ class HomeViewController: UIViewController {
     
     // MARK: - Instances
     let server = Server()
+    let emitt = Emitter()
     var requirements: [Requirement] = []
     var currentUser: CurrentUser?
     
@@ -108,6 +109,27 @@ class HomeViewController: UIViewController {
         }
     }
     
+    private func startConfetti(){
+        emitt.emitter.emitterShape = CAEmitterLayerEmitterShape.line
+        emitt.emitter.emitterCells = generateEmitterCells()
+        emitt.emitter.emitterPosition = CGPoint(x: self.view.frame.size.width / 2, y: -10)
+        emitt.emitter.emitterSize = CGSize(width: self.view.frame.size.width, height: 2.0)
+        DispatchQueue.main.async {
+            let currentWindow: UIWindow? = UIApplication.shared.keyWindow
+            currentWindow?.layer.addSublayer(self.emitt.emitter)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+            self.emitt.endParticles()
+        }
+    }
+    
+    private func fullProgress(){
+        print("User has completed requirements")
+        startConfetti()
+    }
+    
+    
     //MARK: Network Call
     
     func fetchRequirementsFromServer() {
@@ -151,10 +173,12 @@ class HomeViewController: UIViewController {
             }
             if let currentUser = CurrentUser {
                 self.currentUser = currentUser
+                if currentUser.progress == 1 {self.fullProgress()}
                 DispatchQueue.main.async {
                     self.hud.dismiss(animated: true)
                     self.updateProgress(progress: currentUser.progress)
                     self.overallProgressLabel.text = "\(currentUser.progress)%"
+                    //if currentUser.progress == 1 {self.fullProgress()}
                     if self.userNameLabel.text == "Welcome, " {
                         self.userNameLabel.text = "Welcome, \(currentUser.first_name)."
                     }

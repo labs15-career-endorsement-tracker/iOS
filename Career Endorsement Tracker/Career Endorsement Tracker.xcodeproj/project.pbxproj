@@ -42,11 +42,11 @@
 		5784F9F123072D5600C11198 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5784F9F023072D5600C11198 /* Welcome.storyboard */; };
 		57A19605232852E000B000F9 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A19604232852E000B000F9 /* TestViewController.swift */; };
 		57D0CE73232C2F680063D5D1 /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0CE72232C2F680063D5D1 /* Emitter.swift */; };
+		57D0CE75232C307D0063D5D1 /* HomeView+Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0CE74232C307D0063D5D1 /* HomeView+Emitter.swift */; };
 		5BFE7A4423297BD8006DEA9E /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5BFE7A4323297BD8006DEA9E /* Development.xcconfig */; };
 		5BFE7A4723297BE2006DEA9E /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5BFE7A4523297BE2006DEA9E /* Production.xcconfig */; };
 		5BFE7A4823297BE2006DEA9E /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5BFE7A4623297BE2006DEA9E /* Staging.xcconfig */; };
 		FA593528232300C4003621A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA593527232300C4003621A8 /* HomeViewController.swift */; };
-		FABFB81F23273CB800B4647E /* HomeDetailView+Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFB81E23273CB800B4647E /* HomeDetailView+Emitter.swift */; };
 		FABFB8232328121800B4647E /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFB8222328121800B4647E /* CircularProgressBar.swift */; };
 		FACADFDE2316FEDE001BBE9C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACADFDD2316FEDE001BBE9C /* Extensions.swift */; };
 		FACADFE523174587001BBE9C /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACADFE423174587001BBE9C /* Database.swift */; };
@@ -108,6 +108,7 @@
 		5784F9F023072D5600C11198 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		57A19604232852E000B000F9 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		57D0CE72232C2F680063D5D1 /* Emitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emitter.swift; path = ../Emitter.swift; sourceTree = "<group>"; };
+		57D0CE74232C307D0063D5D1 /* HomeView+Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+Emitter.swift"; sourceTree = "<group>"; };
 		5BFE7A4323297BD8006DEA9E /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		5BFE7A4523297BE2006DEA9E /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		5BFE7A4623297BE2006DEA9E /* Staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
@@ -116,7 +117,6 @@
 		FA593527232300C4003621A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA5D9B15230F181B00DC9BC1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FA5D9B17230F181B00DC9BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FABFB81E23273CB800B4647E /* HomeDetailView+Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeDetailView+Emitter.swift"; sourceTree = "<group>"; };
 		FABFB8222328121800B4647E /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircularProgressBar.swift; path = "../Networking /CircularProgressBar.swift"; sourceTree = "<group>"; };
 		FACADFDD2316FEDE001BBE9C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FACADFE423174587001BBE9C /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
@@ -232,9 +232,9 @@
 			isa = PBXGroup;
 			children = (
 				FA593527232300C4003621A8 /* HomeViewController.swift */,
-				FABFB81E23273CB800B4647E /* HomeDetailView+Emitter.swift */,
 				57191C772320E81200542F37 /* HomeDetailTableViewController.swift */,
 				57A19604232852E000B000F9 /* TestViewController.swift */,
+				57D0CE74232C307D0063D5D1 /* HomeView+Emitter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -492,10 +492,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FABFB81F23273CB800B4647E /* HomeDetailView+Emitter.swift in Sources */,
 				570CE9022315CAE800077B72 /* Bearer.swift in Sources */,
 				FACADFE523174587001BBE9C /* Database.swift in Sources */,
 				57191C782320E81200542F37 /* HomeDetailTableViewController.swift in Sources */,
+				57D0CE75232C307D0063D5D1 /* HomeView+Emitter.swift in Sources */,
 				2CC78CC52328AEAD006CDFAE /* VerticallyCenteredTextView.swift in Sources */,
 				FAEC2D1323281615007AC7BA /* CircularProgress.swift in Sources */,
 				57A19605232852E000B000F9 /* TestViewController.swift in Sources */,

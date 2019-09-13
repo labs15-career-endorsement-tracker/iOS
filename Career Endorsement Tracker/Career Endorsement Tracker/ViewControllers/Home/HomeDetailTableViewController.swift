@@ -19,7 +19,6 @@ class HomeDetailTableViewController: UITableViewController {
     
     // MARK: - Properties
     
-    let emitt = Emitter()
     var server: Server?
     var id: Int?
     var steps: [Step] = []
@@ -65,23 +64,6 @@ class HomeDetailTableViewController: UITableViewController {
         tableView.reloadData()
     }
 
-    // MARK: - Methods
-    
-    private func startConfetti(){
-        emitt.emitter.emitterShape = CAEmitterLayerEmitterShape.line
-        emitt.emitter.emitterCells = generateEmitterCells()
-        emitt.emitter.emitterPosition = CGPoint(x: self.view.frame.size.width / 2, y: -10)
-        emitt.emitter.emitterSize = CGSize(width: self.view.frame.size.width, height: 2.0)
-        DispatchQueue.main.async {
-            let currentWindow: UIWindow? = UIApplication.shared.keyWindow
-            currentWindow?.layer.addSublayer(self.emitt.emitter)
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
-            self.emitt.endParticles()
-        }
-    }
-    
     // MARK: - Fetch
     
     func fetchSingleRequirementFromServer() {
@@ -107,7 +89,6 @@ class HomeDetailTableViewController: UITableViewController {
                 let requirement = array[0]
                 let progress = Float(requirement.progress)
                 let finalProgress = progress / 100
-                if finalProgress == 1 {self.fullProgress()}
                 DispatchQueue.main.async {
                     self.updateProgress(progress: requirement.progress)
                     self.progressLabel.text = "\(requirement.progress)%"
@@ -115,11 +96,6 @@ class HomeDetailTableViewController: UITableViewController {
                 }
             }
         }
-    }
-    
-    private func fullProgress(){
-        print("User has completed requirements")
-        startConfetti()
     }
     
     func updateViews() {

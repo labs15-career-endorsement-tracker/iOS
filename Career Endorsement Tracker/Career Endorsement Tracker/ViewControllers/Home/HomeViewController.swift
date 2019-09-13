@@ -89,6 +89,7 @@ class HomeViewController: UIViewController {
         
         progressBar.maxValue = 100
         progressBar.style = .dashed(pattern: [1.0, 1.0])
+        progressBar.innerRingColor = Config.lightGreenDesignColor
 
         guard let name = UserDefaults.standard.value(forKey: "firstName") as? String else {return print("No Name")}
         userNameLabel.text = "Welcome, \(name)."

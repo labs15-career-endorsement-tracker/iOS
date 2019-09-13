@@ -107,6 +107,7 @@ class HomeDetailTableViewController: UITableViewController {
         self.updateProgress(progress: requirement.progress)
         requirementProgessView.maxValue = 100
         requirementProgessView.style = .dashed(pattern: [1.0, 1.0])
+        requirementProgessView.innerRingColor = Config.lightGreenDesignColor
     }
     
     func fetchStepsFromServer() {

@@ -28,15 +28,10 @@ class WelcomeViewController: UIViewController {
     
     func updateViews() {
         self.navigationController?.navigationBar.isHidden = true;
-        self.navigationController?.navigationBar.tintColor = Config.buttonTitleColor
        //
         loginButton.layer.masksToBounds = true
         loginButton.layer.cornerRadius = Config.buttonCornerRadius
-        loginButton.layer.borderWidth = 1
-        loginButton.layer.borderColor = Config.themeGreen.cgColor
        //
-        signUpButton.layer.borderWidth = 2
-        signUpButton.layer.borderColor = UIColor.black.cgColor
         signUpButton.layer.masksToBounds = true
         signUpButton.layer.cornerRadius = Config.buttonCornerRadius
     }

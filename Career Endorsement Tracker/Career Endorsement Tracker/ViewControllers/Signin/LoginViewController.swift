@@ -66,16 +66,12 @@ class LoginViewContoller: UIViewController, UITextFieldDelegate {
     }
     
     func updateViews() {
-        navigationController?.navigationBar.barTintColor =  #colorLiteral(red: 0.1592672765, green: 0.432379216, blue: 0.4243381619, alpha: 1)
-       // self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-         self.navigationController?.navigationBar.tintColor = Config.buttonTitleColor
-        // Login Btn
         loginButton.layer.masksToBounds = true
         loginButton.layer.cornerRadius = Config.buttonCornerRadius
         //Email TF
-        emailTextField.underlined(color: #colorLiteral(red: 0.1592672765, green: 0.432379216, blue: 0.4243381619, alpha: 1))
+        emailTextField.underlined(color: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
         //Password TF
-        passwordTextField.underlined(color: #colorLiteral(red: 0.737254902, green: 0.1960784314, blue: 0.2, alpha: 1))
+        passwordTextField.underlined(color: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

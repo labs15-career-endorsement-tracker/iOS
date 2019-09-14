@@ -19,12 +19,10 @@ class HomeDetailTableViewController: UITableViewController {
     
     // MARK: - Properties
     
-    let emitt = Emitter()
     var server: Server?
     var id: Int?
     var steps: [Step] = []
     var requirement: Requirement?
-    var refreshView: BreakOutToRefreshView!
     
     let hud: JGProgressHUD = {
         let hud = JGProgressHUD(style: .light)
@@ -58,7 +56,6 @@ class HomeDetailTableViewController: UITableViewController {
         fetchStepsFromServer()
         updateViews()
         NotificationCenter.default.addObserver(self, selector: #selector(submitButtonPressed(notificaiton:)), name: .didSubmit, object: nil)
-        setupRefresh()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -67,37 +64,6 @@ class HomeDetailTableViewController: UITableViewController {
         tableView.reloadData()
     }
 
-    // MARK: - Methods
-    
-    private func startConfetti(){
-        emitt.emitter.emitterShape = CAEmitterLayerEmitterShape.line
-        emitt.emitter.emitterCells = generateEmitterCells()
-        emitt.emitter.emitterPosition = CGPoint(x: self.view.frame.size.width / 2, y: -10)
-        emitt.emitter.emitterSize = CGSize(width: self.view.frame.size.width, height: 2.0)
-        DispatchQueue.main.async {
-            let currentWindow: UIWindow? = UIApplication.shared.keyWindow
-            currentWindow?.layer.addSublayer(self.emitt.emitter)
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
-            self.emitt.endParticles()
-        }
-    }
-    
-    private func setupRefresh(){
-        refreshView = BreakOutToRefreshView(scrollView: tableView)
-        refreshView.refreshDelegate = self
-        
-        // configure the refresh view
-        refreshView.scenebackgroundColor = .white
-        refreshView.textColor = .black
-        refreshView.paddleColor = .brown
-        refreshView.ballColor = .darkGray
-        refreshView.blockColors = [.blue, .green, .red]
-        
-        tableView.addSubview(refreshView)
-    }
-    
     // MARK: - Fetch
     
     func fetchSingleRequirementFromServer() {
@@ -123,7 +89,6 @@ class HomeDetailTableViewController: UITableViewController {
                 let requirement = array[0]
                 let progress = Float(requirement.progress)
                 let finalProgress = progress / 100
-                if finalProgress == 1 {self.fullProgress()}
                 DispatchQueue.main.async {
                     self.updateProgress(progress: requirement.progress)
                     self.progressLabel.text = "\(requirement.progress)%"
@@ -131,11 +96,6 @@ class HomeDetailTableViewController: UITableViewController {
                 }
             }
         }
-    }
-    
-    private func fullProgress(){
-        print("User has completed requirements")
-        startConfetti()
     }
     
     func updateViews() {
@@ -147,6 +107,7 @@ class HomeDetailTableViewController: UITableViewController {
         self.updateProgress(progress: requirement.progress)
         requirementProgessView.maxValue = 100
         requirementProgessView.style = .dashed(pattern: [1.0, 1.0])
+        requirementProgessView.innerRingColor = Config.lightGreenDesignColor
     }
     
     func fetchStepsFromServer() {
@@ -252,30 +213,5 @@ extension HomeDetailTableViewController: StepCellDelegate {
                 NotificationCenter.default.post(name: .didSubmit, object: Any?.self)
             }
         }
-    }
-}
-
-extension HomeDetailTableViewController {
-    
-    // MARK: - ScrollView
-    
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        refreshView.scrollViewDidScroll(scrollView)
-    }
-    
-    override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        refreshView.scrollViewWillEndDragging(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
-    }
-    
-    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        refreshView.scrollViewWillBeginDragging(scrollView)
-    }
-}
-
-extension HomeDetailTableViewController: BreakOutToRefreshDelegate {
-    
-    func refreshViewDidRefresh(_ refreshView: BreakOutToRefreshView) {
-        // load stuff from the internet
-        print("Refreshed table view")
     }
 }

@@ -7,8 +7,7 @@
 //
 
 import UIKit
-//import LBTAComponents
-//import JGProgressHUD
+import JGProgressHUD
 
 class Config {
 
@@ -16,7 +15,7 @@ class Config {
     static let buttonTitleFontSize: CGFloat = 18
     static let buttonTitleColor = UIColor.white
     static let buttonCornerRadius: CGFloat = 7
-    
+    static let lightGreenDesignColor = UIColor(red: 119/255, green: 232/255, blue: 121/255, alpha: 1)
     
     
     // App theme colors
@@ -55,9 +54,9 @@ class Config {
         on.present(alert, animated: true, completion: completion)
     }
     
-//    static func dissmissHud(_ hud: JGProgressHUD, text: String, detailText: String, delay: TimeInterval) {
-//        hud.textLabel.text = text
-//        hud.detailTextLabel.text = detailText
-//        hud.dismiss(afterDelay: delay, animated: true)
-//    }
+    static func dissmissHud(_ hud: JGProgressHUD, text: String, detailText: String, delay: TimeInterval) {
+        hud.textLabel.text = text
+        hud.detailTextLabel.text = detailText
+        hud.dismiss(afterDelay: delay, animated: true)
+    }
 }

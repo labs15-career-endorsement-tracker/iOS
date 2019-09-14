@@ -1,15 +1,15 @@
 //
-//  HomeDetailView+Emitter.swift
+//  HomeView+Emitter.swift
 //  Career Endorsement Tracker
 //
-//  Created by Alex on 9/9/19.
+//  Created by Victor  on 9/13/19.
 //  Copyright © 2019 Lambda School. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-extension HomeDetailTableViewController {
-    
+extension HomeViewController {
     // MARK: - Emitter
     
     func generateEmitterCells() -> [CAEmitterCell] {
@@ -61,6 +61,3 @@ extension HomeDetailTableViewController {
         return emitt.images[i % 4].cgImage!
     }
 }
-
-
-

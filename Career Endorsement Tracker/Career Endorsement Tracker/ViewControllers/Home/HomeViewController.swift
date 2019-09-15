@@ -227,7 +227,18 @@ extension HomeViewController: UICollectionViewDataSource {
         
         let requirement = requirements[indexPath.item]
         cell.requirement = requirement
+        // Configure the cell
+        cell.layer.borderWidth = 0.0
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.layer.shadowRadius = 5.0
+        cell.layer.shadowOpacity = 1
+        cell.layer.masksToBounds = false //<-
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0)
     }
     
 }
@@ -236,9 +247,8 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //        return  CGSize(width: collectionView.bounds.size.width, height: 80)
 //    }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 5
-//    }
-    
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 30
+    }
+
 }

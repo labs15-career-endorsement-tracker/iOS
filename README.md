@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-    <img src="v1_1_3_demo.gif" alt="GIF walk-through" width="300">
+    <img src="endrsd_demo_ios_v1_1_3.gif" alt="GIF walk-through" width="300">
 </p>
 
 ## Project Overview

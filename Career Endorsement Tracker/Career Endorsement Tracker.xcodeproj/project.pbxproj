@@ -39,7 +39,6 @@
 		5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EC23072A1600C11198 /* CurrentUser.swift */; };
 		5784F9EF23072BFB00C11198 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EE23072BFB00C11198 /* Config.swift */; };
 		5784F9F123072D5600C11198 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5784F9F023072D5600C11198 /* Welcome.storyboard */; };
-		57A19605232852E000B000F9 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A19604232852E000B000F9 /* TestViewController.swift */; };
 		57D0CE73232C2F680063D5D1 /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0CE72232C2F680063D5D1 /* Emitter.swift */; };
 		57D0CE75232C307D0063D5D1 /* HomeView+Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0CE74232C307D0063D5D1 /* HomeView+Emitter.swift */; };
 		5BFE7A4423297BD8006DEA9E /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5BFE7A4323297BD8006DEA9E /* Development.xcconfig */; };
@@ -103,7 +102,6 @@
 		5784F9EC23072A1600C11198 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		5784F9EE23072BFB00C11198 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		5784F9F023072D5600C11198 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
-		57A19604232852E000B000F9 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		57D0CE72232C2F680063D5D1 /* Emitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emitter.swift; path = ../Emitter.swift; sourceTree = "<group>"; };
 		57D0CE74232C307D0063D5D1 /* HomeView+Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+Emitter.swift"; sourceTree = "<group>"; };
 		5BFE7A4323297BD8006DEA9E /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
@@ -114,11 +112,11 @@
 		FA593527232300C4003621A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA5D9B15230F181B00DC9BC1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FA5D9B17230F181B00DC9BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FABFB8222328121800B4647E /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircularProgressBar.swift; path = "../Networking /CircularProgressBar.swift"; sourceTree = "<group>"; };
+		FABFB8222328121800B4647E /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		FACADFDD2316FEDE001BBE9C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FAE9606D230F1AB7006E7467 /* Career Endorsement Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Career Endorsement Tracker.entitlements"; sourceTree = "<group>"; };
 		FAE9606E230F1C89006E7467 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
-		FAEC2D1223281615007AC7BA /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircularProgress.swift; path = "../Networking /CircularProgress.swift"; sourceTree = "<group>"; };
+		FAEC2D1223281615007AC7BA /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,7 +226,6 @@
 			children = (
 				FA593527232300C4003621A8 /* HomeViewController.swift */,
 				57191C772320E81200542F37 /* HomeDetailTableViewController.swift */,
-				57A19604232852E000B000F9 /* TestViewController.swift */,
 				57D0CE74232C307D0063D5D1 /* HomeView+Emitter.swift */,
 			);
 			path = Home;
@@ -307,6 +304,24 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		57D0CE76232E92020063D5D1 /* CircularProgress */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC2D1223281615007AC7BA /* CircularProgress.swift */,
+				FABFB8222328121800B4647E /* CircularProgressBar.swift */,
+			);
+			path = CircularProgress;
+			sourceTree = "<group>";
+		};
+		57D0CE77232E92270063D5D1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				57191C792320EDD300542F37 /* HomeDetailTableViewCell.swift */,
+				570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		840A0CA944C4061A3BAEA402 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,11 +343,9 @@
 		FABFB821232740B400B4647E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FAEC2D1223281615007AC7BA /* CircularProgress.swift */,
-				FABFB8222328121800B4647E /* CircularProgressBar.swift */,
+				57D0CE77232E92270063D5D1 /* Home */,
+				57D0CE76232E92020063D5D1 /* CircularProgress */,
 				2CC78CBD23283F5A006CDFAE /* StepCell */,
-				57191C792320EDD300542F37 /* HomeDetailTableViewCell.swift */,
-				570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -483,7 +496,6 @@
 				57D0CE75232C307D0063D5D1 /* HomeView+Emitter.swift in Sources */,
 				2CC78CC52328AEAD006CDFAE /* VerticallyCenteredTextView.swift in Sources */,
 				FAEC2D1323281615007AC7BA /* CircularProgress.swift in Sources */,
-				57A19605232852E000B000F9 /* TestViewController.swift in Sources */,
 				57191C7A2320EDD300542F37 /* HomeDetailTableViewCell.swift in Sources */,
 				570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */,
 				5784F9EB230729B600C11198 /* DataGetter.swift in Sources */,

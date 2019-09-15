@@ -93,47 +93,6 @@ Demo the app by downloading it from TestFlight.
 - Xcode 10.3
 - Cocoa Pods
 
-## Installation
-
-#### CocoaPods
-
-You can use [CocoaPods](http://cocoapods.org/) to install `YourLibrary` by adding it to your `Podfile`:
-
-```ruby
-platform :ios, '8.0'
-use_frameworks!
-pod 'YourLibrary'
-```
-
-To get the full benefits import `YourLibrary` wherever you import UIKit
-
-```swift
-import UIKit
-import YourLibrary
-```
-
-#### Carthage
-
-Create a `Cartfile` that lists the framework and run `carthage update`. Follow the [instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios) to add `$(SRCROOT)/Carthage/Build/iOS/YourLibrary.framework` to an iOS project.
-
-```
-github "yourUsername/yourlibrary"
-```
-
-#### Manually
-
-1. Download and drop `YourLibrary.swift` in your project.
-2. Congratulations!
-
-## Usage example
-
-```swift
-import EZSwiftExtensions
-ez.detectScreenShot { () -> () in
-    print("User took a screen shot")
-}
-```
-
 ## Contributing
 
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.

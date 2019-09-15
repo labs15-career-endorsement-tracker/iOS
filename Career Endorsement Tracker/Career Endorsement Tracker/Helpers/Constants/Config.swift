@@ -59,4 +59,21 @@ class Config {
         hud.detailTextLabel.text = detailText
         hud.dismiss(afterDelay: delay, animated: true)
     }
+
+}
+
+struct UserDefaultsKeys {
+    static let ifUserLoggedIn = "isLoggedIn"
+    static let deviceToken = "device_token"
+    
+    // Bearer Tokens
+    static let encodedBearer = "encodedBearerToken"
+    static let decodedBearer = "decodedBearerToken"
+    
+    // CurrentUser
+    static let firstName = "first_name"
+    static let lastName = "last_name"
+    static let email = "email"
+    static let password = "password"
+    static let tracksID = "tracks_id"
 }

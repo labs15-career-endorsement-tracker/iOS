@@ -29,7 +29,6 @@
 		570CE8FC2315CA7E00077B72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8FB2315CA7E00077B72 /* LoginViewController.swift */; };
 		570CE9002315CA9700077B72 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8FF2315CA9700077B72 /* SignUpViewController.swift */; };
 		570CE9022315CAE800077B72 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE9012315CAE800077B72 /* Bearer.swift */; };
-		570CE9092315D57700077B72 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE9082315D57700077B72 /* Task.swift */; };
 		570CE90B2315D59F00077B72 /* Lambda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE90A2315D59F00077B72 /* Lambda.swift */; };
 		570CE90E2315D6B300077B72 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */; };
 		570CE9112315F32200077B72 /* WelcomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE9102315F32200077B72 /* WelcomeNavigationController.swift */; };
@@ -49,7 +48,6 @@
 		FA593528232300C4003621A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA593527232300C4003621A8 /* HomeViewController.swift */; };
 		FABFB8232328121800B4647E /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFB8222328121800B4647E /* CircularProgressBar.swift */; };
 		FACADFDE2316FEDE001BBE9C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACADFDD2316FEDE001BBE9C /* Extensions.swift */; };
-		FACADFE523174587001BBE9C /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACADFE423174587001BBE9C /* Database.swift */; };
 		FAEC2D1323281615007AC7BA /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC2D1223281615007AC7BA /* CircularProgress.swift */; };
 /* End PBXBuildFile section */
 
@@ -95,7 +93,6 @@
 		570CE8FB2315CA7E00077B72 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		570CE8FF2315CA9700077B72 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		570CE9012315CAE800077B72 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
-		570CE9082315D57700077B72 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		570CE90A2315D59F00077B72 /* Lambda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lambda.swift; sourceTree = "<group>"; };
 		570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		570CE9102315F32200077B72 /* WelcomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeNavigationController.swift; sourceTree = "<group>"; };
@@ -119,7 +116,6 @@
 		FA5D9B17230F181B00DC9BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FABFB8222328121800B4647E /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircularProgressBar.swift; path = "../Networking /CircularProgressBar.swift"; sourceTree = "<group>"; };
 		FACADFDD2316FEDE001BBE9C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		FACADFE423174587001BBE9C /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		FAE9606D230F1AB7006E7467 /* Career Endorsement Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Career Endorsement Tracker.entitlements"; sourceTree = "<group>"; };
 		FAE9606E230F1C89006E7467 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		FAEC2D1223281615007AC7BA /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircularProgress.swift; path = "../Networking /CircularProgress.swift"; sourceTree = "<group>"; };
@@ -212,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				5784F9E92307295400C11198 /* Constants */,
-				FACADFE323174573001BBE9C /* Database Mapping */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -253,7 +248,6 @@
 			children = (
 				5784F9EC23072A1600C11198 /* CurrentUser.swift */,
 				570CE9012315CAE800077B72 /* Bearer.swift */,
-				570CE9082315D57700077B72 /* Task.swift */,
 				570CE90A2315D59F00077B72 /* Lambda.swift */,
 			);
 			path = Models;
@@ -341,14 +335,6 @@
 				570CE90D2315D6B300077B72 /* HomeCollectionViewCell.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		FACADFE323174573001BBE9C /* Database Mapping */ = {
-			isa = PBXGroup;
-			children = (
-				FACADFE423174587001BBE9C /* Database.swift */,
-			);
-			path = "Database Mapping";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,7 +479,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				570CE9022315CAE800077B72 /* Bearer.swift in Sources */,
-				FACADFE523174587001BBE9C /* Database.swift in Sources */,
 				57191C782320E81200542F37 /* HomeDetailTableViewController.swift in Sources */,
 				57D0CE75232C307D0063D5D1 /* HomeView+Emitter.swift in Sources */,
 				2CC78CC52328AEAD006CDFAE /* VerticallyCenteredTextView.swift in Sources */,
@@ -513,7 +498,6 @@
 				FA593528232300C4003621A8 /* HomeViewController.swift in Sources */,
 				5784F9EF23072BFB00C11198 /* Config.swift in Sources */,
 				FABFB8232328121800B4647E /* CircularProgressBar.swift in Sources */,
-				570CE9092315D57700077B72 /* Task.swift in Sources */,
 				2CC78CC023283F86006CDFAE /* StepCell.swift in Sources */,
 				5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */,
 				3738EC67230628770083158B /* CareerEndorsementViewController.swift in Sources */,

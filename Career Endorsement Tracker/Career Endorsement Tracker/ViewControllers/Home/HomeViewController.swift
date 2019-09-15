@@ -86,7 +86,6 @@ class HomeViewController: UIViewController {
         
         
         self.navigationItem.titleView = imageView
-        
         progressBar.maxValue = 100
         progressBar.style = .dashed(pattern: [1.0, 1.0])
         progressBar.innerRingColor = Config.lightGreenDesignColor
@@ -176,13 +175,13 @@ class HomeViewController: UIViewController {
                 self.currentUser = currentUser
                 if currentUser.progress == 1 {self.fullProgress()}
                 DispatchQueue.main.async {
-                    self.hud.dismiss(animated: true)
                     self.updateProgress(progress: currentUser.progress)
                     self.overallProgressLabel.text = "\(currentUser.progress)%"
                     //if currentUser.progress == 1 {self.fullProgress()}
                     if self.userNameLabel.text == "Welcome, " {
                         self.userNameLabel.text = "Welcome, \(currentUser.first_name)."
                     }
+                     self.hud.dismiss(animated: true)
                 }
             }
             
@@ -244,11 +243,7 @@ extension HomeViewController: UICollectionViewDataSource {
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return  CGSize(width: collectionView.bounds.size.width, height: 80)
-//    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 30
     }
-
 }

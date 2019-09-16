@@ -18,8 +18,8 @@ enum HTTPMethods: String {
 class Server {
     typealias CompletionHandler = (Error?) -> Void
     
+    //MARK: Properties
     let dataGetter = DataGetter()
-    
     var bearer: Bearer?
     var encodedBearer: Data?
     
@@ -44,7 +44,8 @@ class Server {
     
     let baseURL = URL(string: "http://endrsd-api.herokuapp.com/api/v1")!
     
-    
+    //MARK: Welcome Flow
+
     func loginWith(user: LoggedInUser, completion: @escaping (Error?)->Void) {
         let loginURL = baseURL.appendingPathComponent(Endpoints.login.rawValue)
          print("loginURL = \(loginURL)")
@@ -131,7 +132,9 @@ class Server {
         }
     }
     
+    //MARK: Fetch
     
+    //Fetches all requirements
     func fetchRequirements(withId id: String, completion: @escaping ([Requirement]?, Error?)->Void) {
 
         let requirementsURL = baseURL.appendingPathComponent(Endpoints.requirements.rawValue)
@@ -162,6 +165,7 @@ class Server {
         }
     }
     
+    //fetches single requirement
     func fetchRequirement(withId id: String, withReqId reqId: Int, completion: @escaping (Requirement?, Error?)->Void) {
         
         let requirementURL = baseURL.appendingPathComponent("\(Endpoints.requirements.rawValue)/\(reqId)")
@@ -192,6 +196,7 @@ class Server {
         }
     }
     
+    //fetches all steps to complete for a requirement
     func fetchSteps(withId id: String, withReqId reqId: Int, completion: @escaping ([Step]?, Error?)->Void) {
         
         let stepsURL = baseURL.appendingPathComponent("/requirements/\(reqId)\(Endpoints.steps.rawValue)")
@@ -223,34 +228,7 @@ class Server {
         }
     }
     
-    func updateStep(withId id: String, withReqId reqId: Int, withStepId stepId: Int, isComplete: Bool, completion: @escaping (Error?)->Void) {
-        
-        let postUpdatedStepURL = baseURL.appendingPathComponent("/requirements/\(reqId)\(Endpoints.steps.rawValue)/\(stepId)")
-        print(postUpdatedStepURL)
-        var request = URLRequest(url: postUpdatedStepURL)
-        request.httpMethod = HTTPMethods.put.rawValue
-        request.addValue("Bearer \(id)", forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        print("request: \(request)")
-        do {
-            let params = ["is_complete": isComplete] as [String: Any]
-            print(params)
-            let json = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
-            request.httpBody = json
-        } catch {
-            print("Error encoding item object: \(error)")
-        }
-        
-        dataGetter.fetchData(with: request) { (_, data, error) in
-            if let error = error {
-                print("error updating step")
-                completion(error)
-            } else {
-                completion(nil)
-            }
-        }
-    }
-    
+    //fetches current user
     func fetchUser(withId id: String, withUserId userId: Int, completion: @escaping (CurrentUser?, Error?)->Void) {
         
         let userURL = baseURL.appendingPathComponent("users/\(userId)")
@@ -280,6 +258,37 @@ class Server {
             } catch {
                 print(error.localizedDescription)
                 completion(nil, error)
+            }
+        }
+    }
+
+    //MARK: Update
+    
+    //updates step for completion status
+    func updateStep(withId id: String, withReqId reqId: Int, withStepId stepId: Int, isComplete: Bool, completion: @escaping (Error?)->Void) {
+        
+        let postUpdatedStepURL = baseURL.appendingPathComponent("/requirements/\(reqId)\(Endpoints.steps.rawValue)/\(stepId)")
+        print(postUpdatedStepURL)
+        var request = URLRequest(url: postUpdatedStepURL)
+        request.httpMethod = HTTPMethods.put.rawValue
+        request.addValue("Bearer \(id)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        print("request: \(request)")
+        do {
+            let params = ["is_complete": isComplete] as [String: Any]
+            print(params)
+            let json = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+            request.httpBody = json
+        } catch {
+            print("Error encoding item object: \(error)")
+        }
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                print("error updating step")
+                completion(error)
+            } else {
+                completion(nil)
             }
         }
     }

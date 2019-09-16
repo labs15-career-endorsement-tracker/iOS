@@ -181,10 +181,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="meu-mI-Tdt">
-                                <rect key="frame" x="20" y="42" width="374" height="128"/>
+                                <rect key="frame" x="20" y="42" width="374" height="127.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHv-aH-BJA">
-                                        <rect key="frame" x="8" y="8" width="246" height="39"/>
+                                        <rect key="frame" x="8" y="8" width="246" height="38.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="246" id="0Ym-6e-erQ"/>
                                         </constraints>
@@ -193,7 +193,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Below are your requirements to be fully endorsed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVq-0V-ifs">
-                                        <rect key="frame" x="8" y="55" width="226" height="41"/>
+                                        <rect key="frame" x="8" y="54.5" width="226" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="226" id="NSx-7R-ePJ"/>
                                         </constraints>
@@ -212,7 +212,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uD4-Ng-rBm">
-                                <rect key="frame" x="20" y="178" width="374" height="128"/>
+                                <rect key="frame" x="20" y="177.5" width="374" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overall Progress" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Jr-fN-3KX">
                                         <rect key="frame" x="27" y="28" width="161" height="31.5"/>
@@ -250,8 +250,8 @@
                                     <constraint firstItem="va7-YT-gy1" firstAttribute="top" secondItem="uD4-Ng-rBm" secondAttribute="top" constant="15" id="yvd-A8-Hi7"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gmj-lv-n0Q">
-                                <rect key="frame" x="0.0" y="390" width="414" height="839"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gmj-lv-n0Q">
+                                <rect key="frame" x="0.0" y="389" width="414" height="840"/>
                                 <color key="backgroundColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gyL-fU-orf">
                                     <size key="itemSize" width="365" height="150"/>
@@ -278,7 +278,7 @@
                                                     <color key="trackTintColor" red="0.76862745099999996" green="0.90588235289999997" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </progressView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMf-HI-tXt">
-                                                    <rect key="frame" x="20" y="56" width="325" height="38.5"/>
+                                                    <rect key="frame" x="20" y="56" width="325" height="37.5"/>
                                                     <fontDescription key="fontDescription" name="BarlowCondensed-SemiBold" family="Barlow Condensed" pointSize="32"/>
                                                     <color key="textColor" red="0.18503251671791077" green="0.38786807656288147" blue="0.1883329451084137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -307,7 +307,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Requirements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xET-js-1Sy">
-                                <rect key="frame" x="20" y="328" width="246" height="39"/>
+                                <rect key="frame" x="20" y="327.5" width="246" height="38.5"/>
                                 <fontDescription key="fontDescription" name="BarlowCondensed-Bold" family="Barlow Condensed" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

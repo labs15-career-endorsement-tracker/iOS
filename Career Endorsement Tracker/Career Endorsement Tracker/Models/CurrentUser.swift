@@ -9,11 +9,6 @@
 import Foundation
 import UIKit
 
-    
-import Foundation
-import UIKit
-
-
 // With device_token
 struct CurrentUser: Codable {
     

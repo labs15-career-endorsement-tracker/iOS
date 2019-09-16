@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var overallProgressLabel: UILabel!
     @IBOutlet weak var overallProgressView: UIView!
+    
     // MARK: - Actions
     
     @IBAction func logoutBtnPressed(_ sender: UIBarButtonItem) {
@@ -86,7 +87,6 @@ class HomeViewController: UIViewController {
         
         
         self.navigationItem.titleView = imageView
-        
         progressBar.maxValue = 100
         progressBar.style = .dashed(pattern: [1.0, 1.0])
         progressBar.innerRingColor = Config.lightGreenDesignColor
@@ -95,16 +95,7 @@ class HomeViewController: UIViewController {
         userNameLabel.text = "Welcome, \(name)."
     }
     
-    private func updateProgress(progress: Int){
-        //        progressBar.labelSize = 20
-        //        progressBar.safePercent = 10
-        //        progressBar.setProgress(to: 10.0, withAnimation: false)
-        //        progressBar.animate(toAngle: 90, duration: 2.5, completion: nil)
-        
-        //        progressBar.trackClr = UIColor.cyan
-        //        progressBar.progressClr = UIColor.purple
-        //        progressBar.setProgressWithAnimation(duration: 1.0, value: 0.60)
-        
+    private func updateProgress(progress: Int) {
         progressBar.startProgress(to: CGFloat(progress), duration: 2.0) {
             print("Done animating!")
         }
@@ -126,7 +117,6 @@ class HomeViewController: UIViewController {
     }
     
     private func fullProgress(){
-        print("User has completed requirements")
         startConfetti()
     }
     
@@ -134,10 +124,12 @@ class HomeViewController: UIViewController {
     //MARK: Network Call
     
     func fetchRequirementsFromServer() {
-        let token = UserDefaults.standard.object(forKey: "token") as! String
+        guard let token = UserDefaults.standard.object(forKey: "token") as? String else {
+            Config.showAlert(on: self, style: .alert, title: "User could not be authenticated.", message: "Please logout and sign in again.")
+            return
+        }
         server.fetchRequirements(withId: token) { (reqResult, error) in
             if let error = error {
-                print(error)
                 DispatchQueue.main.async {
                     self.hud.dismiss(animated: true)
                     Config.showAlert(on: self, style: .alert, title: "Fetching Error", message: error.localizedDescription)
@@ -176,13 +168,13 @@ class HomeViewController: UIViewController {
                 self.currentUser = currentUser
                 if currentUser.progress == 1 {self.fullProgress()}
                 DispatchQueue.main.async {
-                    self.hud.dismiss(animated: true)
                     self.updateProgress(progress: currentUser.progress)
                     self.overallProgressLabel.text = "\(currentUser.progress)%"
                     //if currentUser.progress == 1 {self.fullProgress()}
                     if self.userNameLabel.text == "Welcome, " {
                         self.userNameLabel.text = "Welcome, \(currentUser.first_name)."
                     }
+                     self.hud.dismiss(animated: true)
                 }
             }
             
@@ -205,8 +197,6 @@ class HomeViewController: UIViewController {
             destinationVC.requirement = requirements[indexPath.item]
         }
     }
-
-
 }
 
 extension HomeViewController: UICollectionViewDelegate {
@@ -227,18 +217,28 @@ extension HomeViewController: UICollectionViewDataSource {
         
         let requirement = requirements[indexPath.item]
         cell.requirement = requirement
+        //adds shadow
+        cell.layer.borderWidth = 0.0
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.layer.shadowRadius = 5.0
+        cell.layer.shadowOpacity = 1
+        cell.layer.masksToBounds = false 
         return cell
+    }
+    
+    //sets distance from top of first cell and bottom of last cell
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0)
     }
     
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return  CGSize(width: collectionView.bounds.size.width, height: 80)
-//    }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 5
-//    }
     
+    //Sets distance from cell to cell
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 30
+    }
     
 }

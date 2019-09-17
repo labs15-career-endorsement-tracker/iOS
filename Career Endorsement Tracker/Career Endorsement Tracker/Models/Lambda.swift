@@ -22,6 +22,16 @@ struct Requirement: Codable, Equatable {
     var tasks_description: String
     var is_endorsement_requirement: Bool
     var progress: Int
+    var resources: [Resources]
+}
+
+struct Resources: Codable, Equatable {
+    var id: Int
+    var type: String
+    var title: String
+    var url: String
+    var description: String
+    var tasks_id: Int
 }
 
 struct Step: Codable {

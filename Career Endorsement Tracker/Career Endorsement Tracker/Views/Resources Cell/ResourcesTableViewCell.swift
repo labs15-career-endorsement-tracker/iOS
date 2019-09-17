@@ -12,7 +12,7 @@ class ResourcesTableViewCell: UITableViewCell {
 
     // MARK: - Outlets
     
-    @IBOutlet weak var urlLbl: UILabel!
+    @IBOutlet weak var textViewLink: UITextView!
     
     // MARK: - VC Lifecycle
     
@@ -35,5 +35,12 @@ class ResourcesTableViewCell: UITableViewCell {
     
     private func updateViews(){
         
+    }
+}
+
+extension ResourcesViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        UIApplication.shared.open(URL)
+        return false
     }
 }

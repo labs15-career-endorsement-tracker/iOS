@@ -210,6 +210,19 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		375449AF233157D400C05261 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3758984D2321BD1600363B60 /* BarlowCondensed-Black.ttf */,
+				3758984F2321BD2000363B60 /* BarlowCondensed-Bold.ttf */,
+				377AB69223229B240040D7CD /* BarlowCondensed-SemiBold.ttf */,
+				375898512321BD2900363B60 /* BarlowCondensed-Regular.ttf */,
+				375898492321BCEC00363B60 /* Lato-Bold.ttf */,
+				375898532321C0EE00363B60 /* Lato-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		570CE8FA2315CA6E00077B72 /* Signin */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,12 +289,7 @@
 				3738EC5B23061D830083158B /* Assets.xcassets */,
 				FACADFDD2316FEDE001BBE9C /* Extensions.swift */,
 				57D0CE72232C2F680063D5D1 /* Emitter.swift */,
-				3758984D2321BD1600363B60 /* BarlowCondensed-Black.ttf */,
-				3758984F2321BD2000363B60 /* BarlowCondensed-Bold.ttf */,
-				377AB69223229B240040D7CD /* BarlowCondensed-SemiBold.ttf */,
-				375898512321BD2900363B60 /* BarlowCondensed-Regular.ttf */,
-				375898492321BCEC00363B60 /* Lato-Bold.ttf */,
-				375898532321C0EE00363B60 /* Lato-Regular.ttf */,
+				375449AF233157D400C05261 /* Fonts */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";

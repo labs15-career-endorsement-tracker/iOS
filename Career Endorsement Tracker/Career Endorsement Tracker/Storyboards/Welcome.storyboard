@@ -16,6 +16,9 @@
         <array key="Lato-Bold.ttf">
             <string>Lato-Bold</string>
         </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Career Endorsement Tracker-->
@@ -269,14 +272,21 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSw-Ta-lbe">
+                                <rect key="frame" x="132" y="408.5" width="150" height="30"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                <state key="normal" title="Forgot your password?"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="OSw-Ta-lbe" firstAttribute="top" secondItem="FLA-bk-0cn" secondAttribute="bottom" constant="24" id="EBb-Tp-A2M"/>
                             <constraint firstItem="XSW-dj-k3J" firstAttribute="trailing" secondItem="pH1-t0-M6Q" secondAttribute="trailing" constant="16" id="JcT-jm-xAO"/>
                             <constraint firstItem="XSW-dj-k3J" firstAttribute="trailing" secondItem="FLA-bk-0cn" secondAttribute="trailing" constant="20" id="Jlr-TZ-78e"/>
                             <constraint firstItem="pH1-t0-M6Q" firstAttribute="top" secondItem="OoY-YB-Mcv" secondAttribute="bottom" constant="41.5" id="KNJ-l6-heJ"/>
                             <constraint firstItem="FLA-bk-0cn" firstAttribute="top" secondItem="pH1-t0-M6Q" secondAttribute="bottom" constant="46.5" id="NYK-9k-Ref"/>
                             <constraint firstItem="OoY-YB-Mcv" firstAttribute="top" secondItem="XSW-dj-k3J" secondAttribute="top" constant="64" id="OaZ-Tg-3s9"/>
+                            <constraint firstItem="OSw-Ta-lbe" firstAttribute="centerX" secondItem="SKO-ko-7Nk" secondAttribute="centerX" id="WGI-39-PKj"/>
                             <constraint firstItem="pH1-t0-M6Q" firstAttribute="leading" secondItem="XSW-dj-k3J" secondAttribute="leading" constant="16" id="hIr-sK-dvX"/>
                             <constraint firstItem="FLA-bk-0cn" firstAttribute="leading" secondItem="XSW-dj-k3J" secondAttribute="leading" constant="20" id="jke-Id-A0y"/>
                             <constraint firstItem="OoY-YB-Mcv" firstAttribute="leading" secondItem="XSW-dj-k3J" secondAttribute="leading" constant="20" id="yFG-Sa-Xwe"/>

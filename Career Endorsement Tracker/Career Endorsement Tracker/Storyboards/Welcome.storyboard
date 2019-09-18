@@ -368,7 +368,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="requestPasswordTapped:" destination="ba7-RM-Dny" eventType="touchUpInside" id="pi6-la-Ezy"/>
+                                            <action selector="requestPasswordTapped:" destination="ba7-RM-Dny" eventType="touchUpInside" id="Xb8-QG-zTJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUM-Sf-8ST">
@@ -378,7 +378,7 @@
                                             <color key="titleColor" red="0.91190379860000004" green="0.18446540829999999" blue="0.33300244810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="cancelRequestTapped:" destination="ba7-RM-Dny" eventType="touchUpInside" id="0SP-eD-sLY"/>
+                                            <action selector="cancelRequestTapped:" destination="ba7-RM-Dny" eventType="touchUpInside" id="yt4-Jo-q51"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -407,7 +407,7 @@
                         <viewLayoutGuide key="safeArea" id="fNB-3n-7PG"/>
                     </view>
                     <connections>
-                        <outlet property="emailAddressField" destination="K2I-09-TZ8" id="PzU-pV-iQf"/>
+                        <outlet property="emailAddressField" destination="K2I-09-TZ8" id="Vua-Yh-l6Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZV-I8-kPG" userLabel="First Responder" sceneMemberID="firstResponder"/>

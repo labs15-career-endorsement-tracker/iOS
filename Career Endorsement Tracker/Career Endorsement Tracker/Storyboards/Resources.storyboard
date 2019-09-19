@@ -25,7 +25,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VmX-fV-JS8">
                                 <rect key="frame" x="0.0" y="116" width="414" height="780"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="73" id="I1a-Oy-RqQ">
                                         <rect key="frame" x="0.0" y="28" width="414" height="73"/>
@@ -47,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iR9-E9-zJh" firstAttribute="top" secondItem="DDy-Bx-MbJ" secondAttribute="top" constant="24" id="Gkx-sm-6a7"/>
                             <constraint firstItem="VmX-fV-JS8" firstAttribute="trailing" secondItem="DDy-Bx-MbJ" secondAttribute="trailing" id="HAZ-3D-BE3"/>

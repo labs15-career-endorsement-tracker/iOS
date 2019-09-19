@@ -49,6 +49,7 @@ class ResourcesViewController: UIViewController {
         do {
             try audioSession.setActive(true, options: [])
             audioSession.addObserver(self, forKeyPath: "outputVolume", options: NSKeyValueObservingOptions.new, context: nil)
+            audioSession.addObserver(self, forKeyPath: "volumeChanged", options: NSKeyValueObservingOptions.new, context: nil)
             audioLevel = audioSession.outputVolume
         } catch {
             print("Error")
@@ -56,7 +57,7 @@ class ResourcesViewController: UIViewController {
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "outputVolume"{
+        if keyPath == "volumeChanged"{
             print("got in here")
         }
         

@@ -30,6 +30,7 @@ class Server {
         case requirements = "/requirements"
         case steps = "/steps"
         case step = "/step"
+        case resetPassword = "/reset-password"
         case coach = ""
     }
     
@@ -131,6 +132,47 @@ class Server {
             }
         }
     }
+    
+    // MARK: - Forgot password request
+    func resetPasswordFor(user: ResetPassword, completion: @escaping (Error?)->Void) {
+        let resetPasswordURL = baseURL.appendingPathComponent(Endpoints.resetPassword.rawValue)
+        print("resetPasswordURL = \(resetPasswordURL)")
+        var request = URLRequest(url: resetPasswordURL)
+        request.httpMethod = HTTPMethods.post.rawValue
+        request.addValue(HTTPHeaderKeys.ContentTypes.json.rawValue, forHTTPHeaderField: HTTPHeaderKeys.contentType.rawValue)
+        
+        let encoder = JSONEncoder()
+        do {
+            request.httpBody = try encoder.encode(user)
+        } catch {
+            completion(error)
+            return
+        }
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                completion(error)
+                return
+            }
+            guard let data = data else {
+                completion(DataGetter.NetworkError.badData)
+                return
+            }
+            // Save the endoded bearer token so that it can be saved to user defaults
+            self.encodedBearer = data
+            
+            //            let decoder = JSONDecoder()
+            do {
+                //                self.bearer = try decoder.decode(Bearer.self, from: data)
+                //                UserDefaults.standard.set(self.bearer?.token, forKey: "token")
+                //                UserDefaults.standard.set(self.bearer?.userId, forKey: "id")
+                completion(nil)
+            } catch {
+                completion(error)
+            }
+        }
+    }
+    
     
     //MARK: Fetch
     

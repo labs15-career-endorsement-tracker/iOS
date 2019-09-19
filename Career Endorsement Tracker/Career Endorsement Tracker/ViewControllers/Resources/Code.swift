@@ -1,8 +1,8 @@
 //
-//  ResourcesViewController.swift
+//  Code.swift
 //  Career Endorsement Tracker
 //
-//  Created by Alex on 9/17/19.
+//  Created by Alex on 9/19/19.
 //  Copyright © 2019 Lambda School. All rights reserved.
 //
 
@@ -10,40 +10,18 @@ import UIKit
 import MediaPlayer
 import AVFoundation
 
-class ResourcesViewController: UIViewController {
-
-    // MARK: - Properties
-    
-    var requirement: Requirement? {
-        didSet {
-            print("HERE requirement passed: ", requirement?.is_required, requirement)
-//            tableView.reloadData()
-        }
-    }
+class ViewController: UIViewController {
     
     private var audioLevel : Float = 0.0
     
-    // MARK: - Outlets
-    
-    @IBOutlet weak var tableView: UITableView!
-    
-    // MARK: - VC Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        tableView.delegate = self
-        tableView.dataSource = self
-        title = "Resources"
+        // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
         listenVolumeButton()
     }
-
-    // MARK: - Observer
     
     func listenVolumeButton(){
         
@@ -78,28 +56,6 @@ class ResourcesViewController: UIViewController {
                 audioLevel = 0.0625
             }
         }
-    }
-
-}
-
-extension ResourcesViewController: UITableViewDelegate {
-    
-}
-
-extension ResourcesViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return requirement?.resources.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = Bundle.main.loadNibNamed("ResourcesTableViewCell", owner: self, options: nil)?.first as! ResourcesTableViewCell
-
-        cell.resource = requirement?.resources[indexPath.row]
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     

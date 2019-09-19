@@ -14,7 +14,6 @@ class ResourcesTableViewCell: UITableViewCell {
     
     var resource: Resources? {
         didSet {
-            print("HERE passed resource: ", resource?.title, resource?.url, resource)
             updateViews()
         }
     }
@@ -28,10 +27,6 @@ class ResourcesTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-        // Add link
-        UIApplication.shared.openURL(NSURL(string: "https://google.com")! as URL)
-
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -44,12 +39,16 @@ class ResourcesTableViewCell: UITableViewCell {
     
     private func updateViews(){
         guard let resource = resource else {return}
-
-        textViewLink.text = resource.url
+        let attributedString = NSAttributedString.hyperLink(originalText: resource.title ?? "Resource", hyperLink: resource.title ?? "Resource", urlString: resource.url)
+        
+        textViewLink.attributedText = attributedString
+        textViewLink.textColor = #colorLiteral(red: 0.1607843137, green: 0.6745098039, blue: 0.2666666667, alpha: 1)
+        textViewLink.tintColor = #colorLiteral(red: 0.1607843137, green: 0.6745098039, blue: 0.2666666667, alpha: 1)
     }
 }
 
 extension ResourcesViewController: UITextViewDelegate {
+    
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
         UIApplication.shared.open(URL)
         return false

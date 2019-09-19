@@ -204,8 +204,8 @@
 				374CB3A523186791009A8C2D /* Helpers */,
 				5784F9E1230728E900C11198 /* Models */,
 				5784F9E4230728FF00C11198 /* Networking  */,
-				FABFB821232740B400B4647E /* Views */,
 				5784F9E3230728F800C11198 /* ViewControllers */,
+				FABFB821232740B400B4647E /* Views */,
 			);
 			path = "Career Endorsement Tracker";
 			sourceTree = "<group>";

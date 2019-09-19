@@ -165,7 +165,7 @@
                     <navigationItem key="navigationItem" title="Title" id="Hw3-iS-3SE">
                         <barButtonItem key="rightBarButtonItem" title="Resources" id="K4c-T3-Z7M">
                             <connections>
-                                <segue destination="Ir7-JF-ues" kind="show" id="SQj-sH-nCU"/>
+                                <segue destination="Ir7-JF-ues" kind="show" identifier="resource segue" id="SQj-sH-nCU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

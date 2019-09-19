@@ -14,7 +14,8 @@ class ResourcesViewController: UIViewController {
     
     var requirement: Requirement? {
         didSet {
-            tableView.reloadData()
+            print("HERE requirement passed: ", requirement?.is_required, requirement)
+//            tableView.reloadData()
         }
     }
     
@@ -40,7 +41,6 @@ extension ResourcesViewController: UITableViewDelegate {
 
 extension ResourcesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("HERE in TV VC: ", requirement?.resources.count, requirement?.resources.first?.url)
         return requirement?.resources.count ?? 0
     }
     
@@ -48,7 +48,6 @@ extension ResourcesViewController: UITableViewDataSource {
         let cell = Bundle.main.loadNibNamed("ResourcesTableViewCell", owner: self, options: nil)?.first as! ResourcesTableViewCell
 
         cell.resource = requirement?.resources[indexPath.row]
-        print("HERE resource req: ", requirement?.resources[indexPath.row].url)
         return cell
     }
     

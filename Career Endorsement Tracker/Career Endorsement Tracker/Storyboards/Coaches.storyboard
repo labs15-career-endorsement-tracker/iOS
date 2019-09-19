@@ -205,18 +205,5 @@
             </objects>
             <point key="canvasLocation" x="964" y="702"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Q4K-Xy-UrD">
-            <objects>
-                <viewController id="MTu-Hu-gVv" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7Q0-w4-r4O">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y40-V0-o9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
 </document>

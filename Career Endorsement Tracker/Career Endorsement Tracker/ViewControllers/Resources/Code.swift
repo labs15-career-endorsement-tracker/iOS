@@ -46,12 +46,14 @@ class ViewController: UIViewController {
                 print("GoodBye")
                 audioLevel = audioSession.outputVolume
             }
-            if audioSession.outputVolume > 0.999 {
+            if audioSession.outputVolume > 0.699 {
+                print("Max level")
                 (MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(0.9375, animated: false)
                 audioLevel = 0.9375
             }
             
             if audioSession.outputVolume < 0.001 {
+                print("Min level")
                 (MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(0.0625, animated: false)
                 audioLevel = 0.0625
             }

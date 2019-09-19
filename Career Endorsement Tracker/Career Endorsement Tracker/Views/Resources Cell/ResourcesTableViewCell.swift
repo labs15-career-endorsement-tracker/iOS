@@ -20,6 +20,7 @@ class ResourcesTableViewCell: UITableViewCell {
     
     // MARK: - Outlets
     
+    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var textViewLink: UITextView!
     
     // MARK: - VC Lifecycle
@@ -39,6 +40,11 @@ class ResourcesTableViewCell: UITableViewCell {
     
     private func updateViews(){
         guard let resource = resource else {return}
+        // Icon
+        iconImageView.image = UIImage(named:"to-do-list")?.withRenderingMode(.alwaysTemplate)
+        iconImageView.tintColor = #colorLiteral(red: 0.1607843137, green: 0.6745098039, blue: 0.2666666667, alpha: 1)
+        
+        // Text View
         let attributedString = NSAttributedString.hyperLink(originalText: resource.title ?? "Resource", hyperLink: resource.title ?? "Resource", urlString: resource.url)
         textViewLink.attributedText = attributedString
         textViewLink.sizeToFit()

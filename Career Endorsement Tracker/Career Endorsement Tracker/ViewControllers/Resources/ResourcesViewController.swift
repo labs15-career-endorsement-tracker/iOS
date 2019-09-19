@@ -14,12 +14,7 @@ class ResourcesViewController: UIViewController {
 
     // MARK: - Properties
     
-    var requirement: Requirement? {
-        didSet {
-            print("HERE requirement passed: ", requirement?.is_required, requirement)
-//            tableView.reloadData()
-        }
-    }
+    var requirement: Requirement?
     
     private var audioLevel : Float = 0.0
     

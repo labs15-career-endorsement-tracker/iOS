@@ -70,7 +70,7 @@ class ResourcesViewController: UIViewController {
                 print("GoodBye")
                 audioLevel = audioSession.outputVolume
             }
-            if audioSession.outputVolume > 0.999 {
+            if audioSession.outputVolume > 0.699 {
                 print("Max Volume")
                 (MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(0.9375, animated: false)
                 audioLevel = 0.9375

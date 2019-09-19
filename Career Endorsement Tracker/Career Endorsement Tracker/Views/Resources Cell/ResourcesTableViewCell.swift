@@ -41,7 +41,7 @@ class ResourcesTableViewCell: UITableViewCell {
     private func updateViews(){
         guard let resource = resource else {return}
         // Icon
-        iconImageView.image = UIImage(named:"to-do-list")?.withRenderingMode(.alwaysTemplate)
+        iconImageView.image = UIImage(named:"link-regular")?.withRenderingMode(.alwaysTemplate)
         iconImageView.tintColor = #colorLiteral(red: 0.1607843137, green: 0.6745098039, blue: 0.2666666667, alpha: 1)
         
         // Text View

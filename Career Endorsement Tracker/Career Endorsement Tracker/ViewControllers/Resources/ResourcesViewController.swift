@@ -41,28 +41,36 @@ class ResourcesViewController: UIViewController {
     // MARK: - Observer
     
     func listenVolumeButton(){
-        var audioSession = AVAudioSession()
-//        audioSession.setActive(true, error: nil)
-//        audioSession.addObserver(self, forKeyPath: "volumeChanged", options: NSKeyValueObservingOptions.New, context: nil)
-//        
-//        let audioSession = AVAudioSession.sharedInstance()
+        let audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setActive(true, options: [])
             audioSession.addObserver(self, forKeyPath: "outputVolume", options: NSKeyValueObservingOptions.new, context: nil)
-            audioSession.addObserver(self, forKeyPath: "volumeChanged", options: NSKeyValueObservingOptions.new, context: nil)
             audioLevel = audioSession.outputVolume
         } catch {
             print("Error")
         }
     }
     
+    var timesClickedUp = 0
+    var timesClickedDown = 0
+    var upResult = 3
+    var downResult = 2
+
+    // MARK: - Do Not Delete
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "volumeChanged"{
-            print("got in here")
-        }
-        
         if keyPath == "outputVolume"{
             let audioSession = AVAudioSession.sharedInstance()
+            
+            if audioSession.outputVolume > audioLevel {timesClickedUp += 1}
+            else if audioSession.outputVolume < audioLevel {timesClickedDown += 1}
+            if upResult == timesClickedUp, downResult == timesClickedDown {
+                print("Secret code run.")
+                timesClickedUp = 0
+                timesClickedDown = 0
+            }
+            if timesClickedDown > downResult {timesClickedDown = 0}
+            if timesClickedUp > upResult {timesClickedUp = 0}
+            
             if audioSession.outputVolume > audioLevel {
                 print("Hello")
                 audioLevel = audioSession.outputVolume
@@ -71,7 +79,7 @@ class ResourcesViewController: UIViewController {
                 print("GoodBye")
                 audioLevel = audioSession.outputVolume
             }
-            if audioSession.outputVolume > 0.699 {
+            if audioSession.outputVolume > 0.999 {
                 print("Max Volume")
                 (MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(0.9375, animated: false)
                 audioLevel = 0.9375

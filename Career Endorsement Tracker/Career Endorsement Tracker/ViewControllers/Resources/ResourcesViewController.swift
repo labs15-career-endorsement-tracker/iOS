@@ -31,6 +31,7 @@ class ResourcesViewController: UIViewController {
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        title = "Resources"
     }
 
 }

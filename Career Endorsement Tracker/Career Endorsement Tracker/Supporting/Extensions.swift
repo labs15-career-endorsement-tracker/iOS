@@ -23,14 +23,6 @@ extension UITextField {
 
 extension NSAttributedString {
     
-    static func makeHyperlink(for path: String, in string: String, as substring: String) -> NSAttributedString {
-        let nsString = NSString(string: string)
-        let substringRange = nsString.range(of: substring)
-        let attributedString = NSMutableAttributedString(string: string)
-        attributedString.addAttribute(.link, value: path, range: substringRange)
-        return attributedString
-    }
-    
     static func hyperLink(originalText: String, hyperLink: String, urlString: String) -> NSAttributedString {
         let style = NSMutableParagraphStyle()
         style.alignment = .center
@@ -39,11 +31,7 @@ extension NSAttributedString {
         let fullRange = NSMakeRange(0, attributedOriginalText.length)
         attributedOriginalText.addAttribute(NSAttributedString.Key.link, value: urlString, range: linkRange)
         attributedOriginalText.addAttribute(NSAttributedString.Key.paragraphStyle, value: style, range: fullRange)
-//        attributedOriginalText.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 10), range: fullRange)
-//        self.linkTextAttributes = [
-//            NSForegroundColorAttributeName: Config.primaryColour,
-//            NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue,
-//        ]
+        attributedOriginalText.addAttribute(NSAttributedString.Key.font, value: UIFont(name:"BarlowCondensed-SemiBold",size:24), range: fullRange)
         return attributedOriginalText
     }
 }

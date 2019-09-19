@@ -40,9 +40,8 @@ class ResourcesTableViewCell: UITableViewCell {
     private func updateViews(){
         guard let resource = resource else {return}
         let attributedString = NSAttributedString.hyperLink(originalText: resource.title ?? "Resource", hyperLink: resource.title ?? "Resource", urlString: resource.url)
-        
         textViewLink.attributedText = attributedString
-        textViewLink.textColor = #colorLiteral(red: 0.1607843137, green: 0.6745098039, blue: 0.2666666667, alpha: 1)
+        textViewLink.sizeToFit()
         textViewLink.tintColor = #colorLiteral(red: 0.1607843137, green: 0.6745098039, blue: 0.2666666667, alpha: 1)
     }
 }

@@ -278,7 +278,7 @@
 		5784F9E3230728F800C11198 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5798283A2333D7D100B06675 /* New Group */,
+				5798283A2333D7D100B06675 /* CoachSearch */,
 				FA2B1B302331793000E9FD6D /* Resources */,
 				570CE9032315D4AA00077B72 /* Home */,
 				570CE8FA2315CA6E00077B72 /* Signin */,
@@ -328,12 +328,12 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		5798283A2333D7D100B06675 /* New Group */ = {
+		5798283A2333D7D100B06675 /* CoachSearch */ = {
 			isa = PBXGroup;
 			children = (
 				5798283B2333DA2000B06675 /* CoachSearchViewController.swift */,
 			);
-			path = "New Group";
+			path = CoachSearch;
 			sourceTree = "<group>";
 		};
 		57D0CE76232E92020063D5D1 /* CircularProgress */ = {

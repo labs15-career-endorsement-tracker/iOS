@@ -15,7 +15,7 @@
             <objects>
                 <tableViewController id="ZVk-Qx-zhS" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="d2P-Vl-eVG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -45,7 +45,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A6f-qG-9gP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="uUt-R3-y30"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fbO-bL-zYT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="fbO-bL-zYT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -64,17 +64,17 @@
             <objects>
                 <viewController id="JoI-50-kyH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lx7-Yx-OZM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WVd-Ty-7D6">
-                                <rect key="frame" x="20" y="103" width="374" height="30"/>
+                                <rect key="frame" x="20" y="15" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNw-J5-Pv3">
-                                <rect key="frame" x="0.0" y="141" width="414" height="755"/>
+                                <rect key="frame" x="0.0" y="53" width="414" height="755"/>
                                 <connections>
                                     <segue destination="VkW-5r-aEY" kind="embed" id="Z5C-Zc-E0b"/>
                                 </connections>
@@ -172,6 +172,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="DRh-Yr-kYY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KVI-lD-hUQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -191,7 +192,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7B9-pL-sFG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="feU-Yi-MSO"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aWV-gI-LXK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="aWV-gI-LXK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

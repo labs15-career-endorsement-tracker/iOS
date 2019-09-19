@@ -10,7 +10,10 @@ import Foundation
 import UIKit
 
 class CoachSearchViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    
 }

@@ -41,8 +41,11 @@ class ResourcesViewController: UIViewController {
     // MARK: - Observer
     
     func listenVolumeButton(){
-        
-        let audioSession = AVAudioSession.sharedInstance()
+        var audioSession = AVAudioSession()
+//        audioSession.setActive(true, error: nil)
+//        audioSession.addObserver(self, forKeyPath: "volumeChanged", options: NSKeyValueObservingOptions.New, context: nil)
+//        
+//        let audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setActive(true, options: [])
             audioSession.addObserver(self, forKeyPath: "outputVolume", options: NSKeyValueObservingOptions.new, context: nil)
@@ -54,6 +57,10 @@ class ResourcesViewController: UIViewController {
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "outputVolume"{
+            print("got in here")
+        }
+        
+        if keyPath == "outputVolume"{
             let audioSession = AVAudioSession.sharedInstance()
             if audioSession.outputVolume > audioLevel {
                 print("Hello")
@@ -64,11 +71,13 @@ class ResourcesViewController: UIViewController {
                 audioLevel = audioSession.outputVolume
             }
             if audioSession.outputVolume > 0.999 {
+                print("Max Volume")
                 (MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(0.9375, animated: false)
                 audioLevel = 0.9375
             }
             
             if audioSession.outputVolume < 0.001 {
+                print("Min Volume")
                 (MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(0.0625, animated: false)
                 audioLevel = 0.0625
             }

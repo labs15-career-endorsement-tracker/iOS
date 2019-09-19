@@ -51,7 +51,6 @@
 		FA593528232300C4003621A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA593527232300C4003621A8 /* HomeViewController.swift */; };
 		FABFB8232328121800B4647E /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFB8222328121800B4647E /* CircularProgressBar.swift */; };
 		FACADFDE2316FEDE001BBE9C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACADFDD2316FEDE001BBE9C /* Extensions.swift */; };
-		FACC3490233402940092D084 /* Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC348F233402940092D084 /* Code.swift */; };
 		FAEC2D1323281615007AC7BA /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC2D1223281615007AC7BA /* CircularProgress.swift */; };
 /* End PBXBuildFile section */
 
@@ -123,7 +122,6 @@
 		FA5D9B17230F181B00DC9BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FABFB8222328121800B4647E /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		FACADFDD2316FEDE001BBE9C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		FACC348F233402940092D084 /* Code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code.swift; sourceTree = "<group>"; };
 		FAE9606D230F1AB7006E7467 /* Career Endorsement Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Career Endorsement Tracker.entitlements"; sourceTree = "<group>"; };
 		FAE9606E230F1C89006E7467 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		FAEC2D1223281615007AC7BA /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
@@ -354,7 +352,6 @@
 			isa = PBXGroup;
 			children = (
 				FA2B1B312331794200E9FD6D /* ResourcesViewController.swift */,
-				FACC348F233402940092D084 /* Code.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -564,7 +561,6 @@
 				3738EC67230628770083158B /* CareerEndorsementViewController.swift in Sources */,
 				570CE90B2315D59F00077B72 /* Lambda.swift in Sources */,
 				2CC78CD82328DBFD006CDFAE /* Environment.swift in Sources */,
-				FACC3490233402940092D084 /* Code.swift in Sources */,
 				FA2B1B322331794200E9FD6D /* ResourcesViewController.swift in Sources */,
 				570CE8F92315CA5C00077B72 /* Server.swift in Sources */,
 				570CE9112315F32200077B72 /* WelcomeNavigationController.swift in Sources */,

@@ -162,7 +162,13 @@
                             <outlet property="delegate" destination="m2x-Eg-KsC" id="n1E-Nc-IOz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="Hw3-iS-3SE"/>
+                    <navigationItem key="navigationItem" title="Title" id="Hw3-iS-3SE">
+                        <barButtonItem key="rightBarButtonItem" title="Resources" id="K4c-T3-Z7M">
+                            <connections>
+                                <segue destination="Ir7-JF-ues" kind="show" id="SQj-sH-nCU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="progressLabel" destination="7Ls-4k-Rqo" id="OHM-o0-dHP"/>
                         <outlet property="requirementProgessView" destination="lM9-WV-fQK" id="yP6-Xf-caG"/>
@@ -447,6 +453,14 @@
             </objects>
             <point key="canvasLocation" x="889.85507246376824" y="-606.02678571428567"/>
         </scene>
+        <!--Resource-->
+        <scene sceneID="hUK-Ud-dwF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Resources" referencedIdentifier="Resource" id="Ir7-JF-ues" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nNM-zM-Tq0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3209" y="-887"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="PKo-qT-t8E">
             <objects>
@@ -459,7 +473,7 @@
                                 <rect key="frame" x="8" y="126" width="398" height="129"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89N-Ga-Zh6">
-                                        <rect key="frame" x="27" y="28" width="155" height="32"/>
+                                        <rect key="frame" x="27" y="28" width="155" height="31.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="155" id="E4V-dT-dcs"/>
                                         </constraints>
@@ -482,7 +496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r33-DW-DXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3338" y="-607"/>
+            <point key="canvasLocation" x="3591" y="-450"/>
         </scene>
     </scenes>
     <resources>

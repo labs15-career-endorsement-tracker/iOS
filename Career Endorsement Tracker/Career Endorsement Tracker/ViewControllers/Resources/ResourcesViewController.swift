@@ -10,7 +10,19 @@ import UIKit
 
 class ResourcesViewController: UIViewController {
 
+    // MARK: - Properties
+    
+    var requirement: Requirement? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    // MARK: - Outlets
+    
     @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - VC Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,17 +31,6 @@ class ResourcesViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -39,12 +40,15 @@ extension ResourcesViewController: UITableViewDelegate {
 
 extension ResourcesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        print("HERE in TV VC: ", requirement?.resources.count, requirement?.resources.first?.url)
+        return requirement?.resources.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("ResourcesTableViewCell", owner: self, options: nil)?.first as! ResourcesTableViewCell
 
+        cell.resource = requirement?.resources[indexPath.row]
+        print("HERE resource req: ", requirement?.resources[indexPath.row].url)
         return cell
     }
     

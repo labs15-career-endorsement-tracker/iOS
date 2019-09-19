@@ -10,6 +10,15 @@ import UIKit
 
 class ResourcesTableViewCell: UITableViewCell {
 
+    // MARK: - Properties
+    
+    var resource: Resources? {
+        didSet {
+            print("HERE passed resource: ", resource?.title, resource?.url, resource)
+            updateViews()
+        }
+    }
+    
     // MARK: - Outlets
     
     @IBOutlet weak var textViewLink: UITextView!
@@ -34,7 +43,9 @@ class ResourcesTableViewCell: UITableViewCell {
     // MARK: - Setup
     
     private func updateViews(){
-        
+        guard let resource = resource else {return}
+
+        textViewLink.text = resource.url
     }
 }
 

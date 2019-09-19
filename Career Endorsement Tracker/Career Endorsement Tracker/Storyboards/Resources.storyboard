@@ -13,7 +13,7 @@
         <!--Resources View Controller-->
         <scene sceneID="cDX-ye-rfU">
             <objects>
-                <viewController id="972-vo-pBZ" customClass="ResourcesViewController" customModule="Career_Endorsement_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Resource" useStoryboardIdentifierAsRestorationIdentifier="YES" id="972-vo-pBZ" customClass="ResourcesViewController" customModule="Career_Endorsement_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MHm-ZS-ZaX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

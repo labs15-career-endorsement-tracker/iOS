@@ -277,7 +277,7 @@
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                 <state key="normal" title="Forgot your password?"/>
                                 <connections>
-                                    <segue destination="ba7-RM-Dny" kind="presentation" id="sUn-4b-YHL"/>
+                                    <segue destination="ba7-RM-Dny" kind="presentation" identifier="ForgotPasswordSegue" id="MEJ-1f-fMw"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -166,6 +166,7 @@ class HomeViewController: UIViewController {
             }
             if let currentUser = CurrentUser {
                 self.currentUser = currentUser
+                CoreUser.user = currentUser
                 //if currentUser.progress == 1 {self.fullProgress()}
                 DispatchQueue.main.async {
                     self.updateProgress(progress: currentUser.progress)

@@ -56,6 +56,8 @@
 		FACC349323344AC00092D084 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC349223344AC00092D084 /* SupportViewController.swift */; };
 		FACC349723344CFF0092D084 /* SupportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC349523344CFF0092D084 /* SupportTableViewCell.swift */; };
 		FACC349823344CFF0092D084 /* SupportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACC349623344CFF0092D084 /* SupportTableViewCell.xib */; };
+		FACC349B233571AC0092D084 /* AccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC349A233571AC0092D084 /* AccountTableViewController.swift */; };
+		FACC349D233577260092D084 /* CoreUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC349C233577260092D084 /* CoreUserController.swift */; };
 		FAEC2D1323281615007AC7BA /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC2D1223281615007AC7BA /* CircularProgress.swift */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +134,8 @@
 		FACC349223344AC00092D084 /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		FACC349523344CFF0092D084 /* SupportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTableViewCell.swift; sourceTree = "<group>"; };
 		FACC349623344CFF0092D084 /* SupportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupportTableViewCell.xib; sourceTree = "<group>"; };
+		FACC349A233571AC0092D084 /* AccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewController.swift; sourceTree = "<group>"; };
+		FACC349C233577260092D084 /* CoreUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreUserController.swift; sourceTree = "<group>"; };
 		FAE9606D230F1AB7006E7467 /* Career Endorsement Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Career Endorsement Tracker.entitlements"; sourceTree = "<group>"; };
 		FAE9606E230F1C89006E7467 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		FAEC2D1223281615007AC7BA /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
@@ -284,6 +288,7 @@
 		5784F9E3230728F800C11198 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FACC34992335718B0092D084 /* Account */,
 				FACC349123344AA60092D084 /* Support Links */,
 				5798283A2333D7D100B06675 /* CoachSearch */,
 				FA2B1B302331793000E9FD6D /* Resources */,
@@ -330,6 +335,7 @@
 		5784F9E92307295400C11198 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				FACC349C233577260092D084 /* CoreUserController.swift */,
 				5784F9EE23072BFB00C11198 /* Config.swift */,
 			);
 			path = Constants;
@@ -423,6 +429,14 @@
 				FACC349623344CFF0092D084 /* SupportTableViewCell.xib */,
 			);
 			path = "Support Cell";
+			sourceTree = "<group>";
+		};
+		FACC34992335718B0092D084 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				FACC349A233571AC0092D084 /* AccountTableViewController.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -553,6 +567,7 @@
 				2CC78CC52328AEAD006CDFAE /* VerticallyCenteredTextView.swift in Sources */,
 				FAEC2D1323281615007AC7BA /* CircularProgress.swift in Sources */,
 				57191C7A2320EDD300542F37 /* HomeDetailTableViewCell.swift in Sources */,
+				FACC349D233577260092D084 /* CoreUserController.swift in Sources */,
 				570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */,
 				5784F9EB230729B600C11198 /* DataGetter.swift in Sources */,
 				FACC349323344AC00092D084 /* SupportViewController.swift in Sources */,
@@ -577,6 +592,7 @@
 				FA2B1B322331794200E9FD6D /* ResourcesViewController.swift in Sources */,
 				570CE8F92315CA5C00077B72 /* Server.swift in Sources */,
 				570CE9112315F32200077B72 /* WelcomeNavigationController.swift in Sources */,
+				FACC349B233571AC0092D084 /* AccountTableViewController.swift in Sources */,
 				FACC349723344CFF0092D084 /* SupportTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

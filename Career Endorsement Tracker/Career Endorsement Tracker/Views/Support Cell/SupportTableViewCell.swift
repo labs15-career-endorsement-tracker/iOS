@@ -18,17 +18,19 @@ class SupportTableViewCell: UITableViewCell {
     // MARK: - Outlets
     
     @IBOutlet weak var linkTextView: UITextView!
-    @IBOutlet weak var iconImageView: UIImageView! {
-        didSet {
-            setupUI()
-        }
-    }
+    @IBOutlet weak var iconImageView: UIImageView!
+//        {
+//        didSet {
+//            setupUI()
+//        }
+//    }
     
     // MARK: - VC Lifecycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setupUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -40,8 +42,6 @@ class SupportTableViewCell: UITableViewCell {
     // MARK: - UI
     
     private func setupUI(){
-        UIApplication.shared.open(URL(string: "https://app.slack.com/client/T4JUEB3ME/CN99JD9J5")!) // comment out after testing
-        
         guard let iconImage = iconImage else {return print("Missing icon.")}
         guard let url = url else {return print("Missing url.")}
         

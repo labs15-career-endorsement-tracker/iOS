@@ -16,7 +16,7 @@ class SupportViewController: UIViewController {
     // MARK: - Properties
     
     var supportLinks = ["https://twitter.com/getendrsd", "mailto:\(Defaults.email)", "https://app.slack.com/client/T4JUEB3ME/CN99JD9J5"]
-    var supportIcons = [UIImage(), UIImage(), UIImage()]
+    var supportIcons = [UIImage(named: "twitter_icon"), UIImage(named: "email_icon"), UIImage(named: "slack_icon")]
     
     // MARK: - Outlets
     

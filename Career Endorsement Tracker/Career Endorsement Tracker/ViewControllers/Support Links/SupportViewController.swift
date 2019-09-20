@@ -15,8 +15,9 @@ class SupportViewController: UIViewController {
     }
     // MARK: - Properties
     
-    var supportLinks = ["https://twitter.com/getendrsd", "mailto:\(Defaults.email)", ""]
+    var supportLinks = ["https://twitter.com/getendrsd", "mailto:\(Defaults.email)", "https://app.slack.com/client/T4JUEB3ME/CN99JD9J5"]
     var supportIcons = [UIImage(), UIImage(), UIImage()]
+    
     // MARK: - Outlets
     
     @IBOutlet weak var supportLbl: UILabel!
@@ -31,18 +32,6 @@ class SupportViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension SupportViewController: UITableViewDelegate {
@@ -64,5 +53,7 @@ extension SupportViewController: UITableViewDataSource {
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

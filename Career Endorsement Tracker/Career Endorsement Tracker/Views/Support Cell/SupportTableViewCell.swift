@@ -18,14 +18,17 @@ class SupportTableViewCell: UITableViewCell {
     // MARK: - Outlets
     
     @IBOutlet weak var linkTextView: UITextView!
-    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var iconImageView: UIImageView! {
+        didSet {
+            setupUI()
+        }
+    }
     
     // MARK: - VC Lifecycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        setupUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -37,8 +40,8 @@ class SupportTableViewCell: UITableViewCell {
     // MARK: - UI
     
     private func setupUI(){
-        guard let iconImage = iconImage else {return}
-        guard let url = url else {return}
+        guard let iconImage = iconImage else {return print("Missing icon.")}
+        guard let url = url else {return print("Missing url.")}
         
         linkTextView.text = url
         iconImageView.image = iconImage

@@ -53,6 +53,9 @@
 		FA593528232300C4003621A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA593527232300C4003621A8 /* HomeViewController.swift */; };
 		FABFB8232328121800B4647E /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFB8222328121800B4647E /* CircularProgressBar.swift */; };
 		FACADFDE2316FEDE001BBE9C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACADFDD2316FEDE001BBE9C /* Extensions.swift */; };
+		FACC349323344AC00092D084 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC349223344AC00092D084 /* SupportViewController.swift */; };
+		FACC349723344CFF0092D084 /* SupportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC349523344CFF0092D084 /* SupportTableViewCell.swift */; };
+		FACC349823344CFF0092D084 /* SupportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACC349623344CFF0092D084 /* SupportTableViewCell.xib */; };
 		FAEC2D1323281615007AC7BA /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC2D1223281615007AC7BA /* CircularProgress.swift */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +129,9 @@
 		FA5D9B17230F181B00DC9BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FABFB8222328121800B4647E /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		FACADFDD2316FEDE001BBE9C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FACC349223344AC00092D084 /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
+		FACC349523344CFF0092D084 /* SupportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTableViewCell.swift; sourceTree = "<group>"; };
+		FACC349623344CFF0092D084 /* SupportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupportTableViewCell.xib; sourceTree = "<group>"; };
 		FAE9606D230F1AB7006E7467 /* Career Endorsement Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Career Endorsement Tracker.entitlements"; sourceTree = "<group>"; };
 		FAE9606E230F1C89006E7467 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		FAEC2D1223281615007AC7BA /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
@@ -278,6 +284,7 @@
 		5784F9E3230728F800C11198 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FACC349123344AA60092D084 /* Support Links */,
 				5798283A2333D7D100B06675 /* CoachSearch */,
 				FA2B1B302331793000E9FD6D /* Resources */,
 				570CE9032315D4AA00077B72 /* Home */,
@@ -392,12 +399,30 @@
 		FABFB821232740B400B4647E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FACC349423344CD60092D084 /* Support Cell */,
 				FA2B1B3323317ADE00E9FD6D /* Resources Cell */,
 				57D0CE77232E92270063D5D1 /* Home */,
 				57D0CE76232E92020063D5D1 /* CircularProgress */,
 				2CC78CBD23283F5A006CDFAE /* StepCell */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FACC349123344AA60092D084 /* Support Links */ = {
+			isa = PBXGroup;
+			children = (
+				FACC349223344AC00092D084 /* SupportViewController.swift */,
+			);
+			path = "Support Links";
+			sourceTree = "<group>";
+		};
+		FACC349423344CD60092D084 /* Support Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FACC349523344CFF0092D084 /* SupportTableViewCell.swift */,
+				FACC349623344CFF0092D084 /* SupportTableViewCell.xib */,
+			);
+			path = "Support Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,7 +432,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3738EC6323061D830083158B /* Build configuration list for PBXNativeTarget "Career Endorsement Tracker" */;
 			buildPhases = (
-				0E48811D27A86008A024904C /* [CP] Check Pods Manifest.lock */,
 				3738EC4D23061D800083158B /* Sources */,
 				3738EC4E23061D800083158B /* Frameworks */,
 				3738EC4F23061D800083158B /* Resources */,
@@ -478,6 +502,7 @@
 				375898522321BD2900363B60 /* BarlowCondensed-Regular.ttf in Resources */,
 				3738EC5F23061D830083158B /* LaunchScreen.storyboard in Resources */,
 				3758984A2321BCEC00363B60 /* Lato-Bold.ttf in Resources */,
+				FACC349823344CFF0092D084 /* SupportTableViewCell.xib in Resources */,
 				5784F9F123072D5600C11198 /* Welcome.storyboard in Resources */,
 				5BFE7A4823297BE2006DEA9E /* Staging.xcconfig in Resources */,
 				377AB69323229B240040D7CD /* BarlowCondensed-SemiBold.ttf in Resources */,
@@ -498,45 +523,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4BCC4C098D5492A32836D6A2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DC89DE90457AE848919864CD /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Career Endorsement Tracker-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8DEC63EC0A326AEFDC8303D7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -569,6 +555,7 @@
 				57191C7A2320EDD300542F37 /* HomeDetailTableViewCell.swift in Sources */,
 				570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */,
 				5784F9EB230729B600C11198 /* DataGetter.swift in Sources */,
+				FACC349323344AC00092D084 /* SupportViewController.swift in Sources */,
 				2CC78CC32328ABE0006CDFAE /* ShadowView.swift in Sources */,
 				570CE90E2315D6B300077B72 /* HomeCollectionViewCell.swift in Sources */,
 				570CE9002315CA9700077B72 /* SignUpViewController.swift in Sources */,
@@ -590,6 +577,7 @@
 				FA2B1B322331794200E9FD6D /* ResourcesViewController.swift in Sources */,
 				570CE8F92315CA5C00077B72 /* Server.swift in Sources */,
 				570CE9112315F32200077B72 /* WelcomeNavigationController.swift in Sources */,
+				FACC349723344CFF0092D084 /* SupportTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

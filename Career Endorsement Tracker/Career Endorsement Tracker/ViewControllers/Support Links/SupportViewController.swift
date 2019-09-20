@@ -16,7 +16,7 @@ class SupportViewController: UIViewController {
     // MARK: - Properties
     
     var supportLinks = ["https://twitter.com/getendrsd", "mailto:\(Defaults.email)", ""]
-    
+    var supportIcons = [UIImage(), UIImage(), UIImage()]
     // MARK: - Outlets
     
     @IBOutlet weak var supportLbl: UILabel!
@@ -57,6 +57,9 @@ extension SupportViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("SupportTableViewCell", owner: self, options: nil)?.first as! SupportTableViewCell
+        
+        cell.url = supportLinks[indexPath.row]
+        cell.iconImage = supportIcons[indexPath.row]
         
         return cell
     }

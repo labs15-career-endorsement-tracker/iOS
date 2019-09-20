@@ -40,6 +40,8 @@ class SupportTableViewCell: UITableViewCell {
     // MARK: - UI
     
     private func setupUI(){
+        UIApplication.shared.open(URL(string: "https://app.slack.com/client/T4JUEB3ME/CN99JD9J5")!) // comment out after testing
+        
         guard let iconImage = iconImage else {return print("Missing icon.")}
         guard let url = url else {return print("Missing url.")}
         

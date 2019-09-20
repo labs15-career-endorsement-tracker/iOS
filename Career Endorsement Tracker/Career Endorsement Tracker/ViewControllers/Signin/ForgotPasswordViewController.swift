@@ -8,19 +8,49 @@
 
 import UIKit
 
-
-
 class ForgotPasswordViewController: UIViewController {
     
     // MARK: - Properties
+    
     let server = Server()
     var emailAddress: String?
     
     // MARK: - Outlets
+    
     @IBOutlet weak var emailAddressField: UITextField!
     
+    // MARK: - Actions
     
-    // MARK: - View states
+    @IBAction func cancelRequestTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func requestPasswordTapped(_ sender: Any) {
+        // Make sure they entered an email address
+        guard let username = emailAddressField.text, !username.isEmpty else {
+            Config.showAlert(on: self, style: .alert, title: "Forgot password", message: "You must enter the email address you used when you signed up.")
+            return
+        }
+        // There is an email address lets request the reset
+        let user = ResetPassword(email: username)
+        
+        server.resetPasswordFor(user: user, completion: { (error) in
+            if let error = error {
+                DispatchQueue.main.async {
+                    self.displayAlert(message: error.localizedDescription, title: "Error resetting password")
+                }
+                return
+            } else {
+                // Pop back to main for now
+                DispatchQueue.main.async {
+                    self.displayAlert(message: "Please check your email.", title: "Password Reset")
+                }
+            }
+        })
+    }
+    
+    // MARK: - VC Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,47 +64,16 @@ class ForgotPasswordViewController: UIViewController {
         updateAfterEmail()
     }
     
-    // MARK: - Actions
-    @IBAction func requestPasswordTapped(_ sender: Any) {
-        // Make sure they entered an email address
-        guard let username = emailAddressField.text, !username.isEmpty else {
-            Config.showAlert(on: self, style: .alert, title: "Forgot password", message: "You must enter the email address you used when you signed up.")
-            return
-        }
-        // There is an email address lets request the reset
-        let user = ResetPassword(email: username)
-        
-        server.resetPasswordFor(user: user, completion: { (error) in
-
-            if let error = error {
-
-                DispatchQueue.main.async {
-                    self.displayAlert(message: error.localizedDescription)
-                        //Config.showAlert(on: self, style: .alert, title: "Error resetting password", message: error.localizedDescription)
-                }
-                return
-            } else {
-                // Pop back to main for now
-                self.dismiss(animated: true) {}
-            }
-        })
-    }
+    // MARK: - Methods
     
-        // MARK: - Actions
-    
-    @IBAction func cancelRequestTapped(_ sender: Any) {
-         self.dismiss(animated: true, completion: nil)
-    }
-    
-    // MARK: - Functions
     func updateAfterEmail() {
         guard let emailAddress = emailAddress  else { return }
         emailAddressField.text = emailAddress
     }
 
-    func displayAlert(message: String){
+    func displayAlert(message: String, title: String){
         // Create the alert controller
-        let alertController = UIAlertController(title: "Error resetting password", message: message, preferredStyle: .alert)
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         // Create the actions
         let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { UIAlertAction in
@@ -88,15 +87,4 @@ class ForgotPasswordViewController: UIViewController {
         // Present the controller
         self.present(alertController, animated: true, completion: nil)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

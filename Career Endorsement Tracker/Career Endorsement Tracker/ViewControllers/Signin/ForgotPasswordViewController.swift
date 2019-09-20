@@ -8,10 +8,13 @@
 
 import UIKit
 
+
+
 class ForgotPasswordViewController: UIViewController {
     
     // MARK: - Properties
     let server = Server()
+    var emailAddress: String?
     
     // MARK: - Outlets
     @IBOutlet weak var emailAddressField: UITextField!
@@ -24,6 +27,13 @@ class ForgotPasswordViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Make sure we received an email address
+        updateAfterEmail()
+    }
+    
     // MARK: - Actions
     @IBAction func requestPasswordTapped(_ sender: Any) {
         // Make sure they entered an email address
@@ -31,32 +41,37 @@ class ForgotPasswordViewController: UIViewController {
             Config.showAlert(on: self, style: .alert, title: "Forgot password", message: "You must enter the email address you used when you signed up.")
             return
         }
-        
         // There is an email address lets request the reset
         let user = ResetPassword(email: username)
         
         server.resetPasswordFor(user: user, completion: { (error) in
+
             if let error = error {
+
                 DispatchQueue.main.async {
-                    Config.showAlert(on: self, style: .alert, title: "Error resetting password", message: error.localizedDescription)
+                        Config.showAlert(on: self, style: .alert, title: "Error resetting password", message: error.localizedDescription)
                 }
                 return
             } else {
                 // Pop back to main for now
-                DispatchQueue.main.async {
+                self.dismiss(animated: true) {
                     
-                    self.dismiss(animated: true, completion: nil)
                 }
             }
         })
     }
+    
+        // MARK: - Actions
     
     @IBAction func cancelRequestTapped(_ sender: Any) {
          self.dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Functions
-
+    func updateAfterEmail() {
+        guard let emailAddress = emailAddress  else { return }
+        emailAddressField.text = emailAddress
+    }
 
     
 

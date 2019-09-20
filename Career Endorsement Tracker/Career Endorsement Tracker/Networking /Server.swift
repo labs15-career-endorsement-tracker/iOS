@@ -43,8 +43,8 @@ class Server {
         }
     }
     
-    let baseURL = URL(string: "http://endrsd-api.herokuapp.com/api/v1")!
-    
+//    let baseURL = URL(string: "http://endrsd-api.herokuapp.com/api/v1")!
+    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v1")!
     //MARK: Welcome Flow
 
     func loginWith(user: LoggedInUser, completion: @escaping (Error?)->Void) {

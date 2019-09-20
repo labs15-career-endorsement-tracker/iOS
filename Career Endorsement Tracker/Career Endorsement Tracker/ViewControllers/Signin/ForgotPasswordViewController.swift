@@ -49,14 +49,13 @@ class ForgotPasswordViewController: UIViewController {
             if let error = error {
 
                 DispatchQueue.main.async {
-                        Config.showAlert(on: self, style: .alert, title: "Error resetting password", message: error.localizedDescription)
+                    self.displayAlert(message: error.localizedDescription)
+                        //Config.showAlert(on: self, style: .alert, title: "Error resetting password", message: error.localizedDescription)
                 }
                 return
             } else {
                 // Pop back to main for now
-                self.dismiss(animated: true) {
-                    
-                }
+                self.dismiss(animated: true) {}
             }
         })
     }
@@ -73,7 +72,22 @@ class ForgotPasswordViewController: UIViewController {
         emailAddressField.text = emailAddress
     }
 
-    
+    func displayAlert(message: String){
+        // Create the alert controller
+        let alertController = UIAlertController(title: "Error resetting password", message: message, preferredStyle: .alert)
+        
+        // Create the actions
+        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { UIAlertAction in
+            NSLog("OK Pressed")
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        // Add the actions
+        alertController.addAction(okAction)
+        
+        // Present the controller
+        self.present(alertController, animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

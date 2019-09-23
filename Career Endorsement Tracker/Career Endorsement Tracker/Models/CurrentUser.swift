@@ -31,7 +31,3 @@ struct LoggedInUser: Encodable {
     var email: String
     var password: String
 }
-
-struct ResetPassword: Encodable {
-    var email: String
-}

@@ -64,6 +64,19 @@ class HomeDetailTableViewController: UITableViewController {
         tableView.reloadData()
     }
 
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else {return}
+        switch identifier {
+        case "resource segue" :
+            if let resouceVC = segue.destination as? ResourcesViewController {
+                resouceVC.requirement = requirement
+            }
+        default : print(identifier)
+        }
+    }
+    
     // MARK: - Fetch
     
     func fetchSingleRequirementFromServer() {

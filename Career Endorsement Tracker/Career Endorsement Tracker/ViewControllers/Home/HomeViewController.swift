@@ -166,7 +166,8 @@ class HomeViewController: UIViewController {
             }
             if let currentUser = CurrentUser {
                 self.currentUser = currentUser
-                if currentUser.progress == 1 {self.fullProgress()}
+                CoreUser.user = currentUser
+                //if currentUser.progress == 1 {self.fullProgress()}
                 DispatchQueue.main.async {
                     self.updateProgress(progress: currentUser.progress)
                     self.overallProgressLabel.text = "\(currentUser.progress)%"

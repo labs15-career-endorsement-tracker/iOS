@@ -9,34 +9,50 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="BarlowCondensed-Bold.ttf">
+            <string>BarlowCondensed-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Resources View Controller-->
         <scene sceneID="cDX-ye-rfU">
             <objects>
-                <viewController id="972-vo-pBZ" customClass="ResourcesViewController" customModule="Career_Endorsement_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Resource" useStoryboardIdentifierAsRestorationIdentifier="YES" id="972-vo-pBZ" customClass="ResourcesViewController" customModule="Career_Endorsement_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MHm-ZS-ZaX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VmX-fV-JS8">
-                                <rect key="frame" x="0.0" y="124" width="414" height="772"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VmX-fV-JS8">
+                                <rect key="frame" x="0.0" y="116" width="414" height="780"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="73" id="I1a-Oy-RqQ">
                                         <rect key="frame" x="0.0" y="28" width="414" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I1a-Oy-RqQ" id="cSV-X2-pOF">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iR9-E9-zJh">
+                                <rect key="frame" x="16" y="68" width="155" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="Y3Z-Ub-kvR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BarlowCondensed-Bold" family="Barlow Condensed" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="VmX-fV-JS8" firstAttribute="top" secondItem="DDy-Bx-MbJ" secondAttribute="top" constant="80" id="07H-py-HWC"/>
+                            <constraint firstItem="iR9-E9-zJh" firstAttribute="top" secondItem="DDy-Bx-MbJ" secondAttribute="top" constant="24" id="Gkx-sm-6a7"/>
                             <constraint firstItem="VmX-fV-JS8" firstAttribute="trailing" secondItem="DDy-Bx-MbJ" secondAttribute="trailing" id="HAZ-3D-BE3"/>
+                            <constraint firstItem="VmX-fV-JS8" firstAttribute="top" secondItem="iR9-E9-zJh" secondAttribute="bottom" constant="16" id="JuV-XR-qec"/>
+                            <constraint firstItem="iR9-E9-zJh" firstAttribute="leading" secondItem="DDy-Bx-MbJ" secondAttribute="leading" constant="16" id="csR-PM-rK2"/>
                             <constraint firstItem="VmX-fV-JS8" firstAttribute="leading" secondItem="DDy-Bx-MbJ" secondAttribute="leading" id="sSM-PV-bPC"/>
                             <constraint firstAttribute="bottom" secondItem="VmX-fV-JS8" secondAttribute="bottom" id="sVX-Qr-8ny"/>
                         </constraints>

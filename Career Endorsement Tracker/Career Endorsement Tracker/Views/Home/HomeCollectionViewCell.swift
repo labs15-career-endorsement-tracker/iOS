@@ -29,7 +29,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     func updateViews() {
         guard let requirement = requirement else {return}
-        print("HERE past guard statement. Requirements: ", requirement.resources.first?.url, requirement.resources.first?.title)
         taskNameLabel.text = requirement.title
         let progress = Float(requirement.progress)
         let finalProgress = progress / 100

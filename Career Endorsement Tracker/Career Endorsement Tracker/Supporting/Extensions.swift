@@ -35,3 +35,16 @@ extension NSAttributedString {
         return attributedOriginalText
     }
 }
+
+extension UITableViewCell {
+    
+    func styleCell(){
+        self.layer.borderWidth = 0.0
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 0)
+        self.layer.shadowRadius = 5.0
+        self.layer.shadowOpacity = 1
+        self.layer.masksToBounds = false
+    }
+    
+}

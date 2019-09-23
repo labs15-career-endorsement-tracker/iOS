@@ -276,9 +276,6 @@
                                 <rect key="frame" x="132" y="408.5" width="150" height="30"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                 <state key="normal" title="Forgot your password?"/>
-                                <connections>
-                                    <segue destination="ba7-RM-Dny" kind="presentation" identifier="ForgotPasswordSegue" id="MEJ-1f-fMw"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -328,91 +325,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v5w-jh-BUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="250.72463768115944" y="93.75"/>
-        </scene>
-        <!--Forgot Password View Controller-->
-        <scene sceneID="Xib-PL-7hS">
-            <objects>
-                <viewController id="ba7-RM-Dny" customClass="ForgotPasswordViewController" customModule="Career_Endorsement_Tracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GAh-dT-EMv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="urV-Tx-2XZ">
-                                <rect key="frame" x="16" y="147" width="265" height="73.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmY-9J-dUl">
-                                        <rect key="frame" x="0.0" y="0.0" width="265" height="53"/>
-                                        <fontDescription key="fontDescription" name="BarlowCondensed-Bold" family="Barlow Condensed" pointSize="44"/>
-                                        <color key="textColor" red="0.35085254907608032" green="0.68142980337142944" blue="0.27296561002731323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your account email address " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgo-p2-uu9">
-                                        <rect key="frame" x="0.0" y="53" width="255" height="20.5"/>
-                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="boC-W9-tfL">
-                                <rect key="frame" x="12" y="423" width="390" height="99"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFK-qq-Sfx">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="45"/>
-                                        <color key="backgroundColor" red="0.4677523375" green="0.90941542389999996" blue="0.47403568029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="Iah-8z-I2J"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="BarlowCondensed-Bold" family="Barlow Condensed" pointSize="24"/>
-                                        <state key="normal" title="Request password reset ">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="requestPasswordTapped:" destination="ba7-RM-Dny" eventType="touchUpInside" id="Xb8-QG-zTJ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUM-Sf-8ST">
-                                        <rect key="frame" x="0.0" y="69" width="390" height="30"/>
-                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
-                                        <state key="normal" title="Cancel request">
-                                            <color key="titleColor" red="0.91190379860000004" green="0.18446540829999999" blue="0.33300244810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="cancelRequestTapped:" destination="ba7-RM-Dny" eventType="touchUpInside" id="yt4-Jo-q51"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K2I-09-TZ8">
-                                <rect key="frame" x="12" y="273" width="390" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="qew-yH-eAr"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="name"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="boC-W9-tfL" firstAttribute="top" secondItem="K2I-09-TZ8" secondAttribute="bottom" constant="105" id="35z-Ez-Pve"/>
-                            <constraint firstItem="fNB-3n-7PG" firstAttribute="trailing" secondItem="K2I-09-TZ8" secondAttribute="trailing" constant="12" id="8Kb-eA-bUv"/>
-                            <constraint firstItem="boC-W9-tfL" firstAttribute="leading" secondItem="fNB-3n-7PG" secondAttribute="leading" constant="12" id="HbS-CZ-8di"/>
-                            <constraint firstItem="urV-Tx-2XZ" firstAttribute="top" secondItem="fNB-3n-7PG" secondAttribute="top" constant="103" id="c9R-lO-jll"/>
-                            <constraint firstItem="K2I-09-TZ8" firstAttribute="top" secondItem="urV-Tx-2XZ" secondAttribute="bottom" constant="52.5" id="cES-Sa-MNP"/>
-                            <constraint firstItem="K2I-09-TZ8" firstAttribute="leading" secondItem="fNB-3n-7PG" secondAttribute="leading" constant="12" id="cTJ-qF-LDK"/>
-                            <constraint firstItem="urV-Tx-2XZ" firstAttribute="leading" secondItem="fNB-3n-7PG" secondAttribute="leading" constant="16" id="k1Q-45-cX6"/>
-                            <constraint firstItem="boC-W9-tfL" firstAttribute="centerX" secondItem="GAh-dT-EMv" secondAttribute="centerX" id="nxT-OC-LUQ"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="fNB-3n-7PG"/>
-                    </view>
-                    <connections>
-                        <outlet property="emailAddressField" destination="K2I-09-TZ8" id="Vua-Yh-l6Y"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YZV-I8-kPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2713" y="-344"/>
         </scene>
     </scenes>
     <resources>

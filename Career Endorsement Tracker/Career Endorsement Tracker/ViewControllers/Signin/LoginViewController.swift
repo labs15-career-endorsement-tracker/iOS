@@ -8,16 +8,11 @@
 import Foundation
 import UIKit
 
-protocol ForgotPasswordDelegate {
-    func dismissModalView()
-}
-
 class LoginViewContoller: UIViewController, UITextFieldDelegate {
     
     // MARK: - Instances
     
     let server = Server()
-    var dismissModalDelegate: ForgotPasswordDelegate!
     
     // MARK: - Outlets
     
@@ -30,12 +25,6 @@ class LoginViewContoller: UIViewController, UITextFieldDelegate {
     @IBAction func loginButtonPressed(_ sender: Any) {
         login()
     }
-    
-    @IBAction func resetPasswordPressed(_ sender: Any) {
-        
-    }
-    
-    
     // MARK: - VC Lifecycle
     
     override func viewDidLoad() {
@@ -91,15 +80,4 @@ class LoginViewContoller: UIViewController, UITextFieldDelegate {
         return true
     }
     
-     // MARK: - Navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destinationVC = segue.destination as? ForgotPasswordViewController else { return }
-        destinationVC.emailAddress = emailTextField.text
-    }
-}
-
-extension LoginViewContoller: ForgotPasswordDelegate {
-    func dismissModalView() {
-        Config.showAlert(on: self, style: .alert, title: "Reset password", message: "Please check your email to complete password reset.")
-    }
 }

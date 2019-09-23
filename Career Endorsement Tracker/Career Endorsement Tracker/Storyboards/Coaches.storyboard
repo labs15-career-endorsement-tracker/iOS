@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="4rT-Qg-xUF">
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="4rT-Qg-xUF">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="123"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -197,29 +197,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WVd-Ty-7D6">
-                                <rect key="frame" x="20" y="15" width="374" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNw-J5-Pv3">
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wNw-J5-Pv3">
                                 <rect key="frame" x="0.0" y="53" width="414" height="755"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="VkW-5r-aEY" kind="embed" id="Z5C-Zc-E0b"/>
                                 </connections>
                             </containerView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search..." translatesAutoresizingMaskIntoConstraints="NO" id="W3D-5H-aLe">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="wNw-J5-Pv3" secondAttribute="bottom" id="068-n5-fen"/>
-                            <constraint firstItem="wNw-J5-Pv3" firstAttribute="top" secondItem="WVd-Ty-7D6" secondAttribute="bottom" constant="8" symbolic="YES" id="9VM-bL-70p"/>
-                            <constraint firstAttribute="trailing" secondItem="wNw-J5-Pv3" secondAttribute="trailing" id="EOc-3S-FuW"/>
-                            <constraint firstItem="WVd-Ty-7D6" firstAttribute="leading" secondItem="Lx7-Yx-OZM" secondAttribute="leadingMargin" id="GmT-hc-d4b"/>
-                            <constraint firstItem="WVd-Ty-7D6" firstAttribute="top" secondItem="7OK-1C-ZZb" secondAttribute="top" constant="15" id="b3K-U7-thN"/>
-                            <constraint firstItem="wNw-J5-Pv3" firstAttribute="leading" secondItem="Lx7-Yx-OZM" secondAttribute="leading" id="caG-0d-Msl"/>
-                            <constraint firstItem="WVd-Ty-7D6" firstAttribute="centerX" secondItem="wNw-J5-Pv3" secondAttribute="centerX" id="dfa-Mg-xPO"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7OK-1C-ZZb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Find Students" id="Vyr-yy-Zb3"/>

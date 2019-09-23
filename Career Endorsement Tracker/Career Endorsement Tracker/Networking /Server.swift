@@ -293,4 +293,47 @@ class Server {
         }
     }
     
+    //fetches users
+    func searchUser(withId id: String, withName name: String, completion: @escaping ([CurrentUser]?, Error?)->Void) {
+        
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "endrsd-api-staging.herokuapp.com"
+        components.path = "/api/v1/users"
+        //adds query items
+        let queryItemQuery = URLQueryItem(name: "search", value: "\(name)")
+        components.queryItems = [queryItemQuery]
+        print(components.url ?? "no url")
+        
+        guard let url = components.url else {return}
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = HTTPMethods.get.rawValue
+        request.addValue("Bearer \(id)", forHTTPHeaderField: "Authorization")
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                print("error fetching data - users/")
+                completion(nil, error)
+            } else {
+                completion(nil, nil)
+            }
+            
+            guard let data = data else {
+                print("data no good")
+                completion(nil, DataGetter.NetworkError.badData)
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            do {
+                let data = try decoder.decode([CurrentUser].self, from: data)
+                completion(data, nil)
+            } catch {
+                print(error.localizedDescription)
+                completion(nil, error)
+            }
+        }
+    }
+    
 }

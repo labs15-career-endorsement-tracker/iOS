@@ -25,7 +25,7 @@ extension NSAttributedString {
     
     static func hyperLink(originalText: String, hyperLink: String, urlString: String) -> NSAttributedString {
         let style = NSMutableParagraphStyle()
-        style.alignment = .center
+//        style.alignment = .center
         let attributedOriginalText = NSMutableAttributedString(string: originalText)
         let linkRange = attributedOriginalText.mutableString.range(of: hyperLink)
         let fullRange = NSMakeRange(0, attributedOriginalText.length)

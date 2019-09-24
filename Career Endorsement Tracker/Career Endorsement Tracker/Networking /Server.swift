@@ -42,7 +42,7 @@ class Server {
         }
     }
     
-    let baseURL = URL(string: "http://endrsd-api.herokuapp.com/api/v1")!
+    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v1")!
     
     //MARK: Welcome Flow
 
@@ -61,7 +61,7 @@ class Server {
             return
         }
         
-        dataGetter.fetchData(with: request) { (_, data, error) in
+        dataGetter.fetchData(with: request) { (response, data, error) in
             if let error = error {
                 completion(error)
                 return
@@ -78,6 +78,7 @@ class Server {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
                 UserDefaults.standard.set(self.bearer?.token, forKey: "token")
                 UserDefaults.standard.set(self.bearer?.userId, forKey: "id")
+                UserDefaults.standard.set(self.bearer?.isAdmin, forKey: "isAdmin")
                 completion(nil)
             } catch {
                 completion(error)

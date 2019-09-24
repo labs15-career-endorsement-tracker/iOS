@@ -36,8 +36,18 @@
                                         <segue destination="Ua5-63-fht" kind="show" id="M31-cN-kUR"/>
                                     </connections>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinned Students" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bf-LW-EiG">
+                                    <rect key="frame" x="8" y="94" width="143" height="21"/>
+                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="4bf-LW-EiG" firstAttribute="leading" secondItem="4rT-Qg-xUF" secondAttribute="leading" constant="8" id="hTY-sU-iux"/>
+                                <constraint firstAttribute="bottom" secondItem="4bf-LW-EiG" secondAttribute="bottom" constant="8" id="xIA-aH-Ty2"/>
+                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sLT-dO-BKF">

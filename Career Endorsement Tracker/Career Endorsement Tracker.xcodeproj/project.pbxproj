@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -54,6 +54,9 @@
 		FA2B1B3623317B2200E9FD6D /* ResourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B1B3423317B2200E9FD6D /* ResourcesTableViewCell.swift */; };
 		FA2B1B3723317B2200E9FD6D /* ResourcesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2B1B3523317B2200E9FD6D /* ResourcesTableViewCell.xib */; };
 		FA593528232300C4003621A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA593527232300C4003621A8 /* HomeViewController.swift */; };
+		FA7A178F233A8F380090D5EF /* CoachProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A178E233A8F380090D5EF /* CoachProfileTableViewController.swift */; };
+		FA7A1791233A8F6E0090D5EF /* CoachCalendlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A1790233A8F6E0090D5EF /* CoachCalendlyViewController.swift */; };
+		FA7A1793233A8F8A0090D5EF /* CoachPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A1792233A8F8A0090D5EF /* CoachPasswordViewController.swift */; };
 		FABFB8232328121800B4647E /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFB8222328121800B4647E /* CircularProgressBar.swift */; };
 		FACADFDE2316FEDE001BBE9C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACADFDD2316FEDE001BBE9C /* Extensions.swift */; };
 		FACC349323344AC00092D084 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC349223344AC00092D084 /* SupportViewController.swift */; };
@@ -135,6 +138,9 @@
 		FA593527232300C4003621A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA5D9B15230F181B00DC9BC1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FA5D9B17230F181B00DC9BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA7A178E233A8F380090D5EF /* CoachProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachProfileTableViewController.swift; sourceTree = "<group>"; };
+		FA7A1790233A8F6E0090D5EF /* CoachCalendlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachCalendlyViewController.swift; sourceTree = "<group>"; };
+		FA7A1792233A8F8A0090D5EF /* CoachPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachPasswordViewController.swift; sourceTree = "<group>"; };
 		FABFB8222328121800B4647E /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		FACADFDD2316FEDE001BBE9C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FACC349223344AC00092D084 /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
@@ -353,6 +359,9 @@
 			isa = PBXGroup;
 			children = (
 				5798283B2333DA2000B06675 /* CoachSearchViewController.swift */,
+				FA7A178E233A8F380090D5EF /* CoachProfileTableViewController.swift */,
+				FA7A1790233A8F6E0090D5EF /* CoachCalendlyViewController.swift */,
+				FA7A1792233A8F8A0090D5EF /* CoachPasswordViewController.swift */,
 			);
 			path = CoachSearch;
 			sourceTree = "<group>";
@@ -631,11 +640,14 @@
 				FA0383142336C06200ADF1FD /* SupportTableViewController.swift in Sources */,
 				570CE90B2315D59F00077B72 /* Lambda.swift in Sources */,
 				2CC78CD82328DBFD006CDFAE /* Environment.swift in Sources */,
+				FA7A178F233A8F380090D5EF /* CoachProfileTableViewController.swift in Sources */,
 				FA2B1B322331794200E9FD6D /* ResourcesViewController.swift in Sources */,
 				570CE8F92315CA5C00077B72 /* Server.swift in Sources */,
 				570CE9112315F32200077B72 /* WelcomeNavigationController.swift in Sources */,
+				FA7A1793233A8F8A0090D5EF /* CoachPasswordViewController.swift in Sources */,
 				FACC349B233571AC0092D084 /* AccountTableViewController.swift in Sources */,
 				FACC349723344CFF0092D084 /* SupportTableViewCell.swift in Sources */,
+				FA7A1791233A8F6E0090D5EF /* CoachCalendlyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

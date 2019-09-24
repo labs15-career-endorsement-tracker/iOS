@@ -11,7 +11,7 @@
         <!--Profile-->
         <scene sceneID="I6S-YH-gie">
             <objects>
-                <tableViewController id="ZVk-Qx-zhS" sceneMemberID="viewController">
+                <tableViewController id="ZVk-Qx-zhS" customClass="CoachProfileTableViewController" customModule="Career_Endorsement_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="d2P-Vl-eVG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,7 +75,7 @@
         <!--Password-->
         <scene sceneID="bpo-pi-BaQ">
             <objects>
-                <viewController title="Password" id="Ua5-63-fht" sceneMemberID="viewController">
+                <viewController title="Password" id="Ua5-63-fht" customClass="CoachPasswordViewController" customModule="Career_Endorsement_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sOM-F1-iXc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +91,7 @@
         <!--Calendly Link-->
         <scene sceneID="3bJ-JF-pmT">
             <objects>
-                <viewController title="Calendly Link" id="n5p-d8-z01" sceneMemberID="viewController">
+                <viewController title="Calendly Link" id="n5p-d8-z01" customClass="CoachCalendlyViewController" customModule="Career_Endorsement_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EPL-oc-oeM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

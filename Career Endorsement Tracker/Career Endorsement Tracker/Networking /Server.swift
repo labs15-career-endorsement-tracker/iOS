@@ -295,7 +295,7 @@ class Server {
     }
     
     //fetches users
-    func searchUser(withId id: String, withName name: String, completion: @escaping ([SearchUser]?, Error?)->Void) {
+    func searchUser(withId id: String, withName name: String, completion: @escaping ([CurrentUser]?, Error?)->Void) {
         
         var components = URLComponents()
         components.scheme = "https"
@@ -328,7 +328,7 @@ class Server {
             
             let decoder = JSONDecoder()
             do {
-                let data = try decoder.decode([SearchUser].self, from: data)
+                let data = try decoder.decode([CurrentUser].self, from: data)
                 completion(data, nil)
             } catch {
                 print(error.localizedDescription)

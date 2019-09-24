@@ -11,7 +11,8 @@ import UIKit
 class RequestPasswordResetViewController: UIViewController {
     
     // MARK: - Properties
-    
+    let server = Server()
+    var emailAddress: String?
     
     // MARK: - Outlets
     @IBOutlet weak var emailAddressField: UITextField!
@@ -20,20 +21,30 @@ class RequestPasswordResetViewController: UIViewController {
     // MARK: - View states
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        // Do any additional setup after loading the view.
+        // Make sure we received an email address
+        updateAfterEmail()
     }
     
     // MARK: - Actions
     @IBAction func requestPasswordTapped(_ sender: Any) {
     }
     
+    
     @IBAction func cancelRequestTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     
     // MARK: - Functions
-    
+    func updateAfterEmail() {
+        guard let emailAddress = emailAddress  else { return }
+        emailAddressField.text = emailAddress
+    }
     
 
 

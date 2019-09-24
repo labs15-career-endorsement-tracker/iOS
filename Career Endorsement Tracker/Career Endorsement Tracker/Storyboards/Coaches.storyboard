@@ -192,7 +192,7 @@
         <!--Find Students-->
         <scene sceneID="N1r-LP-dxo">
             <objects>
-                <viewController id="JoI-50-kyH" sceneMemberID="viewController">
+                <viewController id="JoI-50-kyH" customClass="CoachSearchViewController" customModule="Career_Endorsement_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lx7-Yx-OZM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,6 +214,9 @@
                         <viewLayoutGuide key="safeArea" id="7OK-1C-ZZb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Find Students" id="Vyr-yy-Zb3"/>
+                    <connections>
+                        <outlet property="searchBar" destination="W3D-5H-aLe" id="rku-FP-xlt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qOl-mu-k4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -297,7 +300,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="e6Q-tW-fCg">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="DRh-Yr-kYY" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="CoachTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="DRh-Yr-kYY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KVI-lD-hUQ">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

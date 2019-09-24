@@ -42,7 +42,7 @@ class Server {
         }
     }
     
-    let baseURL = URL(string: "http://endrsd-api.herokuapp.com/api/v1")!
+    let baseURL = URL(string: "https://endrsd-api-staging.herokuapp.com/api/v1")!
     
     //MARK: Welcome Flow
 
@@ -61,7 +61,7 @@ class Server {
             return
         }
         
-        dataGetter.fetchData(with: request) { (_, data, error) in
+        dataGetter.fetchData(with: request) { (response, data, error) in
             if let error = error {
                 completion(error)
                 return
@@ -78,6 +78,7 @@ class Server {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
                 UserDefaults.standard.set(self.bearer?.token, forKey: "token")
                 UserDefaults.standard.set(self.bearer?.userId, forKey: "id")
+                UserDefaults.standard.set(self.bearer?.isAdmin, forKey: "isAdmin")
                 completion(nil)
             } catch {
                 completion(error)
@@ -294,7 +295,7 @@ class Server {
     }
     
     //fetches users
-    func searchUser(withId id: String, withName name: String, completion: @escaping ([CurrentUser]?, Error?)->Void) {
+    func searchUser(withId id: String, withName name: String, completion: @escaping ([SearchUser]?, Error?)->Void) {
         
         var components = URLComponents()
         components.scheme = "https"
@@ -327,7 +328,7 @@ class Server {
             
             let decoder = JSONDecoder()
             do {
-                let data = try decoder.decode([CurrentUser].self, from: data)
+                let data = try decoder.decode([SearchUser].self, from: data)
                 completion(data, nil)
             } catch {
                 print(error.localizedDescription)

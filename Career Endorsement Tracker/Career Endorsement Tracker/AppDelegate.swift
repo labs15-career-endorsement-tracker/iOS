@@ -41,10 +41,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if UserDefaults.standard.bool(forKey: "isLoggedIn") {
             // user is already logged in, present chat VC, but from MainVC, in order to unwind back to mainVC when user log out.
-            print("user is already logged in")
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
-            window?.rootViewController = vc
+            if UserDefaults.standard.bool(forKey: "isAdmin") {
+                print("user is already logged in")
+                let storyboard = UIStoryboard(name: "Coaches", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "CoachTabBarController")
+                window?.rootViewController = vc
+            } else {
+                print("user is already logged in")
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
+                window?.rootViewController = vc
+            }
         } else {
             // user is not logged in
             print("user is not logged in")

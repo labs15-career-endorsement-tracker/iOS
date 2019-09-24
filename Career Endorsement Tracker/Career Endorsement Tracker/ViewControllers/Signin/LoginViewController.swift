@@ -87,4 +87,10 @@ class LoginViewContoller: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationVC = segue.destination as? RequestPasswordResetViewController else { return }
+        destinationVC.emailAddress = emailTextField.text
+    }
+    
 }

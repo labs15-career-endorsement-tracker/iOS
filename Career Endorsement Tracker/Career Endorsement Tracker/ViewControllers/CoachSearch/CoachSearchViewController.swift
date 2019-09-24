@@ -16,6 +16,8 @@ class CoachSearchViewController: UIViewController {
     let server = Server()
     var users: [CurrentUser] = []
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
@@ -83,7 +85,11 @@ extension CoachSearchViewController: UITableViewDelegate, UITableViewDataSource 
 
 extension CoachSearchViewController: CoachSearchCellDelegate {
     func didPinStudent(cell: UITableViewCell, indexPath: IndexPath) {
-        print("HERE called didPinStudent")
+        
+        guard let token = UserDefaults.standard.object(forKey: "token") as? String else {
+            return Config.showAlert(on: self, style: .alert, title: "User could not be authenticated.", message: "Please logout and sign in again.")
+        }
+        
     }
     
     

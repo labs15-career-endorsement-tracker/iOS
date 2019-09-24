@@ -173,9 +173,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcp-zC-cZb">
-                                                    <rect key="frame" x="348" y="7" width="46" height="30"/>
+                                                    <rect key="frame" x="347" y="7" width="48" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
+                                                    <state key="normal" title="Pinned"/>
                                                     <connections>
                                                         <action selector="pinStudentBtnPressed:" destination="ckn-FI-LJA" eventType="touchUpInside" id="jHs-9H-XAx"/>
                                                     </connections>

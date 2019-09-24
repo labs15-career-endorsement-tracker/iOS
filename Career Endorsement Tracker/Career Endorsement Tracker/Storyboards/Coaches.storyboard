@@ -37,9 +37,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Profile" id="CQj-nc-DFF">
-                        <barButtonItem key="rightBarButtonItem" title="Acct" id="qOg-cs-FDs">
+                        <barButtonItem key="rightBarButtonItem" title="Account" id="qOg-cs-FDs">
                             <connections>
-                                <segue destination="tax-G1-YFU" kind="presentation" modalPresentationStyle="fullScreen" id="50o-Dq-ynW"/>
+                                <segue destination="vWQ-vi-qA6" kind="show" id="pyb-KZ-Ohw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -131,6 +131,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Qcz-ix-aOW"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Yhs-95-Ap9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MxX-Ac-sdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,6 +162,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5J1-6v-7fD"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ggy-GP-xat"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Drl-FP-6df" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -317,25 +319,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuv-ch-EMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="964" y="702"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Yzy-sN-Tbo">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tax-G1-YFU" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="q8N-KB-jPq">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vWQ-vi-qA6" kind="relationship" relationship="rootViewController" id="xuR-e0-nu0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tnb-Pj-XWA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2565" y="702"/>
         </scene>
     </scenes>
     <resources>

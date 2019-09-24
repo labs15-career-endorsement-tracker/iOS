@@ -269,7 +269,7 @@
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                 <state key="normal" title="Forgot your password?"/>
                                 <connections>
-                                    <segue destination="uYG-dC-UUz" kind="presentation" id="8uj-mf-ACg"/>
+                                    <segue destination="uYG-dC-UUz" kind="presentation" modalPresentationStyle="fullScreen" id="8uj-mf-ACg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -326,11 +326,11 @@
             <objects>
                 <viewController title="Log In" id="uYG-dC-UUz" userLabel="Request Password Reset" customClass="RequestPasswordResetViewController" customModule="Career_Endorsement_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9nd-DF-kcd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="SK1-FC-rg9" userLabel="ForgotLabelStack">
-                                <rect key="frame" x="16" y="103" width="265" height="77.5"/>
+                                <rect key="frame" x="16" y="147" width="265" height="77.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5o-6v-Dq4">
                                         <rect key="frame" x="0.0" y="0.0" width="265" height="53"/>
@@ -347,7 +347,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Uq4-CU-ZBC" userLabel="RequestCancelStack">
-                                <rect key="frame" x="12" y="383" width="390" height="95"/>
+                                <rect key="frame" x="12" y="427" width="390" height="95"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GI-0w-dxg">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="41"/>
@@ -373,7 +373,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your account email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5P-Sw-AV5">
-                                <rect key="frame" x="12" y="223" width="390" height="45"/>
+                                <rect key="frame" x="12" y="267" width="390" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="TMH-zB-dLB"/>
                                 </constraints>

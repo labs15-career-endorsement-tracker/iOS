@@ -11,6 +11,8 @@ import UIKit
 
 class CoachSearchViewController: UIViewController {
     
+    // MARK: - Properties
+    
     let server = Server()
     var users: [CurrentUser] = []
     
@@ -66,13 +68,23 @@ extension CoachSearchViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CoachSearchCell") else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CoachSearchCell") as? CoachSearchTableViewCell else {
             return UITableViewCell()
         }
         
         let user = users[indexPath.row]
-        cell.textLabel?.text = "\(user.first_name) \(user.last_name)"
         
+        cell.currentIndexPath = indexPath
+        cell.student = user
+        cell.delegate = self
         return cell
     }
+}
+
+extension CoachSearchViewController: CoachSearchCellDelegate {
+    func didPinStudent(cell: UITableViewCell, indexPath: IndexPath) {
+        print("HERE called didPinStudent")
+    }
+    
+    
 }

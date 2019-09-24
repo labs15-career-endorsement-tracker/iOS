@@ -57,6 +57,7 @@
 		FA7A178F233A8F380090D5EF /* CoachProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A178E233A8F380090D5EF /* CoachProfileTableViewController.swift */; };
 		FA7A1791233A8F6E0090D5EF /* CoachCalendlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A1790233A8F6E0090D5EF /* CoachCalendlyViewController.swift */; };
 		FA7A1793233A8F8A0090D5EF /* CoachPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A1792233A8F8A0090D5EF /* CoachPasswordViewController.swift */; };
+		FA7A1795233AB93E0090D5EF /* CoachSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A1794233AB93E0090D5EF /* CoachSearchTableViewCell.swift */; };
 		FABFB8232328121800B4647E /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFB8222328121800B4647E /* CircularProgressBar.swift */; };
 		FACADFDE2316FEDE001BBE9C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACADFDD2316FEDE001BBE9C /* Extensions.swift */; };
 		FACC349323344AC00092D084 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC349223344AC00092D084 /* SupportViewController.swift */; };
@@ -141,6 +142,7 @@
 		FA7A178E233A8F380090D5EF /* CoachProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachProfileTableViewController.swift; sourceTree = "<group>"; };
 		FA7A1790233A8F6E0090D5EF /* CoachCalendlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachCalendlyViewController.swift; sourceTree = "<group>"; };
 		FA7A1792233A8F8A0090D5EF /* CoachPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachPasswordViewController.swift; sourceTree = "<group>"; };
+		FA7A1794233AB93E0090D5EF /* CoachSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachSearchTableViewCell.swift; sourceTree = "<group>"; };
 		FABFB8222328121800B4647E /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		FACADFDD2316FEDE001BBE9C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FACC349223344AC00092D084 /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
@@ -422,6 +424,7 @@
 		FABFB821232740B400B4647E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA7A1794233AB93E0090D5EF /* CoachSearchTableViewCell.swift */,
 				FACC349423344CD60092D084 /* Support Cell */,
 				FA2B1B3323317ADE00E9FD6D /* Resources Cell */,
 				57D0CE77232E92270063D5D1 /* Home */,
@@ -618,6 +621,7 @@
 				57191C7A2320EDD300542F37 /* HomeDetailTableViewCell.swift in Sources */,
 				FACC349D233577260092D084 /* CoreUserController.swift in Sources */,
 				570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */,
+				FA7A1795233AB93E0090D5EF /* CoachSearchTableViewCell.swift in Sources */,
 				5784F9EB230729B600C11198 /* DataGetter.swift in Sources */,
 				FACC349323344AC00092D084 /* SupportViewController.swift in Sources */,
 				2CC78CC32328ABE0006CDFAE /* ShadowView.swift in Sources */,

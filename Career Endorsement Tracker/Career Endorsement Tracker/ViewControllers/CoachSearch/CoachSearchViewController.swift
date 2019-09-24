@@ -12,14 +12,17 @@ import UIKit
 class CoachSearchViewController: UIViewController {
     
     let server = Server()
+    var users: [CurrentUser] = []
     
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        tableView.delegate = self
+        tableView.dataSource = self
     }
-    
     
 }
 
@@ -45,10 +48,31 @@ extension CoachSearchViewController: UISearchBarDelegate {
             }
             
             if let users = users {
-                print(users)
+                self.users = users
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             }
         }
         
     }
     
+}
+
+extension CoachSearchViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return users.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CoachSearchCell") else {
+            return UITableViewCell()
+        }
+        
+        let user = users[indexPath.row]
+        cell.textLabel?.text = "\(user.first_name) \(user.last_name)"
+        
+        return cell
+    }
 }

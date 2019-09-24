@@ -166,11 +166,11 @@
             </objects>
             <point key="canvasLocation" x="4170" y="127"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="fLf-UE-oE9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A6f-qG-9gP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="uUt-R3-y30"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="uUt-R3-y30"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="fbO-bL-zYT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -298,11 +298,11 @@
             </objects>
             <point key="canvasLocation" x="-235" y="340"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="edk-Xv-TiF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7B9-pL-sFG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="feU-Yi-MSO"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="feU-Yi-MSO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="aWV-gI-LXK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -338,4 +338,7 @@
             <point key="canvasLocation" x="2565" y="702"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
+    </resources>
 </document>

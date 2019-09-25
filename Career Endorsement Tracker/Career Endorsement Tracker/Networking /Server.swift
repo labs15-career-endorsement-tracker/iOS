@@ -337,4 +337,55 @@ class Server {
         }
     }
     
+    //pins student
+    func pinStudent(withToken token: String, withStudentId id: Int, completion: @escaping (Error?)->Void) {
+        
+        
+        let pinStudentURL = baseURL.appendingPathComponent("/students/\(id)")
+    
+        var request = URLRequest(url: pinStudentURL)
+        request.httpMethod = HTTPMethods.put.rawValue
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                print("error fetching data - users/")
+                completion(error)
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
+    //fetches pinned students
+    
+    func fetchPinnedStudents(withToken token: String, completion: @escaping ([CurrentUser]?, Error?)->Void) {
+        
+        let allPinnedStudentsURL = baseURL.appendingPathComponent("students")
+        var request = URLRequest(url: allPinnedStudentsURL)
+        request.httpMethod = HTTPMethods.get.rawValue
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                completion(nil, error)
+            } else {
+                completion(nil, nil)
+            }
+            
+            guard let data = data else {
+                completion(nil, DataGetter.NetworkError.badData)
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            do {
+                let data = try decoder.decode([CurrentUser].self, from: data)
+                completion(data, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+    
 }

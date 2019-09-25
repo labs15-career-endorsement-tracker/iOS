@@ -28,6 +28,19 @@ class CoachSearchViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    //MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SearchDetailSegue" {
+            guard let destinationVC = segue.destination as? SearchDetailTableViewController, let indexPath = tableView.indexPathForSelectedRow else {
+                print("no destination")
+                return
+            }
+            print(users[indexPath.row].id)
+            destinationVC.studentId = users[indexPath.row].id
+        }
+    }
+    
 }
 
 extension CoachSearchViewController: UISearchBarDelegate {
@@ -90,6 +103,20 @@ extension CoachSearchViewController: CoachSearchCellDelegate {
             return Config.showAlert(on: self, style: .alert, title: "User could not be authenticated.", message: "Please logout and sign in again.")
         }
         
+        let student = users[indexPath.row]
+        server.pinStudent(withToken: token, withStudentId: student.id) { (error) in
+            if let error = error {
+                DispatchQueue.main.async {
+                    Config.showAlert(on: self, style: .alert, title: "Error Pinning Student", message: error.localizedDescription)
+                    return
+                }
+            } else {
+                DispatchQueue.main.async {
+                    Config.showAlert(on: self, style: .alert, title: "Success!", message: "\(student.first_name) \(student.last_name) has been assigned to you.")
+                    return
+                }
+            }
+        }
     }
     
     

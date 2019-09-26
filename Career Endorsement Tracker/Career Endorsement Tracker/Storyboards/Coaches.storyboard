@@ -153,7 +153,7 @@
                                         <rect key="frame" x="0.0" y="65" width="366" height="30"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                         <state key="normal" title="Cancel reset request">
-                                            <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="cancelResetRequest:" destination="Ua5-63-fht" eventType="touchUpInside" id="6kS-vu-Md7"/>
@@ -329,16 +329,28 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="188"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmE-cB-upd">
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmE-cB-upd">
                                     <rect key="frame" x="195" y="83.5" width="24.5" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HG4-CR-yud" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
+                                    <rect key="frame" x="142" y="29" width="130" height="130"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="86O-OO-j3J"/>
+                                        <constraint firstAttribute="height" constant="130" id="BsV-xo-pFa"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="130" id="Yzt-vZ-tWa"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="gQo-qy-MGJ"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" red="0.029572339730000001" green="0.081848926840000003" blue="0.20448160169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
+                                <constraint firstItem="HG4-CR-yud" firstAttribute="centerX" secondItem="siF-6e-6eh" secondAttribute="centerX" id="Cg3-fX-YP9"/>
                                 <constraint firstItem="RmE-cB-upd" firstAttribute="centerY" secondItem="siF-6e-6eh" secondAttribute="centerY" id="DQn-3B-spo"/>
+                                <constraint firstItem="HG4-CR-yud" firstAttribute="centerY" secondItem="siF-6e-6eh" secondAttribute="centerY" id="GbE-QA-fgM"/>
                                 <constraint firstItem="RmE-cB-upd" firstAttribute="centerX" secondItem="siF-6e-6eh" secondAttribute="centerX" id="HDV-7N-lbj"/>
                             </constraints>
                         </view>
@@ -375,6 +387,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="progressBar" destination="HG4-CR-yud" id="og9-RD-YGd"/>
                         <outlet property="progressLabel" destination="RmE-cB-upd" id="CxI-UI-BGP"/>
                     </connections>
                 </tableViewController>

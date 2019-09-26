@@ -12,5 +12,5 @@ import UIKit
 struct Bearer: Codable {
     let token: String
     let userId: Int
-    let isAdmin: Bool
+    let isAdmin: Bool?
 }

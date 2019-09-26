@@ -14,6 +14,7 @@ class SearchDetailTableViewController: UITableViewController {
     var studentId: Int?
     let server = Server()
     var student: CurrentUser?
+    
     @IBOutlet weak var progressLabel: UILabel!
     
     override func viewDidLoad() {
@@ -30,8 +31,18 @@ class SearchDetailTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 1
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         guard let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCell", for: indexPath) as? CoachProfileTableViewCell else {
+             return UITableViewCell()
+         }
+         cell.textLabel?.text = title
+         
+         return cell
+     }
+     
     
     func fetchUser() {
         
@@ -56,10 +67,21 @@ class SearchDetailTableViewController: UITableViewController {
                 self.student = studentObj
                 DispatchQueue.main.async {
                     self.progressLabel.text = "\(String(describing: studentObj.progress))%"
-                    self.tableView.reloadData()
+                     self.tableView.reloadData()
                 }
             }
         }
         
     }
+//    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCell", for: indexPath) as? CoachProfileTableViewCell else {
+//            return UITableViewCell()
+//        }
+//        cell.textLabel?.text = title
+//        
+//        return cell
+//    }
+    
+    
 }

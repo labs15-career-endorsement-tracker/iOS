@@ -21,9 +21,10 @@ struct CurrentUser: Codable {
     var is_admin: Bool?
     var tracks_title: String?
     var calendly_link: String?
+    var isPinnedBy: String?
     
-    init( first_name: String, last_name: String, email: String, id: Int, tracks_id: Int, progress: Int, is_admin: Bool, tracks_title: String) {
-        (self.first_name, self.last_name, self.email, self.id, self.tracks_id, self.progress, self.is_admin, self.tracks_title) = (first_name, last_name, email, id, tracks_id, progress, is_admin, tracks_title)
+    init( first_name: String, last_name: String, email: String, id: Int, tracks_id: Int, progress: Int, is_admin: Bool, tracks_title: String, calendly_link: String, isPinnedBy: String) {
+        (self.first_name, self.last_name, self.email, self.id, self.tracks_id, self.progress, self.is_admin, self.tracks_title, self.calendly_link, self.isPinnedBy) = (first_name, last_name, email, id, tracks_id, progress, is_admin, tracks_title, calendly_link, isPinnedBy)
     }
     
 }

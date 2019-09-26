@@ -14,6 +14,7 @@ class SearchDetailTableViewController: UITableViewController {
     var studentId: Int?
     let server = Server()
     var student: CurrentUser?
+    var requirements: [Requirement] = []
     
     @IBOutlet weak var progressLabel: UILabel!
     
@@ -34,14 +35,6 @@ class SearchDetailTableViewController: UITableViewController {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         guard let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCell", for: indexPath) as? CoachProfileTableViewCell else {
-             return UITableViewCell()
-         }
-         cell.textLabel?.text = title
-         
-         return cell
-     }
      
     
     func fetchUser() {
@@ -66,20 +59,34 @@ class SearchDetailTableViewController: UITableViewController {
             if let studentObj = student {
                 self.student = studentObj
                 DispatchQueue.main.async {
-                    self.progressLabel.text = "\(String(describing: studentObj.progress))%"
-                     self.tableView.reloadData()
+                    self.progressLabel.text = "\(studentObj.progress ?? 0)%"
+                    self.tableView.reloadData()
                 }
             }
         }
-        
     }
-//    
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCell", for: indexPath)
+        
+        // Get the student
+        if let student = student {
+            cell.textLabel?.text = ("\(student.first_name) \(student.last_name)")
+            cell.detailTextLabel?.text = "\(student.id)"
+            
+        } else {
+            cell.textLabel?.text = "Student not found."
+        }
+        
+        return cell
+    }
+//
 //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCell", for: indexPath) as? CoachProfileTableViewCell else {
 //            return UITableViewCell()
 //        }
 //        cell.textLabel?.text = title
-//        
+//
 //        return cell
 //    }
     

@@ -431,4 +431,36 @@ class Server {
         }
     }
     
+    
+    //fetches pinned students
+    
+    func fetchUserRequirements(withToken token: String, userID: Int, completion: @escaping ([Requirement]?, Error?)->Void) {
+        
+        let studentsReqURL = baseURL.appendingPathComponent("users/\(userID)/requirements")
+        var request = URLRequest(url: studentsReqURL)
+        request.httpMethod = HTTPMethods.get.rawValue
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                completion(nil, error)
+            } else {
+                completion(nil, nil)
+            }
+            
+            guard let data = data else {
+                completion(nil, DataGetter.NetworkError.badData)
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            do {
+                let data = try decoder.decode([Requirement].self, from: data)
+                completion(data, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+    
 }

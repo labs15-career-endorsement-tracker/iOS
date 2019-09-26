@@ -21,6 +21,7 @@ class SearchDetailTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchUser()
+        fetchRequirements()
         updateViews()
     }
     
@@ -32,7 +33,7 @@ class SearchDetailTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return requirements.count
     }
     
      
@@ -60,6 +61,7 @@ class SearchDetailTableViewController: UITableViewController {
                 self.student = studentObj
                 DispatchQueue.main.async {
                     self.progressLabel.text = "\(studentObj.progress ?? 0)%"
+                    self.updateViews()
                     self.tableView.reloadData()
                 }
             }
@@ -70,25 +72,44 @@ class SearchDetailTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCell", for: indexPath)
         
         // Get the student
-        if let student = student {
-            cell.textLabel?.text = ("\(student.first_name) \(student.last_name)")
-            cell.detailTextLabel?.text = "\(student.id)"
-            
-        } else {
-            cell.textLabel?.text = "Student not found."
-        }
+        let requirement = requirements[indexPath.row]
+        
+        cell.textLabel?.text = requirement.title
+        cell.detailTextLabel?.text = "\(requirement.progress)"
         
         return cell
     }
-//
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCell", for: indexPath) as? CoachProfileTableViewCell else {
-//            return UITableViewCell()
-//        }
-//        cell.textLabel?.text = title
-//
-//        return cell
-//    }
     
+    func fetchRequirements() {
+        guard let token = UserDefaults.standard.string(forKey: "token") else {
+            print("no token")
+            return
+        }
+        
+        guard let studentId = studentId else {
+            print("no id")
+            return
+        }
+        
+        server.fetchUserRequirements(withToken: token, userID: studentId) { (requirements, error) in
+            if let error = error {
+                DispatchQueue.main.async {
+                    Config.showAlert(on: self, style: .alert, title: "Error fetching requirements", message: error.localizedDescription)
+                    return
+                }
+            }
+            
+            if let requirements = requirements {
+                self.requirements = requirements
+                
+                DispatchQueue.main.async {
+                    
+                    self.tableView.reloadData()
+                }
+                
+            }
+        }
+    }
+
     
 }

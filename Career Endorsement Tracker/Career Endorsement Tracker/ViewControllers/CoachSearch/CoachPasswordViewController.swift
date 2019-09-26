@@ -31,6 +31,11 @@ class CoachPasswordViewController: UIViewController {
 
     // MARK: - Actions
     
+    // nvm, Don't want to do a reset request
+    @IBAction func cancelResetRequest(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func requestPasswordTapped(_ sender: Any) {
         // Make sure they entered an email address
         guard let username = emailTextField.text, !username.isEmpty else {
@@ -65,7 +70,7 @@ class CoachPasswordViewController: UIViewController {
         // Create the actions
         let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { UIAlertAction in
             NSLog("OK Pressed")
-            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
         
         // Add the actions

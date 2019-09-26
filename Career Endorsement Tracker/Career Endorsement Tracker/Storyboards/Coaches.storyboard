@@ -110,7 +110,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="xN6-tg-LgO" userLabel="ForgotLabelStack">
-                                <rect key="frame" x="24" y="191" width="259" height="76.5"/>
+                                <rect key="frame" x="24" y="137" width="259" height="76.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVq-UW-iID">
                                         <rect key="frame" x="0.0" y="0.0" width="259" height="52"/>
@@ -127,7 +127,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter your email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uOW-vF-bj6">
-                                <rect key="frame" x="24" y="310" width="366" height="45"/>
+                                <rect key="frame" x="24" y="256" width="366" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="XUh-Hj-KkA"/>
@@ -136,7 +136,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="wF9-7g-dMB" userLabel="RequestCancelStack">
-                                <rect key="frame" x="24" y="468" width="366" height="41"/>
+                                <rect key="frame" x="24" y="414" width="366" height="95"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkb-5n-rIy">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="41"/>
@@ -147,6 +147,16 @@
                                         </state>
                                         <connections>
                                             <action selector="requestPasswordTapped:" destination="Ua5-63-fht" eventType="touchUpInside" id="U7H-fb-4dd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENu-0A-e6A">
+                                        <rect key="frame" x="0.0" y="65" width="366" height="30"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
+                                        <state key="normal" title="Cancel reset request">
+                                            <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelResetRequest:" destination="Ua5-63-fht" eventType="touchUpInside" id="6kS-vu-Md7"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -172,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MxX-Ac-sdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2528" y="1171"/>
+            <point key="canvasLocation" x="2526.0869565217395" y="1170.5357142857142"/>
         </scene>
         <!--Calendly Link-->
         <scene sceneID="3bJ-JF-pmT">

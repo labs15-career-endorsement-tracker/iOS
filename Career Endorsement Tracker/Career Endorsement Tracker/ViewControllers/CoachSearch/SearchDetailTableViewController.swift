@@ -65,10 +65,7 @@ class SearchDetailTableViewController: UITableViewController {
         let requirement = requirements[indexPath.row]
         
         cell.textLabel?.text = requirement.title
-        print("HERE progress: ", requirement.progress)
-        updateProgress(progress: requirement.progress)
-//        cell.detailTextLabel?.isHidden = true
-//        cell.detailTextLabel?.text = "\(requirement.progress)"
+        cell.detailTextLabel?.text = "\(requirement.progress)"
         
         return cell
     }
@@ -110,7 +107,8 @@ class SearchDetailTableViewController: UITableViewController {
             if let studentObj = student {
                 self.student = studentObj
                 DispatchQueue.main.async {
-                    self.progressLabel.text = "\(studentObj.progress ?? 0)%"
+//                    self.progressLabel.text = "\(studentObj.progress ?? 0)%"
+                    self.updateProgress(progress: studentObj.progress ?? 0)
                     self.updateViews()
                     self.tableView.reloadData()
                 }

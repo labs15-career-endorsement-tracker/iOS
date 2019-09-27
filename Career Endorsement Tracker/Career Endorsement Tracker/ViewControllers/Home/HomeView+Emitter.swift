@@ -12,26 +12,47 @@ import UIKit
 extension HomeViewController {
     // MARK: - Emitter
     
+//    func generateEmitterCells() -> [CAEmitterCell] {
+//        var cells:[CAEmitterCell] = [CAEmitterCell]()
+//        for index in 0..<16 {
+//
+//            let cell = CAEmitterCell()
+//
+//            cell.birthRate = 8.0
+//            cell.lifetime = 14.0 //14.0
+//            cell.lifetimeRange = 0
+//            cell.velocity = CGFloat(getRandomVelocity())
+//            cell.velocityRange = 0
+//            cell.emissionLongitude = CGFloat(Double.pi)
+//            cell.emissionRange = 0.8 //5
+//            cell.spin = 3.5
+//            cell.spinRange = 0
+//            cell.color = getNextColor(i: index)
+//            cell.contents = getNextImage(i: index)
+//            cell.scaleRange = 0.25
+//            cell.scale = 0.1
+//
+//            cells.append(cell)
+//        }
+//        return cells
+//    }
+    
     func generateEmitterCells() -> [CAEmitterCell] {
         var cells:[CAEmitterCell] = [CAEmitterCell]()
-        for index in 0..<16 {
+        for index in 0..<3 {
             
             let cell = CAEmitterCell()
             
-            cell.birthRate = 8.0
-            cell.lifetime = 14.0 //14.0
-            cell.lifetimeRange = 0
-            cell.velocity = CGFloat(getRandomVelocity())
-            cell.velocityRange = 0
-            cell.emissionLongitude = CGFloat(Double.pi)
-            cell.emissionRange = 0.8 //5
-            cell.spin = 3.5
-            cell.spinRange = 0
+            cell.birthRate = 4 * emitt.intensity
+            cell.lifetime = 10
+            cell.velocity = CGFloat(350 * emitt.intensity)
+            cell.velocityRange = CGFloat(80.0 * emitt.intensity)
+            cell.emissionLongitude = CGFloat(M_PI)// CGFloat(0)
+            cell.emissionRange = CGFloat(M_PI / 12)
+            cell.scale = 0.3
+            cell.scaleRange = 0.5
             cell.color = getNextColor(i: index)
             cell.contents = getNextImage(i: index)
-            cell.scaleRange = 0.25
-            cell.scale = 0.1
-            
             cells.append(cell)
         }
         return cells

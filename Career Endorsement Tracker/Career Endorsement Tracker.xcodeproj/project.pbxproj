@@ -48,7 +48,7 @@
 		5BFE7A4423297BD8006DEA9E /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5BFE7A4323297BD8006DEA9E /* Development.xcconfig */; };
 		5BFE7A4723297BE2006DEA9E /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5BFE7A4523297BE2006DEA9E /* Production.xcconfig */; };
 		5BFE7A4823297BE2006DEA9E /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5BFE7A4623297BE2006DEA9E /* Staging.xcconfig */; };
-		F5C978521B4225F34E901EDF /* Pods_Career_Endorsement_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD2B826C8A33A4E413634C0 /* Pods_Career_Endorsement_Tracker.framework */; };
+		BE66296AC701934A3D60780B /* Pods_Career_Endorsement_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCCE2B63E2EF4D1AB0400A7 /* Pods_Career_Endorsement_Tracker.framework */; };
 		FA0383122336BEB600ADF1FD /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0383112336BEB600ADF1FD /* Support.storyboard */; };
 		FA0383142336C06200ADF1FD /* SupportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0383132336C06200ADF1FD /* SupportTableViewController.swift */; };
 		FA2B1B2F233178AC00E9FD6D /* Resources.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA2B1B2E233178AC00E9FD6D /* Resources.storyboard */; };
@@ -89,6 +89,7 @@
 		2CC78CC22328ABE0006CDFAE /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		2CC78CC42328AEAD006CDFAE /* VerticallyCenteredTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticallyCenteredTextView.swift; sourceTree = "<group>"; };
 		2CC78CD72328DBFD006CDFAE /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		2EB8E4CE2EE13BF3F78CBD93 /* Pods-Career Endorsement Tracker.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug (staging).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug (staging).xcconfig"; sourceTree = "<group>"; };
 		3738EC5123061D800083158B /* Career Endorsement Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Career Endorsement Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3738EC5423061D800083158B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		3738EC5923061D800083158B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,8 +104,7 @@
 		375898532321C0EE00363B60 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		377AB69223229B240040D7CD /* BarlowCondensed-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
 		379D2C3F23396CB500A33496 /* RequestPasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPasswordResetViewController.swift; sourceTree = "<group>"; };
-		4C7423E2CB04C8BD4F08A4E0 /* Pods-Career Endorsement Tracker.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug (production).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug (production).xcconfig"; sourceTree = "<group>"; };
-		50F6CA26947831D255D01E5C /* Pods-Career Endorsement Tracker.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug (development).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug (development).xcconfig"; sourceTree = "<group>"; };
+		3DCCE2B63E2EF4D1AB0400A7 /* Pods_Career_Endorsement_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Career_Endorsement_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		570CE8E623144E1600077B72 /* RequirementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementsTableViewCell.swift; sourceTree = "<group>"; };
 		570CE8F82315CA5C00077B72 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		570CE8FB2315CA7E00077B72 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -129,11 +129,11 @@
 		5BFE7A4323297BD8006DEA9E /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		5BFE7A4523297BE2006DEA9E /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		5BFE7A4623297BE2006DEA9E /* Staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
-		77E1E8B60F28862BB4144B51 /* Pods-Career Endorsement Tracker.release (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.release (staging).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.release (staging).xcconfig"; sourceTree = "<group>"; };
-		7FD2B826C8A33A4E413634C0 /* Pods_Career_Endorsement_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Career_Endorsement_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		825D607A9E41509D8C72F891 /* Pods-Career Endorsement Tracker.release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.release (production).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.release (production).xcconfig"; sourceTree = "<group>"; };
-		90F2AA5C81ACE05EE50FEF3F /* Pods-Career Endorsement Tracker.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.release (development).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.release (development).xcconfig"; sourceTree = "<group>"; };
-		B1FAE21CFFD093DD18A53900 /* Pods-Career Endorsement Tracker.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug (staging).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug (staging).xcconfig"; sourceTree = "<group>"; };
+		81435E263A9EF2F3D703CC88 /* Pods-Career Endorsement Tracker.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.release (development).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.release (development).xcconfig"; sourceTree = "<group>"; };
+		8FE02590EBD38327DD68170C /* Pods-Career Endorsement Tracker.release (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.release (staging).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.release (staging).xcconfig"; sourceTree = "<group>"; };
+		A8064CF458643324B7FFD68D /* Pods-Career Endorsement Tracker.release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.release (production).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.release (production).xcconfig"; sourceTree = "<group>"; };
+		CE59EC6634276FB107B13CB5 /* Pods-Career Endorsement Tracker.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug (production).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug (production).xcconfig"; sourceTree = "<group>"; };
+		F4B013CED5B42AB7157CEB20 /* Pods-Career Endorsement Tracker.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug (development).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug (development).xcconfig"; sourceTree = "<group>"; };
 		FA0383112336BEB600ADF1FD /* Support.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
 		FA0383132336C06200ADF1FD /* SupportTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTableViewController.swift; sourceTree = "<group>"; };
 		FA2B1B2E233178AC00E9FD6D /* Resources.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Resources.storyboard; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5C978521B4225F34E901EDF /* Pods_Career_Endorsement_Tracker.framework in Frameworks */,
+				BE66296AC701934A3D60780B /* Pods_Career_Endorsement_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,22 +174,14 @@
 		0D45AFB23C58BBE35B56D597 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				50F6CA26947831D255D01E5C /* Pods-Career Endorsement Tracker.debug (development).xcconfig */,
-				B1FAE21CFFD093DD18A53900 /* Pods-Career Endorsement Tracker.debug (staging).xcconfig */,
-				4C7423E2CB04C8BD4F08A4E0 /* Pods-Career Endorsement Tracker.debug (production).xcconfig */,
-				90F2AA5C81ACE05EE50FEF3F /* Pods-Career Endorsement Tracker.release (development).xcconfig */,
-				77E1E8B60F28862BB4144B51 /* Pods-Career Endorsement Tracker.release (staging).xcconfig */,
-				825D607A9E41509D8C72F891 /* Pods-Career Endorsement Tracker.release (production).xcconfig */,
+				F4B013CED5B42AB7157CEB20 /* Pods-Career Endorsement Tracker.debug (development).xcconfig */,
+				2EB8E4CE2EE13BF3F78CBD93 /* Pods-Career Endorsement Tracker.debug (staging).xcconfig */,
+				CE59EC6634276FB107B13CB5 /* Pods-Career Endorsement Tracker.debug (production).xcconfig */,
+				81435E263A9EF2F3D703CC88 /* Pods-Career Endorsement Tracker.release (development).xcconfig */,
+				8FE02590EBD38327DD68170C /* Pods-Career Endorsement Tracker.release (staging).xcconfig */,
+				A8064CF458643324B7FFD68D /* Pods-Career Endorsement Tracker.release (production).xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		149BD9BE8F88DC6EE86A7254 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7FD2B826C8A33A4E413634C0 /* Pods_Career_Endorsement_Tracker.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		2CC78CBD23283F5A006CDFAE /* StepCell */ = {
@@ -222,7 +214,7 @@
 				FA5D9B14230F181B00DC9BC1 /* OneSignalNotificationServiceExtension */,
 				3738EC5223061D800083158B /* Products */,
 				0D45AFB23C58BBE35B56D597 /* Pods */,
-				149BD9BE8F88DC6EE86A7254 /* Frameworks */,
+				4DC3E53762F72E193B5609AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -269,6 +261,14 @@
 				375898532321C0EE00363B60 /* Lato-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4DC3E53762F72E193B5609AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCCE2B63E2EF4D1AB0400A7 /* Pods_Career_Endorsement_Tracker.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		570CE8FA2315CA6E00077B72 /* Signin */ = {
@@ -473,12 +473,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3738EC6323061D830083158B /* Build configuration list for PBXNativeTarget "Career Endorsement Tracker" */;
 			buildPhases = (
-				A448F0424D91C2F506545D5F /* [CP] Check Pods Manifest.lock */,
+				8560C01B4146F8CFC0879BD9 /* [CP] Check Pods Manifest.lock */,
 				3738EC4D23061D800083158B /* Sources */,
 				3738EC4E23061D800083158B /* Frameworks */,
 				3738EC4F23061D800083158B /* Resources */,
 				FA5D9B1E230F181B00DC9BC1 /* Embed App Extensions */,
-				8DB3FBC07A07DB2625D1E668 /* [CP] Embed Pods Frameworks */,
+				5F062C3755F8F426BF8343E0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -566,24 +566,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8DB3FBC07A07DB2625D1E668 /* [CP] Embed Pods Frameworks */ = {
+		5F062C3755F8F426BF8343E0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A448F0424D91C2F506545D5F /* [CP] Check Pods Manifest.lock */ = {
+		8560C01B4146F8CFC0879BD9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

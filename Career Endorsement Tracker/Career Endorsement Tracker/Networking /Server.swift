@@ -342,8 +342,8 @@ class Server {
         
         var components = URLComponents()
         components.scheme = "https"
-        components.host = "endrsd-api-staging.herokuapp.com"
-        components.path = "/api/v1/users"
+        components.host = "endrsd-api.herokuapp.com"
+        components.path = "/api/v2/users"
         //adds query items
         let queryItemQuery = URLQueryItem(name: "search", value: "\(name)")
         components.queryItems = [queryItemQuery]

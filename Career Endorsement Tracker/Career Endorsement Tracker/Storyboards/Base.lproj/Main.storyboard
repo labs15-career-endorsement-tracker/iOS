@@ -611,6 +611,9 @@
                                                     <rect key="frame" x="177" y="7" width="60" height="30"/>
                                                     <color key="tintColor" red="0.4677523375" green="0.90941542389999996" blue="0.47403568029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Sign Out"/>
+                                                    <connections>
+                                                        <action selector="logoutBtnPressed:" destination="KOy-8g-tDQ" eventType="touchUpInside" id="Ugb-lF-rj1"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>

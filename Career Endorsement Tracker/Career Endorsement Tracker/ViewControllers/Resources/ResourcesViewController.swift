@@ -15,7 +15,8 @@ class ResourcesViewController: UIViewController {
     // MARK: - Properties
     
     var requirement: Requirement?
-    
+    let emitt = Emitter()
+    var intensity: Float = 0.5
     private var audioLevel : Float = 0.0
     
     // MARK: - Outlets
@@ -65,6 +66,7 @@ class ResourcesViewController: UIViewController {
             else if audioSession.outputVolume < audioLevel {timesClickedDown += 1}
             if upResult == timesClickedUp, downResult == timesClickedDown {
                 print("Secret code run.")
+                startConfetti()
                 timesClickedUp = 0
                 timesClickedDown = 0
             }
@@ -93,6 +95,21 @@ class ResourcesViewController: UIViewController {
         }
     }
 
+    private func startConfetti(){
+        emitt.emitter.emitterShape = CAEmitterLayerEmitterShape.line
+        emitt.emitter.emitterCells = generateEmitterCells()
+        emitt.emitter.emitterPosition = CGPoint(x: self.view.frame.size.width / 2, y: -10)
+        emitt.emitter.emitterSize = CGSize(width: self.view.frame.size.width, height: 2.0)
+        print("HERE. Running confetti")
+        DispatchQueue.main.async {
+            let currentWindow: UIWindow? = UIApplication.shared.keyWindow
+            currentWindow?.layer.addSublayer(self.emitt.emitter)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+            self.emitt.endParticles()
+        }
+    }
 }
 
 extension ResourcesViewController: UITableViewDelegate {
@@ -116,4 +133,54 @@ extension ResourcesViewController: UITableViewDataSource {
     }
     
     
+}
+
+extension ResourcesViewController {
+    // MARK: - Emitter
+    
+    func generateEmitterCells() -> [CAEmitterCell] {
+        var cells:[CAEmitterCell] = [CAEmitterCell]()
+        for index in 0..<3 {
+            
+            let cell = CAEmitterCell()
+            
+            cell.birthRate = 4 * emitt.intensity
+            cell.lifetime = 10
+            cell.velocity = CGFloat(350 * emitt.intensity)
+            cell.velocityRange = CGFloat(80.0 * emitt.intensity)
+            cell.emissionLongitude = CGFloat(M_PI)// CGFloat(0)
+            cell.emissionRange = CGFloat(M_PI / 12)
+            cell.scale = 0.3
+            cell.scaleRange = 0.5
+            cell.color = getNextColor(i: index)
+            cell.contents = getNextImage(i: index)
+
+            cells.append(cell)
+        }
+        return cells
+    }
+
+    private func getRandomVelocity() -> Int {
+        return emitt.velocities[getRandomNumber()] //velocities[getRandomNumber()]
+    }
+    
+    private func getRandomNumber() -> Int {
+        return Int(arc4random_uniform(4))
+    }
+    
+    private func getNextColor(i:Int) -> CGColor {
+        if i <= 4 {
+            return emitt.colors[0].cgColor
+        } else if i <= 8 {
+            return emitt.colors[1].cgColor
+        } else if i <= 12 {
+            return emitt.colors[2].cgColor
+        } else {
+            return emitt.colors[3].cgColor
+        }
+    }
+    
+    private func getNextImage(i:Int) -> CGImage {
+        return emitt.images[i % 4].cgImage!
+    }
 }

@@ -18,9 +18,9 @@ class Emitter {
     }
     
     enum Images {
-        static let box = UIImage(named: "Box")!
-        static let triangle = UIImage(named: "Triangle")!
-        static let circle = UIImage(named: "Circle")!
+        static let box = UIImage(named: "Alex")!
+        static let triangle = UIImage(named: "Sameera")!
+        static let circle = UIImage(named: "Victor")!
         static let swirl = UIImage(named: "Spiral")!
     }
     
@@ -42,6 +42,12 @@ class Emitter {
         Images.swirl
     ]
     
+    var icons:[String] = [
+        "Alex",
+        "Sameera",
+        "Victor"
+    ]
+    
     var velocities:[Int] = [200,190,250,300]//[100,90,150,200]
     
     // MARK: - Methods
@@ -50,25 +56,50 @@ class Emitter {
         emitter.lifetime = 0.0
     }
     
-    private func generateEmitterCells() -> [CAEmitterCell] {
+    public var intensity: Float = 0.5
+
+    func confettiWithColor() -> CAEmitterCell {
+        let confetti = CAEmitterCell()
+        confetti.birthRate = 4 * intensity
+        confetti.lifetime = 10
+        confetti.velocity = CGFloat(350 * intensity)
+        confetti.velocityRange = CGFloat(80.0 * intensity)
+        confetti.emissionLongitude = CGFloat(M_PI)// CGFloat(0)
+        confetti.emissionRange = CGFloat(M_PI / 12)
+        confetti.scale = 1
+        confetti.scaleRange = 0.5
+//        confetti.contents = getNextImage(i: index)
+        return confetti
+    }
+    
+    func generateEmitterCells() -> [CAEmitterCell] {
         var cells:[CAEmitterCell] = [CAEmitterCell]()
-        for index in 0..<16 {
+        for index in 0..<2 {
             
             let cell = CAEmitterCell()
             
-            cell.birthRate = 14.0
-            cell.lifetime = 14.0 //14.0
-            cell.lifetimeRange = 0
-            cell.velocity = CGFloat(getRandomVelocity())
-            cell.velocityRange = 0
-            cell.emissionLongitude = CGFloat(Double.pi)
-            cell.emissionRange = 0.8
-            cell.spin = 3.5
-            cell.spinRange = 0
+            cell.birthRate = 4 * intensity
+            cell.lifetime = 10
+            cell.velocity = CGFloat(350 * intensity)
+            cell.velocityRange = CGFloat(80.0 * intensity)
+            cell.emissionLongitude = CGFloat(M_PI)// CGFloat(0)
+            cell.emissionRange = CGFloat(M_PI / 12)
+            cell.scale = 1
+            cell.scaleRange = 0.5
+            
+//            cell.birthRate = 14.0
+//            cell.lifetime = 14.0 //14.0
+//            cell.lifetimeRange = 0
+//            cell.velocity = CGFloat(getRandomVelocity())
+//            cell.velocityRange = 0
+//            cell.emissionLongitude = CGFloat(Double.pi)
+//            cell.emissionRange = 0.8
+//            cell.spin = 3.5
+//            cell.spinRange = 0
             cell.color = getNextColor(i: index)
             cell.contents = getNextImage(i: index)
-            cell.scaleRange = 0.25
-            cell.scale = 0.1
+//            cell.scaleRange = 0.25
+//            cell.scale = 0.1
             
             cells.append(cell)
         }
@@ -97,5 +128,9 @@ class Emitter {
     
     private func getNextImage(i:Int) -> CGImage {
         return images[i % 4].cgImage!
+    }
+    
+    private func getNextIcon(i:Int) -> String {
+        return icons[i % 4]
     }
 }

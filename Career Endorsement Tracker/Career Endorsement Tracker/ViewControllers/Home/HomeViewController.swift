@@ -21,22 +21,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var overallProgressLabel: UILabel!
     @IBOutlet weak var overallProgressView: UIView!
     
-    // MARK: - Actions
-    
-    @IBAction func logoutBtnPressed(_ sender: UIBarButtonItem) {
-        let signOutAction = UIAlertAction(title: "Sign Out", style: .destructive) {
-            (action) in
-            UserDefaults.standard.removeObject(forKey: "token")
-            UserDefaults.standard.removeObject(forKey: "id")
-            UserDefaults.standard.removeObject(forKey: "firstName")
-            UserDefaults.standard.set(false, forKey: "isLoggedIn")
-            let storyboard = UIStoryboard(name: "Welcome", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeNavigationController")
-            self.present(vc, animated: true, completion: nil)
-        }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        Config.showAlert(on: self, style: .actionSheet, title: nil, message: nil, actions: [signOutAction, cancelAction], completion: nil)
-    }
     
     // MARK: - Instances
     let server = Server()
@@ -73,6 +57,7 @@ class HomeViewController: UIViewController {
     // MARK: - Helper Method
     
     func updateViews() {
+        
         guard let logo = UIImage(named: "logo-color") else {
             // TODO: - Handle this error somehow
             print("Error: Missing 'logo-color' image file!")

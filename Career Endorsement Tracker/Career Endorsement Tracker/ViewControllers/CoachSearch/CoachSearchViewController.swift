@@ -15,6 +15,8 @@ class CoachSearchViewController: UIViewController {
     
     let server = Server()
     var users: [CurrentUser] = []
+    @IBOutlet weak var imageView: UIImageView!
+    
     
     // MARK: - Outlets
     
@@ -23,10 +25,12 @@ class CoachSearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.separatorStyle = .none
         searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
     
     //MARK: Navigation
     
@@ -67,11 +71,12 @@ extension CoachSearchViewController: UISearchBarDelegate {
             if let users = users {
                 self.users = users
                 DispatchQueue.main.async {
+                    self.imageView.isHidden = true
+                    self.tableView.separatorStyle = .singleLine
                     self.tableView.reloadData()
                 }
             }
         }
-        
     }
     
 }
@@ -94,10 +99,14 @@ extension CoachSearchViewController: UITableViewDelegate, UITableViewDataSource 
         cell.delegate = self
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
 }
 
 extension CoachSearchViewController: CoachSearchCellDelegate {
-    func didPinStudent(cell: UITableViewCell, indexPath: IndexPath) {
+    func didPinStudent(cell: CoachSearchTableViewCell, indexPath: IndexPath, isPinned: Bool) {
         
         guard let token = UserDefaults.standard.object(forKey: "token") as? String else {
             return Config.showAlert(on: self, style: .alert, title: "User could not be authenticated.", message: "Please logout and sign in again.")
@@ -107,13 +116,19 @@ extension CoachSearchViewController: CoachSearchCellDelegate {
         server.pinStudent(withToken: token, withStudentId: student.id) { (error) in
             if let error = error {
                 DispatchQueue.main.async {
-                    Config.showAlert(on: self, style: .alert, title: "Error Pinning Student", message: error.localizedDescription)
+                    Config.showAlert(on: self, style: .alert, title: "Error", message: error.localizedDescription)
                     return
                 }
             } else {
                 DispatchQueue.main.async {
-                    Config.showAlert(on: self, style: .alert, title: "Success!", message: "\(student.first_name) \(student.last_name) has been assigned to you.")
-                    return
+                    if isPinned {
+                        Config.showAlert(on: self, style: .alert, title: "Success!", message: "\(student.first_name) \(student.last_name) has been assigned to you.")
+                        
+                        return
+                    } else {
+                        Config.showAlert(on: self, style: .alert, title: "Success!", message: "\(student.first_name) \(student.last_name) has been unassigned.")
+                        return
+                    }
                 }
             }
         }

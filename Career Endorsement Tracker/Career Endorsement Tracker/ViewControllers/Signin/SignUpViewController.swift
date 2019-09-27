@@ -41,12 +41,6 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         updateViews()
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        colorTextfield(fieldName: firstNameTextField)
-//  //      firstNameTextField.becomeFirstResponder()
-//    }
-    
     
     // MARK: - Actions
     @IBAction func registerButtonPressed(_ sender: Any) {
@@ -119,6 +113,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                     DispatchQueue.main.async {
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                         let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
+                        vc.modalPresentationStyle = .fullScreen
                         self.present(vc, animated: true, completion: nil)
                     }
                 }
@@ -134,23 +129,6 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     
     // MARK: Validation Functions and Actions
-    
-    // Final validation before sending data to server
-    
-    
-    
-//        func validiateAllInput() -> Bool {
-//            if isValidName(nameStr: firstName),
-//                isValidName(nameStr: lastName),
-//                isValidEmail(emailStr: email),
-//                isValidPassword(passwordStr: password),
-//                confirmPassword(confirmPasswordStr: confirmationPassword),
-//                isValidTrack() {
-//                return true
-//            } else {
-//                return false
-//            }
-//        }
     
         // Validate a name
         func isValidName(nameStr:String) -> Bool {
@@ -181,98 +159,5 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 return false
             }
         }
-    }
+}
     
-//    // MARK: - Textfield Delegation Extension
-//    extension SignUpViewController: UITextFieldDelegate {
-//
-//        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//            // Validate first name
-//            if textField == firstNameTextField {
-//                if let firstName = firstNameTextField.text, isValidName(nameStr: firstName) {
-//                    self.firstName = firstName
-//                    resetColors(fieldName: firstNameTextField)
-//                    colorTextfield(fieldName: lastNameTextField)
-//                    lastNameTextField.becomeFirstResponder()
-//                    return true
-//                } else {
-//                    Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Please enter a valid first name.")
-//                }
-//            } // End validate lastName
-//
-//                // Validate last name
-//            else if textField == lastNameTextField {
-//                if let lastName = lastNameTextField.text, isValidName(nameStr: lastName) {
-//                    self.lastName = lastName
-//                    resetColors(fieldName: lastNameTextField)
-//                    colorTextfield(fieldName: emailTextField)
-//                    emailTextField.becomeFirstResponder()
-//                    return true
-//                } else {
-//                    Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Please enter a valid last name.")
-//                }
-//            } // End validate lastName
-//
-//                // Validate email
-//            else if textField == emailTextField {
-//                if let email = emailTextField.text, isValidEmail(emailStr: email) {
-//                    self.email = email
-//                    resetColors(fieldName: emailTextField)
-//                    colorTextfield(fieldName: passwordTextField)
-//                    passwordTextField.becomeFirstResponder()
-//                    return true
-//                } else {
-//                    //     emailTextField.layer.borderColor = Config.textFieldBorderColor
-//                    Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Please enter a valid email address.")
-//                }
-//            } // End validate email
-//
-//                // Validate password
-//            else if textField == passwordTextField {
-//                if let password = passwordTextField.text,  isValidPassword(passwordStr: password) {
-//                    self.password = password
-//                    resetColors(fieldName: passwordTextField)
-//                    colorTextfield(fieldName: confirmPasswordTextField)
-//                    confirmPasswordTextField.becomeFirstResponder()
-//                    return true
-//                } else {
-//                    passwordTextField.text = nil
-//                    Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: " Password must be 8-16 characters, with at least one capital, numeric or special character")
-//                }
-//            } // End validate email
-//
-//                // Validate confirm password
-//            else if textField == confirmPasswordTextField {
-//                if let confirmationPassword = confirmPasswordTextField.text, confirmPassword(confirmPasswordStr: confirmationPassword)  {
-//                    self.confirmationPassword = confirmationPassword
-//                    resetColors(fieldName: confirmPasswordTextField)
-//                    colorTextfield(fieldName: trackTextField)
-//                    trackTextField.becomeFirstResponder()
-//                    return true
-//                } else {
-//                    passwordTextField.text = nil
-//                    confirmPasswordTextField.text = nil
-//                    passwordTextField.becomeFirstResponder()
-//                    colorTextfield(fieldName: passwordTextField)
-//                    resetColors(fieldName: confirmPasswordTextField)
-//                    Config.showAlert(on: self, style: .alert, title: "SignUp Error", message: "Passwords do not match.")
-//
-//                }
-//            }  // End validate confirm password
-//
-//            return false  // There were problems with one or more fields
-//        }
-//
-//        // Highlight
-//        func colorTextfield(fieldName: UITextField) {
-//            fieldName.layer.borderWidth = 1
-//            fieldName.layer.cornerRadius = 5.0
-//            fieldName.layer.borderColor = Config.textFieldBorderColor
-//        }
-//
-//        func resetColors(fieldName: UITextField) {
-//            fieldName.layer.borderWidth = 0
-//            fieldName.layer.borderColor = UIColor.lightGray.cgColor
-//        }
-//
-//} // End Textfield Delegation Extension

@@ -32,4 +32,23 @@ class AccountTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return section == 0 ? CGFloat.leastNormalMagnitude : tableView.sectionHeaderHeight
     }
+    
+    // Mark: - Actions
+    
+    @IBAction func logoutBtnPressed(_ sender: UIBarButtonItem) {
+        let signOutAction = UIAlertAction(title: "Sign Out", style: .destructive) {
+            (action) in
+            UserDefaults.standard.removeObject(forKey: "token")
+            UserDefaults.standard.removeObject(forKey: "id")
+            UserDefaults.standard.removeObject(forKey: "firstName")
+            UserDefaults.standard.removeObject(forKey: "isAdmin")
+            UserDefaults.standard.set(false, forKey: "isLoggedIn")
+            let storyboard = UIStoryboard(name: "Welcome", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeNavigationController")
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        Config.showAlert(on: self, style: .actionSheet, title: nil, message: nil, actions: [signOutAction, cancelAction], completion: nil)
+    }
 }

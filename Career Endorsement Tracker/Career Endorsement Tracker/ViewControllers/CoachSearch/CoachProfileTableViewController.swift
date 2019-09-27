@@ -47,7 +47,12 @@ class CoachProfileTableViewController: UITableViewController {
             return UITableViewCell()
         }
         let student = students[indexPath.row]
-        cell.student = student
+        cell.textLabel?.text = student.first_name + " " + student.last_name
+        if let progress = student.progress {
+            cell.detailTextLabel?.text = "\(progress)%"
+        } else {
+            cell.detailTextLabel?.text = "0%"
+        }
         return cell
     }
     
@@ -91,6 +96,7 @@ class CoachProfileTableViewController: UITableViewController {
             UserDefaults.standard.set(false, forKey: "isLoggedIn")
             let storyboard = UIStoryboard(name: "Welcome", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeNavigationController")
+            vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)

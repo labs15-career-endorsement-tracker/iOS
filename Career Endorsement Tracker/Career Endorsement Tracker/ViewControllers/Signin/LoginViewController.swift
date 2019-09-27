@@ -59,12 +59,14 @@ class LoginViewContoller: UIViewController, UITextFieldDelegate {
                     DispatchQueue.main.async {
                         let storyboard = UIStoryboard(name: "Coaches", bundle: nil)
                         let vc = storyboard.instantiateViewController(withIdentifier: "CoachTabBarController")
+                        vc.modalPresentationStyle = .fullScreen
                         self.present(vc, animated: true, completion: nil)
                     }
                 } else {
                     DispatchQueue.main.async {
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                         let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
+                        vc.modalPresentationStyle = .fullScreen
                         self.present(vc, animated: true, completion: nil)
                     }
                 }

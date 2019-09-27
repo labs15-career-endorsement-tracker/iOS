@@ -65,7 +65,7 @@ class SearchDetailTableViewController: UITableViewController {
         let requirement = requirements[indexPath.row]
         
         cell.textLabel?.text = requirement.title
-        cell.detailTextLabel?.text = "\(requirement.progress)"
+        cell.detailTextLabel?.text = "\(requirement.progress)%"
         
         return cell
     }

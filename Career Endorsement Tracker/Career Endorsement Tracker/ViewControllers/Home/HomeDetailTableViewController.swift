@@ -118,6 +118,8 @@ class HomeDetailTableViewController: UITableViewController {
         }
         title = requirement.title
         self.updateProgress(progress: requirement.progress)
+        requirementProgessView.startAngle = CGFloat(-90)
+        requirementProgessView.endAngle = CGFloat(270)
         requirementProgessView.maxValue = 100
         requirementProgessView.style = .dashed(pattern: [1.0, 1.0])
         requirementProgessView.innerRingColor = Config.lightGreenDesignColor

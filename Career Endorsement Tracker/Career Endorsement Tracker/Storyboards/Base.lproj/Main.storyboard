@@ -39,7 +39,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circles" translatesAutoresizingMaskIntoConstraints="NO" id="9bp-XC-fd9">
-                                            <rect key="frame" x="0.0" y="0.0" width="365.00000000000006" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="365" height="150"/>
                                             <viewLayoutGuide key="safeArea" id="nuq-ZQ-cVi"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbW-TK-gP1">
@@ -338,7 +338,7 @@
                     <navigationItem key="navigationItem" id="A6Z-NZ-TQu">
                         <barButtonItem key="rightBarButtonItem" image="person.crop.circle" catalog="system" id="bHk-e3-ozE">
                             <connections>
-                                <segue destination="0Hx-0e-psE" kind="presentation" id="gio-fo-8jb"/>
+                                <segue destination="0Hx-0e-psE" kind="presentation" identifier="AccountSegue" id="gio-fo-8jb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -607,18 +607,71 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8M-HU-TGR">
-                                                    <rect key="frame" x="177" y="7" width="60" height="30"/>
-                                                    <color key="tintColor" red="0.4677523375" green="0.90941542389999996" blue="0.47403568029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" title="Sign Out"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Coach: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90O-K4-wbd">
+                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="90O-K4-wbd" firstAttribute="trailing" secondItem="YAW-aR-EyH" secondAttribute="trailingMargin" id="3wX-kj-3JT"/>
+                                                <constraint firstItem="90O-K4-wbd" firstAttribute="top" secondItem="YAW-aR-EyH" secondAttribute="topMargin" id="GXp-qa-mx2"/>
+                                                <constraint firstItem="90O-K4-wbd" firstAttribute="centerY" secondItem="YAW-aR-EyH" secondAttribute="centerY" id="nWp-xH-cGL"/>
+                                                <constraint firstItem="90O-K4-wbd" firstAttribute="leading" secondItem="YAW-aR-EyH" secondAttribute="leadingMargin" id="tgS-Qs-UZn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="eAK-w4-SPP">
+                                        <rect key="frame" x="0.0" y="265" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eAK-w4-SPP" id="aVL-jF-dL0">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Schedule 1:1 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnb-t8-5pm">
+                                                    <rect key="frame" x="20" y="12" width="100" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bd-gy-LLg">
+                                                    <rect key="frame" x="128" y="7" width="266" height="30"/>
+                                                    <state key="normal" title="Link"/>
                                                     <connections>
-                                                        <action selector="logoutBtnPressed:" destination="KOy-8g-tDQ" eventType="touchUpInside" id="Ugb-lF-rj1"/>
+                                                        <action selector="calendlyLinkButtonPressed:" destination="KOy-8g-tDQ" eventType="touchUpInside" id="waR-XF-pAb"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="A8M-HU-TGR" firstAttribute="centerX" secondItem="YAW-aR-EyH" secondAttribute="centerX" id="Frl-s9-QhC"/>
-                                                <constraint firstItem="A8M-HU-TGR" firstAttribute="centerY" secondItem="YAW-aR-EyH" secondAttribute="centerY" id="tHX-1l-zQA"/>
+                                                <constraint firstItem="gnb-t8-5pm" firstAttribute="bottom" secondItem="aVL-jF-dL0" secondAttribute="bottomMargin" id="DLR-XD-qFH"/>
+                                                <constraint firstItem="0bd-gy-LLg" firstAttribute="leading" secondItem="gnb-t8-5pm" secondAttribute="trailing" constant="8" id="K0S-A9-0vo"/>
+                                                <constraint firstItem="gnb-t8-5pm" firstAttribute="leading" secondItem="aVL-jF-dL0" secondAttribute="leadingMargin" id="V8t-yD-Bsy"/>
+                                                <constraint firstItem="gnb-t8-5pm" firstAttribute="centerY" secondItem="aVL-jF-dL0" secondAttribute="centerY" id="VTi-x7-UGt"/>
+                                                <constraint firstItem="gnb-t8-5pm" firstAttribute="centerY" secondItem="0bd-gy-LLg" secondAttribute="centerY" id="nht-Nu-7GT"/>
+                                                <constraint firstItem="0bd-gy-LLg" firstAttribute="trailing" secondItem="aVL-jF-dL0" secondAttribute="trailingMargin" id="x9R-fZ-P7l"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="sXP-qr-cCg">
+                                        <rect key="frame" x="0.0" y="309" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sXP-qr-cCg" id="tqK-SB-ID2">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmA-G5-fow">
+                                                    <rect key="frame" x="177" y="7" width="60" height="30"/>
+                                                    <color key="tintColor" red="0.4677523375" green="0.90941542389999996" blue="0.47403568029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Sign Out"/>
+                                                    <connections>
+                                                        <action selector="logoutBtnPressed:" destination="KOy-8g-tDQ" eventType="touchUpInside" id="WbF-ks-oZa"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GmA-G5-fow" firstAttribute="centerY" secondItem="tqK-SB-ID2" secondAttribute="centerY" id="3sP-9h-jis"/>
+                                                <constraint firstItem="GmA-G5-fow" firstAttribute="centerX" secondItem="tqK-SB-ID2" secondAttribute="centerX" id="rFK-PW-gHe"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -632,6 +685,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Account" id="Hp5-AC-k6E"/>
                     <connections>
+                        <outlet property="calendlyLinkButton" destination="0bd-gy-LLg" id="5z1-as-NZX"/>
+                        <outlet property="coachNameLabel" destination="90O-K4-wbd" id="ifW-Ze-dq6"/>
                         <outlet property="emailLbl" destination="9Dt-BR-U4X" id="tII-Am-ZRa"/>
                         <outlet property="nameLbl" destination="Cs1-Fz-8QM" id="7lK-qJ-SUA"/>
                         <outlet property="trackLbl" destination="ohL-MD-Dee" id="b5k-PH-8lo"/>
@@ -639,7 +694,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="td1-lr-idd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5700" y="-824"/>
+            <point key="canvasLocation" x="5698.5507246376819" y="-824.33035714285711"/>
         </scene>
         <!--Deactivate View Controller-->
         <scene sceneID="l2g-sP-uKL">

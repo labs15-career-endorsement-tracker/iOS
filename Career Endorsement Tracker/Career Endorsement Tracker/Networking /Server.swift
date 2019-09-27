@@ -481,4 +481,35 @@ class Server {
         }
     }
     
+    
+    func addCalendlyLink(withToken token: String, withLink link: String, completion: @escaping (Error?) -> Void) {
+        let calendlyURL = baseURL.appendingPathComponent("users")
+        var request = URLRequest(url: calendlyURL)
+        request.httpMethod = HTTPMethods.put.rawValue
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.addValue(HTTPHeaderKeys.ContentTypes.json.rawValue, forHTTPHeaderField: HTTPHeaderKeys.contentType.rawValue)
+        
+        print(link)
+        do {
+            let userParams = ["calendly_link": link] as [String: Any]
+            let json = try JSONSerialization.data(withJSONObject: userParams, options: .prettyPrinted)
+            request.httpBody = json
+        } catch {
+            print("496")
+            completion(error)
+            return
+        }
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                completion(error)
+            } else {
+                completion(nil)
+            }
+        }
+        
+    }
+    
+    
+    
 }

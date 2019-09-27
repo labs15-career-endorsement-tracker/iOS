@@ -75,6 +75,8 @@ class HomeViewController: UIViewController {
         progressBar.maxValue = 100
         progressBar.style = .dashed(pattern: [1.0, 1.0])
         progressBar.innerRingColor = Config.lightGreenDesignColor
+        progressBar.startAngle = CGFloat(-90)
+        progressBar.endAngle = CGFloat(270)
 
         guard let name = UserDefaults.standard.value(forKey: "firstName") as? String else {return print("No Name")}
         userNameLabel.text = "Welcome, \(name)."
@@ -181,6 +183,18 @@ class HomeViewController: UIViewController {
             destinationVC.server = server
             destinationVC.id = requirements[indexPath.item].id
             destinationVC.requirement = requirements[indexPath.item]
+        }
+        if segue.identifier == "AccountSegue" {
+            guard let destinationVC = segue.destination as? UINavigationController, let rootViewController = destinationVC.topViewController as? AccountTableViewController else {
+                print("NO destination")
+                return
+            }
+            if let currentUser = currentUser {
+                if let calendlyLink = currentUser.coach?.calendly_link, let coach = currentUser.coach {
+                    rootViewController.calendlyLink = calendlyLink
+                    rootViewController.coach = coach
+                }
+            }
         }
     }
 }

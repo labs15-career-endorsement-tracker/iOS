@@ -43,6 +43,8 @@ class SearchDetailTableViewController: UITableViewController {
         progressBar.maxValue = 100
         progressBar.style = .dashed(pattern: [1.0, 1.0])
         progressBar.innerRingColor = Config.lightGreenDesignColor
+        progressBar.startAngle = CGFloat(-90)
+        progressBar.endAngle = CGFloat(270)
         progressBar.fontColor = .white
     }
     

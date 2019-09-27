@@ -253,7 +253,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdU-g9-JJC">
                                         <rect key="frame" x="0.0" y="58.5" width="382" height="20.5"/>
                                         <fontDescription key="fontDescription" name="BarlowCondensed-Bold" family="Barlow Condensed" pointSize="17"/>
-                                        <color key="textColor" red="0.87450980392156863" green="0.062745098039215685" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.34799450640000001" green="0.68230134249999996" blue="0.27290457489999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J7F-iA-Vmw">

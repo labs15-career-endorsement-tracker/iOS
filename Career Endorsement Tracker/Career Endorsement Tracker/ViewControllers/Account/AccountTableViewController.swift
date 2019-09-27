@@ -15,16 +15,22 @@ class AccountTableViewController: UITableViewController {
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var trackLbl: UILabel!
+    @IBOutlet weak var coachNameLabel: UILabel!
+    @IBOutlet weak var calendlyLinkButton: UIButton!
+    
+    var calendlyLink: String?
+    var coach: Coach?
+    var url: URL?
     
     // MARK: - VC Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         guard let user = CoreUser.user else {return}
         nameLbl.text = user.first_name + " " + user.last_name
         emailLbl.text = user.email
         trackLbl.text = user.tracks_title
+        updateViews()
     }
 
     // MARK: - Table view data source
@@ -50,5 +56,26 @@ class AccountTableViewController: UITableViewController {
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         Config.showAlert(on: self, style: .actionSheet, title: nil, message: nil, actions: [signOutAction, cancelAction], completion: nil)
+    }
+    
+    //MARK: Helper
+    
+    func updateViews() {
+        if let coach = coach {
+            coachNameLabel.text = "Coach: \(coach.first_name) \(coach.last_name)"
+        }
+        if let calendlyLink = calendlyLink, let url = URL(string: calendlyLink) {
+            calendlyLinkButton.setTitle(calendlyLink, for: .normal)
+            self.url = url
+        }
+    }
+    
+    @IBAction func calendlyLinkButtonPressed(_ sender: Any) {
+        if let coachLink = url, UIApplication.shared.canOpenURL(coachLink) {
+            UIApplication.shared.open(coachLink)
+        } else {
+            Config.showAlert(on: self, style: .alert, title: "No Link", message: "Sorry, please wait until you have been assigned a career coach. ")
+            return
+        }
     }
 }

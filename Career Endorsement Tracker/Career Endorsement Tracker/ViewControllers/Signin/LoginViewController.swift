@@ -52,14 +52,23 @@ class LoginViewContoller: UIViewController, UITextFieldDelegate {
                 return
             } else {
                 // Save the encoded and decoded bearer tokens to user defaults
-                let defaults = UserDefaults.standard
-                defaults.set(self.server.encodedBearer, forKey: UserDefaultsKeys.encodedBearer)
+                let defaults = UserDefaults()
                 defaults.set(true, forKey: UserDefaultsKeys.ifUserLoggedIn)
                 
-                DispatchQueue.main.async {
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
-                    self.present(vc, animated: true, completion: nil)
+                if defaults.bool(forKey: "isAdmin") {
+                    DispatchQueue.main.async {
+                        let storyboard = UIStoryboard(name: "Coaches", bundle: nil)
+                        let vc = storyboard.instantiateViewController(withIdentifier: "CoachTabBarController")
+                        vc.modalPresentationStyle = .fullScreen
+                        self.present(vc, animated: true, completion: nil)
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
+                        vc.modalPresentationStyle = .fullScreen
+                        self.present(vc, animated: true, completion: nil)
+                    }
                 }
             }
         })
@@ -78,6 +87,12 @@ class LoginViewContoller: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         login()
         return true
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationVC = segue.destination as? RequestPasswordResetViewController else { return }
+        destinationVC.emailAddress = emailTextField.text
     }
     
 }

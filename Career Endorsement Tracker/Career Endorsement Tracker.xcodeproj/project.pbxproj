@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0AAAC6E8B722E6B6021A3E12 /* Pods_Career_Endorsement_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6BD552E07BD0E46511CCA2 /* Pods_Career_Endorsement_Tracker.framework */; };
 		2CC78CC023283F86006CDFAE /* StepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC78CBE23283F86006CDFAE /* StepCell.swift */; };
 		2CC78CC123283F86006CDFAE /* StepCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CC78CBF23283F86006CDFAE /* StepCell.xib */; };
 		2CC78CC32328ABE0006CDFAE /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC78CC22328ABE0006CDFAE /* ShadowView.swift */; };
@@ -24,6 +23,7 @@
 		375898522321BD2900363B60 /* BarlowCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 375898512321BD2900363B60 /* BarlowCondensed-Regular.ttf */; };
 		375898542321C0EE00363B60 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 375898532321C0EE00363B60 /* Lato-Regular.ttf */; };
 		377AB69323229B240040D7CD /* BarlowCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377AB69223229B240040D7CD /* BarlowCondensed-SemiBold.ttf */; };
+		379D2C4023396CB500A33496 /* RequestPasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379D2C3F23396CB500A33496 /* RequestPasswordResetViewController.swift */; };
 		570CE8E723144E1700077B72 /* RequirementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8E623144E1600077B72 /* RequirementsTableViewCell.swift */; };
 		570CE8F92315CA5C00077B72 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8F82315CA5C00077B72 /* Server.swift */; };
 		570CE8FC2315CA7E00077B72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE8FB2315CA7E00077B72 /* LoginViewController.swift */; };
@@ -35,18 +35,39 @@
 		570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CE9122315F37200077B72 /* WelcomeViewController.swift */; };
 		57191C782320E81200542F37 /* HomeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57191C772320E81200542F37 /* HomeDetailTableViewController.swift */; };
 		57191C7A2320EDD300542F37 /* HomeDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57191C792320EDD300542F37 /* HomeDetailTableViewCell.swift */; };
+		573A9A71233ADB77006FC25C /* CoachProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573A9A70233ADB77006FC25C /* CoachProfileTableViewCell.swift */; };
+		573A9A73233AE848006FC25C /* SearchDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573A9A72233AE848006FC25C /* SearchDetailTableViewController.swift */; };
+		577407E6233DCCF5005B9006 /* DeactivateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577407E5233DCCF5005B9006 /* DeactivateViewController.swift */; };
 		5784F9EB230729B600C11198 /* DataGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EA230729B600C11198 /* DataGetter.swift */; };
 		5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EC23072A1600C11198 /* CurrentUser.swift */; };
 		5784F9EF23072BFB00C11198 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EE23072BFB00C11198 /* Config.swift */; };
 		5784F9F123072D5600C11198 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5784F9F023072D5600C11198 /* Welcome.storyboard */; };
+		579828392333D75700B06675 /* Coaches.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579828382333D75700B06675 /* Coaches.storyboard */; };
+		5798283C2333DA2000B06675 /* CoachSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5798283B2333DA2000B06675 /* CoachSearchViewController.swift */; };
 		57D0CE73232C2F680063D5D1 /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0CE72232C2F680063D5D1 /* Emitter.swift */; };
 		57D0CE75232C307D0063D5D1 /* HomeView+Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0CE74232C307D0063D5D1 /* HomeView+Emitter.swift */; };
 		5BFE7A4423297BD8006DEA9E /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5BFE7A4323297BD8006DEA9E /* Development.xcconfig */; };
 		5BFE7A4723297BE2006DEA9E /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5BFE7A4523297BE2006DEA9E /* Production.xcconfig */; };
 		5BFE7A4823297BE2006DEA9E /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5BFE7A4623297BE2006DEA9E /* Staging.xcconfig */; };
+		BE66296AC701934A3D60780B /* Pods_Career_Endorsement_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCCE2B63E2EF4D1AB0400A7 /* Pods_Career_Endorsement_Tracker.framework */; };
+		FA0383122336BEB600ADF1FD /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0383112336BEB600ADF1FD /* Support.storyboard */; };
+		FA0383142336C06200ADF1FD /* SupportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0383132336C06200ADF1FD /* SupportTableViewController.swift */; };
+		FA2B1B2F233178AC00E9FD6D /* Resources.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA2B1B2E233178AC00E9FD6D /* Resources.storyboard */; };
+		FA2B1B322331794200E9FD6D /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B1B312331794200E9FD6D /* ResourcesViewController.swift */; };
+		FA2B1B3623317B2200E9FD6D /* ResourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B1B3423317B2200E9FD6D /* ResourcesTableViewCell.swift */; };
+		FA2B1B3723317B2200E9FD6D /* ResourcesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2B1B3523317B2200E9FD6D /* ResourcesTableViewCell.xib */; };
 		FA593528232300C4003621A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA593527232300C4003621A8 /* HomeViewController.swift */; };
+		FA7A178F233A8F380090D5EF /* CoachProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A178E233A8F380090D5EF /* CoachProfileTableViewController.swift */; };
+		FA7A1791233A8F6E0090D5EF /* CoachCalendlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A1790233A8F6E0090D5EF /* CoachCalendlyViewController.swift */; };
+		FA7A1793233A8F8A0090D5EF /* CoachPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A1792233A8F8A0090D5EF /* CoachPasswordViewController.swift */; };
+		FA7A1795233AB93E0090D5EF /* CoachSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A1794233AB93E0090D5EF /* CoachSearchTableViewCell.swift */; };
 		FABFB8232328121800B4647E /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFB8222328121800B4647E /* CircularProgressBar.swift */; };
 		FACADFDE2316FEDE001BBE9C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACADFDD2316FEDE001BBE9C /* Extensions.swift */; };
+		FACC349323344AC00092D084 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC349223344AC00092D084 /* SupportViewController.swift */; };
+		FACC349723344CFF0092D084 /* SupportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC349523344CFF0092D084 /* SupportTableViewCell.swift */; };
+		FACC349823344CFF0092D084 /* SupportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACC349623344CFF0092D084 /* SupportTableViewCell.xib */; };
+		FACC349B233571AC0092D084 /* AccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC349A233571AC0092D084 /* AccountTableViewController.swift */; };
+		FACC349D233577260092D084 /* CoreUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC349C233577260092D084 /* CoreUserController.swift */; };
 		FAEC2D1323281615007AC7BA /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC2D1223281615007AC7BA /* CircularProgress.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,16 +85,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0195A9D4A7179DADD9D8494A /* Pods-Career Endorsement Tracker.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.release (development).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.release (development).xcconfig"; sourceTree = "<group>"; };
-		0905A91F4B74F3555ECA4C94 /* Pods-Career Endorsement Tracker.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug (production).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug (production).xcconfig"; sourceTree = "<group>"; };
-		10A4A2FF77424A581F60ACE3 /* Pods-Career Endorsement Tracker.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug (staging).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug (staging).xcconfig"; sourceTree = "<group>"; };
-		1A6BD552E07BD0E46511CCA2 /* Pods_Career_Endorsement_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Career_Endorsement_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D41103C319D6DD065CAC1E4 /* Pods-Career Endorsement Tracker.release (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.release (staging).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.release (staging).xcconfig"; sourceTree = "<group>"; };
 		2CC78CBE23283F86006CDFAE /* StepCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCell.swift; sourceTree = "<group>"; };
 		2CC78CBF23283F86006CDFAE /* StepCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepCell.xib; sourceTree = "<group>"; };
 		2CC78CC22328ABE0006CDFAE /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		2CC78CC42328AEAD006CDFAE /* VerticallyCenteredTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticallyCenteredTextView.swift; sourceTree = "<group>"; };
 		2CC78CD72328DBFD006CDFAE /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		2EB8E4CE2EE13BF3F78CBD93 /* Pods-Career Endorsement Tracker.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug (staging).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug (staging).xcconfig"; sourceTree = "<group>"; };
 		3738EC5123061D800083158B /* Career Endorsement Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Career Endorsement Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3738EC5423061D800083158B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		3738EC5923061D800083158B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,6 +104,8 @@
 		375898512321BD2900363B60 /* BarlowCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		375898532321C0EE00363B60 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		377AB69223229B240040D7CD /* BarlowCondensed-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
+		379D2C3F23396CB500A33496 /* RequestPasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPasswordResetViewController.swift; sourceTree = "<group>"; };
+		3DCCE2B63E2EF4D1AB0400A7 /* Pods_Career_Endorsement_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Career_Endorsement_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		570CE8E623144E1600077B72 /* RequirementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementsTableViewCell.swift; sourceTree = "<group>"; };
 		570CE8F82315CA5C00077B72 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		570CE8FB2315CA7E00077B72 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -98,22 +117,45 @@
 		570CE9122315F37200077B72 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		57191C772320E81200542F37 /* HomeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailTableViewController.swift; sourceTree = "<group>"; };
 		57191C792320EDD300542F37 /* HomeDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailTableViewCell.swift; sourceTree = "<group>"; };
+		573A9A70233ADB77006FC25C /* CoachProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachProfileTableViewCell.swift; sourceTree = "<group>"; };
+		573A9A72233AE848006FC25C /* SearchDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailTableViewController.swift; sourceTree = "<group>"; };
+		577407E5233DCCF5005B9006 /* DeactivateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeactivateViewController.swift; sourceTree = "<group>"; };
 		5784F9EA230729B600C11198 /* DataGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGetter.swift; sourceTree = "<group>"; };
 		5784F9EC23072A1600C11198 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		5784F9EE23072BFB00C11198 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		5784F9F023072D5600C11198 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		579828382333D75700B06675 /* Coaches.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Coaches.storyboard; sourceTree = "<group>"; };
+		5798283B2333DA2000B06675 /* CoachSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachSearchViewController.swift; sourceTree = "<group>"; };
 		57D0CE72232C2F680063D5D1 /* Emitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emitter.swift; path = ../Emitter.swift; sourceTree = "<group>"; };
 		57D0CE74232C307D0063D5D1 /* HomeView+Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+Emitter.swift"; sourceTree = "<group>"; };
 		5BFE7A4323297BD8006DEA9E /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		5BFE7A4523297BE2006DEA9E /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		5BFE7A4623297BE2006DEA9E /* Staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
-		DED7901D279D1634A14A4BE8 /* Pods-Career Endorsement Tracker.release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.release (production).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.release (production).xcconfig"; sourceTree = "<group>"; };
-		E714FE897B2909FBE6988BF6 /* Pods-Career Endorsement Tracker.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug (development).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug (development).xcconfig"; sourceTree = "<group>"; };
+		81435E263A9EF2F3D703CC88 /* Pods-Career Endorsement Tracker.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.release (development).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.release (development).xcconfig"; sourceTree = "<group>"; };
+		8FE02590EBD38327DD68170C /* Pods-Career Endorsement Tracker.release (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.release (staging).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.release (staging).xcconfig"; sourceTree = "<group>"; };
+		A8064CF458643324B7FFD68D /* Pods-Career Endorsement Tracker.release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.release (production).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.release (production).xcconfig"; sourceTree = "<group>"; };
+		CE59EC6634276FB107B13CB5 /* Pods-Career Endorsement Tracker.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug (production).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug (production).xcconfig"; sourceTree = "<group>"; };
+		F4B013CED5B42AB7157CEB20 /* Pods-Career Endorsement Tracker.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Career Endorsement Tracker.debug (development).xcconfig"; path = "Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker.debug (development).xcconfig"; sourceTree = "<group>"; };
+		FA0383112336BEB600ADF1FD /* Support.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
+		FA0383132336C06200ADF1FD /* SupportTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTableViewController.swift; sourceTree = "<group>"; };
+		FA2B1B2E233178AC00E9FD6D /* Resources.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Resources.storyboard; sourceTree = "<group>"; };
+		FA2B1B312331794200E9FD6D /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
+		FA2B1B3423317B2200E9FD6D /* ResourcesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesTableViewCell.swift; sourceTree = "<group>"; };
+		FA2B1B3523317B2200E9FD6D /* ResourcesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResourcesTableViewCell.xib; sourceTree = "<group>"; };
 		FA593527232300C4003621A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA5D9B15230F181B00DC9BC1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FA5D9B17230F181B00DC9BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA7A178E233A8F380090D5EF /* CoachProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachProfileTableViewController.swift; sourceTree = "<group>"; };
+		FA7A1790233A8F6E0090D5EF /* CoachCalendlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachCalendlyViewController.swift; sourceTree = "<group>"; };
+		FA7A1792233A8F8A0090D5EF /* CoachPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachPasswordViewController.swift; sourceTree = "<group>"; };
+		FA7A1794233AB93E0090D5EF /* CoachSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachSearchTableViewCell.swift; sourceTree = "<group>"; };
 		FABFB8222328121800B4647E /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		FACADFDD2316FEDE001BBE9C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FACC349223344AC00092D084 /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
+		FACC349523344CFF0092D084 /* SupportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTableViewCell.swift; sourceTree = "<group>"; };
+		FACC349623344CFF0092D084 /* SupportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupportTableViewCell.xib; sourceTree = "<group>"; };
+		FACC349A233571AC0092D084 /* AccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewController.swift; sourceTree = "<group>"; };
+		FACC349C233577260092D084 /* CoreUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreUserController.swift; sourceTree = "<group>"; };
 		FAE9606D230F1AB7006E7467 /* Career Endorsement Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Career Endorsement Tracker.entitlements"; sourceTree = "<group>"; };
 		FAE9606E230F1C89006E7467 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		FAEC2D1223281615007AC7BA /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
@@ -124,7 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AAAC6E8B722E6B6021A3E12 /* Pods_Career_Endorsement_Tracker.framework in Frameworks */,
+				BE66296AC701934A3D60780B /* Pods_Career_Endorsement_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,12 +176,12 @@
 		0D45AFB23C58BBE35B56D597 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E714FE897B2909FBE6988BF6 /* Pods-Career Endorsement Tracker.debug (development).xcconfig */,
-				10A4A2FF77424A581F60ACE3 /* Pods-Career Endorsement Tracker.debug (staging).xcconfig */,
-				0905A91F4B74F3555ECA4C94 /* Pods-Career Endorsement Tracker.debug (production).xcconfig */,
-				0195A9D4A7179DADD9D8494A /* Pods-Career Endorsement Tracker.release (development).xcconfig */,
-				1D41103C319D6DD065CAC1E4 /* Pods-Career Endorsement Tracker.release (staging).xcconfig */,
-				DED7901D279D1634A14A4BE8 /* Pods-Career Endorsement Tracker.release (production).xcconfig */,
+				F4B013CED5B42AB7157CEB20 /* Pods-Career Endorsement Tracker.debug (development).xcconfig */,
+				2EB8E4CE2EE13BF3F78CBD93 /* Pods-Career Endorsement Tracker.debug (staging).xcconfig */,
+				CE59EC6634276FB107B13CB5 /* Pods-Career Endorsement Tracker.debug (production).xcconfig */,
+				81435E263A9EF2F3D703CC88 /* Pods-Career Endorsement Tracker.release (development).xcconfig */,
+				8FE02590EBD38327DD68170C /* Pods-Career Endorsement Tracker.release (staging).xcconfig */,
+				A8064CF458643324B7FFD68D /* Pods-Career Endorsement Tracker.release (production).xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -174,7 +216,7 @@
 				FA5D9B14230F181B00DC9BC1 /* OneSignalNotificationServiceExtension */,
 				3738EC5223061D800083158B /* Products */,
 				0D45AFB23C58BBE35B56D597 /* Pods */,
-				840A0CA944C4061A3BAEA402 /* Frameworks */,
+				4DC3E53762F72E193B5609AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -196,8 +238,8 @@
 				374CB3A523186791009A8C2D /* Helpers */,
 				5784F9E1230728E900C11198 /* Models */,
 				5784F9E4230728FF00C11198 /* Networking  */,
-				FABFB821232740B400B4647E /* Views */,
 				5784F9E3230728F800C11198 /* ViewControllers */,
+				FABFB821232740B400B4647E /* Views */,
 			);
 			path = "Career Endorsement Tracker";
 			sourceTree = "<group>";
@@ -210,6 +252,27 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		375449AF233157D400C05261 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3758984D2321BD1600363B60 /* BarlowCondensed-Black.ttf */,
+				3758984F2321BD2000363B60 /* BarlowCondensed-Bold.ttf */,
+				377AB69223229B240040D7CD /* BarlowCondensed-SemiBold.ttf */,
+				375898512321BD2900363B60 /* BarlowCondensed-Regular.ttf */,
+				375898492321BCEC00363B60 /* Lato-Bold.ttf */,
+				375898532321C0EE00363B60 /* Lato-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4DC3E53762F72E193B5609AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCCE2B63E2EF4D1AB0400A7 /* Pods_Career_Endorsement_Tracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		570CE8FA2315CA6E00077B72 /* Signin */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +280,7 @@
 				570CE9122315F37200077B72 /* WelcomeViewController.swift */,
 				570CE8FB2315CA7E00077B72 /* LoginViewController.swift */,
 				570CE8FF2315CA9700077B72 /* SignUpViewController.swift */,
+				379D2C3F23396CB500A33496 /* RequestPasswordResetViewController.swift */,
 			);
 			path = Signin;
 			sourceTree = "<group>";
@@ -253,6 +317,10 @@
 		5784F9E3230728F800C11198 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FACC34992335718B0092D084 /* Account */,
+				FACC349123344AA60092D084 /* Support Links */,
+				5798283A2333D7D100B06675 /* CoachSearch */,
+				FA2B1B302331793000E9FD6D /* Resources */,
 				570CE9032315D4AA00077B72 /* Home */,
 				570CE8FA2315CA6E00077B72 /* Signin */,
 			);
@@ -276,12 +344,7 @@
 				3738EC5B23061D830083158B /* Assets.xcassets */,
 				FACADFDD2316FEDE001BBE9C /* Extensions.swift */,
 				57D0CE72232C2F680063D5D1 /* Emitter.swift */,
-				3758984D2321BD1600363B60 /* BarlowCondensed-Black.ttf */,
-				3758984F2321BD2000363B60 /* BarlowCondensed-Bold.ttf */,
-				377AB69223229B240040D7CD /* BarlowCondensed-SemiBold.ttf */,
-				375898512321BD2900363B60 /* BarlowCondensed-Regular.ttf */,
-				375898492321BCEC00363B60 /* Lato-Bold.ttf */,
-				375898532321C0EE00363B60 /* Lato-Regular.ttf */,
+				375449AF233157D400C05261 /* Fonts */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -292,6 +355,9 @@
 				5784F9F023072D5600C11198 /* Welcome.storyboard */,
 				3738EC5823061D800083158B /* Main.storyboard */,
 				3738EC5D23061D830083158B /* LaunchScreen.storyboard */,
+				FA2B1B2E233178AC00E9FD6D /* Resources.storyboard */,
+				579828382333D75700B06675 /* Coaches.storyboard */,
+				FA0383112336BEB600ADF1FD /* Support.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -299,9 +365,22 @@
 		5784F9E92307295400C11198 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				FACC349C233577260092D084 /* CoreUserController.swift */,
 				5784F9EE23072BFB00C11198 /* Config.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		5798283A2333D7D100B06675 /* CoachSearch */ = {
+			isa = PBXGroup;
+			children = (
+				5798283B2333DA2000B06675 /* CoachSearchViewController.swift */,
+				FA7A178E233A8F380090D5EF /* CoachProfileTableViewController.swift */,
+				FA7A1790233A8F6E0090D5EF /* CoachCalendlyViewController.swift */,
+				FA7A1792233A8F8A0090D5EF /* CoachPasswordViewController.swift */,
+				573A9A72233AE848006FC25C /* SearchDetailTableViewController.swift */,
+			);
+			path = CoachSearch;
 			sourceTree = "<group>";
 		};
 		57D0CE76232E92020063D5D1 /* CircularProgress */ = {
@@ -322,12 +401,21 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		840A0CA944C4061A3BAEA402 /* Frameworks */ = {
+		FA2B1B302331793000E9FD6D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1A6BD552E07BD0E46511CCA2 /* Pods_Career_Endorsement_Tracker.framework */,
+				FA2B1B312331794200E9FD6D /* ResourcesViewController.swift */,
 			);
-			name = Frameworks;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA2B1B3323317ADE00E9FD6D /* Resources Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA2B1B3423317B2200E9FD6D /* ResourcesTableViewCell.swift */,
+				FA2B1B3523317B2200E9FD6D /* ResourcesTableViewCell.xib */,
+			);
+			path = "Resources Cell";
 			sourceTree = "<group>";
 		};
 		FA5D9B14230F181B00DC9BC1 /* OneSignalNotificationServiceExtension */ = {
@@ -343,11 +431,42 @@
 		FABFB821232740B400B4647E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA7A1794233AB93E0090D5EF /* CoachSearchTableViewCell.swift */,
+				FACC349423344CD60092D084 /* Support Cell */,
+				FA2B1B3323317ADE00E9FD6D /* Resources Cell */,
 				57D0CE77232E92270063D5D1 /* Home */,
 				57D0CE76232E92020063D5D1 /* CircularProgress */,
 				2CC78CBD23283F5A006CDFAE /* StepCell */,
+				573A9A70233ADB77006FC25C /* CoachProfileTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FACC349123344AA60092D084 /* Support Links */ = {
+			isa = PBXGroup;
+			children = (
+				FACC349223344AC00092D084 /* SupportViewController.swift */,
+				FA0383132336C06200ADF1FD /* SupportTableViewController.swift */,
+			);
+			path = "Support Links";
+			sourceTree = "<group>";
+		};
+		FACC349423344CD60092D084 /* Support Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FACC349523344CFF0092D084 /* SupportTableViewCell.swift */,
+				FACC349623344CFF0092D084 /* SupportTableViewCell.xib */,
+			);
+			path = "Support Cell";
+			sourceTree = "<group>";
+		};
+		FACC34992335718B0092D084 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				FACC349A233571AC0092D084 /* AccountTableViewController.swift */,
+				577407E5233DCCF5005B9006 /* DeactivateViewController.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,12 +476,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3738EC6323061D830083158B /* Build configuration list for PBXNativeTarget "Career Endorsement Tracker" */;
 			buildPhases = (
-				97AE6C44861C1AB2E215C7A2 /* [CP] Check Pods Manifest.lock */,
+				8560C01B4146F8CFC0879BD9 /* [CP] Check Pods Manifest.lock */,
 				3738EC4D23061D800083158B /* Sources */,
 				3738EC4E23061D800083158B /* Frameworks */,
 				3738EC4F23061D800083158B /* Resources */,
 				FA5D9B1E230F181B00DC9BC1 /* Embed App Extensions */,
-				3804A46666BA836EACBAA78B /* [CP] Embed Pods Frameworks */,
+				5F062C3755F8F426BF8343E0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -393,7 +512,7 @@
 								enabled = 1;
 							};
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.iCloud = {
 								enabled = 0;
@@ -427,15 +546,20 @@
 			files = (
 				375898522321BD2900363B60 /* BarlowCondensed-Regular.ttf in Resources */,
 				3738EC5F23061D830083158B /* LaunchScreen.storyboard in Resources */,
+				FA0383122336BEB600ADF1FD /* Support.storyboard in Resources */,
 				3758984A2321BCEC00363B60 /* Lato-Bold.ttf in Resources */,
+				FACC349823344CFF0092D084 /* SupportTableViewCell.xib in Resources */,
 				5784F9F123072D5600C11198 /* Welcome.storyboard in Resources */,
 				5BFE7A4823297BE2006DEA9E /* Staging.xcconfig in Resources */,
 				377AB69323229B240040D7CD /* BarlowCondensed-SemiBold.ttf in Resources */,
 				375898542321C0EE00363B60 /* Lato-Regular.ttf in Resources */,
 				5BFE7A4423297BD8006DEA9E /* Development.xcconfig in Resources */,
 				375898502321BD2000363B60 /* BarlowCondensed-Bold.ttf in Resources */,
+				FA2B1B3723317B2200E9FD6D /* ResourcesTableViewCell.xib in Resources */,
+				579828392333D75700B06675 /* Coaches.storyboard in Resources */,
 				5BFE7A4723297BE2006DEA9E /* Production.xcconfig in Resources */,
 				3738EC5C23061D830083158B /* Assets.xcassets in Resources */,
+				FA2B1B2F233178AC00E9FD6D /* Resources.storyboard in Resources */,
 				3738EC5A23061D800083158B /* Main.storyboard in Resources */,
 				3758984E2321BD1600363B60 /* BarlowCondensed-Black.ttf in Resources */,
 				2CC78CC123283F86006CDFAE /* StepCell.xib in Resources */,
@@ -445,7 +569,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3804A46666BA836EACBAA78B /* [CP] Embed Pods Frameworks */ = {
+		5F062C3755F8F426BF8343E0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -462,7 +586,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		97AE6C44861C1AB2E215C7A2 /* [CP] Check Pods Manifest.lock */ = {
+		8560C01B4146F8CFC0879BD9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -497,26 +621,42 @@
 				2CC78CC52328AEAD006CDFAE /* VerticallyCenteredTextView.swift in Sources */,
 				FAEC2D1323281615007AC7BA /* CircularProgress.swift in Sources */,
 				57191C7A2320EDD300542F37 /* HomeDetailTableViewCell.swift in Sources */,
+				FACC349D233577260092D084 /* CoreUserController.swift in Sources */,
 				570CE9132315F37200077B72 /* WelcomeViewController.swift in Sources */,
+				FA7A1795233AB93E0090D5EF /* CoachSearchTableViewCell.swift in Sources */,
 				5784F9EB230729B600C11198 /* DataGetter.swift in Sources */,
+				FACC349323344AC00092D084 /* SupportViewController.swift in Sources */,
 				2CC78CC32328ABE0006CDFAE /* ShadowView.swift in Sources */,
 				570CE90E2315D6B300077B72 /* HomeCollectionViewCell.swift in Sources */,
 				570CE9002315CA9700077B72 /* SignUpViewController.swift in Sources */,
 				570CE8FC2315CA7E00077B72 /* LoginViewController.swift in Sources */,
 				3738EC5523061D800083158B /* AppDelegate.swift in Sources */,
+				577407E6233DCCF5005B9006 /* DeactivateViewController.swift in Sources */,
 				570CE8E723144E1700077B72 /* RequirementsTableViewCell.swift in Sources */,
 				57D0CE73232C2F680063D5D1 /* Emitter.swift in Sources */,
 				FACADFDE2316FEDE001BBE9C /* Extensions.swift in Sources */,
+				379D2C4023396CB500A33496 /* RequestPasswordResetViewController.swift in Sources */,
+				573A9A71233ADB77006FC25C /* CoachProfileTableViewCell.swift in Sources */,
 				FA593528232300C4003621A8 /* HomeViewController.swift in Sources */,
+				FA2B1B3623317B2200E9FD6D /* ResourcesTableViewCell.swift in Sources */,
 				5784F9EF23072BFB00C11198 /* Config.swift in Sources */,
 				FABFB8232328121800B4647E /* CircularProgressBar.swift in Sources */,
 				2CC78CC023283F86006CDFAE /* StepCell.swift in Sources */,
 				5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */,
+				5798283C2333DA2000B06675 /* CoachSearchViewController.swift in Sources */,
 				3738EC67230628770083158B /* CareerEndorsementViewController.swift in Sources */,
+				FA0383142336C06200ADF1FD /* SupportTableViewController.swift in Sources */,
 				570CE90B2315D59F00077B72 /* Lambda.swift in Sources */,
 				2CC78CD82328DBFD006CDFAE /* Environment.swift in Sources */,
+				FA7A178F233A8F380090D5EF /* CoachProfileTableViewController.swift in Sources */,
+				FA2B1B322331794200E9FD6D /* ResourcesViewController.swift in Sources */,
+				573A9A73233AE848006FC25C /* SearchDetailTableViewController.swift in Sources */,
 				570CE8F92315CA5C00077B72 /* Server.swift in Sources */,
 				570CE9112315F32200077B72 /* WelcomeNavigationController.swift in Sources */,
+				FA7A1793233A8F8A0090D5EF /* CoachPasswordViewController.swift in Sources */,
+				FACC349B233571AC0092D084 /* AccountTableViewController.swift in Sources */,
+				FACC349723344CFF0092D084 /* SupportTableViewCell.swift in Sources */,
+				FA7A1791233A8F6E0090D5EF /* CoachCalendlyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,7 +758,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.endrsd.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.endrsd.Career-Endorsement-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -701,7 +841,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.endrsd.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.endrsd.Career-Endorsement-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -778,7 +918,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.endrsd.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.endrsd.Career-Endorsement-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -855,7 +995,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.endrsd.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.endrsd.Career-Endorsement-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -994,7 +1134,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.endrsd.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.endrsd.Career-Endorsement-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1015,7 +1155,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.endrsd.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.endrsd.Career-Endorsement-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

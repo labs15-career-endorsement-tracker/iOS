@@ -30,6 +30,7 @@ class Server {
         case requirements = "/requirements"
         case steps = "/steps"
         case step = "/step"
+        case resetPassword = "/reset-password"
         case coach = ""
     }
     
@@ -42,7 +43,7 @@ class Server {
         }
     }
     
-    let baseURL = URL(string: "http://endrsd-api.herokuapp.com/api/v1")!
+    let baseURL = URL(string: "https://endrsd-api.herokuapp.com/api/v2")!
     
     //MARK: Welcome Flow
 
@@ -61,7 +62,7 @@ class Server {
             return
         }
         
-        dataGetter.fetchData(with: request) { (_, data, error) in
+        dataGetter.fetchData(with: request) { (response, data, error) in
             if let error = error {
                 completion(error)
                 return
@@ -78,6 +79,7 @@ class Server {
                 self.bearer = try decoder.decode(Bearer.self, from: data)
                 UserDefaults.standard.set(self.bearer?.token, forKey: "token")
                 UserDefaults.standard.set(self.bearer?.userId, forKey: "id")
+                UserDefaults.standard.set(self.bearer?.isAdmin, forKey: "isAdmin")
                 completion(nil)
             } catch {
                 completion(error)
@@ -131,6 +133,48 @@ class Server {
             }
         }
     }
+    
+    
+    // MARK: - Forgot password request
+    func resetPasswordFor(user: ResetPassword, completion: @escaping (Error?)->Void) {
+        let resetPasswordURL = baseURL.appendingPathComponent(Endpoints.resetPassword.rawValue)
+        print("resetPasswordURL = \(resetPasswordURL)")
+        var request = URLRequest(url: resetPasswordURL)
+        request.httpMethod = HTTPMethods.post.rawValue
+        request.addValue(HTTPHeaderKeys.ContentTypes.json.rawValue, forHTTPHeaderField: HTTPHeaderKeys.contentType.rawValue)
+        
+        let encoder = JSONEncoder()
+        do {
+            request.httpBody = try encoder.encode(user)
+        } catch {
+            completion(error)
+            return
+        }
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                completion(error)
+                return
+            }
+            guard let data = data else {
+                completion(DataGetter.NetworkError.badData)
+                return
+            }
+            // Save the endoded bearer token so that it can be saved to user defaults
+            self.encodedBearer = data
+            
+            //            let decoder = JSONDecoder()
+            do {
+                //                self.bearer = try decoder.decode(Bearer.self, from: data)
+                //                UserDefaults.standard.set(self.bearer?.token, forKey: "token")
+                //                UserDefaults.standard.set(self.bearer?.userId, forKey: "id")
+                completion(nil)
+            } catch {
+                completion(error)
+            }
+        }
+    }
+    
     
     //MARK: Fetch
     
@@ -292,5 +336,180 @@ class Server {
             }
         }
     }
+    
+    //fetches users
+    func searchUser(withId id: String, withName name: String, completion: @escaping ([CurrentUser]?, Error?)->Void) {
+        
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "endrsd-api.herokuapp.com"
+        components.path = "/api/v2/users"
+        //adds query items
+        let queryItemQuery = URLQueryItem(name: "search", value: "\(name)")
+        components.queryItems = [queryItemQuery]
+        print(components.url ?? "no url")
+        
+        guard let url = components.url else {return}
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = HTTPMethods.get.rawValue
+        request.addValue("Bearer \(id)", forHTTPHeaderField: "Authorization")
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                print("error fetching data - users/")
+                completion(nil, error)
+            } else {
+                completion(nil, nil)
+            }
+            
+            guard let data = data else {
+                print("data no good")
+                completion(nil, DataGetter.NetworkError.badData)
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            do {
+                let data = try decoder.decode([CurrentUser].self, from: data)
+                completion(data, nil)
+            } catch {
+                print(error.localizedDescription)
+                completion(nil, error)
+            }
+        }
+    }
+    
+    //pins student
+    func pinStudent(withToken token: String, withStudentId id: Int, completion: @escaping (Error?)->Void) {
+        
+        
+        let pinStudentURL = baseURL.appendingPathComponent("/students/\(id)")
+    
+        var request = URLRequest(url: pinStudentURL)
+        request.httpMethod = HTTPMethods.put.rawValue
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                print("error fetching data - users/")
+                completion(error)
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
+    //fetches pinned students
+    
+    func fetchPinnedStudents(withToken token: String, completion: @escaping ([CurrentUser]?, Error?)->Void) {
+        
+        let allPinnedStudentsURL = baseURL.appendingPathComponent("students")
+        var request = URLRequest(url: allPinnedStudentsURL)
+        request.httpMethod = HTTPMethods.get.rawValue
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                completion(nil, error)
+            } else {
+                completion(nil, nil)
+            }
+            
+            guard let data = data else {
+                completion(nil, DataGetter.NetworkError.badData)
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            do {
+                let data = try decoder.decode([CurrentUser].self, from: data)
+                completion(data, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+    
+    
+    //fetches user requirements in coach views
+    
+    func fetchUserRequirements(withToken token: String, userID: Int, completion: @escaping ([Requirement]?, Error?)->Void) {
+        
+        let studentsReqURL = baseURL.appendingPathComponent("users/\(userID)/requirements")
+        var request = URLRequest(url: studentsReqURL)
+        request.httpMethod = HTTPMethods.get.rawValue
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                completion(nil, error)
+            } else {
+                completion(nil, nil)
+            }
+            
+            guard let data = data else {
+                completion(nil, DataGetter.NetworkError.badData)
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            do {
+                let data = try decoder.decode([Requirement].self, from: data)
+                completion(data, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+    
+    //deletes user
+    
+    func deleteUser(withToken token: String, completion: @escaping (Error?) -> Void) {
+        let deleteURL = baseURL.appendingPathComponent("users")
+        var request = URLRequest(url: deleteURL)
+        request.httpMethod = HTTPMethods.delete.rawValue
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                print("error updating step")
+                completion(error)
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
+    
+    func addCalendlyLink(withToken token: String, withLink link: String, completion: @escaping (Error?) -> Void) {
+        let calendlyURL = baseURL.appendingPathComponent("users")
+        var request = URLRequest(url: calendlyURL)
+        request.httpMethod = HTTPMethods.put.rawValue
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.addValue(HTTPHeaderKeys.ContentTypes.json.rawValue, forHTTPHeaderField: HTTPHeaderKeys.contentType.rawValue)
+        
+        print(link)
+        do {
+            let userParams = ["calendly_link": link] as [String: Any]
+            let json = try JSONSerialization.data(withJSONObject: userParams, options: .prettyPrinted)
+            request.httpBody = json
+        } catch {
+            print("496")
+            completion(error)
+            return
+        }
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                completion(error)
+            } else {
+                completion(nil)
+            }
+        }
+        
+    }
+    
+    
     
 }

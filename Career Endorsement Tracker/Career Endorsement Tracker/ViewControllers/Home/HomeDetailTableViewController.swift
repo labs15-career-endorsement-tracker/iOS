@@ -64,6 +64,19 @@ class HomeDetailTableViewController: UITableViewController {
         tableView.reloadData()
     }
 
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else {return}
+        switch identifier {
+        case "resource segue" :
+            if let resouceVC = segue.destination as? ResourcesViewController {
+                resouceVC.requirement = requirement
+            }
+        default : print(identifier)
+        }
+    }
+    
     // MARK: - Fetch
     
     func fetchSingleRequirementFromServer() {
@@ -105,6 +118,8 @@ class HomeDetailTableViewController: UITableViewController {
         }
         title = requirement.title
         self.updateProgress(progress: requirement.progress)
+        requirementProgessView.startAngle = CGFloat(-90)
+        requirementProgessView.endAngle = CGFloat(270)
         requirementProgessView.maxValue = 100
         requirementProgessView.style = .dashed(pattern: [1.0, 1.0])
         requirementProgessView.innerRingColor = Config.lightGreenDesignColor

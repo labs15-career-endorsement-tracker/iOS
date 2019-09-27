@@ -21,22 +21,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var overallProgressLabel: UILabel!
     @IBOutlet weak var overallProgressView: UIView!
     
-    // MARK: - Actions
-    
-    @IBAction func logoutBtnPressed(_ sender: UIBarButtonItem) {
-        let signOutAction = UIAlertAction(title: "Sign Out", style: .destructive) {
-            (action) in
-            UserDefaults.standard.removeObject(forKey: "token")
-            UserDefaults.standard.removeObject(forKey: "id")
-            UserDefaults.standard.removeObject(forKey: "firstName")
-            UserDefaults.standard.set(false, forKey: "isLoggedIn")
-            let storyboard = UIStoryboard(name: "Welcome", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeNavigationController")
-            self.present(vc, animated: true, completion: nil)
-        }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        Config.showAlert(on: self, style: .actionSheet, title: nil, message: nil, actions: [signOutAction, cancelAction], completion: nil)
-    }
     
     // MARK: - Instances
     let server = Server()
@@ -73,6 +57,7 @@ class HomeViewController: UIViewController {
     // MARK: - Helper Method
     
     func updateViews() {
+        
         guard let logo = UIImage(named: "logo-color") else {
             // TODO: - Handle this error somehow
             print("Error: Missing 'logo-color' image file!")
@@ -90,6 +75,8 @@ class HomeViewController: UIViewController {
         progressBar.maxValue = 100
         progressBar.style = .dashed(pattern: [1.0, 1.0])
         progressBar.innerRingColor = Config.lightGreenDesignColor
+        progressBar.startAngle = CGFloat(-90)
+        progressBar.endAngle = CGFloat(270)
 
         guard let name = UserDefaults.standard.value(forKey: "firstName") as? String else {return print("No Name")}
         userNameLabel.text = "Welcome, \(name)."
@@ -166,9 +153,10 @@ class HomeViewController: UIViewController {
             }
             if let currentUser = CurrentUser {
                 self.currentUser = currentUser
-                if currentUser.progress == 1 {self.fullProgress()}
+                CoreUser.user = currentUser
+                //if currentUser.progress == 1 {self.fullProgress()}
                 DispatchQueue.main.async {
-                    self.updateProgress(progress: currentUser.progress)
+                    self.updateProgress(progress: currentUser.progress ?? 0)
                     self.overallProgressLabel.text = "\(currentUser.progress)%"
                     //if currentUser.progress == 1 {self.fullProgress()}
                     if self.userNameLabel.text == "Welcome, " {
@@ -195,6 +183,18 @@ class HomeViewController: UIViewController {
             destinationVC.server = server
             destinationVC.id = requirements[indexPath.item].id
             destinationVC.requirement = requirements[indexPath.item]
+        }
+        if segue.identifier == "AccountSegue" {
+            guard let destinationVC = segue.destination as? UINavigationController, let rootViewController = destinationVC.topViewController as? AccountTableViewController else {
+                print("NO destination")
+                return
+            }
+            if let currentUser = currentUser {
+                if let calendlyLink = currentUser.coach?.calendly_link, let coach = currentUser.coach {
+                    rootViewController.calendlyLink = calendlyLink
+                    rootViewController.coach = coach
+                }
+            }
         }
     }
 }

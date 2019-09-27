@@ -432,7 +432,7 @@ class Server {
     }
     
     
-    //fetches pinned students
+    //fetches user requirements in coach views
     
     func fetchUserRequirements(withToken token: String, userID: Int, completion: @escaping ([Requirement]?, Error?)->Void) {
         
@@ -459,6 +459,24 @@ class Server {
                 completion(data, nil)
             } catch {
                 completion(nil, error)
+            }
+        }
+    }
+    
+    //deletes user
+    
+    func deleteUser(withToken token: String, completion: @escaping (Error?) -> Void) {
+        let deleteURL = baseURL.appendingPathComponent("users")
+        var request = URLRequest(url: deleteURL)
+        request.httpMethod = HTTPMethods.delete.rawValue
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            if let error = error {
+                print("error updating step")
+                completion(error)
+            } else {
+                completion(nil)
             }
         }
     }

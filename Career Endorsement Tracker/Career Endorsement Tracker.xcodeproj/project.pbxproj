@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,6 +37,7 @@
 		57191C7A2320EDD300542F37 /* HomeDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57191C792320EDD300542F37 /* HomeDetailTableViewCell.swift */; };
 		573A9A71233ADB77006FC25C /* CoachProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573A9A70233ADB77006FC25C /* CoachProfileTableViewCell.swift */; };
 		573A9A73233AE848006FC25C /* SearchDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573A9A72233AE848006FC25C /* SearchDetailTableViewController.swift */; };
+		577407E6233DCCF5005B9006 /* DeactivateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577407E5233DCCF5005B9006 /* DeactivateViewController.swift */; };
 		5784F9EB230729B600C11198 /* DataGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EA230729B600C11198 /* DataGetter.swift */; };
 		5784F9ED23072A1600C11198 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EC23072A1600C11198 /* CurrentUser.swift */; };
 		5784F9EF23072BFB00C11198 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784F9EE23072BFB00C11198 /* Config.swift */; };
@@ -118,6 +119,7 @@
 		57191C792320EDD300542F37 /* HomeDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailTableViewCell.swift; sourceTree = "<group>"; };
 		573A9A70233ADB77006FC25C /* CoachProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachProfileTableViewCell.swift; sourceTree = "<group>"; };
 		573A9A72233AE848006FC25C /* SearchDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailTableViewController.swift; sourceTree = "<group>"; };
+		577407E5233DCCF5005B9006 /* DeactivateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeactivateViewController.swift; sourceTree = "<group>"; };
 		5784F9EA230729B600C11198 /* DataGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGetter.swift; sourceTree = "<group>"; };
 		5784F9EC23072A1600C11198 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		5784F9EE23072BFB00C11198 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -462,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				FACC349A233571AC0092D084 /* AccountTableViewController.swift */,
+				577407E5233DCCF5005B9006 /* DeactivateViewController.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -572,18 +575,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Career Endorsement Tracker/Pods-Career Endorsement Tracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -635,6 +631,7 @@
 				570CE9002315CA9700077B72 /* SignUpViewController.swift in Sources */,
 				570CE8FC2315CA7E00077B72 /* LoginViewController.swift in Sources */,
 				3738EC5523061D800083158B /* AppDelegate.swift in Sources */,
+				577407E6233DCCF5005B9006 /* DeactivateViewController.swift in Sources */,
 				570CE8E723144E1700077B72 /* RequirementsTableViewCell.swift in Sources */,
 				57D0CE73232C2F680063D5D1 /* Emitter.swift in Sources */,
 				FACADFDE2316FEDE001BBE9C /* Extensions.swift in Sources */,

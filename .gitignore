@@ -22,3 +22,4 @@ Production.xcconfig
 build
 .DS_Store
 .vscode/
+settings.json

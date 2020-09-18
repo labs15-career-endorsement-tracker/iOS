@@ -148,8 +148,8 @@ extension ResourcesViewController {
             cell.lifetime = 10
             cell.velocity = CGFloat(350 * emitt.intensity)
             cell.velocityRange = CGFloat(80.0 * emitt.intensity)
-            cell.emissionLongitude = CGFloat(M_PI)// CGFloat(0)
-            cell.emissionRange = CGFloat(M_PI / 12)
+            cell.emissionLongitude = CGFloat(Double.pi)// CGFloat(0)
+            cell.emissionRange = CGFloat(Double.pi / 12)
             cell.scale = 0.3
             cell.scaleRange = 0.5
             cell.color = getNextColor(i: index)

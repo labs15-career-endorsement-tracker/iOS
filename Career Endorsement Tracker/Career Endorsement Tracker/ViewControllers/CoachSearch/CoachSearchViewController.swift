@@ -111,7 +111,7 @@ extension CoachSearchViewController: CoachSearchCellDelegate {
         guard let token = UserDefaults.standard.object(forKey: "token") as? String else {
             return Config.showAlert(on: self, style: .alert, title: "User could not be authenticated.", message: "Please logout and sign in again.")
         }
-        
+        cell.pinStudentBtn.setTitle("Unpin", for: .normal)
         let student = users[indexPath.row]
         server.pinStudent(withToken: token, withStudentId: student.id) { (error) in
             if let error = error {
